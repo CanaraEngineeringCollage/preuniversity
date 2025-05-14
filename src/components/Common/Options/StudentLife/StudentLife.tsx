@@ -64,7 +64,7 @@ export default function StudentLife() {
               <div className="flex items-start">{/* <Certicficate /> */}</div>
               <div className="flex flex-col gap-2">
                 <ul className="list-none text-[#1D1D1F] text-[16px] leading-10">
-                  <Link href="/about/mandatory-disclosure">
+                  <Link href="/question-bank">
                     <li>Question Bank</li>
                   </Link>
                 </ul>

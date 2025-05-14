@@ -1,0 +1,707 @@
+[
+  {
+    "id": 1,
+    "name": "Sri D Vasudeva Kamath",
+    "image": "/images/administrativePageImages/1.png",
+    "category": "Prospective",
+    "roles": [
+      { "title": "Chairman", "organization": "CEC GC" },
+      { "title": "President", "organization": "CHSA" }
+    ],
+    "profileType": "Prospective Student",
+    "roles2": [
+      { "title": "Student", "organization": "N/A" }
+    ],
+    "bio": {
+      "age": "17-23",
+      "location": "India, along the Southern Kanara Belt",
+      "educationalLevel": "Completed PU",
+      "description": "Prospective engineering students in India are often driven by a combination of factors including the technology-oriented culture and the associated prestige. These individuals possess strong analytical and logical skills honed through rigorous academic preparation. The competitive nature of entrance exams fosters a drive to succeed, though this may also experience pressure from family or societal expectations to pursue this path."
+    },
+    "tags": ["Pressure-Driven", "Competitive", "Curious", "Tech-Savvy"],
+    "coreNeeds": [
+      "Understand the admission process step by step.",
+      "Get clear eligibility criteria without confusion.",
+      "Explore available courses & specializations.",
+      "Learn about campus life, facilities & culture.",
+      "Discover placement records & career opportunities.",
+      "Find information on scholarships & financial aid.",
+      "Read alumni success stories & career paths.",
+      "Access application support & deadline reminders."
+    ],
+    "frustrationsAndFears": [
+      "Unclear admission process & eligibility criteria.",
+      "Fear of not securing admission due to competition.",
+      "Misinformation about job placements & campus facilities.",
+      "Pressure from family expectations."
+    ],
+    "addressal": [
+      "Display the admission process in a simple, step-by-step format.",
+      "Clearly outline eligibility criteria for easy understanding.",
+      "Present key statistics with an option to download detailed reports.",
+      "Highlight future career prospects."
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Sri M. Ranganath Bhat",
+    "image": "/images/administrativePageImages/2.png",
+    "category": "Current",
+    "roles": [
+      { "title": "Secretary", "organization": "CEC GC" },
+      { "title": "Hon. Secretary", "organization": "CHSA" }
+    ],
+    "profileType": "Prospective Student",
+    "roles2": [
+      { "title": "Student", "organization": "N/A" }
+    ],
+    "bio": {
+      "age": "17-23",
+      "location": "India, along the Southern Kanara Belt",
+      "educationalLevel": "Completed PU",
+      "description": "Prospective engineering students in India are often driven by a combination of factors including the technology-oriented culture and the associated prestige. These individuals possess strong analytical and logical skills honed through rigorous academic preparation. The competitive nature of entrance exams fosters a drive to succeed, though this may also experience pressure from family or societal expectations to pursue this path."
+    },
+    "tags": ["Pressure-Driven", "Competitive", "Curious", "Tech-Savvy"],
+    "motivations": [
+      { "icon": "/svgs/common/3.svg", "description": "Pursue a field with strong career prospects" },
+      { "icon": "/svgs/common/2.svg", "description": "Achieve success in technology & innovation" },
+      { "icon": "/svgs/common/1.svg", "description": "Secure a high-paying & stable profession" }
+    ],
+    "problemAreas": [
+      { "icon": "/svgs/common/3.svg", "description": "Pursue a field with strong career prospects" },
+      { "icon": "/svgs/common/1.svg", "description": "Achieve success in technology & innovation" },
+      { "icon": "/svgs/common/2.svg", "description": "Secure a high-paying & stable profession" }
+    ],
+    "coreNeeds": [
+      "Understand the admission process step by step.",
+      "Get clear eligibility criteria without confusion.",
+      "Explore available courses & specializations.",
+      "Learn about campus life, facilities & culture.",
+      "Discover placement records & career opportunities.",
+      "Find information on scholarships & financial aid.",
+      "Read alumni success stories & career paths.",
+      "Access application support & deadline reminders."
+    ],
+    "frustrationsAndFears": [
+      "Unclear admission process & eligibility criteria.",
+      "Fear of not securing admission due to competition.",
+      "Misinformation about job placements & campus facilities.",
+      "Pressure from family expectations."
+    ],
+    "addressal": [
+      "Display the admission process in a simple, step-by-step format.",
+      "Clearly outline eligibility criteria for easy understanding.",
+      "Present key statistics with an option to download detailed reports.",
+      "Highlight future career prospects."
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Sri Pradeep G Pai",
+    "image": "/images/administrativePageImages/3.png",
+    "category": "Parents",
+    "roles": [{ "title": "Convenor Governing Council", "organization": "CEC" }],
+    "profileType": "Prospective Student",
+    "roles2": [
+      { "title": "Student", "organization": "N/A" }
+    ],
+    "bio": {
+      "age": "17-23",
+      "location": "India, along the Southern Kanara Belt",
+      "educationalLevel": "Completed PU",
+      "description": "Prospective engineering students in India are often driven by a combination of factors including the technology-oriented culture and the associated prestige. These individuals possess strong analytical and logical skills honed through rigorous academic preparation. The competitive nature of entrance exams fosters a drive to succeed, though this may also experience pressure from family or societal expectations to pursue this path."
+    },
+    "tags": ["Pressure-Driven", "Competitive", "Curious", "Tech-Savvy"],
+    "coreNeeds": [
+      "Understand the admission process step by step.",
+      "Get clear eligibility criteria without confusion.",
+      "Explore available courses & specializations.",
+      "Learn about campus life, facilities & culture.",
+      "Discover placement records & career opportunities.",
+      "Find information on scholarships & financial aid.",
+      "Read alumni success stories & career paths.",
+      "Access application support & deadline reminders."
+    ],
+    "frustrationsAndFears": [
+      "Unclear admission process & eligibility criteria.",
+      "Fear of not securing admission due to competition.",
+      "Misinformation about job placements & campus facilities.",
+      "Pressure from family expectations."
+    ],
+    "addressal": [
+      "Display the admission process in a simple, step-by-step format.",
+      "Clearly outline eligibility criteria for easy understanding.",
+      "Present key statistics with an option to download detailed reports.",
+      "Highlight future career prospects."
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Sri CA. M.Vaman Kamath",
+    "image": "/images/administrativePageImages/4.png",
+    "category": "Alumni",
+    "roles": [
+      { "title": "Member", "organization": "CEC GC" },
+      { "title": "Treasurer", "organization": "CHSA" }
+    ],
+    "profileType": "Prospective Student",
+    "roles2": [
+      { "title": "Student", "organization": "N/A" }
+    ],
+    "bio": {
+      "age": "17-23",
+      "location": "India, along the Southern Kanara Belt",
+      "educationalLevel": "Completed PU",
+      "description": "Prospective engineering students in India are often driven by a combination of factors including the technology-oriented culture and the associated prestige. These individuals possess strong analytical and logical skills honed through rigorous academic preparation. The competitive nature of entrance exams fosters a drive to succeed, though this may also experience pressure from family or societal expectations to pursue this path."
+    },
+    "tags": ["Pressure-Driven", "Competitive", "Curious", "Tech-Savvy"],
+    "coreNeeds": [
+      "Understand the admission process step by step.",
+      "Get clear eligibility criteria without confusion.",
+      "Explore available courses & specializations.",
+      "Learn about campus life, facilities & culture.",
+      "Discover placement records & career opportunities.",
+      "Find information on scholarships & financial aid.",
+      "Read alumni success stories & career paths.",
+      "Access application support & deadline reminders."
+    ],
+    "frustrationsAndFears": [
+      "Unclear admission process & eligibility criteria.",
+      "Fear of not securing admission due to competition.",
+      "Misinformation about job placements & campus facilities.",
+      "Pressure from family expectations."
+    ],
+    "addressal": [
+      "Display the admission process in a simple, step-by-step format.",
+      "Clearly outline eligibility criteria for easy understanding.",
+      "Present key statistics with an option to download detailed reports.",
+      "Highlight future career prospects."
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Sri K Suresh Kamath",
+    "image": "/images/administrativePageImages/5.png",
+    "category": "Governing",
+    "roles": [
+      { "title": "Member", "organization": "CEC GC" },
+      { "title": "Vice President", "organization": "CHSA" }
+    ],
+    "profileType": "Prospective Student",
+    "roles2": [
+      { "title": "Student", "organization": "N/A" }
+    ],
+    "bio": {
+      "age": "17-23",
+      "location": "India, along the Southern Kanara Belt",
+      "educationalLevel": "Completed PU",
+      "description": "Prospective engineering students in India are often driven by a combination of factors including the technology-oriented culture and the associated prestige. These individuals possess strong analytical and logical skills honed through rigorous academic preparation. The competitive nature of entrance exams fosters a drive to succeed, though this may also experience pressure from family or societal expectations to pursue this path."
+    },
+    "tags": ["Pressure-Driven", "Competitive", "Curious", "Tech-Savvy"],
+    "coreNeeds": [
+      "Understand the admission process step by step.",
+      "Get clear eligibility criteria without confusion.",
+      "Explore available courses & specializations.",
+      "Learn about campus life, facilities & culture.",
+      "Discover placement records & career opportunities.",
+      "Find information on scholarships & financial aid.",
+      "Read alumni success stories & career paths.",
+      "Access application support & deadline reminders."
+    ],
+    "frustrationsAndFears": [
+      "Unclear admission process & eligibility criteria.",
+      "Fear of not securing admission due to competition.",
+      "Misinformation about job placements & campus facilities.",
+      "Pressure from family expectations."
+    ],
+    "addressal": [
+      "Display the admission process in a simple, step-by-step format.",
+      "Clearly outline eligibility criteria for easy understanding.",
+      "Present key statistics with an option to download detailed reports.",
+      "Highlight future career prospects."
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Sri T. Gopalkrishna Shenoy",
+    "image": "/images/administrativePageImages/6.png",
+    "category": "Prospective",
+    "roles": [
+      { "title": "Member", "organization": "CEC GC" },
+      { "title": "Joint Secretary", "organization": "CHSA" }
+    ],
+    "profileType": "Prospective Student",
+    "roles2": [
+      { "title": "Student", "organization": "N/A" }
+    ],
+    "bio": {
+      "age": "17-23",
+      "location": "India, along the Southern Kanara Belt",
+      "educationalLevel": "Completed PU",
+      "description": "Prospective engineering students in India are often driven by a combination of factors including the technology-oriented culture and the associated prestige. These individuals possess strong analytical and logical skills honed through rigorous academic preparation. The competitive nature of entrance exams fosters a drive to succeed, though this may also experience pressure from family or societal expectations to pursue this path."
+    },
+    "tags": ["Pressure-Driven", "Competitive", "Curious", "Tech-Savvy"],
+    "coreNeeds": [
+      "Understand the admission process step by step.",
+      "Get clear eligibility criteria without confusion.",
+      "Explore available courses & specializations.",
+      "Learn about campus life, facilities & culture.",
+      "Discover placement records & career opportunities.",
+      "Find information on scholarships & financial aid.",
+      "Read alumni successful stories & career paths.",
+      "Access application support & deadline reminders."
+    ],
+    "frustrationsAndFears": [
+      "Unclear admission process & eligibility criteria.",
+      "Fear of not securing admission due to competition.",
+      "Misinformation about job placements & campus facilities.",
+      "Pressure from family expectations."
+    ],
+    "addressal": [
+      "Display the admission process in a simple, step-by-step format.",
+      "Clearly outline eligibility criteria for easy understanding.",
+      "Present key statistics with an option to download detailed reports.",
+      "Highlight future career prospects."
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Sri M. Naresh Shenoy",
+    "image": "/images/administrativePageImages/7.png",
+    "category": "Governing",
+    "roles": [
+      { "title": "Member", "organization": "CEC GC" },
+      { "title": "Governing Body Member", "organization": "CHSA" }
+    ],
+    "profileType": "Prospective Student",
+    "roles2": [
+      { "title": "Student", "organization": "N/A" }
+    ],
+    "bio": {
+      "age": "17-23",
+      "location": "India, along the Southern Kanara Belt",
+      "educationalLevel": "Completed PU",
+      "description": "Prospective engineering students in India are often driven by a combination of factors including the technology-oriented culture and the associated prestige. These individuals possess strong analytical and logical skills honed through rigorous academic preparation. The competitive nature of entrance exams fosters a drive to succeed, though this may also experience pressure from family or societal expectations to pursue this path."
+    },
+    "tags": ["Pressure-Driven", "Competitive", "Curious", "Tech-Savvy"],
+    "coreNeeds": [
+      "Understand the admission process step by step.",
+      "Get clear eligibility criteria without confusion.",
+      "Explore available courses & specializations.",
+      "Learn about campus life, facilities & culture.",
+      "Discover placement records & career opportunities.",
+      "Find information on scholarships & financial aid.",
+      "Read alumni success stories & career paths.",
+      "Access application support & deadline reminders."
+    ],
+    "frustrationsAndFears": [
+      "Unclear admission process & eligibility criteria.",
+      "Fear of not securing admission due to competition.",
+      "Misinformation about job placements & campus facilities.",
+      "Pressure from family expectations."
+    ],
+    "addressal": [
+      "Display the admission process in a simple, step-by-step format.",
+      "Clearly outline eligibility criteria for easy understanding.",
+      "Present key statistics with an option to download detailed reports.",
+      "Highlight future career prospects."
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Sri Gopal Rao",
+    "image": "/images/administrativePageImages/8.png",
+    "category": "Prospective",
+    "roles": [
+      { "title": "Member by invite", "organization": "" },
+      { "title": "Governing Council", "organization": "CEC" }
+    ],
+    "profileType": "Prospective Student",
+    "roles2": [
+      { "title": "Student", "organization": "N/A" }
+    ],
+    "bio": {
+      "age": "17-23",
+      "location": "India, along the Southern Kanara Belt",
+      "educationalLevel": "Completed PU",
+      "description": "Prospective engineering students in India are often driven by a combination of factors including the technology-oriented culture and the associated prestige. These individuals possess strong analytical and logical skills honed through rigorous academic preparation. The competitive nature of entrance exams fosters a drive to succeed, though this may also experience pressure from family or societal expectations to pursue this path."
+    },
+    "tags": ["Pressure-Driven", "Competitive", "Curious", "Tech-Savvy"],
+    "coreNeeds": [
+      "Understand the admission process step by step.",
+      "Get clear eligibility criteria without confusion.",
+      "Explore available courses & specializations.",
+      "Learn about campus life, facilities & culture.",
+      "Discover placement records & career opportunities.",
+      "Find information on scholarships & financial aid.",
+      "Read alumni success stories & career paths.",
+      "Access application support & deadline reminders."
+    ],
+    "frustrationsAndFears": [
+      "Unclear admission process & eligibility criteria.",
+      "Fear of not securing admission due to competition.",
+      "Misinformation about job placements & campus facilities.",
+      "Pressure from family expectations."
+    ],
+    "addressal": [
+      "Display the admission process in a simple, step-by-step format.",
+      "Clearly outline eligibility criteria for easy understanding.",
+      "Present key statistics with an option to download detailed reports.",
+      "Highlight future career prospects."
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Sri. Vinayak Kamath",
+    "image": "/images/administrativePageImages/9.png",
+    "category": "Prospective",
+    "roles": [
+      { "title": "Member by invite", "organization": "" },
+      { "title": "Governing Council", "organization": "CEC" }
+    ],
+    "profileType": "Prospective Student",
+    "roles2": [
+      { "title": "Student", "organization": "N/A" }
+    ],
+    "bio": {
+      "age": "17-23",
+      "location": "India, along the Southern Kanara Belt",
+      "educationalLevel": "Completed PU",
+      "description": "Prospective engineering students in India are often driven by a combination of factors including the technology-oriented culture and the associated prestige. These individuals possess strong analytical and logical skills honed through rigorous academic preparation. The competitive nature of entrance exams fosters a drive to succeed, though this may also experience pressure from family or societal expectations to pursue this path."
+    },
+    "tags": ["Pressure-Driven", "Competitive", "Curious", "Tech-Savvy"],
+    "coreNeeds": [
+      "Understand the admission process step by step.",
+      "Get clear eligibility criteria without confusion.",
+      "Explore available courses & specializations.",
+      "Learn about campus life, facilities & culture.",
+      "Discover placement records & career opportunities.",
+      "Find information on scholarships & financial aid.",
+      "Read alumni success stories & career paths.",
+      "Access application support & deadline reminders."
+    ],
+    "frustrationsAndFears": [
+      "Unclear admission process & eligibility criteria.",
+      "Fear of not securing admission due to competition.",
+      "Misinformation about job placements & campus facilities.",
+      "Pressure from family expectations."
+    ],
+    "addressal": [
+      "Display the admission process in a simple, step-by-step format.",
+      "Clearly outline eligibility criteria for easy understanding.",
+      "Present key statistics with an option to download detailed reports.",
+      "Highlight future career prospects."
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Dr. P. Dayananda Pai",
+    "image": "/images/administrativePageImages/10.png",
+    "category": "Prospective",
+    "roles": [
+      { "title": "Member by invite", "organization": "" },
+      { "title": "Governing Council", "organization": "CEC" }
+    ],
+    "profileType": "Prospective Student",
+    "roles2": [
+      { "title": "Student", "organization": "N/A" }
+    ],
+    "bio": {
+      "age": "17-23",
+      "location": "India, along the Southern Kanara Belt",
+      "educationalLevel": "Completed PU",
+      "description": "Prospective engineering students in India are often driven by a combination of factors including the technology-oriented culture and the associated prestige. These individuals possess strong analytical and logical skills honed through rigorous academic preparation. The competitive nature of entrance exams fosters a drive to succeed, though this may also experience pressure from family or societal expectations to pursue this path."
+    },
+    "tags": ["Pressure-Driven", "Competitive", "Curious", "Tech-Savvy"],
+    "coreNeeds": [
+      "Understand the admission process step by step.",
+      "Get clear eligibility criteria without confusion.",
+      "Explore available courses & specializations.",
+      "Learn about campus life, facilities & culture.",
+      "Discover placement records & career opportunities.",
+      "Find information on scholarships & financial aid.",
+      "Read alumni success stories & career paths.",
+      "Access application support & deadline reminders."
+    ],
+    "frustrationsAndFears": [
+      "Unclear admission process & eligibility criteria.",
+      "Fear of not securing admission due to competition.",
+      "Misinformation about job placements & campus facilities.",
+      "Pressure from family expectations."
+    ],
+    "addressal": [
+      "Display the admission process in a simple, step-by-step format.",
+      "Clearly outline eligibility criteria for easy understanding.",
+      "Present key statistics with an option to download detailed reports.",
+      "Highlight future career prospects."
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Sri. J.P. Nayak",
+    "image": "/images/administrativePageImages/11.png",
+    "category": "Prospective",
+    "roles": [
+      { "title": "Member by invite", "organization": "" },
+      { "title": "Governing Council", "organization": "CEC" }
+    ],
+    "profileType": "Prospective Student",
+    "roles2": [
+      { "title": "Student", "organization": "N/A" }
+    ],
+    "bio": {
+      "age": "17-23",
+      "location": "India, along the Southern Kanara Belt",
+      "educationalLevel": "Completed PU",
+      "description": "Prospective engineering students in India are often driven by a combination of factors including the technology-oriented culture and the associated prestige. These individuals possess strong analytical and logical skills honed through rigorous academic preparation. The competitive nature of entrance exams fosters a drive to succeed, though this may also experience pressure from family or societal expectations to pursue this path."
+    },
+    "tags": ["Pressure-Driven", "Competitive", "Curious", "Tech-Savvy"],
+    "coreNeeds": [
+      "Understand the admission process step by step.",
+      "Get clear eligibility criteria without confusion.",
+      "Explore available courses & specializations.",
+      "Learn about campus life, facilities & culture.",
+      "Discover placement records & career opportunities.",
+      "Find information on scholarships & financial aid.",
+      "Read alumni success stories & career paths.",
+      "Access application support & deadline reminders."
+    ],
+    "frustrationsAndFears": [
+      "Unclear admission process & eligibility criteria.",
+      "Fear of not securing admission due to competition.",
+      "Misinformation about job placements & campus facilities.",
+      "Pressure from family expectations."
+    ],
+    "addressal": [
+      "Display the admission process in a simple, step-by-step format.",
+      "Clearly outline eligibility criteria for easy understanding.",
+      "Present key statistics with an option to download detailed reports.",
+      "Highlight future career prospects."
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Dr. Nagesh H R",
+    "image": "/images/administrativePageImages/12.png",
+    "category": "Prospective",
+    "roles": [
+      { "title": "Member Secretary", "organization": "CEC GC" },
+      { "title": "Principal", "organization": "CEC" }
+    ],
+    "profileType": "Prospective Student",
+    "roles2": [
+      { "title": "Student", "organization": "N/A" }
+    ],
+    "bio": {
+      "age": "17-23",
+      "location": "India, along the Southern Kanara Belt",
+      "educationalLevel": "Completed PU",
+      "description": "Prospective engineering students in India are often driven by a combination of factors including the technology-oriented culture and the associated prestige. These individuals possess strong analytical and logical skills honed through rigorous academic preparation. The competitive nature of entrance exams fosters a drive to succeed, though this may also experience pressure from family or societal expectations to pursue this path."
+    },
+    "tags": ["Pressure-Driven", "Competitive", "Curious", "Tech-Savvy"],
+    "motivations": [
+      { "icon": "/svgs/common/13.svg", "description": "Pursue a field with strong career prospects" },
+      { "icon": "/svgs/common/2.svg", "description": "Achieve success in technology & innovation" },
+      { "icon": "/svgs/common/1.svg", "description": "Secure a high-paying & stable profession" }
+    ],
+    "problemAreas": [
+      { "icon": "/svgs/common/3.svg", "description": "Pursue a field with strong career prospects" },
+      { "icon": "/svgs/common/1.svg", "description": "Achieve success in technology & innovation" },
+      { "icon": "/svgs/common/2.svg", "description": "Secure a high-paying & stable profession" }
+    ],
+    "coreNeeds": [
+      "Understand the admission process step by step.",
+      "Get clear eligibility criteria without confusion.",
+      "Explore available courses & specializations.",
+      "Learn about campus life, facilities & culture.",
+      "Discover placement records & career opportunities.",
+      "Find information on scholarships & financial aid.",
+      "Read alumni success stories & career paths.",
+      "Access application support & deadline reminders."
+    ],
+    "frustrationsAndFears": [
+      "Unclear admission process & eligibility criteria.",
+      "Fear of not securing admission due to competition.",
+      "Misinformation about job placements & campus facilities.",
+      "Pressure from family expectations."
+    ],
+    "addressal": [
+      "Display the admission process in a simple, step-by-step format.",
+      "Clearly outline eligibility criteria for easy understanding.",
+      "Present key statistics with an option to download detailed reports.",
+      "Highlight future career prospects."
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Dr. Demian Antony D Mello",
+    "image": "/images/administrativePageImages/13.png",
+    "category": "Prospective",
+    "roles": [
+      { "title": "Member Secretary", "organization": "CEC GC" },
+      { "title": "Vice Principal & Dean-Academics", "organization": "" }
+    ],
+    "profileType": "Prospective Student",
+    "roles2": [
+      { "title": "Student", "organization": "N/A" }
+    ],
+    "bio": {
+      "age": "17-23",
+      "location": "India, along the Southern Kanara Belt",
+      "educationalLevel": "Completed PU",
+      "description": "Prospective engineering students in India are often driven by a combination of factors including the technology-oriented culture and the associated prestige. These individuals possess strong analytical and logical skills honed through rigorous academic preparation. The competitive nature of entrance exams fosters a drive to succeed, though this may also experience pressure from family or societal expectations to pursue this path."
+    },
+    "tags": ["Pressure-Driven", "Competitive", "Curious", "Tech-Savvy"],
+    "coreNeeds": [
+      "Understand the admission process step by step.",
+      "Get clear eligibility criteria without confusion.",
+      "Explore available courses & specializations.",
+      "Learn about campus life, facilities & culture.",
+      "Discover placement records & career opportunities.",
+      "Find information on scholarships & financial aid.",
+      "Read alumni success stories & career paths.",
+      "Access application support & deadline reminders."
+    ],
+    "frustrationsAndFears": [
+      "Unclear admission process & eligibility criteria.",
+      "Fear of not securing admission due to competition.",
+      "Misinformation about job placements & campus facilities.",
+      "Pressure from family expectations."
+    ],
+    "addressal": [
+      "Display the admission process in a simple, step-by-step format.",
+      "Clearly outline eligibility criteria for easy understanding.",
+      "Present key statistics with an option to download detailed reports.",
+      "Highlight future career prospects."
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Sri. Siddartha Pai",
+    "image": "/images/administrativePageImages/14.png",
+    "category": "Prospective",
+    "roles": [
+      { "title": "Member by invite", "organization": "" },
+      { "title": "Governing Council", "organization": "CEC" }
+    ],
+    "profileType": "Prospective Student",
+    "roles2": [
+      { "title": "Student", "organization": "N/A" }
+    ],
+    "bio": {
+      "age": "17-23",
+      "location": "India, along the Southern Kanara Belt",
+      "educationalLevel": "Completed PU",
+      "description": "Prospective engineering students in India are often driven by a combination of factors including the technology-oriented culture and the associated prestige. These individuals possess strong analytical and logical skills honed through rigorous academic preparation. The competitive nature of entrance exams fosters a drive to succeed, though this may also experience pressure from family or societal expectations to pursue this path."
+    },
+    "tags": ["Pressure-Driven", "Competitive", "Curious", "Tech-Savvy"],
+    "coreNeeds": [
+      "Understand the admission process step by step.",
+      "Get clear eligibility criteria without confusion.",
+      "Explore available courses & specializations.",
+      "Learn about campus life, facilities & culture.",
+      "Discover placement records & career opportunities.",
+      "Find information on scholarships & financial aid.",
+      "Read alumni success stories & career paths.",
+      "Access application support & deadline reminders."
+    ],
+    "frustrationsAndFears": [
+      "Unclear admission process & eligibility criteria.",
+      "Fear of not securing admission due to competition.",
+      "Misinformation about job placements & campus facilities.",
+      "Pressure from family expectations."
+    ],
+    "addressal": [
+      "Display the admission process in a simple, step-by-step format.",
+      "Clearly outline eligibility criteria for easy understanding.",
+      "Present key statistics with an option to download detailed reports.",
+      "Highlight future career prospects."
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Sri. Ullas Kamath",
+    "image": "/images/administrativePageImages/15.png",
+    "category": "Prospective",
+    "roles": [
+      { "title": "Member by invite", "organization": "CEC GC" },
+      { "title": "Governing Council", "organization": "CEC" }
+    ],
+    "profileType": "Prospective Student",
+    "roles2": [
+      { "title": "Student", "organization": "N/A" }
+    ],
+    "bio": {
+      "age": "17-23",
+      "location": "India, along the Southern Kanara Belt",
+      "educationalLevel": "Completed PU",
+      "description": "Prospective engineering students in India are often driven by a combination of factors including the technology-oriented culture and the associated prestige. These individuals possess strong analytical and logical skills honed through rigorous academic preparation. The competitive nature of entrance exams fosters a drive to succeed, though this may also experience pressure from family or societal expectations to pursue this path."
+    },
+    "tags": ["Pressure-Driven", "Competitive", "Curious", "Tech-Savvy"],
+    "coreNeeds": [
+      "Understand the admission process step by step.",
+      "Get clear eligibility criteria without confusion.",
+      "Explore available courses & specializations.",
+      "Learn about campus life, facilities & culture.",
+      "Discover placement records & career opportunities.",
+      "Find information on scholarships & financial aid.",
+      "Read alumni success stories & career paths.",
+      "Access application support & deadline reminders."
+    ],
+    "frustrationsAndFears": [
+      "Unclear admission process & eligibility criteria.",
+      "Fear of not securing admission due to competition.",
+      "Misinformation about job placements & campus facilities.",
+      "Pressure from family expectations."
+    ],
+    "addressal": [
+      "Display the admission process in a simple, step-by-step format.",
+      "Clearly outline eligibility criteria for easy understanding.",
+      "Present key statistics with an option to download detailed reports.",
+      "Highlight future career prospects."
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Sri. Chakravarthy Sulibele",
+    "image": "/images/administrativePageImages/16.png",
+    "category": "Prospective",
+    "roles": [
+      { "title": "Member by invite", "organization": "" },
+      { "title": "Governing Council, CEC", "organization": "" }
+    ],
+    "profileType": "Prospective Student",
+    "roles2": [
+      { "title": "Student", "organization": "N/A" }
+    ],
+    "bio": {
+      "age": "17-23",
+      "location": "India, along the Southern Kanara Belt",
+      "educationalLevel": "Completed PU",
+      "description": "Prospective engineering students in India are often driven by a combination of factors including the technology-oriented culture and the associated prestige. These individuals possess strong analytical and logical skills honed through rigorous academic preparation. The competitive nature of entrance exams fosters a drive to succeed, though this may also experience pressure from family or societal expectations to pursue this path."
+    },
+    "tags": ["Pressure-Driven", "Competitive", "Curious", "Tech-Savvy"],
+    "coreNeeds": [
+      "Understand the admission process step by step.",
+      "Get clear eligibility criteria without confusion.",
+      "Explore available courses & specializations.",
+      "Learn about campus life, facilities & culture.",
+      "Discover placement records & career opportunities.",
+      "Find information on scholarships & financial aid.",
+      "Read alumni success stories & career paths.",
+      "Access application support & deadline reminders."
+    ],
+    "frustrationsAndFears": [
+      "Unclear admission process & eligibility criteria.",
+      "Fear of not securing admission due to competition.",
+      "Misinformation about job placements & campus facilities.",
+      "Pressure from family expectations."
+    ],
+    "addressal": [
+      "Display the admission process in a simple, step-by-step format.",
+      "Clearly outline eligibility criteria for easy understanding.",
+      "Present key statistics with an option to download detailed reports.",
+      "Highlight future career prospects."
+    ]
+  }
+]

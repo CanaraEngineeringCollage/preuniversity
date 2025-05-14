@@ -106,7 +106,7 @@ function Innovations() {
         </motion.div>
         <div className="lg:grid grid-cols-12 gap-4 hidden relative">
           <FacilityCard
-            title="New Academic Block"
+            title="Academic Counselling"
             description="Our state-of-the-art Academic Block is designed to elevate the learning experience. Spread across three floors, it houses spacious, well-lit classrooms, modern laboratories, and dedicated staff rooms. With lift access to all floors, the block ensures convenience and accessibility for all. A perfect blend of functionality and comfort for both students and faculty."
             imageUrl="/images/homePageImages/1.png"
             className="lg:col-span-3 md:col-span-5 row-span-2 mt-56"
@@ -115,7 +115,7 @@ function Innovations() {
             index={0} // From left
           />
           <FacilityCard
-            title="Dr. P. Dayananda Pai & P. Sathish Pai Auditorium"
+            title="Book Bank"
             description="At Manipal School, we believe that a healthy body nurtures a healthy mind. Our state-of-the-art sports infrastructure(Marena) is designed to meet the diverse physical training needs of our students. With dedicated spaces for cricket, basketball, football, and badminton, we provide ample opportunities for students to engage in sports under the guidance of experienced coachesTo support overall well-being, we incorporate yoga into our curriculum, fostering mindfulness and inner balance. Additionally, Karate training is offered to instill discipline, confidence, and self-defense skills, promoting both physical and mental resilience. Our structured sports program for Junior school students, curated by our training partner Edusports, ensures that every student develops essential athletic skills and gains exposure to various sports. "
             subTitle=""
             heading="Inaugurated and Blessed by"
@@ -141,7 +141,7 @@ function Innovations() {
             index={1} // From right
           />
           <FacilityCard
-            title="Research Labs"
+            title="Dedicated Course Labs"
             keyHighlights={[
               "Dedicated labs for AI & ML, IoT, CAED, CS and more",
               "Centrally Air-conditioned Environment",
@@ -150,7 +150,7 @@ function Innovations() {
               "Open for student innovation, startup prototyping, and technical skill development",
             ]}
             bottomDescription="From ideation to real-world solutions, our labs empower you to turn ideas into impact."
-            description="Our state-of-the-art Research Labs are at the heart of academic discovery and innovation on campus. Designed to foster curiosity and creativity, these labs provide the perfect environment for students and faculty to explore, experiment, and excel."
+            description="Our state-of-the-art Dedicated Course Labs are at the heart of academic discovery and innovation on campus. Designed to foster curiosity and creativity, these labs provide the perfect environment for students and faculty to explore, experiment, and excel."
             imageUrl="/images/homePageImages/3.png"
             className="lg:col-span-3 md:col-span-5 row-span-2"
             gradientColor="#3c72d0"
@@ -158,7 +158,7 @@ function Innovations() {
             index={2} // From left
           />
           <FacilityCard
-            title="Well-Equipped Classrooms"
+            title="Club Activities"
             subTitle="Every classroom is a space where ideas thrive and interactions spark innovation"
             description="Our classrooms are spacious, well-lit, and ergonomically designed to provide an ideal learning environment. Equipped with modern teaching aids such as projectors, smart boards, and high-speed internet, they ensure seamless integration of technology into everyday learning."
             imageUrl="/images/homePageImages/4.png"
@@ -168,7 +168,7 @@ function Innovations() {
             index={3} // From right
           />
           <FacilityCard
-            title="Expansive Library"
+            title="Medical Facilities"
             description="47,000 volumes with 5,000+ unique titles, including physical and digital formats. Access to a wealth of e-books, e-journals, and educational videos through our VTUCN membership and digital subscriptions. Over 400+ e-magazines, 10,888 educational videos, and 90+ web content platforms. Access to 200+ international proceedings and 5 lakh+ educational materials through the National Digital Library. Subscriptions to 42 print journals, 16+ magazines, and 4 newspapers."
             imageUrl="/images/homePageImages/5.png"
             className="lg:col-span-3 md:col-span-5 row-span-2 top-36"
@@ -185,7 +185,7 @@ function Innovations() {
             index={4} // From left
           />
           <FacilityCard
-            title="Canteen"
+            title="Competitive Exam Training"
             description="We are committed to equipping our students with the knowledge and guidance needed to make informed decisions about their future. Through university fairs, career counseling sessions, and interactions with esteemed academicians, we provide students with valuable insights into higher education opportunities. College visits, workshops, Job shadowing program and mentorship programs help them explore diverse career paths, empowering them to make confident choices for their academic and professional journeys."
             imageUrl="/images/homePageImages/6.png"
             className="lg:col-span-4 md:col-span-5 object-cover lg:max-w-[310px] row-span-2 xl:max-w-[310px] top-[-13rem]"
@@ -196,14 +196,14 @@ function Innovations() {
         </div>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4 relative lg:hidden">
           <FacilityCard
-            title="New Academic Block"
+            title="Academic Counselling"
             description="Our state-of-the-art Academic Block is designed to elevate the learning experience. Spread across three floors, it houses spacious, well-lit classrooms, modern laboratories, and dedicated staff rooms. With lift access to all floors, the block ensures convenience and accessibility for all. A perfect blend of functionality and comfort for both students and faculty."
             className="col-span-1"
             imageUrl="/images/homePageImages/1.png"
             gradientColor="#3c72d0"
           />
           <FacilityCard
-            title="Dr. P. Dayananda Pai & P. Sathish Pai Auditorium"
+            title="Book Bank"
             description="At Manipal School, we believe that a healthy body nurtures a healthy mind. Our state-of-the-art sports infrastructure(Marena) is designed to meet the diverse physical training needs of our students. With dedicated spaces for cricket, basketball, football, and badminton, we provide ample opportunities for students to engage in sports under the guidance of experienced coachesTo support overall well-being, we incorporate yoga into our curriculum, fostering mindfulness and inner balance. Additionally, Karate training is offered to instill discipline, confidence, and self-defense skills, promoting both physical and mental resilience. Our structured sports program for Junior school students, curated by our training partner Edusports, ensures that every student develops essential athletic skills and gains exposure to various sports. "
             subTitle=""
             heading="Inaugurated and Blessed by"
@@ -229,7 +229,7 @@ function Innovations() {
             index={1}
           />
           <FacilityCard
-            title="Research Labs"
+            title="Dedicated Course Labs"
             keyHighlights={[
               "Dedicated labs for AI & ML, IoT, CAED, CS and more",
               "Centrally Air-conditioned Environment",
@@ -238,7 +238,7 @@ function Innovations() {
               "Open for student innovation, startup prototyping, and technical skill development",
             ]}
             bottomDescription="From ideation to real-world solutions, our labs empower you to turn ideas into impact."
-            description="Our state-of-the-art Research Labs are at the heart of academic discovery and innovation on campus. Designed to foster curiosity and creativity, these labs provide the perfect environment for students and faculty to explore, experiment, and excel."
+            description="Our state-of-the-art Dedicated Course Labs are at the heart of academic discovery and innovation on campus. Designed to foster curiosity and creativity, these labs provide the perfect environment for students and faculty to explore, experiment, and excel."
             imageUrl="/images/homePageImages/3.png"
             className="col-span-1"
             gradientColor="#3c72d0"
@@ -246,7 +246,7 @@ function Innovations() {
             index={2}
           />
           <FacilityCard
-            title="Well-Equipped Classrooms"
+            title="Club Activities"
             bottomDescription="Every classroom is a space where ideas thrive and interactions spark innovation"
             description="Our classrooms are spacious, well-lit, and ergonomically designed to provide an ideal learning environment. Equipped with modern teaching aids such as projectors, smart boards, and high-speed internet, they ensure seamless integration of technology into everyday learning."
             imageUrl="/images/homePageImages/4.png"
@@ -256,7 +256,7 @@ function Innovations() {
             index={3}
           />
           <FacilityCard
-            title="Expansive Library"
+            title="Medical Facilities"
             description="47,000 volumes with 5,000+ unique titles, including physical and digital formats. Access to a wealth of e-books, e-journals, and educational videos through our VTUCN membership and digital subscriptions. Over 400+ e-magazines, 10,888 educational videos, and 90+ web content platforms. Access to 200+ international proceedings and 5 lakh+ educational materials through the National Digital Library. Subscriptions to 42 print journals, 16+ magazines, and 4 newspapers."
             imageUrl="/images/homePageImages/5.png"
             keyHighlights={[

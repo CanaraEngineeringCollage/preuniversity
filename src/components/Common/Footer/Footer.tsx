@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Instagram, Meta, Yt } from "../../../../public/icons";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -7,36 +8,36 @@ export default function Footer() {
       {/* Top Links */}
       <div className="max-w-6xl  text-base mx-auto px-4 py-10 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
         <div className="flex justify-center">
-          <ul className="space-y-3 cursor-pointer">
-            <li>About the College</li>
-            <li>Institute Legacy</li>
-            <li>Administration</li>
-            <li>Infrastructure</li>
+          <ul className="! cursor-pointer">
+            <Link href="/about"><li className="pb-3">About the College</li></Link>
+            <Link href="/legacy"><li  className="pb-3">Institute Legacy</li></Link>
+            <Link href="/administration"><li className="pb-3">Administration</li></Link>
+            <Link href="/infrastructure"><li className="pb-3">Infrastructure</li></Link>
           </ul>
         </div>
         <div className="flex justify-center">
-          <ul className="space-y-3 cursor-pointer">
-            <li>Admissions</li>
-            <li>Streams</li>
-            <li>Fee Portal</li>
+          <ul className=" cursor-pointer">
+            <Link href="/admission"><li className="pb-3">Admissions</li></Link>
+            <Link href="/about"><li className="pb-3">Streams</li></Link>
+           <Link href="/fee-portal"> <li className="pb-3">Fee Portal</li></Link>
           </ul>
         </div>
         <div className="flex justify-center">
-          <ul className="space-y-3 cursor-pointer">
-            <li>Exam Results</li>
-            <li>Exam Circulars</li>
-            <li>Question Bank</li>
+          <ul className=" cursor-pointer">
+           <Link href="/exam-results"> <li className="pb-3">Exam Results</li></Link>
+           <Link href="/about"> <li className="pb-3">Exam Circulars</li></Link>
+           <Link href="/question-bank"> <li className="pb-3">Question Bank</li></Link>
           </ul>
         </div>
         <div className="flex justify-center">
-          <ul className="space-y-3 cursor-pointer">
-            <li>Buzz</li>
+          <ul className=" cursor-pointer">
+           <Link href="/about"> <li className="pb-3">Buzz</li></Link>
           </ul>
         </div>
         <div className="flex justify-center">
-          <ul className="space-y-3 cursor-pointer">
-            <li>Footprints</li>
-            <li>Mat Kabaddi</li>
+          <ul className=" cursor-pointer">
+           <Link href="/about"> <li className="pb-3">Footprints</li></Link>
+           <Link href="/about"> <li className="pb-3">Mat Kabaddi</li></Link>
           </ul>
         </div>
       </div>
