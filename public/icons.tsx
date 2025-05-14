@@ -105,3 +105,54 @@ export function Meta() {
     </svg>
   );
 }
+export function UpArrow() {
+  return (
+    <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clipPath="url(#clip0_621_2020)">
+        <rect y="26.1924" width="26" height="26" rx="13" transform="rotate(-90 0 26.1924)" fill="#D2D2D7" fillOpacity="0.64" />
+        <path
+          d="M12.1392 8.57249C12.6029 8.10714 13.3542 8.10555 13.8211 8.56773L19.3974 14.0924C19.6325 14.3251 19.75 14.6316 19.75 14.9381C19.75 15.2415 19.6349 15.5448 19.4046 15.7767C18.9416 16.2445 18.188 16.2468 17.7202 15.7839L12.9873 11.0953L8.28453 15.8132C7.82077 16.2785 7.06627 16.2801 6.60021 15.8156C6.13406 15.3518 6.13327 14.5958 6.59782 14.1312L12.1392 8.57249Z"
+          fill="black"
+          fillOpacity="0.56"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_621_2020">
+          <rect y="26.1924" width="26" height="26" rx="13" transform="rotate(-90 0 26.1924)" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+}
+
+export function DownArrow() {
+  return (<svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clipPath="url(#clip0_621_2024)">
+<rect x="26" y="0.196289" width="26" height="26" rx="13" transform="rotate(90 26 0.196289)" fill="#D2D2D7" fillOpacity="0.64"/>
+<path d="M13.8608 17.8162C13.3971 18.2815 12.6458 18.2831 12.1789 17.8209L6.60259 12.2963C6.36753 12.0636 6.25 11.7571 6.25 11.4505C6.25 11.1472 6.36515 10.8438 6.59544 10.6119C7.05841 10.1442 7.81203 10.1418 8.27976 10.6048L13.0127 15.2933L17.7155 10.5755C18.1792 10.1101 18.9337 10.1086 19.3998 10.5731C19.8659 11.0369 19.8667 11.7929 19.4022 12.2574L13.8608 17.8162Z" fill="black" fillOpacity="0.56"/>
+</g>
+<defs>
+<clipPath id="clip0_621_2024">
+<rect x="26" y="0.196289" width="26" height="26" rx="13" transform="rotate(90 26 0.196289)" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+  )}
+
+  export function Download(){
+    return (
+    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_621_1824" style={{ maskType: "luminance" }} maskUnits="userSpaceOnUse" x="0" y="0" width="17" height="17">
+<path d="M0.222656 0.171997H16.8881V16.8374H0.222656V0.171997Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_621_1824)">
+<path d="M14.5062 5.09082H11.5442C10.8251 5.09082 10.2422 4.50789 10.2422 3.78884V0.82682" stroke="#1D1D1F" strokeWidth="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.5072 5.09072V14.8845C14.5072 15.6036 13.9243 16.1865 13.2052 16.1865H3.89964C3.18059 16.1865 2.59766 15.6036 2.59766 14.8845V2.12509C2.59766 1.406 3.18059 0.823103 3.89964 0.823103H10.2613L14.5072 5.09072Z" stroke="#1D1D1F" strokeWidth="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.52148 12.5713V7.85374" stroke="#1D1D1F" strokeWidth="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.7207 11.1629L8.52167 12.9639L10.3226 11.1629" stroke="#1D1D1F" strokeWidth="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
+
+    )
+  }
+
