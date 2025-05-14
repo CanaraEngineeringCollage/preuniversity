@@ -2,6 +2,7 @@ import Innovations from "@/components/HomePageComponents/CampusFacilities/Campus
 import ExploreStream from "@/components/HomePageComponents/ExploreStream/ExploreStream";
 import FormComponent from "@/components/HomePageComponents/FormComponent/FormComponent";
 import HeroBanner from "@/components/HomePageComponents/HeroSection/HeroSection";
+import HeroSectionMobile from "@/components/HomePageComponents/HeroSectionMobile/HeroSectionMobile";
 import SeeYourSelf from "@/components/HomePageComponents/SeeYourSelf/SeeYourSelf";
 import Image from "next/image";
 import { title } from "process";
@@ -15,6 +16,9 @@ export default function Home() {
   <>
   <section>
     <HeroBanner/>
+  </section>
+  <section className="md:hidden">
+    <HeroSectionMobile/>
   </section>
   <section className="px-6 md:px-12 lg:px-16 xl:px-0 py-32">
     <SeeYourSelf/>

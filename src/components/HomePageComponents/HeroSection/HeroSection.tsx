@@ -7,8 +7,8 @@ import { motion, useInView } from "framer-motion";
 import { toast } from "react-hot-toast";
 import { useState } from "react";
 
-
 import { useRouter } from "next/navigation";
+import { ClipLoader } from "react-spinners";
 
 interface FormData {
   fullName: string;
@@ -43,7 +43,7 @@ const HeroBanner = () => {
     } else {
       toast.error("Error submitting form.");
     }
-  }
+  };
   const formRef = useRef(null);
   const isFormInView = useInView(formRef, { once: true });
 
@@ -51,18 +51,12 @@ const HeroBanner = () => {
     <div className="relative md:h-[120vh] h-[70vh]">
       {/* Background Image Carousel */}
       <div className="absolute inset-0 z-0">
-  <div className="relative w-full h-full">
-    <Image
-      src="/images/homePageImages/bgImage.png"
-      alt="Students 1"
-      fill
-      className="object-cover hidden md:block"
-    />
-  
-    {/* Gradient overlay */}
-    
-  </div>
-</div>
+        <div className="relative w-full h-full">
+          <Image src="/images/homePageImages/bgImage.png" alt="Students 1" fill className="object-cover " />
+
+          {/* Gradient overlay */}
+        </div>
+      </div>
 
       {/* Form Container - Positioned on the Right */}
       <div className="relative  container mx-auto h-full max-w-[1350px]  z-20 hidden md:flex items-center justify-end md:min-h-[90vh]">
@@ -92,9 +86,7 @@ const HeroBanner = () => {
               {...register("fullName", { required: "Full Name is required" })}
               className="w-full border-b border-gray-300 focus:outline-none text-md py-2"
             />
-            {errors.fullName && (
-              <p className="text-red-500 text-sm">{errors.fullName.message}</p>
-            )}
+            {errors.fullName && <p className="text-red-500 text-sm">{errors.fullName.message}</p>}
 
             <motion.input
               type="email"
@@ -102,9 +94,7 @@ const HeroBanner = () => {
               {...register("email", { required: "Email is required" })}
               className="w-full border-b border-gray-300 focus:outline-none text-md py-2"
             />
-            {errors.email && (
-              <p className="text-red-500 text-sm">{errors.email.message}</p>
-            )}
+            {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
 
             <motion.input
               type="tel"
@@ -114,9 +104,7 @@ const HeroBanner = () => {
               })}
               className="w-full border-b border-gray-300 focus:outline-none text-md py-2"
             />
-            {errors.phoneNumber && (
-              <p className="text-red-500 text-sm">{errors.phoneNumber.message}</p>
-            )}
+            {errors.phoneNumber && <p className="text-red-500 text-sm">{errors.phoneNumber.message}</p>}
 
             <motion.textarea
               placeholder="Your Enquiry"
@@ -130,9 +118,7 @@ const HeroBanner = () => {
             />
             <div className="flex justify-between text-red-500 text-sm px-1">
               <span>{errors.comments?.message}</span>
-              <span className="text-gray-500">
-                {watch("comments")?.length || 0}/250
-              </span>
+              <span className="text-gray-500">{watch("comments")?.length || 0}/250</span>
             </div>
 
             <div className="flex justify-center">
@@ -142,11 +128,7 @@ const HeroBanner = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-[#3C71D7] text-white px-8 py-2 rounded-full font-semibold text-md"
               >
-                {loading ? (
-                  <ClipLoader size={24} color="#fff" className="mt-2" />
-                ) : (
-                  "Submit"
-                )}
+                {loading ? <ClipLoader size={24} color="#fff" className="mt-2" /> : "Submit"}
               </motion.button>
             </div>
           </form>

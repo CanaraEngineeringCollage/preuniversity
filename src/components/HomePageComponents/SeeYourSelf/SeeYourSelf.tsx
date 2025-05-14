@@ -6,7 +6,7 @@ const SeeYourSelf = () => {
 <section className="max-w-7xl xl:max-w-[75%] mx-auto">
   <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
     <div className="">
-      <h1 className="font-bold text-[45px] mb-5">See Yourself at Canara</h1>
+      <h1 className="font-bold leading-[1.1]  text-[45px] mb-5">See Yourself at Canara</h1>
       <p className="text-[#86868B] text-xl mb-5">
         Canara Pre-University College, established in 1972, offers two-year Pre-University education in Commerce (BSBA, BEBA, CSBA, SEBA & HEBA) &
         Science (PCMB, PCMC, PCME, PCMS) streams. With a focus on academic excellence, character building & overall personality development, the
@@ -22,7 +22,7 @@ const SeeYourSelf = () => {
         alt=""
         width={1000}
         height={1000}
-        className="w-[70%] h-[70vh] rounded-2xl"
+        className="lg:w-[70%] w-[100%] h-[50vh] lg:h-[70vh] rounded-2xl"
       />
     </div>
   </div>
