@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "../SideBar/SideBar";
+import Footer from "../Footer/Footer";
 
 function Layout({ children }: { children: React.ReactNode }) {
   const [sidebar, openSidebar] = useState<boolean>(false);
@@ -25,7 +26,7 @@ function Layout({ children }: { children: React.ReactNode }) {
             {children}
           </div>
         </main>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   );

@@ -22,7 +22,9 @@ function FormComponent() {
     setIsLoading(false);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const value = e.target.value;
     setFormData({
       ...formData,
@@ -35,13 +37,31 @@ function FormComponent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FEFEFE] flex items-center justify-center p-4">
-      <div className="w-full max-w-6xl bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+    <div className="relative min-h-screen flex items-center justify-center p-4 overflow-hidden">
+      {/* Background half white and half blue */}
+      <div className="absolute inset-0 z-0">
+        <div className="h-1/2 bg-[#FEFEFE]"></div>
+        <div className="h-1/2 bg-[#001A48]"></div>
+      </div>
+
+      {/* Main content */}
+      <div className="relative z-10 w-full max-w-6xl bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row">
         <div className="md:w-1/2 h-[400px] md:h-[800px] relative">
-          <Image src="/images/homePageImages/map.jpg" alt="Map" fill className="m-[15px] rounded-[15px] object-cover" />
+          <Image
+            src="/images/homePageImages/map.jpg"
+            alt="Map"
+            fill
+            className="lg:m-[15px] rounded-[15px] object-cover"
+          />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <div className="flex justify-center">
-              <svg width="35" height="43" viewBox="0 0 35 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                width="35"
+                height="43"
+                viewBox="0 0 35 43"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
@@ -54,7 +74,9 @@ function FormComponent() {
         </div>
 
         <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-center md:ml-8">
-          <h2 className="text-2xl md:text-[44px] font-bold text-[#1e1b4b] mb-6 md:mb-8">Dream Big. Plan Smart. Enquire Now.</h2>
+          <h2 className="text-2xl md:text-[44px] font-bold text-[#1e1b4b] mb-6 md:mb-8">
+            Dream Big. Plan Smart. Enquire Now.
+          </h2>
 
           <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
             <div>
@@ -99,12 +121,14 @@ function FormComponent() {
                 placeholder="Your Enquiry"
                 value={formData.enquiry}
                 onChange={handleChange}
-                className="w-full px-4 py-2 md:py-3  border-b border-gray-300 focus:border-purple-500 focus:outline-none resize-none text-sm md:text-base"
+                className="w-full px-4 py-2 md:py-3 border-b border-gray-300 focus:border-purple-500 focus:outline-none resize-none text-sm md:text-base"
                 maxLength={250}
                 required
                 rows={3}
               />
-              <span className="absolute bottom-2 right-2 text-xs md:text-sm text-gray-400">{charCount}/250</span>
+              <span className="absolute bottom-2 right-2 text-xs md:text-sm text-gray-400">
+                {charCount}/250
+              </span>
             </div>
 
             <div className="flex justify-center">

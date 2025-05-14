@@ -87,7 +87,7 @@ const ExploreStream = () => {
     <section className="lg:ml-20    xl:ml-60">
       <div className="flex flex-col items-center pb-10">
        <h1 className="text-3xl md:text-[40px] text-center lg2:text-5xl  font-bold text-black pb-6 xl:pb-22">Explore Our Stream Combinations</h1>
-       <p className="text-[23px] text-[#1D1D1F] mb-5">Find the program that fuels your passion and shapes your future</p>
+       <p className="text-[23px] text-[#1D1D1F] text-center mb-5">Find the program that fuels your passion and shapes your future</p>
       <div className="inline-flex items-center p-1 bg-white  rounded-full">
   <button
     onClick={() => setSelectedButton("Science")}

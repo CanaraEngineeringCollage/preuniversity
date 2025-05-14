@@ -110,7 +110,7 @@ function Innovations() {
             description="Our state-of-the-art Academic Block is designed to elevate the learning experience. Spread across three floors, it houses spacious, well-lit classrooms, modern laboratories, and dedicated staff rooms. With lift access to all floors, the block ensures convenience and accessibility for all. A perfect blend of functionality and comfort for both students and faculty."
             imageUrl="/images/homePageImages/1.png"
             className="lg:col-span-3 md:col-span-5 row-span-2 mt-56"
-            gradientColor="#1A97A2"
+            gradientColor="#3c72d0"
             delay={0.1}
             index={0} // From left
           />
@@ -136,7 +136,7 @@ function Innovations() {
             bottomDescription="A space built to inspire, connect, and celebrate — all under one roof."
             imageUrl="/images/homePageImages/2.png"
             className="lg:col-span-3 md:col-span-5 row-span-1 top-32"
-            gradientColor="#1A97A2"
+            gradientColor="#3c72d0"
             delay={0.2}
             index={1} // From right
           />
@@ -153,7 +153,7 @@ function Innovations() {
             description="Our state-of-the-art Research Labs are at the heart of academic discovery and innovation on campus. Designed to foster curiosity and creativity, these labs provide the perfect environment for students and faculty to explore, experiment, and excel."
             imageUrl="/images/homePageImages/3.png"
             className="lg:col-span-3 md:col-span-5 row-span-2"
-            gradientColor="#1A97A2"
+            gradientColor="#3c72d0"
             delay={0.3}
             index={2} // From left
           />
@@ -163,7 +163,7 @@ function Innovations() {
             description="Our classrooms are spacious, well-lit, and ergonomically designed to provide an ideal learning environment. Equipped with modern teaching aids such as projectors, smart boards, and high-speed internet, they ensure seamless integration of technology into everyday learning."
             imageUrl="/images/homePageImages/4.png"
             className="lg:col-span-3 md:col-span-5 row-span-1 top-20"
-            gradientColor="#1A97A2"
+            gradientColor="#3c72d0"
             delay={0.4}
             index={3} // From right
           />
@@ -179,7 +179,7 @@ function Innovations() {
               "Connectivity to 200+ international proceedings and a vast repository of 5 lakh+ educational materials through the National Digital Library.",
               "Subscriptions to 42 print journals, 16+ magazines, and 4 newspapers, enriching academic resources for students.",
             ]}
-            gradientColor="#1A97A2"
+            gradientColor="#3c72d0"
             centering="object-[5%_center]"
             delay={0.5}
             index={4} // From left
@@ -189,7 +189,7 @@ function Innovations() {
             description="We are committed to equipping our students with the knowledge and guidance needed to make informed decisions about their future. Through university fairs, career counseling sessions, and interactions with esteemed academicians, we provide students with valuable insights into higher education opportunities. College visits, workshops, Job shadowing program and mentorship programs help them explore diverse career paths, empowering them to make confident choices for their academic and professional journeys."
             imageUrl="/images/homePageImages/6.png"
             className="lg:col-span-4 md:col-span-5 object-cover lg:max-w-[310px] row-span-2 xl:max-w-[310px] top-[-13rem]"
-            gradientColor="#1A97A2"
+            gradientColor="#3c72d0"
             delay={0.6}
             index={5} // From right
           />
@@ -200,7 +200,7 @@ function Innovations() {
             description="Our state-of-the-art Academic Block is designed to elevate the learning experience. Spread across three floors, it houses spacious, well-lit classrooms, modern laboratories, and dedicated staff rooms. With lift access to all floors, the block ensures convenience and accessibility for all. A perfect blend of functionality and comfort for both students and faculty."
             className="col-span-1"
             imageUrl="/images/homePageImages/1.png"
-            gradientColor="#1A97A2"
+            gradientColor="#3c72d0"
           />
           <FacilityCard
             title="Dr. P. Dayananda Pai & P. Sathish Pai Auditorium"
@@ -224,7 +224,7 @@ function Innovations() {
             bottomDescription="A space built to inspire, connect, and celebrate — all under one roof."
             imageUrl="/images/homePageImages/2.png"
             className="col-span-1"
-            gradientColor="#1A97A2"
+            gradientColor="#3c72d0"
             delay={0.2}
             index={1}
           />
@@ -241,7 +241,7 @@ function Innovations() {
             description="Our state-of-the-art Research Labs are at the heart of academic discovery and innovation on campus. Designed to foster curiosity and creativity, these labs provide the perfect environment for students and faculty to explore, experiment, and excel."
             imageUrl="/images/homePageImages/3.png"
             className="col-span-1"
-            gradientColor="#1A97A2"
+            gradientColor="#3c72d0"
             delay={0.3}
             index={2}
           />
@@ -251,7 +251,7 @@ function Innovations() {
             description="Our classrooms are spacious, well-lit, and ergonomically designed to provide an ideal learning environment. Equipped with modern teaching aids such as projectors, smart boards, and high-speed internet, they ensure seamless integration of technology into everyday learning."
             imageUrl="/images/homePageImages/4.png"
             className="col-span-1"
-            gradientColor="#1A97A2"
+            gradientColor="#3c72d0"
             delay={0.4}
             index={3}
           />
@@ -268,7 +268,7 @@ function Innovations() {
             ]}
             className="col-span-1"
             centering="object-[5%_center]"
-            gradientColor="#1A97A2"
+            gradientColor="#3c72d0"
             delay={0.5}
             index={4}
           />
@@ -280,7 +280,7 @@ Our hygienic and spacious canteens offer a wide variety of vegetarian and non-ve
             imageUrl="/images/homePageImages/6.png"
             centering="object-[25%_center]"
             className="col-span-1"
-            gradientColor="#1A97A2"
+            gradientColor="#3c72d0"
             delay={0.6}
             index={5}
           />
