@@ -29,16 +29,8 @@ const HeroBanner = () => {
   const router = useRouter();
   const onSubmit = async (data: FormData) => {
     setLoading(true);
-    const response = await fetch("https://applycanara.vercel.app/api/submit-form", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    const result = await response.json();
-    if (result.result === "success") {
+    
+    if (true) {
       router.push("/thank-you");
     } else {
       toast.error("Error submitting form.");
@@ -48,7 +40,7 @@ const HeroBanner = () => {
   const isFormInView = useInView(formRef, { once: true });
 
   return (
-    <div className="relative md:h-[120vh] h-[70vh]">
+    <div className="relative md:h-[100vh] h-[70vh]">
       {/* Background Image Carousel */}
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full">
@@ -70,7 +62,7 @@ const HeroBanner = () => {
           transition={{ duration: 0.5 }}
           className="bg-white rounded-lg shadow-lg px-4 md:px-6 lg:px-8 py-6 md:py-8 xl:py-16 w-full max-w-[95vw] sm:max-w-[80vw] md:max-w-[40vw] lg:max-w-[35vw] xl:max-w-[30vw]"
         >
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 md:space-y-6">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 md:space-y-6 text-black">
             <motion.h2
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
