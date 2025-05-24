@@ -13,7 +13,7 @@ export default function Updates() {
   const pathname = usePathname();
 
   return (
-    <Menu open={true} handler={setIsMenuOpen} offset={{ mainAxis: 20 }} placement="bottom" allowHover={true}>
+    <Menu open={isMenuOpen} handler={setIsMenuOpen} offset={{ mainAxis: 20 }} placement="bottom" allowHover={true}>
       <MenuHandler>
         <Typography as="div" className="text-sm xl:text-base">
           <ListItem
