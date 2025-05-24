@@ -51,7 +51,7 @@ export default function About() {
               <div className="flex flex-col gap-2">
                 <ul className="list-none text-[#1D1D1F] text-[16px] leading-10">
                   <Link href="/legacy">
-                    <li>Our Founder</li>
+                    <li>Institute Legacy</li>
                   </Link>
                   
                 </ul>
@@ -63,8 +63,8 @@ export default function About() {
               <div className="flex items-start">{/* <Certicficate /> */}</div>
               <div className="flex flex-col gap-2">
                 <ul className="list-none text-[#1D1D1F] text-[16px] leading-10">
-                  <Link href="/about/mandatory-disclosure">
-                    <li>Mandatory Disclosure</li>
+                  <Link href="/administration">
+                    <li>Administration</li>
                   </Link>
                 </ul>
               </div>
@@ -75,8 +75,8 @@ export default function About() {
               <div className="flex items-start">{/* <HandShake /> */}</div>
               <div className="flex flex-col gap-2">
                 <ul className="list-none text-[#1D1D1F] text-[16px] leading-10">
-                  <Link href="/about/grievance-redressal-cell">
-                    <li>Grievance Redressal Cell</li>
+                  <Link href="/admission">
+                    <li>Admissions</li>
                   </Link>
                  
                 </ul>
@@ -86,8 +86,8 @@ export default function About() {
               <div className="flex items-start">{/* <HandShake /> */}</div>
               <div className="flex flex-col gap-2">
                 <ul className="list-none text-[#1D1D1F] text-[16px] leading-10">
-                  <Link href="/about/grievance-redressal-cell">
-                    <li>Grievance Redressal Cell</li>
+                  <Link href="/infrastructure">
+                    <li>Infrastructure</li>
                   </Link>
                  
                 </ul>
