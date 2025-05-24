@@ -9,12 +9,10 @@ const page = () => {
   return (
     <>
       <Banner />
-      <div className="mx-72">
-        <Opportunity />
-        <VisonAndMission />
-        <DeanMessage />
-        <PrincipalMessage />
-      </div>
+      <Opportunity />
+      <VisonAndMission />
+      <DeanMessage />
+      <PrincipalMessage />
     </>
   );
 };

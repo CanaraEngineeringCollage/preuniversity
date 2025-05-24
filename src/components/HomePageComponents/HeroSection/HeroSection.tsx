@@ -67,7 +67,7 @@ const HeroBanner = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-2xl md:text-4xl leading-[1.3] font-bold text-center text-[#001A48]"
+              className="text-2xl md:text-4xl leading-[1.3] font-bold text-center text-[#001A48] font-helvetica"
             >
               Dream Big. Plan Smart. Enquire Now.
             </motion.h2>

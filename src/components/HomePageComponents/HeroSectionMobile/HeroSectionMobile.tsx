@@ -34,20 +34,7 @@ const HeroSectionMobile = () => {
   const router = useRouter();
   const onSubmit = async (data: FormData) => {
     setLoading(true);
-    const response = await fetch("https://applycanara.vercel.app/api/submit-form", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    const result = await response.json();
-    if (result.result === "success") {
-      router.push("/thank-you");
-    } else {
-      toast.error("Error submitting form.");
-    }
+    
   }
 
   return (
@@ -57,7 +44,7 @@ const HeroSectionMobile = () => {
           Dream Big. Plan Smart. Enquire Now.
         </h2>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 gap-6 text-black">
           <div>
             <input
               type="text"

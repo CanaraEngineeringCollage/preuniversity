@@ -126,33 +126,98 @@ export function UpArrow() {
 }
 
 export function DownArrow() {
-  return (<svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clipPath="url(#clip0_621_2024)">
-<rect x="26" y="0.196289" width="26" height="26" rx="13" transform="rotate(90 26 0.196289)" fill="#D2D2D7" fillOpacity="0.64"/>
-<path d="M13.8608 17.8162C13.3971 18.2815 12.6458 18.2831 12.1789 17.8209L6.60259 12.2963C6.36753 12.0636 6.25 11.7571 6.25 11.4505C6.25 11.1472 6.36515 10.8438 6.59544 10.6119C7.05841 10.1442 7.81203 10.1418 8.27976 10.6048L13.0127 15.2933L17.7155 10.5755C18.1792 10.1101 18.9337 10.1086 19.3998 10.5731C19.8659 11.0369 19.8667 11.7929 19.4022 12.2574L13.8608 17.8162Z" fill="black" fillOpacity="0.56"/>
-</g>
-<defs>
-<clipPath id="clip0_621_2024">
-<rect x="26" y="0.196289" width="26" height="26" rx="13" transform="rotate(90 26 0.196289)" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-  )}
+  return (
+    <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clipPath="url(#clip0_621_2024)">
+        <rect x="26" y="0.196289" width="26" height="26" rx="13" transform="rotate(90 26 0.196289)" fill="#D2D2D7" fillOpacity="0.64" />
+        <path
+          d="M13.8608 17.8162C13.3971 18.2815 12.6458 18.2831 12.1789 17.8209L6.60259 12.2963C6.36753 12.0636 6.25 11.7571 6.25 11.4505C6.25 11.1472 6.36515 10.8438 6.59544 10.6119C7.05841 10.1442 7.81203 10.1418 8.27976 10.6048L13.0127 15.2933L17.7155 10.5755C18.1792 10.1101 18.9337 10.1086 19.3998 10.5731C19.8659 11.0369 19.8667 11.7929 19.4022 12.2574L13.8608 17.8162Z"
+          fill="black"
+          fillOpacity="0.56"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_621_2024">
+          <rect x="26" y="0.196289" width="26" height="26" rx="13" transform="rotate(90 26 0.196289)" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+}
 
-  export function Download(){
-    return (
+export function Download() {
+  return (
     <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_621_1824" style={{ maskType: "luminance" }} maskUnits="userSpaceOnUse" x="0" y="0" width="17" height="17">
-<path d="M0.222656 0.171997H16.8881V16.8374H0.222656V0.171997Z" fill="white"/>
-</mask>
-<g mask="url(#mask0_621_1824)">
-<path d="M14.5062 5.09082H11.5442C10.8251 5.09082 10.2422 4.50789 10.2422 3.78884V0.82682" stroke="#1D1D1F" strokeWidth="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14.5072 5.09072V14.8845C14.5072 15.6036 13.9243 16.1865 13.2052 16.1865H3.89964C3.18059 16.1865 2.59766 15.6036 2.59766 14.8845V2.12509C2.59766 1.406 3.18059 0.823103 3.89964 0.823103H10.2613L14.5072 5.09072Z" stroke="#1D1D1F" strokeWidth="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M8.52148 12.5713V7.85374" stroke="#1D1D1F" strokeWidth="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6.7207 11.1629L8.52167 12.9639L10.3226 11.1629" stroke="#1D1D1F" strokeWidth="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-</svg>
+      <mask id="mask0_621_1824" style={{ maskType: "luminance" }} maskUnits="userSpaceOnUse" x="0" y="0" width="17" height="17">
+        <path d="M0.222656 0.171997H16.8881V16.8374H0.222656V0.171997Z" fill="white" />
+      </mask>
+      <g mask="url(#mask0_621_1824)">
+        <path
+          d="M14.5062 5.09082H11.5442C10.8251 5.09082 10.2422 4.50789 10.2422 3.78884V0.82682"
+          stroke="#1D1D1F"
+          strokeWidth="1.5"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M14.5072 5.09072V14.8845C14.5072 15.6036 13.9243 16.1865 13.2052 16.1865H3.89964C3.18059 16.1865 2.59766 15.6036 2.59766 14.8845V2.12509C2.59766 1.406 3.18059 0.823103 3.89964 0.823103H10.2613L14.5072 5.09072Z"
+          stroke="#1D1D1F"
+          strokeWidth="1.5"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path d="M8.52148 12.5713V7.85374" stroke="#1D1D1F" strokeWidth="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path
+          d="M6.7207 11.1629L8.52167 12.9639L10.3226 11.1629"
+          stroke="#1D1D1F"
+          strokeWidth="1.5"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </g>
+    </svg>
+  );
+}
 
-    )
-  }
+export function PreviewIcon() {
+  return (
+    <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.42">
+        <g clip-path="url(#clip0_621_394)">
+          <rect x="0.222656" y="0.421875" width="36" height="36" rx="18" fill="#D2D2D7" fill-opacity="0.64" />
+          <path
+            d="M21.7816 12.4839L15.8406 18.4059L21.7447 24.3659C22.3276 24.9549 22.3247 25.9039 21.7357 26.4869C21.4437 26.7769 21.0617 26.9219 20.6797 26.9219C20.2937 26.9219 19.9077 26.7739 19.6147 26.4779L12.6577 19.4559C12.0757 18.8679 12.0777 17.9219 12.6637 17.3379L19.6637 10.3599C20.2487 9.77488 21.2007 9.77588 21.7847 10.3629C22.3697 10.9499 22.3676 11.8999 21.7816 12.4839Z"
+            fill="black"
+            fill-opacity="0.56"
+          />
+        </g>
+      </g>
+      <defs>
+        <clipPath id="clip0_621_394">
+          <rect x="0.222656" y="0.421875" width="36" height="36" rx="18" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+}
 
+export function NextIcon(){
+  return (
+    <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_621_397)">
+    <rect x="0.222656" y="0.421875" width="36" height="36" rx="18" fill="#D2D2D7" fill-opacity="0.64"/>
+    <path d="M23.7814 17.3379C24.3674 17.9219 24.3694 18.8679 23.7874 19.4559L16.8304 26.4779C16.5374 26.7739 16.1514 26.9219 15.7654 26.9219C15.3834 26.9219 15.0014 26.7769 14.7094 26.4869C14.1204 25.9039 14.1174 24.9549 14.7004 24.3659L20.6045 18.4059L14.6635 12.4839C14.0775 11.8999 14.0755 10.9498 14.6605 10.3629C15.2445 9.77588 16.1965 9.77488 16.7815 10.3599L23.7814 17.3379Z" fill="black" fill-opacity="0.56"/>
+    </g>
+    <defs>
+    <clipPath id="clip0_621_397">
+    <rect x="0.222656" y="0.421875" width="36" height="36" rx="18" fill="white"/>
+    </clipPath>
+    </defs>
+    </svg>
+    
+
+  )
+}

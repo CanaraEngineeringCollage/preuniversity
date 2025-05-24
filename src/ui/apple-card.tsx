@@ -117,7 +117,7 @@ export default function AppleStyledCard({ title, imageSrc, imageAlt, content, gr
                 transition: { duration: 0.3 },
               }}
               ref={containerRef}
-              className="max-w-5xl xl:mx-auto  bg-white shadow-2xl mx-4  dark:bg-neutral-900 h-fit z-[60] my-10   rounded-3xl font-sans relative overflow-hidden"
+              className="max-w-5xl xl:mx-auto  bg-white shadow-2xl mx-4  h-fit z-[60] my-10   rounded-3xl font-sans relative overflow-hidden"
             >
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}

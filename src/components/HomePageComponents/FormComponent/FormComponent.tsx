@@ -40,12 +40,12 @@ function FormComponent() {
     <div className="relative min-h-screen flex items-center justify-center p-4 overflow-hidden">
       {/* Background half white and half blue */}
       <div className="absolute inset-0 z-0">
-        <div className="h-1/2 bg-[#FEFEFE]"></div>
+        <div className="h-1/2 bg-["></div>
         <div className="h-1/2 bg-[#001A48]"></div>
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 w-full max-w-6xl bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+      <div className="relative z-10 w-full max-w-7xl bg-[#F6F7FB]  rounded-2xl  overflow-hidden flex flex-col md:flex-row">
         <div className="md:w-1/2 h-[400px] md:h-[800px] relative">
           <Image
             src="/images/homePageImages/map.jpg"
@@ -78,7 +78,7 @@ function FormComponent() {
             Dream Big. Plan Smart. Enquire Now.
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6 text-black">
             <div>
               <input
                 type="text"

@@ -26,10 +26,10 @@ function Navbar({ openSidebar, sidebar }: { openSidebar: () => void; sidebar: bo
     <>
       {/* First Header */}
       <section className={`bg-white relative transition-all duration-500 ease-in-out `}>
-        <nav className="  py-6 max-w-[90%] mx-auto">
+        <nav className="  py-6 max-w-[95%]  lg:max-w-[90%] mx-auto">
           {/* For large and Medium-sized Screen */}
           <div className="flex items-center justify-between relative  lg:py-2 xl:py-3 container-padding">
-            <div className="flex flex-row items-center w-[80%] md:w-56 2xl:w-60 h-10 relative">
+            <div className="flex flex-row items-center w-[40%] h-9 md:w-[369px] 2xl:w-60 md:h-[68px] relative">
               <Link href={"/"}>
                 <Image
                   src={"/svgs/logo.svg"}
@@ -42,7 +42,7 @@ function Navbar({ openSidebar, sidebar }: { openSidebar: () => void; sidebar: bo
                 />
               </Link>
             </div>
-            <button className="text-white bg-[#3C71D7] hidden lg:block rounded-full px-4 py-3 ">Enquire Now</button>
+            <button className="text-white bg-[#3C71D7] hidden lg:block rounded-[90px] px-5 py-3 font-bold">Enquire Now</button>
           </div>
           <div className="block lg:hidden absolute top-1/2 -translate-y-1/2 right-4 z-[1000]">
             {/* Dropdown */}

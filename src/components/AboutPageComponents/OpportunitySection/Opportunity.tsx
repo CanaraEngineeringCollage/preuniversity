@@ -2,9 +2,9 @@ import React from "react";
 
 const Opportunity = () => {
   return (
-    <div className="container text-black mx-auto ">
-      <h1 className="text-[45px] font-bold py-11 text-center">Where Excellence Meets Opportunity</h1>
-      <div className="flex flex-col gap-8 text-[#86868B]">
+    <div className="container text-black max-w-[90%] xl:max-w-[75%] mx-auto">
+      <h1 className="leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl font-bold py-11 text-center">Where Excellence Meets Opportunity</h1>
+      <div className="flex flex-col gap-8 text-[#86868B] lg2:text-xl font-medium">
       <p>
         Established in 1972, Canara Pre-University College offers inclusive education to both boys & girls, regardless of caste, creed, or religion.
         The college provides a Two-Year Pre-University program with a wide range of Commerce (BSBA, BEBA, CSBA, SEBA & HEBA) & Science (PCMB, PCMC,

@@ -79,7 +79,7 @@ export default function CardContent({
             alt={imageAlt}
             height={500}
             width={900}
-            className="md:w-[100vw] md:h-[60vh] h-full w-full mx-auto object-cover  mb-12"
+            className="md:w-[100vw] md:h-[60vh] h-full w-full mx-auto object-cover mb-6 md:mb-12"
           />
         </motion.div>
       )}
@@ -91,7 +91,7 @@ export default function CardContent({
           transition: { delay: 0.1, duration: 0.3 },
         }}
       >
-        <motion.p className="text-2xl md:text-4xl px-8  font-semibold text-neutral-700 mt-4 dark:text-white">{title}</motion.p>
+        <motion.p className="text-2xl md:text-4xl px-8  font-semibold text-neutral-700 mt-1 ">{title}</motion.p>
       </motion.div>
       {/* Main Title + Description */}
       <motion.p className={cn(textColor, "text-base pt-2 md:text-xl font-sans max-w-3xl px-8")}>{description}</motion.p>

@@ -43,8 +43,8 @@ export default function Courses() {
         <Typography as="div" className="text-sm xl:text-base" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
           <ListItem
             className={`flex items-center gap-2 ${
-              isMenuOpen ? "opacity-100" : "opacity-80"
-            } py-2 pr-4  transition-colors ease-in-out duration-300  bg-transparent font-semibold hover:bg-transparent shadow-none rounded-none outline-none focus:ring-0 ${pathname.includes("courses") ? "border-primary border-b-2 text-primary" : "text-[#2884CA]"}`}
+              isMenuOpen ? "opacity-100" : "opacity-100"
+            } py-2 pr-4  transition-colors ease-in-out duration-300  bg-transparent font-semibold hover:bg-transparent shadow-none rounded-none outline-none focus:ring-0}`}
             selected={isMenuOpen || isMobileMenuOpen}
             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
           >
@@ -54,9 +54,9 @@ export default function Courses() {
         </Typography>
       </MenuHandler>
 
-      <MenuList className="w-full bg-transparent overflow-hidden text-black p-0  z-100 border-none !border-0 shadow-none flex justify-center pb-4 outline-none focus:ring-0">
+      <MenuList className="w-full bg-transparent !top-[218px] overflow-hidden text-black p-0  z-100 border-none !border-0 shadow-none flex justify-center pb-4 outline-none focus:ring-0">
         {isMenuOpen && (
-          <div className="cursor-pointer w-full bg-white z-100 shadow-md rounded-xl flex justify-center gap-8 p-8 border-none outline-none">
+          <div className="cursor-pointer w-full bg-white z-100 shadow-md flex justify-center gap-8 p-8 border-none outline-none">
             <div className="flex flex-col gap-12">
               <div className="flex flex-col">
                 <div className="flex ml-[194px] gap-2 mb-5">

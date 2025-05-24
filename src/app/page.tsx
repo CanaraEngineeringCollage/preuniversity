@@ -14,7 +14,7 @@ export default function Home() {
   <section className="md:hidden">
     <HeroSectionMobile/>
   </section>
-  <section className="py-32">
+  <section>
     <SeeYourSelf/>
   </section>
   <section>

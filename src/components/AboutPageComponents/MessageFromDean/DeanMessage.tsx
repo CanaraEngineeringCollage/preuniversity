@@ -3,10 +3,10 @@ import image from "../../../../public/Images/aboutPageImages/dean.webp";
 import Image from "next/image";
 const DeanMessage = () => {
   return (
-    <div className="container grid md:grid-cols-2 grid-cols-1 mx-auto gap-8 mt-44">
+    <div className=" max-w-[90%] xl:max-w-[75%]  grid md:grid-cols-2 grid-cols-1 mx-auto gap-8 mt-44">
       <div>
-        <h2 className="text-black text-4xl font-bold">Message from the Dean</h2>
-        <div className="text-[#86868B] pt-8 flex flex-col">
+        <h2 className="text-black leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl font-bold">Message from the Dean</h2>
+        <div className="text-[#86868B] pt-8 flex flex-col lg2:text-xl ">
           <p>Vision, when turned inward, becomes Duty. When it looks outward, it becomes Aspiration. When it looks upward, it becomes Faith.</p>
           <p>These words by Stephens S. reflect the ethos of Canara Institution—committed to nurturing talent & skill over the years.</p>
           <p className="pt-12">
