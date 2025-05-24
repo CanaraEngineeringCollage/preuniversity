@@ -361,7 +361,7 @@ function MainMenu({
       <div className="border-b-border border-b-2 py-4">
         <div
           onClick={() => {
-            router.push("/");
+            router.push("/buzz");
             openSidebar(false);
           }}
           className="flex gap-4 "
@@ -389,8 +389,11 @@ function MainMenu({
         <div className={`space-y-2 transition-all ease-in-out duration-300 ${open.updates ? "h-full opacity-100 mt-2" : "h-0 opacity-0"}`}>
           {open.updates && (
             <>
-              <div>
-                <div className="flex items-center gap-2">
+              <div >
+                <div className="flex items-center gap-2"  onClick={() => {
+            router.push("/exam-results");
+            openSidebar(false);
+          }}>
                   {/* <College /> */}
                   <Typography className="text-sm text-gray-500">Exam Results</Typography>
                   <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
@@ -404,7 +407,11 @@ function MainMenu({
                 </div>
               </div>
               <div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2" onClick={() =>{
+            router.push("/fee-portal");
+            openSidebar(false);
+            }
+            }>
                   {/* <Innovation /> */}
                   <Typography className="text-sm text-gray-500">Fee Portal</Typography>
                   <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />

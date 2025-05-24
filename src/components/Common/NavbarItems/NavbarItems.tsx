@@ -1,3 +1,4 @@
+import Link from "next/link";
 import About from "../Options/About/About";
 import Courses from "../Options/Courses/Courses";
 import Events from "../Options/Events/Events";
@@ -20,9 +21,11 @@ function NavbarItems() {
         <div className="cursor-pointer  pt-[8px] text-sm xl:text-base font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
           <Events />
         </div>
-        <div className="cursor-pointer  pt-[8px] text-sm xl:text-base font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
-          Buzz
-        </div>
+        <Link href="/buzz">
+          <div className="cursor-pointer  pt-[8px] text-sm xl:text-base font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
+            Buzz
+          </div>
+        </Link>
         <div className="cursor-pointer  pt-[8px] text-sm xl:text-base font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
           <Updates />
         </div>
