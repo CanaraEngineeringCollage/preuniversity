@@ -30,7 +30,7 @@ export default function Updates() {
         </Typography>
       </MenuHandler>
 
-      <MenuList className="w-full bg-transparent text-black p-0  z-100 border-none !border-0 shadow-none flex justify-center pb-4 outline-none focus:ring-0">
+      <MenuList className="w-full bg-transparent !top-[210px] text-black p-0  z-100 border-none !border-0 shadow-none flex justify-center pb-4 outline-none focus:ring-0">
         <div className="w-full cursor-pointer max-w-screen-2xl bg-white z-100 shadow-md  flex justify-center gap-8 p-8 border-none outline-none">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mx-16 w-[50%]">
             {/* Column 1 */}
@@ -62,7 +62,7 @@ export default function Updates() {
               <div className="flex items-start">{/* <Certicficate /> */}</div>
               <div className="flex flex-col gap-2">
                 <ul className="list-none text-[#1D1D1F] text-[16px] leading-10">
-                  <Link href="/about/mandatory-disclosure">
+                  <Link href="/fee-portal">
                     <li>Fee Portal</li>
                   </Link>
                 </ul>
