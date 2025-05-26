@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import image from "../../../../public/Images/aboutPageImages/principal.webp";
+import image from "../../../../public/images/aboutPageImages/principal.webp";
 const PrincipalMessage = () => {
   return (
     <div className="max-w-[90%] xl:max-w-[75%] grid md:grid-cols-2 grid-cols-1 mx-auto gap-8 my-44">

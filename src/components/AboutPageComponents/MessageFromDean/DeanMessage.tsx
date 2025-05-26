@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../../../public/Images/aboutPageImages/dean.webp";
+import image from "../../../../public/images/aboutPageImages/dean.webp";
 import Image from "next/image";
 const DeanMessage = () => {
   return (
