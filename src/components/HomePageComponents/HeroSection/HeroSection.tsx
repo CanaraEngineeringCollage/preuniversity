@@ -33,7 +33,7 @@ const HeroBanner = () => {
     if (true) {
       router.push("/thank-you");
     } else {
-      toast.error("Error submitting form.");
+   
     }
   };
   const formRef = useRef(null);
