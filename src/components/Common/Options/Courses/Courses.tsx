@@ -40,7 +40,7 @@ export default function Courses() {
   return (
     <Menu open={isMenuOpen} handler={setIsMenuOpen} offset={{ mainAxis: 20 }} placement="bottom" allowHover={true}>
       <MenuHandler>
-        <Typography as="div" className="text-sm xl:text-base" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
+        <Typography as="div" className="text-sm xl:text-base" >
           <ListItem
             className={`flex items-center gap-2 ${
               isMenuOpen ? "opacity-100" : "opacity-100"
