@@ -8,7 +8,7 @@ export default function Footer() {
       {/* Top Links */}
       <div className="max-w-6xl  text-base mx-auto px-4 py-10 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
         <div className="flex justify-center">
-          <ul className="! cursor-pointer">
+          <ul className="! cursor-pointer w-32">
             <Link href="/about"><li className="pb-3">About the College</li></Link>
             <Link href="/legacy"><li  className="pb-3">Institute Legacy</li></Link>
             <Link href="/administration"><li className="pb-3">Administration</li></Link>
@@ -16,26 +16,26 @@ export default function Footer() {
           </ul>
         </div>
         <div className="flex justify-center">
-          <ul className=" cursor-pointer">
+          <ul className=" cursor-pointer w-32">
             <Link href="/admission"><li className="pb-3">Admissions</li></Link>
             <Link href="/about"><li className="pb-3">Streams</li></Link>
            <Link href="/fee-portal"> <li className="pb-3">Fee Portal</li></Link>
           </ul>
         </div>
         <div className="flex justify-center">
-          <ul className=" cursor-pointer">
+          <ul className=" cursor-pointer w-32">
            <Link href="/exam-results"> <li className="pb-3">Exam Results</li></Link>
            <Link href="/about"> <li className="pb-3">Exam Circulars</li></Link>
            <Link href="/question-bank"> <li className="pb-3">Question Bank</li></Link>
           </ul>
         </div>
         <div className="flex justify-center">
-          <ul className=" cursor-pointer">
-           <Link href="/about"> <li className="pb-3">Buzz</li></Link>
+          <ul className=" cursor-pointer w-32">
+           <Link href="/buzz"> <li className="pb-3">Buzz</li></Link>
           </ul>
         </div>
         <div className="flex justify-center">
-          <ul className=" cursor-pointer">
+          <ul className=" cursor-pointer w-32">
            <Link href="/about"> <li className="pb-3">Footprints</li></Link>
            <Link href="/about"> <li className="pb-3">Mat Kabaddi</li></Link>
           </ul>

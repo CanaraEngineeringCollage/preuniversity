@@ -33,7 +33,7 @@ const AdministrationMembers = () => {
             <div
               key={index}
               className={`relative cursor-pointer w-full max-w-[309px] h-[450px] rounded-xl overflow-hidden bg-[#6DC0EB] text-white flex flex-col items-center py-6 shadow-md ${
-                shouldCenterLast ? "md:col-start-2" : ""
+                shouldCenterLast ? "md:col-start-2 xl:col-start-auto" : ""
               }`}
             >
               <Image
