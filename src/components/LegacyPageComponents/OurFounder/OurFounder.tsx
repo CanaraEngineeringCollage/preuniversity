@@ -1,6 +1,6 @@
 // components/FounderSection.tsx
 import Image from "next/image";
-import img from "../../../../public/Images/legacyPageImages/image.png";
+import img from "../../../../public/images/legacyPageImages/image.png";
 
 export default function FounderSection() {
   return (
