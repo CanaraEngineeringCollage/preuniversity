@@ -8,12 +8,16 @@ import "swiper/css";
 import { motion } from "framer-motion";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import { NextIcon, PreviewIcon } from "../../../../public/icons";
+import streamsNav from '@/utils/streamData/stream'
+import Link from "next/link";
+import { strict } from "assert";
 // import { Pause, Play } from "@/components/Icons/Icons";
 
 interface DataItem {
   title: string;
   icon: string;
   description: string;
+  link:string;
 }
 
 const ExploreStream = () => {
@@ -21,48 +25,63 @@ const ExploreStream = () => {
     {
       title: "Physics, Chemistry, Mathematics & Biology (PCMB)",
       icon: "/svgs/homapageCarousalSvg/1.svg",
-      description:"cscsc",
+      description: "cscsc",
+      link: "streams/pcmb"
     },
     {
       title: "Physics, Chemistry, Mathematics & Electronics (PCME)",
       icon: "/svgs/homapageCarousalSvg/2.svg",
-            description:"bsbsb",
+      description: "bsbsb",
+            link: "streams/pcme"
+
 
     },
     {
       title: "Physics, Chemistry, Mathematics & Computer Science (PCMC)",
       icon: "/svgs/homapageCarousalSvg/3.svg",
-            description:"asas",
+      description: "asas",
+            link: "streams/asas"
+
 
     },
     {
       title: "Physics, Chemistry, Mathematics & Statistics (PCMS)",
       icon: "/svgs/homapageCarousalSvg/4.svg",
-                  description:"asas",
+      description: "asas",
+            link: "streams/pcms"
+
 
     },
     {
       title: "Physics, Chemistry, Mathematics & Biology (PCMB)",
       icon: "/svgs/homapageCarousalSvg/1.svg",
-                  description:"asas",
+      description: "asas",
+            link: "streams/pcmb"
+
 
     },
     {
       title: "Physics, Chemistry, Mathematics & Electronics (PCME)",
       icon: "/svgs/homapageCarousalSvg/2.svg",
-                  description:"asas",
+      description: "asas",
+            link: "streams/pcme"
+
 
     },
     {
       title: "Physics, Chemistry, Mathematics & Computer Science (PCMC)",
       icon: "/svgs/homapageCarousalSvg/3.svg",
-                  description:"asas",
+      description: "asas",
+            link: "streams/pcmc"
+
 
     },
     {
       title: "Physics, Chemistry, Mathematics & Statistics (PCMS)",
       icon: "/svgs/homapageCarousalSvg/4.svg",
-                  description:"asas",
+      description: "asas",
+            link: "streams/pcms"
+
 
     },
   ];
@@ -71,42 +90,55 @@ const ExploreStream = () => {
     {
       title: "Computer Science, Statistics, Business Studies, Accountancy (CSBA) ",
       icon: "/svgs/homapageCarousalSvg/csba.svg",
-                  description:"esas",
+      description: "esas",
+            link: "streams/csba"
+
 
     },
     {
       title: " Basic Maths, Statistics, Business Studies, Accountancy (BSBA) ",
       icon: "/svgs/homapageCarousalSvg/bsba.svg",
-                  description:"asas",
+      description: "asas",
+            link: "streams/bsba"
+
 
     },
 
     {
       title: " Statistics, Economics, Business Studies, Accountancy (SEBA) ",
       icon: "/svgs/homapageCarousalSvg/seba.svg",
-                  description:"asas",
+      description: "asas",
+            link: "streams/seba"
+
 
     },
     {
       title: " History, Economics, Business Studies, Accountancy (HEBA)",
       icon: "/svgs/homapageCarousalSvg/heba.svg",
-                  description:"asas",
+      description: "asas",
+            link: "streams/heba"
+
 
     },
-   {
+    {
       title: "Computer Science, Statistics, Business Studies, Accountancy (CSBA) ",
       icon: "/svgs/homapageCarousalSvg/csba.svg",
-                  description:"asas",
+      description: "asas",
+            link: "streams/csba"
+
 
     },
-     {
+    {
       title: " Basic Maths, Statistics, Business Studies, Accountancy (BSBA) ",
       icon: "/svgs/homapageCarousalSvg/bsba.svg",
-                  description:"asas",
+      description: "asas",
+            link: "streams/bsba"
+
 
     },
-  
+
   ];
+  
 
   const [data, setData] = useState<DataItem[]>(dummyFunctionDepartmentData);
   const swiperRef = useRef<SwiperType | null>(null);
@@ -120,6 +152,8 @@ const ExploreStream = () => {
   useEffect(() => {
     setData(dummyFunctionDepartmentData);
   }, []);
+
+  
 
   return (
     <section className="my-16">
@@ -173,24 +207,23 @@ const ExploreStream = () => {
             swiperRef.current = swiper;
           }}
         >
-          {data?.map((item, index) => (
-            <SwiperSlide key={index}>
-              <div className="max-w-sm h-[25vh] lg:h-[30vh] xl:h-auto text-black p-6 bg-[#ffffff]  rounded-2xl">
-                <div className="mb-4">
-                  <Image src={item.icon} alt="Mental Health Icon" width={30} height={30} />
-                </div>
-                <h2 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h2>
-                {/* <p className="text-sm text-gray-600">{item.description}</p> */}
-                
-                <a href="/streams" className="underline text-base">
-                  Learn More
-                </a>
-              </div>
-            </SwiperSlide>
-          ))}
+   {data?.map((item, index) => (
+  <SwiperSlide key={index}>
+    <div className="max-w-sm h-[25vh] lg:h-[30vh] xl:h-auto text-black p-6 bg-[#ffffff]  rounded-2xl">
+      <div className="mb-4">
+        <Image src={item.icon} alt="Mental Health Icon" width={30} height={30} />
+      </div>
+      <h2 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h2>
+      <Link href={item.link} className="underline text-base">
+        Learn More
+      </Link>
+    </div>
+  </SwiperSlide>
+))}
+
         </Swiper>
       </div>
-      <div className="flex justify-end items-cen  ter mt-9 me-6 md:me-16 gap-4">
+      <div className="flex justify-end items-center mt-9 me-6 md:me-16 gap-4">
         {/* Play/Pause Button with Progress Circle */}
 
         {/* Navigation Buttons */}

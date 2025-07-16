@@ -3,32 +3,32 @@ import { motion } from "framer-motion";
 
 const data = [
   {
-    image: "/images/homePageImages/phy2.jpg",
+    image: "/images/homePageImages/phy2.webp",
     text: "Academic Counselling",
     description: "Interactive learning environment",
   },
   {
-    image: "/images/homePageImages/chem1.jpg",
+    image: "/images/homePageImages/chem1.webp",
     text: "Book Bank",
     description: "Hands-on practical sessions",
   },
   {
-    image: "/images/homePageImages/comp2.jpg",
+    image: "/images/homePageImages/comp2.webp",
     text: "Medical Facilities",
     description: "Advanced course experiments",
   },
   {
-    image: "/images/homePageImages/electo1.jpg",
+    image: "/images/homePageImages/electo1.webp",
     text: "Dedicated Course Labs",
     description: "Interactive learning environment",
   },
   {
-    image: "/images/homePageImages/bio1.jpg",
+    image: "/images/homePageImages/bio1.webp",
     text: "Competitive Exam Training",
     description: "Hands-on practical sessions",
   },
   {
-    image: "/images/homePageImages/electo2.jpg",
+    image: "/images/homePageImages/electo2.webp",
     text: "Club Activities",
     description: "Advanced course experiments",
   },
