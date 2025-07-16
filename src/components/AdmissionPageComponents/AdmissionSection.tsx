@@ -38,13 +38,13 @@ const AdmissionSection = () => {
           </div>
         </div>
         <div className="mt-20 space-y-2">
-          <h1 className="font-extrabold text-xl">Acceptance of Rules of Selection & Admission</h1>
+          <h1 className="font-extrabold text-2xl">Acceptance of Rules of Selection & Admission</h1>
           <p className="text-[#86868B] text-[17px]">
             Every candidate will deemed to have accepted the rules by the very act of submitting his / her application.
           </p>
         </div>
         <div className="mt-20 space-y-2">
-          <h1 className="font-extrabold text-xl">All correspondence should be addressed to</h1>
+          <h1 className="font-extrabold text-2xl">All correspondence should be addressed to</h1>
           <p className="text-[#86868B] text-[17px]">The Dean, Canara Pre-University College, M.G. Road, Mangaluru – 575003.</p>
           <p className="text-[#86868B] text-[17px]">
             <span className="font-bold">Tel No’s:</span> 0824-2495605 (O), 2492561 (P).

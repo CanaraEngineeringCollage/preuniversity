@@ -13,6 +13,7 @@ import { NextIcon, PreviewIcon } from "../../../../public/icons";
 interface DataItem {
   title: string;
   icon: string;
+  description: string;
 }
 
 const ExploreStream = () => {
@@ -20,36 +21,93 @@ const ExploreStream = () => {
     {
       title: "Physics, Chemistry, Mathematics & Biology (PCMB)",
       icon: "/svgs/homapageCarousalSvg/1.svg",
+      description:"cscsc",
     },
     {
       title: "Physics, Chemistry, Mathematics & Electronics (PCME)",
       icon: "/svgs/homapageCarousalSvg/2.svg",
+            description:"bsbsb",
+
     },
     {
       title: "Physics, Chemistry, Mathematics & Computer Science (PCMC)",
       icon: "/svgs/homapageCarousalSvg/3.svg",
+            description:"asas",
+
     },
     {
       title: "Physics, Chemistry, Mathematics & Statistics (PCMS)",
       icon: "/svgs/homapageCarousalSvg/4.svg",
+                  description:"asas",
+
     },
     {
       title: "Physics, Chemistry, Mathematics & Biology (PCMB)",
       icon: "/svgs/homapageCarousalSvg/1.svg",
+                  description:"asas",
+
     },
     {
       title: "Physics, Chemistry, Mathematics & Electronics (PCME)",
       icon: "/svgs/homapageCarousalSvg/2.svg",
+                  description:"asas",
+
     },
     {
       title: "Physics, Chemistry, Mathematics & Computer Science (PCMC)",
       icon: "/svgs/homapageCarousalSvg/3.svg",
+                  description:"asas",
+
     },
     {
       title: "Physics, Chemistry, Mathematics & Statistics (PCMS)",
       icon: "/svgs/homapageCarousalSvg/4.svg",
+                  description:"asas",
+
     },
   ];
+
+  const dummyFunctionDepartmentDataCommerce: DataItem[] = [
+    {
+      title: "Computer Science, Statistics, Business Studies, Accountancy (CSBA) ",
+      icon: "/svgs/homapageCarousalSvg/csba.svg",
+                  description:"esas",
+
+    },
+    {
+      title: " Basic Maths, Statistics, Business Studies, Accountancy (BSBA) ",
+      icon: "/svgs/homapageCarousalSvg/bsba.svg",
+                  description:"asas",
+
+    },
+
+    {
+      title: " Statistics, Economics, Business Studies, Accountancy (SEBA) ",
+      icon: "/svgs/homapageCarousalSvg/seba.svg",
+                  description:"asas",
+
+    },
+    {
+      title: " History, Economics, Business Studies, Accountancy (HEBA)",
+      icon: "/svgs/homapageCarousalSvg/heba.svg",
+                  description:"asas",
+
+    },
+   {
+      title: "Computer Science, Statistics, Business Studies, Accountancy (CSBA) ",
+      icon: "/svgs/homapageCarousalSvg/csba.svg",
+                  description:"asas",
+
+    },
+     {
+      title: " Basic Maths, Statistics, Business Studies, Accountancy (BSBA) ",
+      icon: "/svgs/homapageCarousalSvg/bsba.svg",
+                  description:"asas",
+
+    },
+  
+  ];
+
   const [data, setData] = useState<DataItem[]>(dummyFunctionDepartmentData);
   const swiperRef = useRef<SwiperType | null>(null);
   const autoplayDelay = 3000; // Swiper autoplay delay in ms
@@ -76,8 +134,10 @@ const ExploreStream = () => {
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setSelectedButton(tab.id)}
-              className={`relative px-6 py-1.5 text-base sm:text-lg font-medium text-gray-700 rounded-full transition-colors duration-200 focus:outline-none`}
+              onClick={() => {
+                setSelectedButton(tab.id);
+                setData(tab.id === "Science" ? dummyFunctionDepartmentData : dummyFunctionDepartmentDataCommerce);
+              }} className={`relative px-6 py-1.5 text-base sm:text-lg font-medium text-gray-700 rounded-full transition-colors duration-200 focus:outline-none`}
               style={{
                 WebkitTapHighlightColor: "transparent",
               }}
@@ -121,7 +181,8 @@ const ExploreStream = () => {
                 </div>
                 <h2 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h2>
                 {/* <p className="text-sm text-gray-600">{item.description}</p> */}
-                <a href="" className="underline text-base">
+                
+                <a href="/streams" className="underline text-base">
                   Learn More
                 </a>
               </div>
@@ -129,7 +190,7 @@ const ExploreStream = () => {
           ))}
         </Swiper>
       </div>
-      <div className="flex justify-end items-center mt-9 me-6 md:me-16 gap-4">
+      <div className="flex justify-end items-cen  ter mt-9 me-6 md:me-16 gap-4">
         {/* Play/Pause Button with Progress Circle */}
 
         {/* Navigation Buttons */}
