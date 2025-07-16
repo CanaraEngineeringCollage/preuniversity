@@ -4,6 +4,7 @@ import { Typography } from "@material-tailwind/react";
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 
 
@@ -20,7 +21,7 @@ const science = [
     title: "Physics, Chemistry, Mathematics & Computer Science (PCMC)",
     link: "/examination-guidelines",
   },
-   {
+  {
     title: "Physics, Chemistry, Mathematics & Statistics (PCMS)",
     link: "/examination-guidelines",
   },
@@ -63,12 +64,15 @@ export default function Sidebar({ sidebar, openSidebar }: { sidebar: boolean; op
     updates: false,
   });
   const [visible, setVisible] = useState("main-menu");
+
+  const closeSidebar = () => {
+    openSidebar(false);
+  }
   return (
     <div>
       <div
-        className={`sidebar bg-white z-[1000] h-[100vh] fixed md:top-[5rem] top-20 left-0  pb-36 ${
-          !sidebar ? "translate-x-[-100%]" : "translate-x-0"
-        } ease-in-out duration-500 pt-6 ${sidebar ? "shadow-2xl" : ""}`}
+        className={`sidebar bg-white z-[1000] h-[100vh] fixed md:top-[5rem] top-20 left-0  pb-36 ${!sidebar ? "translate-x-[-100%]" : "translate-x-0"
+          } ease-in-out duration-500 pt-6 ${sidebar ? "shadow-2xl" : ""}`}
       >
         <div className="px-8 max-w-xs">
           {
@@ -125,7 +129,7 @@ function SubMenu({
         onClick={() => {
           setVisible("main-menu");
         }}
-        className="flex gap-2 items-center"
+        className="flex gap-2 items-center sticky-top"
       >
         <IoIosArrowDown className={`w-4 h-4 text-gray-500 rotate-90 transition-all ease-in-out duration-300 lg:hidden`} />
         <Typography className="font-medium text-gray-500  text-[15px]">{data.title}</Typography>
@@ -186,40 +190,73 @@ function MainMenu({
           {open.about && (
             <>
               <div>
-                <div className="flex items-center gap-2">
-                  {/* <College /> */}
-                  <Typography className="text-sm text-gray-500">About Canara PU College</Typography>
-                  <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
-                </div>
+                <Link onClick={() => {
+                  closeSidebar(false)
+                }} href={"/about"}>
+                  <div className="flex items-center gap-2">
+                    {/* <College /> */}
+                    <Typography className="text-sm text-gray-500">About Canara PU College</Typography>
+
+
+                    <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
+                  </div>
+                </Link>
               </div>
               <div>
-                <div className="flex items-center gap-2">
-                  {/* <Employees /> */}
-                  <Typography className="text-sm text-gray-500">Institute Legacy</Typography>
-                  <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
-                </div>
+                <Link
+                  onClick={() => {
+                    closeSidebar(false)
+                  }}
+                  href={"/legacy"}>
+                  <div className="flex items-center gap-2">
+                    {/* <Employees /> */}
+                    <Typography className="text-sm text-gray-500">Institute Legacy</Typography>
+                    <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
+                  </div>
+                </Link>
+
               </div>
               <div>
-                <div className="flex items-center gap-2">
-                  {/* <Certicficate /> */}
-                  <Typography className="text-sm text-gray-500">Administration</Typography>
-                  <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
-                </div>
+                <Link onClick={() => {
+                  closeSidebar(false)
+                }}
+
+                  href={"/administration"}>
+                  <div className="flex items-center gap-2">
+                    {/* <Certicficate /> */}
+                    <Typography className="text-sm text-gray-500">Administration</Typography>
+                    <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
+                  </div>
+                </Link>
               </div>
 
               <div>
-                <div className="flex items-center gap-2">
-                  {/* <HandShake /> */}
-                  <Typography className="text-sm text-gray-500">Admissions</Typography>
-                  <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
-                </div>
+                <Link onClick={() => {
+                  closeSidebar(false)
+                }}
+
+
+                  href={"/admission"}>
+                  <div className="flex items-center gap-2">
+                    {/* <HandShake /> */}
+                    <Typography className="text-sm text-gray-500">Admissions</Typography>
+                    <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
+                  </div>
+                </Link>
               </div>
               <div>
-                <div className="flex items-center gap-2">
-                  {/* <HandShake /> */}
-                  <Typography className="text-sm text-gray-500">Infrastructure</Typography>
-                  <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
-                </div>
+                <Link onClick={() => {
+                  closeSidebar(false)
+                }}
+
+                  href={"/infrastructure"}>
+                  <div className="flex items-center gap-2">
+                    {/* <HandShake /> */}
+                    <Typography className="text-sm text-gray-500">Infrastructure</Typography>
+                    <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
+                  </div>
+                </Link>
+
               </div>
             </>
           )}
@@ -300,21 +337,38 @@ function MainMenu({
                 </div>
               </div>
               <div>
-                <div className="flex items-center gap-2">
+                <Link  onClick={()=>{
+                 closeSidebar(false)
+
+                }}
+                
+                href={"/conduct"}>
+                 <div className="flex items-center gap-2">
                   {/* <StudentsLife /> */}
                   <Typography className="text-sm text-gray-500"> Code of Conduct</Typography>
                   <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
                 </div>
+                </Link>
+               
               </div>
               <div>
-                <div className="flex items-center gap-2">
+                <Link  onClick={()=>{
+                 closeSidebar(false)
+
+                }} 
+                
+                href={"/question-bank"}>
+                 <div className="flex items-center gap-2">
                   {/* <Innovation /> */}
                   <Typography className="text-sm text-gray-500"> Question Bank</Typography>
                   <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
                 </div>
+                
+                </Link>
+               
               </div>
               <div>
-               
+
               </div>
             </>
           )}
@@ -353,7 +407,7 @@ function MainMenu({
                   <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
                 </div>
               </div>
-             
+
             </>
           )}
         </div>
@@ -390,10 +444,10 @@ function MainMenu({
           {open.updates && (
             <>
               <div >
-                <div className="flex items-center gap-2"  onClick={() => {
-            router.push("/exam-results");
-            openSidebar(false);
-          }}>
+                <div className="flex items-center gap-2" onClick={() => {
+                  router.push("/exam-results");
+                  openSidebar(false);
+                }}>
                   {/* <College /> */}
                   <Typography className="text-sm text-gray-500">Exam Results</Typography>
                   <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
@@ -407,17 +461,17 @@ function MainMenu({
                 </div>
               </div>
               <div>
-                <div className="flex items-center gap-2" onClick={() =>{
-            router.push("/fee-portal");
-            openSidebar(false);
-            }
-            }>
+                <div className="flex items-center gap-2" onClick={() => {
+                  router.push("/fee-portal");
+                  openSidebar(false);
+                }
+                }>
                   {/* <Innovation /> */}
                   <Typography className="text-sm text-gray-500">Fee Portal</Typography>
                   <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
                 </div>
               </div>
-             
+
             </>
           )}
         </div>
