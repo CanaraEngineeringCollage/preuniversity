@@ -1,29 +1,63 @@
-"use client"
+import React from "react"
+import Banner from "../Common/Banner/Banner"
 
-import React, { useState } from 'react'
-import Banner from '../Common/Banner/Banner'
-import stream from '@/lib/stream.json'
-import { useParams } from 'next/navigation'
-
-
-const Subject = () => {
-  const { slug } = useParams();
-
-  const [selectedIndex, setSelectedIndex] = useState<number>(0);
-  const mainStreams = stream.find((dept) => dept.slug === slug);
-
-
-  //  const streamItems = [
-  //   "Stream content",
-  // ]
+type props ={
+  name:string
+  description:string
+  future_prospects_heading:string
+  future_prospects:{
+    title:string
+    sub_title?:string
+  points?:string[]
+  }[]
+  }
 
 
-  return (
+export default function Subject( {name ,description,future_prospects_heading,future_prospects}:props ) {
+  return(
     <>
-      <Banner />
+    <Banner/>
 
-      <h1 className='text-4xl text-center text-black'>{mainStreams?.name}</h1>
-    </>)
+ <div className="max-w-screen  mx-12 px-1 sm:px-3 lg:px-8 py-12 text-black mb-12">
+  <h1 className=" text-[#1D1D1F] max-w-4xl text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 py-6 sm:py-10">
+    {name}
+  </h1>
+
+  <p className="text-sm text-start sm:text-gray-600/70 text-gray-600/70 mb-10">
+    {description}
+  </p>
+
+  <h2 className=" text-[#1D1D1F]/90 text-lg sm:text-2xl font-semibold mb-6 sm:mb-8 py-4 sm:py-5">
+    {future_prospects_heading}
+  </h2>
+
+  <div className="space-y-6 sm:space-y-8">
+    {future_prospects.map((item, index) => (
+      <div key={index}>
+       <div className="heading max-w-3xl">
+
+         <h3 className="text-lg  sm:text-xl font-semibold text-[#0D3274]/90 mb-2">
+          {item.title}
+        </h3>
+       </div>
+
+        <p className="text-sm sm:text-[17px] text-[#86868B] mb-2">
+          {item.sub_title}
+        </p>
+
+        {item.points && (
+          <ul className="list-disc list-inside text-sm sm:text-[17px] text-[#86868B]/90 space-y-2 sm:space-y-4">
+            {item.points.map((point, i) => (
+              <li key={i}>{point}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+    ))}
+  </div>
+</div>
+
+    
+    </>
+  )
 }
-
-export default Subject
