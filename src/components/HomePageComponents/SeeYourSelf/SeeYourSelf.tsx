@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+
 
 const SeeYourSelf = () => {
   return (
@@ -17,7 +19,7 @@ const SeeYourSelf = () => {
             Located in the heart of the city, the campus features well-equipped labs, a modern library, reading room & canteen. Students are
             encouraged to take part in co-curricular activities, with achievers recognized & celebrated.
           </p>
-          <button className="px-4 py-1.5 border rounded-4xl lg:w-1/4 mt-4 lg2:mt-8">View More</button>
+          <Link href={"/about"}><button className="px-4 py-1.5 border border-gray-600 rounded-4xl lg:w-1/4 mt-4 lg2:mt-8 hover:bg-gray-500/40 transition">View More</button></Link>
         </div>
         <div className="flex items-center justify-center md:p-8 lg2:p-16 ">
           <Image src="/images/homePageImages/image1.png" alt="" width={1000} height={1000} className=" rounded-2xl" />

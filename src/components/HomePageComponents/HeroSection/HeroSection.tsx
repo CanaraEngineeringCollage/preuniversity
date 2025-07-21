@@ -17,7 +17,7 @@ interface FormData {
   comments: string;
 }
 
-const HeroBanner = () => {
+const   HeroBanner = () => {
   const {
     register,
     handleSubmit,
