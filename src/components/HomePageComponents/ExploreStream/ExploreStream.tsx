@@ -40,7 +40,7 @@ const ExploreStream = () => {
       title: "Physics, Chemistry, Mathematics & Computer Science (PCMC)",
       icon: "/svgs/homapageCarousalSvg/3.svg",
       description: "asas",
-            link: "streams/asas"
+            link: "streams/pcmc"
 
 
     },
@@ -117,7 +117,7 @@ const ExploreStream = () => {
       icon: "/svgs/homapageCarousalSvg/heba.svg",
       description: "asas",
             link: "streams/heba"
-
+      
 
     },
     {
