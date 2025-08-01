@@ -76,9 +76,9 @@ export default function Courses() {
                     >
                       <div className="flex items-start"></div>
                       <div className="flex flex-col gap-2">
-                        {/* <Link href="/courses/pcmb"> */}
+                        <Link href="/streams/pcmb">
                           <p className={`text-base ${pathname.includes("/courses/pcmb") ? "text-primary" : "text-gray-500"}`}>Physics, Chemistry, Mathematics & Biology (PCMB)</p>
-                        {/* </Link> */}
+                        </Link>
                       </div>
                     </motion.div>
 
@@ -93,9 +93,9 @@ export default function Courses() {
                     >
                       <div className="flex items-start"></div>
                       <div className="flex flex-col gap-2">
-                        {/* <Link href="/courses/pcme"> */}
+                        <Link href="/streams/pcme">
                           <p className={`text-base ${pathname.includes("/courses/pcme") ? "text-primary" : "text-gray-500"}`}>Physics, Chemistry, Mathematics & Electronics (PCME)</p>
-                        {/* </Link> */}
+                        </Link>
                       </div>
                     </motion.div>
 
@@ -110,9 +110,9 @@ export default function Courses() {
                     >
                       <div className="flex items-start"></div>
                       <div className="flex flex-col gap-2">
-                        {/* <Link href="/courses/pcmc"> */}
+                        <Link href="/streams/pcmc">
                           <p className={`text-base ${pathname.includes("/courses/pcmc") ? "text-primary" : "text-gray-500"}`}>Physics, Chemistry, Mathematics & Computer Science (PCMC)</p>
-                        {/* </Link> */}
+                        </Link>
                       </div>
                     </motion.div>
 
@@ -127,9 +127,9 @@ export default function Courses() {
                     >
                       <div className="flex items-start"></div>
                       <div className="flex flex-col gap-2">
-                        {/* <Link href="/courses/pcms"> */}
+                        <Link href="/streams/pcms">
                           <p className={`text-base ${pathname.includes("/courses/pcms") ? "text-primary" : "text-gray-500"}`}>Physics, Chemistry, Mathematics & Statistics (PCMS)</p>
-                        {/* </Link> */}
+                        </Link>
                       </div>
                     </motion.div>
                   </div>
@@ -154,9 +154,9 @@ export default function Courses() {
                       >
                         <div className="flex items-start"></div>
                         <div className="flex flex-col gap-2">
-                          {/* <Link href="/courses/bsba"> */}
+                          <Link href="/streams/bsba">
                             <p className={`text-base ${pathname.includes("/courses/bsba") ? "text-primary" : "text-gray-500"}`}>Basic Maths, Statistics, Business Studies & Accountancy (BSBA)</p>
-                          {/* </Link> */}
+                          </Link>
                         </div>
                       </motion.div>
 
@@ -171,9 +171,9 @@ export default function Courses() {
                       >
                         <div className="flex items-start"></div>
                         <div className="flex flex-col gap-2">
-                          {/* <Link href="/courses/beba"> */}
+                          <Link href="/streams/beba">
                             <p className={`text-base ${pathname.includes("/courses/beba") ? "text-primary" : "text-gray-500"}`}>Basic Maths, Economics, Business Studies & Accountancy (BEBA)</p>
-                          {/* </Link> */}
+                          </Link>
                         </div>
                       </motion.div>
 
@@ -188,9 +188,9 @@ export default function Courses() {
                       >
                         <div className="flex items-start"></div>
                         <div className="flex flex-col gap-2">
-                          {/* <Link href="/courses/seba"> */}
+                          <Link href="/streams/seba">
                             <p className={`text-base ${pathname.includes("/courses/seba") ? "text-primary" : "text-gray-500"}`}>Statistics, Economics, Business Studies & Accountancy (SEBA)</p>
-                          {/* </Link> */}
+                          </Link>
                         </div>
                       </motion.div>
 
@@ -205,9 +205,9 @@ export default function Courses() {
                       >
                         <div className="flex items-start"></div>
                         <div className="flex flex-col gap-2">
-                          {/* <Link href="/courses/csba"> */}
-                            <p className={`text-base ${pathname.includes("/courses/csba") ? "text-primary" : "text-gray-500"}`}>Computer Science, Statistics, Business Studies & Accountancy (CSBA)</p>
-                          {/* </Link> */}
+                          <Link href="/streams/heba">
+                            <p className={`text-base ${pathname.includes("/courses/csba") ? "text-primary" : "text-gray-500"}`}>  History, Economics, Business Studies & Accountancy (HEBA)</p>
+                          </Link>
                         </div>
                       </motion.div>
                       <motion.div
@@ -220,9 +220,9 @@ export default function Courses() {
                       >
                         <div className="flex items-start"></div>
                         <div className="flex flex-col gap-2">
-                          {/* <Link href="/courses/heba"> */}
-                            <p className={`text-base ${pathname.includes("/courses/heba") ? "text-primary" : "text-gray-500"}`}>History, Economics, Business Studies & Accountancy (HEBA)</p>
-                          {/* </Link> */}
+                          <Link href="/streams/csba">
+                            <p className={`text-base ${pathname.includes("/courses/heba") ? "text-primary" : "text-gray-500"}`}>Computer Science, Statistics, Business Studies & Accountancy (CSBA)</p>
+                          </Link>
                         </div>
                       </motion.div>
                       <motion.div
@@ -234,11 +234,11 @@ export default function Courses() {
                         className="flex gap-4"
                       >
                         <div className="flex items-start"></div>
-                        <div className="flex flex-col gap-2">
-                          {/* <Link href="/courses/ceba"> */}
+                        {/* <div className="flex flex-col gap-2">
+                          <Link href="/streams/ceba">
                             <p className={`text-base ${pathname.includes("/courses/ceba") ? "text-primary" : "text-gray-500"}`}>Computer Science, Economics, Business Studies & Accountancy (CEBA)</p>
-                          {/* </Link> */}
-                        </div>
+                          </Link>
+                        </div> */}
                       </motion.div>
                     </div>
                   </div>
