@@ -5,7 +5,7 @@ import Events from "../Options/Events/Events";
 import StudentLife from "../Options/StudentLife/StudentLife";
 import Updates from "../Options/Updates/Updates";
 
-function NavbarItems() {
+function  NavbarItems() {
   return (
     <>
       <div className="hidden nav-items lg:flex text-white lg2 flex-row w-full justify-between">
