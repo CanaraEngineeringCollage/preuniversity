@@ -17,7 +17,7 @@ interface DataItem {
   title: string;
   icon: string;
   description: string;
-  link:string;
+  link: string;
 }
 
 const ExploreStream = () => {
@@ -32,7 +32,7 @@ const ExploreStream = () => {
       title: "Physics, Chemistry, Mathematics & Electronics (PCME)",
       icon: "/svgs/homapageCarousalSvg/2.svg",
       description: "bsbsb",
-            link: "streams/pcme"
+      link: "streams/pcme"
 
 
     },
@@ -40,7 +40,7 @@ const ExploreStream = () => {
       title: "Physics, Chemistry, Mathematics & Computer Science (PCMC)",
       icon: "/svgs/homapageCarousalSvg/3.svg",
       description: "asas",
-            link: "streams/pcmc"
+      link: "streams/pcmc"
 
 
     },
@@ -48,7 +48,7 @@ const ExploreStream = () => {
       title: "Physics, Chemistry, Mathematics & Statistics (PCMS)",
       icon: "/svgs/homapageCarousalSvg/4.svg",
       description: "asas",
-            link: "streams/pcms"
+      link: "streams/pcms"
 
 
     },
@@ -56,7 +56,7 @@ const ExploreStream = () => {
       title: "Physics, Chemistry, Mathematics & Biology (PCMB)",
       icon: "/svgs/homapageCarousalSvg/1.svg",
       description: "asas",
-            link: "streams/pcmb"
+      link: "streams/pcmb"
 
 
     },
@@ -64,7 +64,7 @@ const ExploreStream = () => {
       title: "Physics, Chemistry, Mathematics & Electronics (PCME)",
       icon: "/svgs/homapageCarousalSvg/2.svg",
       description: "asas",
-            link: "streams/pcme"
+      link: "streams/pcme"
 
 
     },
@@ -72,7 +72,7 @@ const ExploreStream = () => {
       title: "Physics, Chemistry, Mathematics & Computer Science (PCMC)",
       icon: "/svgs/homapageCarousalSvg/3.svg",
       description: "asas",
-            link: "streams/pcmc"
+      link: "streams/pcmc"
 
 
     },
@@ -80,7 +80,7 @@ const ExploreStream = () => {
       title: "Physics, Chemistry, Mathematics & Statistics (PCMS)",
       icon: "/svgs/homapageCarousalSvg/4.svg",
       description: "asas",
-            link: "streams/pcms"
+      link: "streams/pcms"
 
 
     },
@@ -91,7 +91,7 @@ const ExploreStream = () => {
       title: "Computer Science, Statistics, Business Studies, Accountancy (CSBA) ",
       icon: "/svgs/homapageCarousalSvg/csba.svg",
       description: "esas",
-            link: "streams/csba"
+      link: "streams/csba"
 
 
     },
@@ -99,7 +99,7 @@ const ExploreStream = () => {
       title: " Basic Maths, Statistics, Business Studies, Accountancy (BSBA) ",
       icon: "/svgs/homapageCarousalSvg/bsba.svg",
       description: "asas",
-            link: "streams/bsba"
+      link: "streams/bsba"
 
 
     },
@@ -108,7 +108,7 @@ const ExploreStream = () => {
       title: " Statistics, Economics, Business Studies, Accountancy (SEBA) ",
       icon: "/svgs/homapageCarousalSvg/seba.svg",
       description: "asas",
-            link: "streams/seba"
+      link: "streams/seba"
 
 
     },
@@ -116,15 +116,15 @@ const ExploreStream = () => {
       title: " History, Economics, Business Studies, Accountancy (HEBA)",
       icon: "/svgs/homapageCarousalSvg/heba.svg",
       description: "asas",
-            link: "streams/heba"
-      
+      link: "streams/heba"
+
 
     },
     {
       title: "Computer Science, Statistics, Business Studies, Accountancy (CSBA) ",
       icon: "/svgs/homapageCarousalSvg/csba.svg",
-      description: "asas",
-            link: "streams/csba"
+      description: "esas",
+      link: "streams/csba"
 
 
     },
@@ -132,13 +132,32 @@ const ExploreStream = () => {
       title: " Basic Maths, Statistics, Business Studies, Accountancy (BSBA) ",
       icon: "/svgs/homapageCarousalSvg/bsba.svg",
       description: "asas",
-            link: "streams/bsba"
+      link: "streams/bsba"
 
 
     },
 
+    {
+      title: " Statistics, Economics, Business Studies, Accountancy (SEBA) ",
+      icon: "/svgs/homapageCarousalSvg/seba.svg",
+      description: "asas",
+      link: "streams/seba"
+
+
+    },
+    {
+      title: " History, Economics, Business Studies, Accountancy (HEBA)",
+      icon: "/svgs/homapageCarousalSvg/heba.svg",
+      description: "asas",
+      link: "streams/heba"
+
+
+    },
+
+
+
   ];
-  
+
 
   const [data, setData] = useState<DataItem[]>(dummyFunctionDepartmentData);
   const swiperRef = useRef<SwiperType | null>(null);
@@ -153,7 +172,7 @@ const ExploreStream = () => {
     setData(dummyFunctionDepartmentData);
   }, []);
 
-  
+
 
   return (
     <section className="my-16">
@@ -207,19 +226,19 @@ const ExploreStream = () => {
             swiperRef.current = swiper;
           }}
         >
-   {data?.map((item, index) => (
-  <SwiperSlide key={index}>
-    <div className="max-w-sm h-[25vh] lg:h-[30vh] xl:h-auto text-black p-6 bg-[#ffffff]  rounded-2xl">
-      <div className="mb-4">
-        <Image src={item.icon} alt="Mental Health Icon" width={30} height={30} />
-      </div>
-      <h2 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h2>
-      <Link href={item.link} className="underline text-base">
-        Learn More
-      </Link>
-    </div>
-  </SwiperSlide>
-))}
+          {data?.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="max-w-sm h-[25vh] lg:h-[30vh] xl:h-auto text-black p-6 bg-[#ffffff]  rounded-2xl">
+                <div className="mb-4">
+                  <Image src={item.icon} alt="Mental Health Icon" width={30} height={30} />
+                </div>
+                <h2 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h2>
+                <Link href={item.link} className="underline text-base">
+                  Learn More
+                </Link>
+              </div>
+            </SwiperSlide>
+          ))}
 
         </Swiper>
       </div>

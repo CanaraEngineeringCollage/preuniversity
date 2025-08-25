@@ -14,7 +14,7 @@ const aboutLinks = [
 
 const admissionLinks = [
   { data: "Admissions", links: "/admission" },
-  { data: "Streams", links: "/about" },
+  // { data: "Streams", links: "/about" },
   { data: "Fee Portal", links: "/fee-portal" },
 ];
 
@@ -26,10 +26,10 @@ const examLinks = [
 
 const buzzLinks = [{ data: "Buzz", links: "/buzz" }];
 
-const eventLinks = [
-  { data: "Footprints", links: "/about" },
-  { data: "Mat Kabaddi", links: "/about" },
-];
+// const eventLinks = [
+//   { data: "Footprints", links: "/about" },
+//   { data: "Mat Kabaddi", links: "/about" },
+// ];
 
 interface FooterListProps {
   data: { data: string; links: string }[];
@@ -47,7 +47,7 @@ export default function Footer() {
     <footer className="bg-[#001A48] text-white">
       {/* Desktop Version */}
       <div className="lg:block hidden">
-        <div className="max-w-6xl text-base mx-auto px-4 py-10 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
+        <div className="max-w-6xl text-base mx-auto px-4 py-10 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
           <div className="flex justify-center">
             <FooterList data={aboutLinks} />
           </div>
@@ -60,9 +60,9 @@ export default function Footer() {
           <div className="flex justify-center">
             <FooterList data={buzzLinks} />
           </div>
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <FooterList data={eventLinks} />
-          </div>
+          </div> */}
         </div>
 
         <hr className="border-gray-600 max-w-6xl my-4 mx-auto" />
@@ -106,7 +106,7 @@ export default function Footer() {
           <FooterSection title="About Admissions" data={admissionLinks} isOpen={admissionIsOpen} setIsOpen={setAdmissionIsOpen} />
           <FooterSection title="Student Resources" data={examLinks} isOpen={examIsOpen} setIsOpen={setExamIsOpen} />
           <FooterSection title="Buzz" data={buzzLinks} isOpen={buzzIsOpen} setIsOpen={setBuzzIsOpen} />
-          <FooterSection title="Fest Pages" data={eventLinks} isOpen={eventIsOpen} setIsOpen={setEventIsOpen} />
+          {/* <FooterSection title="Fest Pages" data={eventLinks} isOpen={eventIsOpen} setIsOpen={setEventIsOpen} /> */}
         </div>
 
         <hr className="border-gray-600 my-4 hidden lg:block" />
