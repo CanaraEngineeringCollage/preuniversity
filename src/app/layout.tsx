@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Canara Pre-University College, Mangalore",
     description: "Co-educational pre-university institution offering Science & Commerce since 1972.", 
-    images: ["icon.png"], // replace with actual
+    images: ["/icon.png"], // replace with actual
   },
 };
 
