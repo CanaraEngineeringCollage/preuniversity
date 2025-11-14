@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     siteName: "Canara PU College Mangalore",
     images: [
       {
-        url: "https://canarapucollege.com/path-to-image.jpg", // replace with actual image URL
+        url: "/icon.png", // replace with actual image URL
         width: 1200,
         height: 630,
         alt: "Canara PU College Mangalore Campus"
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Canara Pre-University College, Mangalore",
     description: "Co-educational pre-university institution offering Science & Commerce since 1972.", 
-    images: ["https://canarapucollege.com/path-to-image.jpg"], // replace with actual
+    images: ["icon.png"], // replace with actual
   },
 };
 
