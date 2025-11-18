@@ -207,20 +207,20 @@ const ExploreStream = () => {
           ))}
         </div>
       </div>
-      <div className="md:ml-32 ml-5">
+      <div className="lg:ml-32 ml-5">
         <Swiper
           modules={[Autoplay]}
           autoplay={{ delay: autoplayDelay, disableOnInteraction: false }}
           spaceBetween={20}
           slidesPerView={1}
           loop={true}
-          breakpoints={{
-            640: { slidesPerView: 1, spaceBetween: 20 },
-            768: { slidesPerView: 2, spaceBetween: 20 },
-            1024: { slidesPerView: 3.5, spaceBetween: 25 },
-            1400: { slidesPerView: 3.5, spaceBetween: 25 },
-            1500: { slidesPerView: 4, spaceBetween: 25 },
-          }}
+         breakpoints={{
+    640: { slidesPerView: 1, spaceBetween: 20 },
+    768: { slidesPerView: 2, spaceBetween: 20 },
+    1024: { slidesPerView: 3, spaceBetween: 24 },
+    1280: { slidesPerView: 3.5, spaceBetween: 24 },
+    1536: { slidesPerView: 4, spaceBetween: 24 },
+  }}
           speed={1000}
           className="mySwiper"
           onSwiper={(swiper) => {

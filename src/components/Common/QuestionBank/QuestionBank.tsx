@@ -192,10 +192,10 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({ title, description, campu
         isOpen,
       }}
     >
-      <section className="max-w-7xl xl:max-w-[75%] mx-auto text-black py-10">
+      <section className="max-w-7xl xl:max-w-[75%] mx-auto text-black py-20">
         {(title || description) && (
           <div className="text-center mb-10 lg:px-32">
-            <h1 className="text-center leading-[1.1] text-[46px] mb-5 font-bold">{title}</h1>
+            <h1 className="text-center leading-[1.1] text-[46px] mb-5 lg:mb-10 font-bold">{title}</h1>
             <p className="text-center">{description}</p>
           </div>
         )}
