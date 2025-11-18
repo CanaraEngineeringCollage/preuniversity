@@ -20,20 +20,20 @@ export default function StudentLife() {
           <ListItem
             className={`flex items-center gap-2 ${
               isMenuOpen ? "opacity-100" : "opacity-100"
-            } py-2 pr-4  transition-colors ease-in-out duration-300  bg-transparent font-semibold hover:bg-transparent shadow-none rounded-none outline-none focus:ring-0`}
+            } py-2 pr-4  transition-colors text-[18px] ease-in-out duration-300  bg-transparent font-semibold hover:bg-transparent shadow-none rounded-none outline-none focus:ring-0`}
             selected={isMenuOpen || isMobileMenuOpen}
             placeholder=""
             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
           >
             StudentLife
-            <FaChevronUp strokeWidth={2.5} className={`hidden h-3 w-3 transition-transform lg:block ${isMenuOpen ? "" : "rotate-180"}`} />
+            <FaChevronUp strokeWidth={2.5} className={`hidden h-3.5 w-3.5 transition-transform lg:block ${isMenuOpen ? "" : "rotate-180"}`} />
           </ListItem>
         </Typography>
       </MenuHandler>
 
-     <MenuList className="w-full bg-transparent !top-[210px]  text-black p-0  z-100 border-none !border-0 shadow-none flex justify-center pb-4 outline-none focus:ring-0">
-        <div className="w-full cursor-pointer max-w-screen-2xl bg-white z-100 shadow-md flex justify-center gap-8 p-8 border-none outline-none">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 mx-16 w-[50%]">
+     <MenuList className="w-full bg-white !top-[210px]  text-black p-0  z-100 border-none !border-0 shadow-none flex justify-center outline-none focus:ring-0">
+  <div className="w-[80%]    p-8 border-none outline-none">
+    <div className="flex justify-evenly">
             {/* Column 1 */}
             {/* <div className="flex gap-4 pr-4  ">
               <div className="flex items-start"> <College /> </div>

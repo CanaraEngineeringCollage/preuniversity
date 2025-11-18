@@ -23,11 +23,11 @@ export default function Subject( {name ,description,future_prospects_heading,fut
     {name}
   </h1>
 
-  <p className="text-sm text-start sm:text-gray-600/70 text-gray-600/70 mb-10">
+  <p className="text-sm text-start  text-[#86868B] mb-10">
     {description}
   </p>
 
-  <h2 className=" text-[#1D1D1F]/90 text-lg sm:text-2xl font-semibold mb-6 sm:mb-8 py-4 sm:py-5">
+  <h2 className=" text-[#1D1D1F] text-lg sm:text-2xl font-bold mb-2 sm:mb-4 py-4 sm:py-5">
     {future_prospects_heading}
   </h2>
 
@@ -36,7 +36,7 @@ export default function Subject( {name ,description,future_prospects_heading,fut
       <div key={index}>
        <div className="heading max-w-3xl">
 
-         <h3 className="text-lg  sm:text-xl font-semibold text-[#0D3274]/90 mb-2">
+         <h3 className="text-lg  sm:text-xl font-bold text-[#0D3274] mb-2">
           {item.title}
         </h3>
        </div>
@@ -46,7 +46,7 @@ export default function Subject( {name ,description,future_prospects_heading,fut
         </p>
 
         {item.points && (
-          <ul className="list-disc list-inside text-sm sm:text-[17px] text-[#86868B]/90 space-y-2 sm:space-y-4">
+          <ul className="list-disc list-inside text-sm sm:text-[17px] text-[#86868B]/90 space-y-2 sm:space-y-2">
             {item.points.map((point, i) => (
               <li key={i}>{point}</li>
             ))}

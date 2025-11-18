@@ -46,32 +46,38 @@ function FormComponent() {
 
       {/* Main content */}
       <div className="relative z-10 w-full max-w-7xl bg-[#F6F7FB]  rounded-2xl  overflow-hidden flex flex-col md:flex-row">
-        <div className="md:w-1/2 h-[400px] md:h-[800px] relative">
-          <Image
-            src="/images/homePageImages/map.jpg"
-            alt="Map"
-            fill
-            className="lg:m-[15px] rounded-[15px] object-cover"
-          />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <div className="flex justify-center">
-              <svg
-                width="35"
-                height="43"
-                viewBox="0 0 35 43"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M17.3152 0.299805C26.6982 0.299805 34.3152 7.9168 34.3152 17.2998C34.3152 22.1858 31.8772 27.2148 28.8162 31.4378C24.5422 37.3358 19.1972 41.6358 19.1972 41.6358V41.6368C18.0982 42.5208 16.5322 42.5208 15.4332 41.6368V41.6358C15.4332 41.6358 10.0882 37.3358 5.81418 31.4378C2.75318 27.2148 0.315186 22.1858 0.315186 17.2998C0.315186 7.9168 7.93219 0.299805 17.3152 0.299805ZM17.3152 10.2998C21.1782 10.2998 24.3152 13.4368 24.3152 17.2998C24.3152 21.1628 21.1782 24.2998 17.3152 24.2998C13.4522 24.2998 10.3152 21.1628 10.3152 17.2998C10.3152 13.4368 13.4522 10.2998 17.3152 10.2998Z"
-                  fill="#3C71D7"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
+    <div className="md:w-1/2 h-[400px] md:h-[800px] relative p-4">
+  <iframe
+    width="100%"
+    height="100%"
+    className="rounded-[15px]"
+    style={{ border: 0 }}
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+    src="https://maps.google.com/maps?q=12.908481990450067,74.8659859558218&z=15&output=embed&hl=en"
+  ></iframe>
+
+  {/* Custom BLUE Marker */}
+  {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+    <svg
+      width="42"
+      height="50"
+      viewBox="0 0 35 43"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="drop-shadow-lg"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M17.3152 0.299805C26.6982 0.299805 34.3152 7.9168 34.3152 17.2998C34.3152 22.1858 31.8772 27.2148 28.8162 31.4378C24.5422 37.3358 19.1972 41.6358 19.1972 41.6358V41.6368C18.0982 42.5208 16.5322 42.5208 15.4332 41.6368V41.6358C15.4332 41.6358 10.0882 37.3358 5.81418 31.4378C2.75318 27.2148 0.315186 22.1858 0.315186 17.2998C0.315186 7.9168 7.93219 0.299805 17.3152 0.299805ZM17.3152 10.2998C21.1782 10.2998 24.3152 13.4368 24.3152 17.2998C24.3152 21.1628 21.1782 24.2998 17.3152 24.2998C13.4522 24.2998 10.3152 21.1628 10.3152 17.2998C10.3152 13.4368 13.4522 10.2998 17.3152 10.2998Z"
+        fill="#3C71D7"
+      />
+    </svg>
+  </div> */}
+</div>
+
 
         <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-center md:ml-8">
           <h2 className="text-2xl md:text-[44px] font-bold text-[#1e1b4b] mb-6 md:mb-8">

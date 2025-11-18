@@ -217,8 +217,9 @@ const ExploreStream = () => {
           breakpoints={{
             640: { slidesPerView: 1, spaceBetween: 20 },
             768: { slidesPerView: 2, spaceBetween: 20 },
-            1024: { slidesPerView: 4, spaceBetween: 25 },
-            1400: { slidesPerView: 5, spaceBetween: 25 },
+            1024: { slidesPerView: 3.5, spaceBetween: 25 },
+            1400: { slidesPerView: 3.5, spaceBetween: 25 },
+            1500: { slidesPerView: 4, spaceBetween: 25 },
           }}
           speed={1000}
           className="mySwiper"
@@ -228,7 +229,8 @@ const ExploreStream = () => {
         >
           {data?.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="max-w-sm h-[25vh] lg:h-[30vh] xl:h-auto text-black p-6 bg-[#ffffff]  rounded-2xl">
+             <div className=" h-[200px]  text-black p-6 bg-white rounded-2xl flex flex-col justify-between">
+
                 <div className="mb-4">
                   <Image src={item.icon} alt="Mental Health Icon" width={30} height={30} />
                 </div>

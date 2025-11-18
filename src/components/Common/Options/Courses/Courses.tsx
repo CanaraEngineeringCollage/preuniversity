@@ -1,8 +1,6 @@
 "use client";
 import { ListItem, Menu, MenuHandler, MenuList, Typography } from "@material-tailwind/react";
 import { useState } from "react";
-// import { FaChevronUp } from "react-icons/fa6";
-// import { College, Employees, Certicficate, HandShake } from "../../../../components/Icons/Icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -27,223 +25,136 @@ export default function Courses() {
         ease: "easeOut",
       },
     },
-    hover: {
-      scale: 1.05,
-      backgroundColor: "#005580",
-      color: "white",
-      transition: {
-        duration: 0.2,
-      },
-    },
   };
 
   return (
     <Menu open={isMenuOpen} handler={setIsMenuOpen} offset={{ mainAxis: 20 }} placement="bottom" allowHover={true}>
       <MenuHandler>
-        <Typography as="div" className="text-sm xl:text-base" >
+        <Typography as="div" className="text-sm xl:text-base">
           <ListItem
-            className={`flex items-center gap-2 ${
-              isMenuOpen ? "opacity-100" : "opacity-100"
-            } py-2 pr-4  transition-colors ease-in-out duration-300  bg-transparent font-semibold hover:bg-transparent shadow-none rounded-none outline-none focus:ring-0}`}
+            className={`flex items-center gap-2 py-2 pr-4 text-[18px] transition-colors duration-300 bg-transparent font-semibold hover:bg-transparent shadow-none rounded-none outline-none`}
             selected={isMenuOpen || isMobileMenuOpen}
             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
           >
             Courses
-            <FaChevronUp strokeWidth={2.5} className={`hidden h-3 w-3 transition-transform lg:block ${isMenuOpen ? "" : "rotate-180"}`} />
+            <FaChevronUp
+              strokeWidth={2.5}
+              className={`hidden h-3.5 w-3.5 transition-transform lg:block ${isMenuOpen ? "" : "rotate-180"}`}
+            />
           </ListItem>
         </Typography>
       </MenuHandler>
 
-      <MenuList className="w-full bg-transparent !top-[210px] overflow-hidden text-black p-0  z-100 border-none !border-0 shadow-none flex justify-center pb-4 outline-none focus:ring-0">
+      <MenuList className="w-full bg-white !top-[210px] text-black p-0 shadow-none border-none flex justify-center">
         {isMenuOpen && (
-          <div className="cursor-pointer w-full bg-white z-100 shadow-md flex justify-center gap-8 p-8 border-none outline-none">
-            <div className="flex flex-col gap-12">
-              <div className="flex flex-col">
-                <div className="flex ml-[194px] gap-2 mb-5">
+          <div className="w-[75%] mx-auto p-10">
+            <div className="flex flex-col gap-16">
+
+              {/* ================= SCIENCE STREAMS ================= */}
+              <div>
+                <div className="flex items-center gap-2 mb-5">
                   <Image src="/nav1.svg" alt="" width={20} height={20} />
                   <h1 className="text-[16px] font-bold">Science Streams</h1>
                 </div>
-                <div className="flex justify-center">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mx-16 w-[75%]">
-                    {/* Column 1 */}
-                    <motion.div
-                      custom={0}
-                      variants={cardVariants}
-                      initial="initial"
-                      animate="animate"
-                     
-                      className="flex gap-4 pr-4"
-                    >
-                      <div className="flex items-start"></div>
-                      <div className="flex flex-col gap-2">
-                        <Link href="/streams/pcmb">
-                          <p className={`text-base ${pathname.includes("/courses/pcmb") ? "text-primary" : "text-gray-500"}`}>Physics, Chemistry, Mathematics & Biology (PCMB)</p>
-                        </Link>
-                      </div>
-                    </motion.div>
 
-                    {/* Column 2 */}
-                    <motion.div
-                      custom={1}
-                      variants={cardVariants}
-                      initial="initial"
-                      animate="animate"
-                     
-                      className="flex gap-4 pr-4"
-                    >
-                      <div className="flex items-start"></div>
-                      <div className="flex flex-col gap-2">
-                        <Link href="/streams/pcme">
-                          <p className={`text-base ${pathname.includes("/courses/pcme") ? "text-primary" : "text-gray-500"}`}>Physics, Chemistry, Mathematics & Electronics (PCME)</p>
-                        </Link>
-                      </div>
-                    </motion.div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16">
 
-                    {/* Column 3 */}
-                    <motion.div
-                      custom={2}
-                      variants={cardVariants}
-                      initial="initial"
-                      animate="animate"
-                     
-                      className="flex gap-4 pr-4"
-                    >
-                      <div className="flex items-start"></div>
-                      <div className="flex flex-col gap-2">
-                        <Link href="/streams/pcmc">
-                          <p className={`text-base ${pathname.includes("/courses/pcmc") ? "text-primary" : "text-gray-500"}`}>Physics, Chemistry, Mathematics & Computer Science (PCMC)</p>
-                        </Link>
-                      </div>
-                    </motion.div>
+                  {/* PCMB */}
+                  <motion.div custom={0} variants={cardVariants} initial="initial" animate="animate">
+                    <Link href="/streams/pcmb">
+                      <p className={`text-base ${pathname.includes("pcmb") ? "text-primary" : "text-gray-600"}`}>
+                        Physics, Chemistry, Mathematics & Biology (PCMB)
+                      </p>
+                    </Link>
+                  </motion.div>
 
-                    {/* Column 4 */}
-                    <motion.div
-                      custom={3}
-                      variants={cardVariants}
-                      initial="initial"
-                      animate="animate"
-                     
-                      className="flex gap-4"
-                    >
-                      <div className="flex items-start"></div>
-                      <div className="flex flex-col gap-2">
-                        <Link href="/streams/pcms">
-                          <p className={`text-base ${pathname.includes("/courses/pcms") ? "text-primary" : "text-gray-500"}`}>Physics, Chemistry, Mathematics & Statistics (PCMS)</p>
-                        </Link>
-                      </div>
-                    </motion.div>
-                  </div>
+                  {/* PCME */}
+                  <motion.div custom={1} variants={cardVariants} initial="initial" animate="animate">
+                    <Link href="/streams/pcme">
+                      <p className={`text-base ${pathname.includes("pcme") ? "text-primary" : "text-gray-600"}`}>
+                        Physics, Chemistry, Mathematics & Electronics (PCME)
+                      </p>
+                    </Link>
+                  </motion.div>
+
+                  {/* PCMC */}
+                  <motion.div custom={2} variants={cardVariants} initial="initial" animate="animate">
+                    <Link href="/streams/pcmc">
+                      <p className={`text-base ${pathname.includes("pcmc") ? "text-primary" : "text-gray-600"}`}>
+                        Physics, Chemistry, Mathematics & Computer Science (PCMC)
+                      </p>
+                    </Link>
+                  </motion.div>
+
+                  {/* PCMS */}
+                  <motion.div custom={3} variants={cardVariants} initial="initial" animate="animate">
+                    <Link href="/streams/pcms">
+                      <p className={`text-base ${pathname.includes("pcms") ? "text-primary" : "text-gray-600"}`}>
+                        Physics, Chemistry, Mathematics & Statistics (PCMS)
+                      </p>
+                    </Link>
+                  </motion.div>
+
                 </div>
               </div>
+
+              {/* ================= COMMERCE STREAMS ================= */}
               <div>
-                <div className="flex flex-col">
-                  <div className="flex ml-[194px] gap-2 mb-6">
-                    <Image src="/nav2.svg" alt="" width={20} height={20} />
-                    <h1 className="text-[16px] font-bold">Commerce Streams</h1>
-                  </div>
-                  <div className="flex justify-center">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mx-16 w-[75%]">
-                      {/* Column 1 */}
-                      <motion.div
-                        custom={4}
-                        variants={cardVariants}
-                        initial="initial"
-                        animate="animate"
-                       
-                        className="flex gap-4 pr-4"
-                      >
-                        <div className="flex items-start"></div>
-                        <div className="flex flex-col gap-2">
-                          <Link href="/streams/bsba">
-                            <p className={`text-base ${pathname.includes("/courses/bsba") ? "text-primary" : "text-gray-500"}`}>Basic Maths, Statistics, Business Studies & Accountancy (BSBA)</p>
-                          </Link>
-                        </div>
-                      </motion.div>
+                <div className="flex items-center gap-2 mb-5">
+                  <Image src="/nav2.svg" alt="" width={20} height={20} />
+                  <h1 className="text-[16px] font-bold">Commerce Streams</h1>
+                </div>
 
-                      {/* Column 2 */}
-                      <motion.div
-                        custom={5}
-                        variants={cardVariants}
-                        initial="initial"
-                        animate="animate"
-                       
-                        className="flex gap-4 pr-4"
-                      >
-                        <div className="flex items-start"></div>
-                        <div className="flex flex-col gap-2">
-                          <Link href="/streams/beba">
-                            <p className={`text-base ${pathname.includes("/courses/beba") ? "text-primary" : "text-gray-500"}`}>Basic Maths, Economics, Business Studies & Accountancy (BEBA)</p>
-                          </Link>
-                        </div>
-                      </motion.div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16">
 
-                      {/* Column 3 */}
-                      <motion.div
-                        custom={6}
-                        variants={cardVariants}
-                        initial="initial"
-                        animate="animate"
-                       
-                        className="flex gap-4 pr-4"
-                      >
-                        <div className="flex items-start"></div>
-                        <div className="flex flex-col gap-2">
-                          <Link href="/streams/seba">
-                            <p className={`text-base ${pathname.includes("/courses/seba") ? "text-primary" : "text-gray-500"}`}>Statistics, Economics, Business Studies & Accountancy (SEBA)</p>
-                          </Link>
-                        </div>
-                      </motion.div>
+                  {/* BSBA */}
+                  <motion.div custom={4} variants={cardVariants} initial="initial" animate="animate">
+                    <Link href="/streams/bsba">
+                      <p className={`text-base ${pathname.includes("bsba") ? "text-primary" : "text-gray-600"}`}>
+                        Basic Maths, Statistics, Business Studies & Accountancy (BSBA)
+                      </p>
+                    </Link>
+                  </motion.div>
 
-                      {/* Column 4 */}
-                      <motion.div
-                        custom={7}
-                        variants={cardVariants}
-                        initial="initial"
-                        animate="animate"
-                       
-                        className="flex gap-4"
-                      >
-                        <div className="flex items-start"></div>
-                        <div className="flex flex-col gap-2">
-                          <Link href="/streams/heba">
-                            <p className={`text-base ${pathname.includes("/courses/csba") ? "text-primary" : "text-gray-500"}`}>  History, Economics, Business Studies & Accountancy (HEBA)</p>
-                          </Link>
-                        </div>
-                      </motion.div>
-                      <motion.div
-                        custom={8}
-                        variants={cardVariants}
-                        initial="initial"
-                        animate="animate"
-                       
-                        className="flex gap-4"
-                      >
-                        <div className="flex items-start"></div>
-                        <div className="flex flex-col gap-2">
-                          <Link href="/streams/csba">
-                            <p className={`text-base ${pathname.includes("/courses/heba") ? "text-primary" : "text-gray-500"}`}>Computer Science, Statistics, Business Studies & Accountancy (CSBA)</p>
-                          </Link>
-                        </div>
-                      </motion.div>
-                      <motion.div
-                        custom={9}
-                        variants={cardVariants}
-                        initial="initial"
-                        animate="animate"
-                       
-                        className="flex gap-4"
-                      >
-                        <div className="flex items-start"></div>
-                        {/* <div className="flex flex-col gap-2">
-                          <Link href="/streams/ceba">
-                            <p className={`text-base ${pathname.includes("/courses/ceba") ? "text-primary" : "text-gray-500"}`}>Computer Science, Economics, Business Studies & Accountancy (CEBA)</p>
-                          </Link>
-                        </div> */}
-                      </motion.div>
-                    </div>
-                  </div>
+                  {/* BEBA */}
+                  <motion.div custom={5} variants={cardVariants} initial="initial" animate="animate">
+                    <Link href="/streams/beba">
+                      <p className={`text-base ${pathname.includes("beba") ? "text-primary" : "text-gray-600"}`}>
+                        Basic Maths, Economics, Business Studies & Accountancy (BEBA)
+                      </p>
+                    </Link>
+                  </motion.div>
+
+                  {/* SEBA */}
+                  <motion.div custom={6} variants={cardVariants} initial="initial" animate="animate">
+                    <Link href="/streams/seba">
+                      <p className={`text-base ${pathname.includes("seba") ? "text-primary" : "text-gray-600"}`}>
+                        Statistics, Economics, Business Studies & Accountancy (SEBA)
+                      </p>
+                    </Link>
+                  </motion.div>
+
+                  {/* HEBA */}
+                  <motion.div custom={7} variants={cardVariants} initial="initial" animate="animate">
+                    <Link href="/streams/heba">
+                      <p className={`text-base ${pathname.includes("heba") ? "text-primary" : "text-gray-600"}`}>
+                        History, Economics, Business Studies & Accountancy (HEBA)
+                      </p>
+                    </Link>
+                  </motion.div>
+
+                  {/* CSBA — moves automatically to next row */}
+                  <motion.div custom={8} variants={cardVariants} initial="initial" animate="animate">
+                    <Link href="/streams/csba">
+                      <p className={`text-base ${pathname.includes("csba") ? "text-primary" : "text-gray-600"}`}>
+                        Computer Science, Statistics, Business Studies & Accountancy (CSBA)
+                      </p>
+                    </Link>
+                  </motion.div>
+
                 </div>
               </div>
+
             </div>
           </div>
         )}
