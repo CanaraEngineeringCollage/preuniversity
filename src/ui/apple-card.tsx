@@ -86,6 +86,23 @@ export default function AppleStyledCard({ title, imageSrc, imageAlt, content, gr
     setOpen(false);
   };
 
+
+
+   React.useEffect(() => {
+      if (open) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === "Escape" && open) {
+          setOpen(false)
+        }
+      };
+      window.addEventListener("keydown", handleKeyDown);
+      return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [open, setOpen]);
+  
   return (
     <>
       <AnimatePresence>
