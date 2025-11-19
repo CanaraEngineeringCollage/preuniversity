@@ -32,7 +32,15 @@ const ExploreStream = () => {
       title: "Physics, Chemistry, Mathematics & Electronics (PCME)",
       icon: "/svgs/homapageCarousalSvg/2.svg",
       description: "bsbsb",
-      link: "streams/pcme"
+      link: "streams/beba"
+
+
+    },
+     {
+      title: "Basic Maths, Economics, Business Studies & Accountancy (BEBA)",
+      icon: "/svgs/homapageCarousalSvg/1.svg",
+      description: "asas",
+      link: "streams/pcmc"
 
 
     },
@@ -65,6 +73,14 @@ const ExploreStream = () => {
       icon: "/svgs/homapageCarousalSvg/2.svg",
       description: "asas",
       link: "streams/pcme"
+
+
+    },
+      {
+      title: "Physics, Chemistry, Mathematics & Electronics (PCME)",
+      icon: "/svgs/homapageCarousalSvg/2.svg",
+      description: "bsbsb",
+      link: "streams/beba"
 
 
     },

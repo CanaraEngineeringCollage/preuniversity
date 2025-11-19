@@ -20,7 +20,7 @@ const admissionLinks = [
 
 const examLinks = [
   { data: "Exam Results", links: "/exam-results" },
-  { data: "Exam Circulars", links: "/about" },
+  { data: "Exam Circulars", links: "/exam-circulars" },
   { data: "Question Bank", links: "/question-bank" },
 ];
 

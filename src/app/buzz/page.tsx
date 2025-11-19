@@ -6,7 +6,7 @@ import Magazine from "@/components/BuzzComponents/Magazine/Magazine";
 const page = () => {
   return (
     <div>
-    {/* <Magazine />  */}
+    <Magazine /> 
 
       <ExploreCampus
         campusEvents={data}

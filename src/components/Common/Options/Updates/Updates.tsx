@@ -50,7 +50,7 @@ export default function Updates() {
               <div className="flex items-start">{/* <Employees /> */}</div>
               <div className="flex flex-col gap-2">
                 <ul className="list-none text-[#1D1D1F] text-[16px] leading-10">
-                  <Link href="/about/our-founder">
+                  <Link href="/exam-circulars">
                     <li>Exam Circulars</li>
                   </Link>
                 </ul>

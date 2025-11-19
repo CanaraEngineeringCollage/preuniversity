@@ -4,7 +4,7 @@ import React from 'react'
 const page = () => {
   return (
     <section>
-        <Results image='/Images/commonImages/bannerImage.webp' text='Get Results' />
+        <Results image='/images/commonImages/bannerImage.webp' text='Get Results' />
     </section>
   )
 }

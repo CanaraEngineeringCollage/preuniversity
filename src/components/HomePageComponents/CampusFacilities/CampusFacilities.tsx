@@ -109,8 +109,8 @@ function Innovations() {
           </motion.div>
           <div className="lg:grid grid-cols-12 gap-4 overflow-hidden hidden relative">
             <FacilityCard
-              title="Academic Counselling"
-              description="Our state-of-the-art Academic Block is designed to elevate the learning experience. Spread across three floors, it houses spacious, well-lit classrooms, modern laboratories, and dedicated staff rooms. With lift access to all floors, the block ensures convenience and accessibility for all. A perfect blend of functionality and comfort for both students and faculty."
+              title="Academic Counsellor"
+              description="Every class shall have a member of the teaching staff as the Academic Counsellor who will act as a friend, philosopher & guide to all the students entrusted to his / her personal care."
               imageUrl="/images/homePageImages/1.png"
               className="lg:col-span-3 md:col-span-5 row-span-2 mt-56"
               gradientColor="#3c72d7"
@@ -119,24 +119,7 @@ function Innovations() {
             />
             <FacilityCard
               title="Book Bank"
-              description="At Manipal School, we believe that a healthy body nurtures a healthy mind. Our state-of-the-art sports infrastructure(Marena) is designed to meet the diverse physical training needs of our students. With dedicated spaces for cricket, basketball, football, and badminton, we provide ample opportunities for students to engage in sports under the guidance of experienced coachesTo support overall well-being, we incorporate yoga into our curriculum, fostering mindfulness and inner balance. Additionally, Karate training is offered to instill discipline, confidence, and self-defense skills, promoting both physical and mental resilience. Our structured sports program for Junior school students, curated by our training partner Edusports, ensures that every student develops essential athletic skills and gains exposure to various sports. "
-              subTitle=""
-              heading="Inaugurated and Blessed by"
-              subHeading="Shrimad Samyamindra Thirtha Swamiji, Mathadipathi, Shree Kashi Math Samsthan, Varanasi"
-              subDescription="A symbol of excellence and grandeur, the auditorium stands as a proud landmark on campus. Designed to host large-scale events, academic gatherings, and cultural programs, it reflects our commitment to providing world-class infrastructure."
-              keyHighlights={[
-                "Seating Capacity: 2,000",
-                "Centrally Air-conditioned Environment",
-                "Expansive 2,900 sq.m Carpet Area",
-                "State-of-the-Art Acoustics",
-                "Uninterrupted Generator Power Supply",
-                "Ample Parking Facility",
-              ]}
-              additionalFeatures={[
-                "A/C Seminar Hall with 500-seat capacity, fully equipped with acoustics",
-                "Dedicated space for Start-up & Incubation Centre",
-              ]}
-              bottomDescription="A space built to inspire, connect, and celebrate — all under one roof."
+              description="This scheme is intended primarily to help the economically backward students who cannot afford to purchase expensive text books, to possess the same on loan from the Book Bank for the academic year."
               imageUrl="/images/homePageImages/2.png"
               className="lg:col-span-3 md:col-span-5 row-span-1 top-32"
               gradientColor="#3c72d7"
@@ -144,16 +127,8 @@ function Innovations() {
               index={1} // From right
             />
             <FacilityCard
-              title="Dedicated Course Labs"
-              keyHighlights={[
-                "Dedicated labs for AI & ML, IoT, CAED, CS and more",
-                "Centrally Air-conditioned Environment",
-                "Guided by experienced faculty and domain experts",
-                "Supports academic projects, funded research, and interdisciplinary collaboration",
-                "Open for student innovation, startup prototyping, and technical skill development",
-              ]}
-              bottomDescription="From ideation to real-world solutions, our labs empower you to turn ideas into impact."
-              description="Our state-of-the-art Dedicated Course Labs are at the heart of academic discovery and innovation on campus. Designed to foster curiosity and creativity, these labs provide the perfect environment for students and faculty to explore, experiment, and excel."
+              title="Scholarships"
+              description="All Government & College Scholarships are given to needy and meritorious students."
               imageUrl="/images/homePageImages/3.png"
               className="lg:col-span-3 md:col-span-5 row-span-2"
               gradientColor="#3c72d7"
@@ -161,9 +136,8 @@ function Innovations() {
               index={2} // From left
             />
             <FacilityCard
-              title="Club Activities"
-              subTitle="Every classroom is a space where ideas thrive and interactions spark innovation"
-              description="Our classrooms are spacious, well-lit, and ergonomically designed to provide an ideal learning environment. Equipped with modern teaching aids such as projectors, smart boards, and high-speed internet, they ensure seamless integration of technology into everyday learning."
+              title="Communication System"
+              description="The College provides easy access to the attendance of the students through the  SMS service to parents. SMS alerts about college notifications are also given to lecturers and parents . The regularly Updated college Website gives a comprehensive view to the college activities."
               imageUrl="/images/homePageImages/4.png"
               className="lg:col-span-3 md:col-span-5 row-span-1 top-20"
               gradientColor="#3c72d7"
@@ -172,24 +146,18 @@ function Innovations() {
             />
             <FacilityCard
               title="Medical Facilities"
-              description="47,000 volumes with 5,000+ unique titles, including physical and digital formats. Access to a wealth of e-books, e-journals, and educational videos through our VTUCN membership and digital subscriptions. Over 400+ e-magazines, 10,888 educational videos, and 90+ web content platforms. Access to 200+ international proceedings and 5 lakh+ educational materials through the National Digital Library. Subscriptions to 42 print journals, 16+ magazines, and 4 newspapers."
+              description="All the bonafied students of this institution come under the “Safety Insurance Policy”, The Premium towards the same, is paid by the college from the ‘Parent -Teacher Association’ fund."
               imageUrl="/images/homePageImages/5.png"
               className="lg:col-span-3 md:col-span-5 row-span-2 top-36"
-              keyHighlights={[
-                "47,000 volumes with 5,000+ unique titles in both physical and digital formats.",
-                "Access to a diverse collection of e-books, e-journals, and educational videos through our VTUCN membership and digital subscriptions.",
-                "Over 400+ e-magazines, 10,888 educational videos, and access to 90+ web content platforms.",
-                "Connectivity to 200+ international proceedings and a vast repository of 5 lakh+ educational materials through the National Digital Library.",
-                "Subscriptions to 42 print journals, 16+ magazines, and 4 newspapers, enriching academic resources for students.",
-              ]}
+        
               gradientColor="#3c72d7"
               centering="object-[5%_center]"
               delay={0.5}
               index={4} // From left
             />
             <FacilityCard
-              title="Competitive Exam Training"
-              description="We are committed to equipping our students with the knowledge and guidance needed to make informed decisions about their future. Through university fairs, career counseling sessions, and interactions with esteemed academicians, we provide students with valuable insights into higher education opportunities. College visits, workshops, Job shadowing program and mentorship programs help them explore diverse career paths, empowering them to make confident choices for their academic and professional journeys."
+              title="Remedial Classes"
+              description="With the aim of enhancing students’ performance and aiding the slow learners, remedial classes are organised."
               imageUrl="/images/homePageImages/6.png"
               className="lg:col-span-4 md:col-span-5 object-cover lg:max-w-[310px] row-span-2 xl:max-w-[310px] top-[-13rem]"
               gradientColor="#3c72d7"
@@ -199,8 +167,8 @@ function Innovations() {
           </div>
           <div className="grid md:grid-cols-2 grid-cols-1 gap-4 relative lg:hidden">
             <FacilityCard
-              title="Academic Counselling"
-              description="Our state-of-the-art Academic Block is designed to elevate the learning experience. Spread across three floors, it houses spacious, well-lit classrooms, modern laboratories, and dedicated staff rooms. With lift access to all floors, the block ensures convenience and accessibility for all. A perfect blend of functionality and comfort for both students and faculty."
+              title="Academic Counsellor"
+              description="Every class shall have a member of the teaching staff as the Academic Counsellor who will act as a friend, philosopher & guide to all the students entrusted to his / her personal care."
               className="col-span-1"
               imageUrl="/images/homePageImages/1.png"
               gradientColor="#3c72d7"
@@ -209,24 +177,7 @@ function Innovations() {
             />
             <FacilityCard
               title="Book Bank"
-              description="At Manipal School, we believe that a healthy body nurtures a healthy mind. Our state-of-the-art sports infrastructure(Marena) is designed to meet the diverse physical training needs of our students. With dedicated spaces for cricket, basketball, football, and badminton, we provide ample opportunities for students to engage in sports under the guidance of experienced coachesTo support overall well-being, we incorporate yoga into our curriculum, fostering mindfulness and inner balance. Additionally, Karate training is offered to instill discipline, confidence, and self-defense skills, promoting both physical and mental resilience. Our structured sports program for Junior school students, curated by our training partner Edusports, ensures that every student develops essential athletic skills and gains exposure to various sports. "
-              subTitle=""
-              heading="Inaugurated and Blessed by"
-              subHeading="Shrimad Samyamindra Thirtha Swamiji, Mathadipathi, Shree Kashi Math Samsthan, Varanasi"
-              subDescription="A symbol of excellence and grandeur, the auditorium stands as a proud landmark on campus. Designed to host large-scale events, academic gatherings, and cultural programs, it reflects our commitment to providing world-class infrastructure."
-              keyHighlights={[
-                "Seating Capacity: 2,000",
-                "Centrally Air-conditioned Environment",
-                "Expansive 2,900 sq.m Carpet Area",
-                "State-of-the-Art Acoustics",
-                "Uninterrupted Generator Power Supply",
-                "Ample Parking Facility",
-              ]}
-              additionalFeatures={[
-                "A/C Seminar Hall with 500-seat capacity, fully equipped with acoustics",
-                "Dedicated space for Start-up & Incubation Centre",
-              ]}
-              bottomDescription="A space built to inspire, connect, and celebrate — all under one roof."
+              description="This scheme is intended primarily to help the economically backward students who cannot afford to purchase expensive text books, to possess the same on loan from the Book Bank for the academic year."
               imageUrl="/images/homePageImages/2.png"
               className="col-span-1"
               gradientColor="#3c72d7"
@@ -234,16 +185,8 @@ function Innovations() {
               index={1}
             />
             <FacilityCard
-              title="Dedicated Course Labs"
-              keyHighlights={[
-                "Dedicated labs for AI & ML, IoT, CAED, CS and more",
-                "Centrally Air-conditioned Environment",
-                "Guided by experienced faculty and domain experts",
-                "Supports academic projects, funded research, and interdisciplinary collaboration",
-                "Open for student innovation, startup prototyping, and technical skill development",
-              ]}
-              bottomDescription="From ideation to real-world solutions, our labs empower you to turn ideas into impact."
-              description="Our state-of-the-art Dedicated Course Labs are at the heart of academic discovery and innovation on campus. Designed to foster curiosity and creativity, these labs provide the perfect environment for students and faculty to explore, experiment, and excel."
+              title="Scholarships"
+              description="All Government & College Scholarships are given to needy and meritorious students."
               imageUrl="/images/homePageImages/3.png"
               className="col-span-1"
               gradientColor="#3c72d7"
@@ -251,9 +194,8 @@ function Innovations() {
               index={2}
             />
             <FacilityCard
-              title="Club Activities"
-              bottomDescription="Every classroom is a space where ideas thrive and interactions spark innovation"
-              description="Our classrooms are spacious, well-lit, and ergonomically designed to provide an ideal learning environment. Equipped with modern teaching aids such as projectors, smart boards, and high-speed internet, they ensure seamless integration of technology into everyday learning."
+              title="Communication System"
+              description="The College provides easy access to the attendance of the students through the  SMS service to parents. SMS alerts about college notifications are also given to lecturers and parents . The regularly Updated college Website gives a comprehensive view to the college activities."
               imageUrl="/images/homePageImages/4.png"
               className="col-span-1"
               gradientColor="#3c72d7"
@@ -262,15 +204,9 @@ function Innovations() {
             />
             <FacilityCard
               title="Medical Facilities"
-              description="47,000 volumes with 5,000+ unique titles, including physical and digital formats. Access to a wealth of e-books, e-journals, and educational videos through our VTUCN membership and digital subscriptions. Over 400+ e-magazines, 10,888 educational videos, and 90+ web content platforms. Access to 200+ international proceedings and 5 lakh+ educational materials through the National Digital Library. Subscriptions to 42 print journals, 16+ magazines, and 4 newspapers."
+              description="All the bonafied students of this institution come under the “Safety Insurance Policy”, The Premium towards the same, is paid by the college from the ‘Parent -Teacher Association’ fund."
               imageUrl="/images/homePageImages/5.png"
-              keyHighlights={[
-                "47,000 volumes with 5,000+ unique titles in both physical and digital formats.",
-                "Access to a diverse collection of e-books, e-journals, and educational videos through our VTUCN membership and digital subscriptions.",
-                "Over 400+ e-magazines, 10,888 educational videos, and access to 90+ web content platforms.",
-                "Connectivity to 200+ international proceedings and a vast repository of 5 lakh+ educational materials through the National Digital Library.",
-                "Subscriptions to 42 print journals, 16+ magazines, and 4 newspapers, enriching academic resources for students.",
-              ]}
+        
               className="col-span-1"
               centering="object-[5%_center]"
               gradientColor="#3c72d7"
@@ -278,8 +214,8 @@ function Innovations() {
               index={4}
             />
             <FacilityCard
-              title="On-Campus Dining"
-              description="A student-friendly space to relax, recharge, and relish.Our hygienic and spacious canteens offer a wide variety of vegetarian and non-vegetarian options, catering to diverse tastes. Nutritious and freshly prepared meals are sourced from Prathignhya Café and Can Café - Hangyo, ensuring quality with every bite. It's more than just a meal—it's part of the Canara experience."
+              title="Remedial Classes"
+              description="With the aim of enhancing students’ performance and aiding the slow learners, remedial classes are organised."
               imageUrl="/images/homePageImages/6.png"
               centering="object-[25%_center]"
               className="col-span-1"
