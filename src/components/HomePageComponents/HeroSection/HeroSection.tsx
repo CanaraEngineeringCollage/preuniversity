@@ -9,6 +9,7 @@ import { useState } from "react";
 
 import { useRouter } from "next/navigation";
 import { ClipLoader } from "react-spinners";
+import { submitToGoogleSheet } from "@/utils/formSubmission";
 
 interface FormData {
   fullName: string;
@@ -27,15 +28,22 @@ const   HeroBanner = () => {
   } = useForm<FormData>();
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-  const onSubmit = async (data: FormData) => {
-    setLoading(true);
-    
-    if (true) {
-      router.push("/thank-you");
-    } else {
-   
-    }
-  };
+const onSubmit = async (data: FormData) => {
+  setLoading(true);
+
+  const result = await submitToGoogleSheet(data);
+
+  if (result.success) {
+    reset();
+    toast.success("Enquiry submitted successfully!");
+  } else {
+    toast.error("Something went wrong. Try again.");
+  }
+
+  setLoading(false);
+};
+
+
   const formRef = useRef(null);
   const isFormInView = useInView(formRef, { once: true });
 

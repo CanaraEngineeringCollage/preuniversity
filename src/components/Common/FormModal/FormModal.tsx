@@ -9,6 +9,7 @@ import { ClipLoader } from "react-spinners";
 import toast from "react-hot-toast";
 import { useOutsideClick } from "@/components/hooks/use-outside-click";
 import { IoCloseOutline } from "react-icons/io5";
+import { submitToGoogleSheet } from "@/utils/formSubmission";
 
 type FormData = {
   fullName: string;
@@ -60,16 +61,25 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const commentValue = watch("enquiry") || "";
   const [loading, setLoading] = React.useState(false);
 
-  const handleFormSubmit = async (data: FormData) => {
-    setLoading(true);
+ const handleFormSubmit = async (data: FormData) => {
+  setLoading(true);
 
-    // 👉 your API code goes here
-
-    toast.success("Form submitted!");
-    setLoading(false);
+  const result = await submitToGoogleSheet({
+    fullName: data.fullName,
+    email: data.email,
+    phoneNumber: data.phoneNumber,
+    comments: data.enquiry,
+  });
+reset();
+    onClose();
+  if (result.success) {
     reset();
     onClose();
-  };
+  } else {
+  }
+
+  setLoading(false);
+};
 
   // close on outside click
   useOutsideClick(containerRef, () => {

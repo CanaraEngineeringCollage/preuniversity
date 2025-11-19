@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { ClipLoader } from "react-spinners";
 import Image from "next/image";
+import { submitToGoogleSheet } from "@/utils/formSubmission";
 
 function FormComponent() {
   const [formData, setFormData] = useState({
@@ -15,12 +16,31 @@ function FormComponent() {
   const [charCount, setCharCount] = useState<number>(0);
   const [isLoding, setIsLoading] = useState<boolean>(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    console.log(formData);
-    setIsLoading(false);
-  };
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsLoading(true);
+
+  const result = await submitToGoogleSheet({
+    fullName: formData.name,
+    email: formData.email,
+    phoneNumber: formData.phone,
+    comments: formData.enquiry,
+  });
+
+  if (result.success) {
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      enquiry: "",
+    });
+    setCharCount(0);
+  } else {
+  }
+
+  setIsLoading(false);
+};
+
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>

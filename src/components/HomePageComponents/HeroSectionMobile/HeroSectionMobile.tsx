@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 import { ClipLoader } from 'react-spinners';
 import { useRouter } from 'next/navigation';
+import { submitToGoogleSheet } from '@/utils/formSubmission';
 
 type FormData = {
   fullName: string;
@@ -32,10 +33,26 @@ const HeroSectionMobile = () => {
   const [loading, setLoading] = useState(false);
   const commentValue = watch('enquiry') || '';
   const router = useRouter();
-  const onSubmit = async (data: FormData) => {
-    setLoading(true);
-    
+const onSubmit = async (data: FormData) => {
+  setLoading(true);
+
+  const result = await submitToGoogleSheet({
+    fullName: data.fullName,
+    email: data.email,
+    phoneNumber: data.phoneNumber,
+    comments: data.enquiry, // map enquiry -> comments
+  });
+
+  if (result.success) {
+    reset();
+    toast.success("Enquiry submitted successfully!");
+  } else {
+    toast.error("Something went wrong. Try again.");
   }
+
+  setLoading(false);
+};
+
 
   return (
     <div className="flex justify-center mt-[-10px] ">
