@@ -62,7 +62,7 @@ const   HeroBanner = () => {
           transition={{ duration: 0.5 }}
           className="bg-white rounded-lg shadow-lg px-4 md:px-6 lg:px-8 py-6 md:py-8 xl:py-16 w-full max-w-[95vw] sm:max-w-[80vw] md:max-w-[40vw] lg:max-w-[35vw] xl:max-w-[30vw]"
         >
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 md:space-y-6 text-black">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 md:space-y-6 text-[#1D1D1F]">
             <motion.h2
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}

@@ -40,11 +40,11 @@ const HeroSectionMobile = () => {
   return (
     <div className="flex justify-center mt-[-10px] ">
       <div className="w-full max-w-7xl p-10">
-        <h2 className="text-center text-black font-bold text-3xl md:text-3xl mb-12">
+        <h2 className="text-center text-[#1D1D1F] font-bold text-3xl md:text-3xl mb-12">
           Dream Big. Plan Smart. Enquire Now.
         </h2>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 gap-6 text-black">
+        <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[#1D1D1F]">
           <div>
             <input
               type="text"

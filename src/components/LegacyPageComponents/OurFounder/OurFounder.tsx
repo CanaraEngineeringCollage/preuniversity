@@ -9,12 +9,12 @@ export default function FounderSection() {
         <div className="flex flex-col md:flex-row items-start gap-12">
           {/* Left Column - Text */}
           <div className="flex-1  text-[#86868B] text-[17px] leading-relaxed space-y-6 ">
-            <h2 className="leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl  font-bold text-center md:text-start  text-black mb-6">Our Founder</h2>
+            <h2 className="leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl  font-bold text-center md:text-start  text-[#1D1D1F] mb-6">Our Founder</h2>
             <div className="flex md:hidden flex-col items-center flex-shrink-0 mx-auto lg:px-20">
               <div className="w-80 h-96 relative rounded-xl overflow-hidden shadow-md">
                 <Image src={img} alt="Sri Ammembal Subba Rao Pai" width={1000} height={1000} className="object-cover h-full" />
               </div>
-              <p className="mt-4 text-center text-[27px] font-semibold text-black">
+              <p className="mt-4 text-center text-[27px] font-semibold text-[#1D1D1F]">
                 Sri Ammembal Subba
                 <br />
                 Rao Pai
@@ -40,7 +40,7 @@ export default function FounderSection() {
             <div className="w-80  h-96 relative rounded-xl overflow-hidden shadow-md">
               <Image src={img} alt="Sri Ammembal Subba Rao Pai" fill className="object-cover" />
             </div>
-            <p className="mt-4 text-center text-[27px] font-semibold text-black">
+            <p className="mt-4 text-center text-[27px] font-semibold text-[#1D1D1F]">
               Sri Ammembal Subba
               <br />
               Rao Pai

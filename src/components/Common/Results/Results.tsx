@@ -3,7 +3,7 @@ import React from "react";
 
 const Results = ({ image, text }: { image: string; text: string }) => {
   return (
-    <section className="text-black relative w-full overflow-hidden pb-10 lg:pb-28">
+    <section className="text-[#1D1D1F] relative w-full overflow-hidden pb-10 lg:pb-28">
       <div className="relative h-[65vh] lg:h-[100vh] w-screen flex justify-center items-center">
         {/* Correct Image Placement */}
         <Image

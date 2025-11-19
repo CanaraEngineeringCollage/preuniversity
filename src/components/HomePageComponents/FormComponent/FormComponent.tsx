@@ -45,8 +45,8 @@ function FormComponent() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 w-full max-w-7xl bg-[#F6F7FB]  rounded-2xl  overflow-hidden flex flex-col md:flex-row">
-    <div className="md:w-1/2 h-[400px] md:h-[800px] relative p-4">
+      <div className="relative z-10 w-full max-w-7xl bg-[#F6F7FB] rounded-t-2xl  lg:rounded-2xl  overflow-hidden flex flex-col md:flex-row">
+    <div className="md:w-1/2 h-[400px] md:h-[800px] relative lg:p-4">
   <iframe
     width="100%"
     height="100%"
@@ -84,7 +84,7 @@ function FormComponent() {
             Dream Big. Plan Smart. Enquire Now.
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6 text-black">
+          <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6 text-[#1D1D1F]">
             <div>
               <input
                 type="text"

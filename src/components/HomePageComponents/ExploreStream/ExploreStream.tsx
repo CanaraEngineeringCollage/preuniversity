@@ -175,9 +175,9 @@ const ExploreStream = () => {
 
 
   return (
-    <section className="my-16">
+    <section className="max-w-[95%] xl:max-w-[87.5%] ml-auto my-16">
       <div className="flex flex-col items-center ">
-        <h1 className="leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl text-center   font-bold text-black ">
+        <h1 className="leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl text-center   font-bold text-[#1D1D1F] ">
           Explore Our Stream Combinations
         </h1>
         <p className="lg2:text-2xl lg:text-lg text-[#86868B]  pt-4  text-center mb-6 font-medium px-2">
@@ -207,7 +207,7 @@ const ExploreStream = () => {
           ))}
         </div>
       </div>
-      <div className="lg:ml-32 ml-5">
+      <div className=" ml-5">
         <Swiper
           modules={[Autoplay]}
           autoplay={{ delay: autoplayDelay, disableOnInteraction: false }}
@@ -229,7 +229,7 @@ const ExploreStream = () => {
         >
           {data?.map((item, index) => (
             <SwiperSlide key={index}>
-             <div className=" h-[200px]  text-black p-6 bg-white rounded-2xl flex flex-col justify-between">
+             <div className=" h-[200px]  text-[#1D1D1F] p-6 bg-white rounded-2xl flex flex-col justify-between">
 
                 <div className="mb-4">
                   <Image src={item.icon} alt="Mental Health Icon" width={30} height={30} />

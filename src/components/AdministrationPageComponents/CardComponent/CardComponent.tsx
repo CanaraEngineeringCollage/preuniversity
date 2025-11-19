@@ -21,49 +21,50 @@ const AdministrationMembers = () => {
   }, []);
   return (
     <section className="pb-20 px-4 sm:px-8 md:px-16 lg:px-64 xl:px-64">
-      <h1 className="text-black text-[40px] lg:text-[54px] mb-10 mt-10 md:mb-20 font-bold text-center">Administrative Body</h1>
+      <h1 className="text-[#1D1D1F] text-[40px] lg:text-[54px] mb-10 mt-10 md:mb-20 font-bold text-center">Administrative Body</h1>
 
-      <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-8 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-8 justify-items-center">
         {data.map((item, index) => {
           const isLastCard = index === data.length - 1;
           const remainder = data.length % 3;
           const shouldCenterLast = remainder === 1 && isLastCard;
 
           return (
-            <div
-              key={index}
-              className={`relative cursor-pointer w-full max-w-[309px] h-[450px] rounded-xl overflow-hidden bg-[#6DC0EB] text-white flex flex-col items-center py-6 shadow-md ${
-                shouldCenterLast ? "md:col-start-2 xl:col-start-auto" : ""
-              }`}
-            >
-              <Image
-                onClick={() => router.push(`/user-details/${item.id}`)}
-                src={item.image}
-                alt={item.name}
-                width={300}
-                height={300}
-                className="rounded-full scale-110 w-full object-cover"
-              />
-              <Link href={`/user-details/${item.id}`}>
-                <div className="absolute bottom-0 left-0 w-full h-56 bg-[linear-gradient(to_top,#6DC0EB_40%,transparent)] z-10"></div>
-                <div className="absolute z-10 bottom-5 left-6">
-                  <h2 className="text-[20px] font-bold">{item.name}</h2>
-                  <p className="text-[17px]">
-                    {item.roles.map((role, idx) => (
-                      <div key={idx}>
-                        {role.title}
-                        {role.organization && (
-                          <>
-                            {" "}
-                            , <span className="font-semibold">{role.organization}</span>
-                          </>
-                        )}
-                      </div>
-                    ))}
-                  </p>
-                </div>
-              </Link>
-            </div>
+        <div
+  key={index}
+  className={`relative  w-full max-w-[309px] aspect-[3/4] rounded-xl overflow-hidden bg-[#6DC0EB] text-white flex flex-col items-center shadow-md ${
+    shouldCenterLast ? "md:col-start-2 xl:col-start-auto" : ""
+  }`}
+>
+  {/* Image fills card completely */}
+  <Image
+    src={item.image}
+    alt={item.name}
+    fill
+    className="object-cover" // removed padding to avoid gap
+  />
+
+  {/* Responsive gradient */}
+  <div className="absolute bottom-0 left-0 w-full h-[40%] bg-gradient-to-t from-[#6DC0EB] via-[#6DC0EB]/70 to-transparent z-10"></div>
+
+  {/* Content */}
+  <div className="absolute z-20 bottom-3 sm:bottom-4 px-2 sm:px-3 md:px-4 left-0 w-full">
+    <h2 className="text-base sm:text-lg md:text-xl font-bold leading-tight ">
+      {item.name}
+    </h2>
+    <p className="text-xs sm:text-sm md:text-base leading-snug break-words">
+      {item.roles.map((role, idx) => (
+        <span key={idx}>
+          {role.title}
+          {item.roles.length > 1 && role.organization && ","}{" "}
+          <span className="font-semibold">{role.organization}</span>
+          {idx < item.roles.length - 1 && <br />}
+        </span>
+      ))}
+    </p>
+  </div>
+</div>
+
           );
         })}
       </div>

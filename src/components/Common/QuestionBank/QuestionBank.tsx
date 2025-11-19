@@ -96,7 +96,7 @@ function EventContent({ description }: { description: EventDescriptionProps }) {
         height={700}
         className="object-cover overflow-hidden rounded-t-2xl w-full lg:h-[700px] h-[400px] mb-10"
       />
-      <div className="p-4 lg:px-20 space-y-10 text-left text-sm text-black bg-white">
+      <div className="p-4 lg:px-20 space-y-10 text-left text-sm text-[#1D1D1F] bg-white">
         <div>
           <p className="text-[17px] text-textGray uppercase font-bold mb-4">{description.date}</p>
           <h3 className="text-[31px] lg:text-[46px] leading-[1.1] lg:max-w-[70%] mb-5 font-bold">{description.topTitle}</h3>
@@ -192,7 +192,7 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({ title, description, campu
         isOpen,
       }}
     >
-      <section className="max-w-7xl xl:max-w-[75%] mx-auto text-black py-20">
+      <section className="max-w-7xl xl:max-w-[75%] mx-auto text-[#1D1D1F] py-20">
         {(title || description) && (
           <div className="text-center mb-10 lg:px-32">
             <h1 className="text-center leading-[1.1] text-[46px] mb-5 lg:mb-10 font-bold">{title}</h1>
@@ -206,7 +206,7 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({ title, description, campu
           {categories.map((category, index) => (
             <h3
               onClick={() => setActiveCategory(category)}
-              className={`cursor-pointer ${category === activeCategory ? "text-black font-bold" : "text-textGray"} text-[18px]`}
+              className={`cursor-pointer ${category === activeCategory ? "text-[#1D1D1F] font-bold" : "text-textGray"} text-[18px]`}
               key={index}
             >
               {category}
@@ -243,7 +243,7 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({ title, description, campu
           ))}
         </div>
         <div className="flex justify-center mt-10">
-          <button className="bg-[#eff1f6] text-black px-5 py-2 cursor-pointer rounded-3xl">Explore More Campus Stories</button>
+          <button className="bg-[#eff1f6] text-[#1D1D1F] px-5 py-2 cursor-pointer rounded-3xl">Explore More Campus Stories</button>
         </div>
 
         {/* Modal */}

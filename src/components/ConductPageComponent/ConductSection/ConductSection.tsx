@@ -15,7 +15,7 @@ const ConductSection = () => {
 
   return (
     <section className="max-w-7xl xl:max-w-[75%] text-[#86868B] lg:mx-auto py-20 lg:py-32  mx-[15px]">
-      <h1 className="lg:text-[54px] text-[32px] font-bold text-black mb-5 lg:mb-28">Code of Conduct</h1>
+      <h1 className="lg:text-[54px] text-[32px] font-bold text-[#1D1D1F] mb-5 lg:mb-28">Code of Conduct</h1>
       <p>
         All students shall observe the rules and regulations laid down in the college calendar and those that may be framed from time to time. All
         parents are also required to familiarize themselves with these rules. Every student is therefore deemed to have agreed to abide by the rules
@@ -27,7 +27,7 @@ const ConductSection = () => {
         ))}
       </ul>
 
-      <h1 className="text-xl font-extrabold text-black mt-10 mb-3">Dress Code</h1>
+      <h1 className="text-xl font-bold text-[#1D1D1F] mt-10 mb-3">Dress Code</h1>
       <p>
         Students are expected to dress in uniform prescribed by the college authorities and the I.D. card at all times in the college campus on all
         working days. Students not wearing teh prescribed uniform or the I.D.card will not be allowed to enter the campus.

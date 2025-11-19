@@ -10,7 +10,7 @@ const QuestionSection = () => {
   const [showCommerce, setShowCommerce] = useState<boolean>(false);
 
   return (
-    <section className="lg:mx-52 mx-5 text-black py-32">
+    <section className="lg:mx-52 mx-5 text-[#1D1D1F] pt-24 pb-32">
       <div>
         <h1 className="mb-20 font-bold text-[45px]">Question Bank</h1>
 
@@ -18,7 +18,7 @@ const QuestionSection = () => {
         <div className="flex gap-2 justify-between">
           <div className="flex items-center gap-3">
             <Image src="/nav1.svg" alt="svg" width={20} height={20} />
-            <h1 className="text-xl font-extrabold">Science Streams</h1>
+            <h1 className="text-xl font-bold">Science Streams</h1>
           </div>
           <button onClick={() => setShowScience(!showScience)}>
             {showScience ? <UpArrow /> : <DownArrow />}
@@ -57,7 +57,7 @@ const QuestionSection = () => {
         <div className="flex justify-between gap-2 mt-10">
           <div className="flex items-center gap-3">
             <Image src="/nav1.svg" alt="svg" width={20} height={20} />
-            <h1 className="text-xl font-extrabold">Commerce Streams</h1>
+            <h1 className="text-xl font-bold">Commerce Streams</h1>
           </div>
           <button onClick={() => setShowCommerce(!showCommerce)}>
             {showCommerce ? <UpArrow /> : <DownArrow />}

@@ -5,7 +5,7 @@ import React from "react";
 
 const SeeYourSelf = () => {
   return (
-    <section className="max-w-[90%] xl:max-w-[75%] mx-auto text-black my-0 md:my-12">
+    <section className="max-w-[90%] xl:max-w-[75%] mx-auto text-[#1D1D1F] my-0 md:my-12">
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2 justify-items-center items-center">
         <div className="flex flex-col">
           <h1 className="font-bold leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl">See Yourself at Canara</h1>

@@ -6,9 +6,9 @@ const AdmissionSection = () => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
   return (
-    <section className="py-20 xl:py-36 text-black lg2:px-24 mx-5 overflow-hidden">
+    <section className="py-20 xl:py-36 text-[#1D1D1F] lg2:px-24 mx-5 overflow-hidden">
       <div className="">
-        <h1 className="text-[30px] lg:text-[54px] font-bold pb-1 lg:pb-10 text-black">Admissions</h1>
+        <h1 className="text-[30px] lg:text-[54px] font-bold pb-1 lg:pb-10 text-[#1D1D1F]">Admissions</h1>
         <div className="grid grid-cols-1 gap-3 md:gap-32 md:grid-cols-12 mt-10">
           <div className="col-span-4">
             {AdmissionData?.map((section, index) => (
@@ -23,12 +23,13 @@ const AdmissionSection = () => {
               </h1>
             ))}
           </div>
-          <div className="col-span-8">
+          <div className="col-span-8 mt-7">
+            {AdmissionData[selectedIndex]?.subTitle && <p className="text-[17px] mb-3 text-[#86868B]  cursor-pointer">{AdmissionData[selectedIndex].subTitle}</p>}
             {AdmissionData[selectedIndex]?.data && (
               <>
-                <ul className="list-disc pl-5 space-y-1 mt-7 lg:me-24">
+                <ul className="list-disc pl-5 space-y-1  lg:me-24">
                   {AdmissionData[selectedIndex].data[0]?.points?.map((point, i) => (
-                    <li key={i} className="text-[17px] text-[#86868B] hover:text-blue-600 cursor-pointer">
+                    <li key={i} className="text-[17px] text-[#86868B]  cursor-pointer">
                       {point}
                     </li>
                   ))}

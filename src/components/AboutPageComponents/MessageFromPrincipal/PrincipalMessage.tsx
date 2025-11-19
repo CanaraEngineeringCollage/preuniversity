@@ -3,13 +3,13 @@ import React from "react";
 import image from "../../../../public/images/aboutPageImages/principal.webp";
 const PrincipalMessage = () => {
   return (
-    <div className="max-w-[90%] xl:max-w-[75%] grid md:grid-cols-2 grid-cols-1 mx-auto gap-8 my-44">
-      <div className="flex justify-center flex-col items-center">
+    <div className="max-w-5xl xl:max-w-[75%] grid md:grid-cols-2 grid-cols-1 mx-auto gap-8 my-44">
+      <div className="flex justify-start flex-col items-start">
         <Image src={image} alt="Dean" className="object-cover w-[380px] h-[436px]" />
-        <h2 className="text-black text-[27px] pt-9 font-bold">Smt. Latamaheswari K B</h2>
+        <h2 className="text-[#1D1D1F] text-[27px] pt-9 font-bold">Smt. Latamaheswari K B</h2>
       </div>
       <div>
-        <h2 className="text-black text-4xl font-bold text-center">Message from the Principal</h2>
+        <h2 className="text-[#1D1D1F] text-4xl font-bold ">Message from the Principal</h2>
         <div className="text-[#86868B] pt-8 lg2:text-xl ">
           <p className="">
             I am pleased to share my views through these few words. Having spent three decades in this noble profession, I feel blessed that I have

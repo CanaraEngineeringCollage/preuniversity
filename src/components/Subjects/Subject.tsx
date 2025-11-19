@@ -18,12 +18,12 @@ export default function Subject( {name ,description,future_prospects_heading,fut
     <>
     <Banner/>
 
- <div className="max-w-screen  mx-12 px-1 sm:px-3 lg:px-8 py-12 text-black mb-12">
-  <h1 className=" text-[#1D1D1F] max-w-4xl text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 py-6 sm:py-10">
+ <div className="max-w-screen  mx-12 px-1 sm:px-3 lg:px-8 py-12 text-[#1D1D1F] mb-12">
+  <h1 className=" text-[#1D1D1F] max-w-4xl leading-[1.2] text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 py-6 sm:py-10">
     {name}
   </h1>
 
-  <p className="text-sm text-start  text-[#86868B] mb-10">
+  <p className="text-sm sm:text-[17px] text-start leading-relaxed   text-[#86868B] mb-10">
     {description}
   </p>
 
