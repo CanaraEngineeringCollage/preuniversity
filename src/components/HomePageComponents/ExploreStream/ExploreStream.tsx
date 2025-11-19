@@ -191,7 +191,7 @@ const ExploreStream = () => {
 
 
   return (
-    <section className="max-w-[95%] xl:max-w-[87.5%] ml-auto my-16">
+    <section className="lg:max-w-[95%] px-5 md:px-0 xl:max-w-[87.5%] ml-auto my-16">
       <div className="flex flex-col items-center ">
         <h1 className="leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl text-center   font-bold text-[#1D1D1F] ">
           Explore Our Stream Combinations
@@ -223,7 +223,7 @@ const ExploreStream = () => {
           ))}
         </div>
       </div>
-      <div className=" ml-5">
+      <div className="">
         <Swiper
           modules={[Autoplay]}
           autoplay={{ delay: autoplayDelay, disableOnInteraction: false }}

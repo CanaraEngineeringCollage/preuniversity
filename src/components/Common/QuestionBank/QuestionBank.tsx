@@ -192,21 +192,38 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({ title, description, campu
         isOpen,
       }}
     >
-      <section className="max-w-7xl xl:max-w-[75%] mx-auto text-[#1D1D1F] py-20">
+      <section className="max-w-7xl  px-5 xl:max-w-[75%] mx-auto text-[#1D1D1F]  py-10 lg:py-20">
         {(title || description) && (
           <div className="text-center mb-10 lg:px-32">
-            <h1 className="text-center leading-[1.1] text-[46px] mb-5 lg:mb-10 font-bold">{title}</h1>
+            <h1 className="text-center leading-[1.1] text-[30px] lg:text-[46px] mb-5 lg:mb-10 font-bold">{title}</h1>
             <p className="text-center">{description}</p>
           </div>
         )}
-        <div className="flex justify-between items-center pb-5 lg:pb-10 flex-wrap gap-2">
+
+        
+        <div className="flex justify-between items-center pb-5 lg:pb-10  gap-2">
           <button className="border text-lg font-bold px-3 py-1 rounded-4xl cursor-pointer" onClick={() => setActiveCategory("All")}>
             Clear All Filters
           </button>
+          {/* Mobile Select Category */}
+<div className="block md:hidden ">
+  <select
+    className=" border px-3 py-2 rounded-4xl text-[18px] text-[#1D1D1F]"
+    value={activeCategory}
+    onChange={(e) => setActiveCategory(e.target.value)}
+  >
+    {categories.map((category, index) => (
+      <option key={index} value={category}>
+        {category}
+      </option>
+    ))}
+  </select>
+</div>
+
           {categories.map((category, index) => (
             <h3
               onClick={() => setActiveCategory(category)}
-              className={`cursor-pointer ${category === activeCategory ? "text-[#1D1D1F] font-bold" : "text-textGray"} text-[18px]`}
+              className={`cursor-pointer ${category === activeCategory ? "text-[#1D1D1F] font-bold" : "text-textGray"} hidden lg:block text-[18px]`}
               key={index}
             >
               {category}

@@ -10,9 +10,9 @@ const QuestionSection = () => {
   const [showCommerce, setShowCommerce] = useState<boolean>(false);
 
   return (
-    <section className="lg:mx-52 mx-5 text-[#1D1D1F] pt-24 pb-32">
+    <section className="lg:mx-52 mx-5 text-[#1D1D1F] py-10 lg:pt-24 lg:pb-32">
       <div>
-        <h1 className="mb-20 font-bold text-[45px]">Question Bank</h1>
+        <h1 className="mb-10 lg:mb-20 font-bold text-[30px] lg:text-[45px]">Question Bank</h1>
 
         {/* Science Stream */}
         <div className="flex gap-2 justify-between">
@@ -40,7 +40,7 @@ const QuestionSection = () => {
                   className="flex justify-between mt-5 border-b-1 pb-1 border-[#e5e7ed]"
                   key={index}
                 >
-                  <h1 className="text-[17px] text-[#86868B]">{item.name}</h1>
+                  <h1 className="text-[17px] w-[50%] lg:w-auto text-[#86868B]">{item.name}</h1>
                   <a
                     download={item.link}
                     className="cursor-pointer text-[17px] font-bold flex gap-2 items-center"
@@ -79,7 +79,7 @@ const QuestionSection = () => {
                   className="flex justify-between mt-5 border-b-1 pb-1 border-[#e5e7ed]"
                   key={index}
                 >
-                  <h1 className="text-[17px] text-[#86868B]">{item.name}</h1>
+                  <h1 className="text-[17px] w-[50%] lg:w-auto text-[#86868B]">{item.name}</h1>
                   <a
                     download={item.link}
                     className="cursor-pointer text-[17px] font-bold flex gap-2 items-center"

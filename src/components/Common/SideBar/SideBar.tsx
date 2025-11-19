@@ -1,7 +1,7 @@
 "use client";
 
 import { Typography } from "@material-tailwind/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -11,19 +11,19 @@ import Link from "next/link";
 const science = [
   {
     title: "Physics, Chemistry, Mathematics & Biology (PCMB)",
-    link: "/examination-circulations",
+    link: "/streams/pcmb",
   },
   {
     title: "Physics, Chemistry, Mathematics & Electronics (PCME)",
-    link: "/examination-docs-issued",
+    link: "/streams/pcme",
   },
   {
     title: "Physics, Chemistry, Mathematics & Computer Science (PCMC)",
-    link: "/examination-guidelines",
+    link: "/streams/pcmc",
   },
   {
     title: "Physics, Chemistry, Mathematics & Statistics (PCMS)",
-    link: "/examination-guidelines",
+    link: "/streams/pcms",
   },
 ];
 
@@ -31,28 +31,28 @@ const science = [
 const commerce = [
   {
     title: "Basic Maths, Statistics, Business Studies & Accountancy (BSBA)",
-    link: "/examination-circulations",
+    link: "/streams/bsba",
   },
   {
     title: "Basic Maths, Economics, Business Studies & Accountancy (BEBA)",
-    link: "/examination-docs-issued",
+    link: "/streams/beba",
   },
   {
     title: "Statistics, Economics, Business Studies & Accountancy (SEBA)",
-    link: "/examination-guidelines",
+    link: "/streams/seba",
   },
   {
     title: "Computer Science, Statistics, Business Studies & Accountancy (CSBA)",
-    link: "/examination-circulations",
+    link: "/streams/csba",
   },
   {
     title: "History, Economics, Business Studies & Accountancy (HEBA)",
-    link: "/examination-docs-issued",
+    link: "/streams/heba",
   },
-  {
-    title: "Computer Science, Economics, Business Studies & Accountancy (CEBA)",
-    link: "/examination-guidelines",
-  },
+  // {
+  //   title: "Computer Science, Economics, Business Studies & Accountancy (CEBA)",
+  //   link: "/examination-guidelines",
+  // },
 ];
 
 export default function Sidebar({ sidebar, openSidebar }: { sidebar: boolean; openSidebar: () => void }) {
@@ -68,11 +68,26 @@ export default function Sidebar({ sidebar, openSidebar }: { sidebar: boolean; op
   const closeSidebar = () => {
     openSidebar(false);
   }
+
+   useEffect(() => {
+      if (sidebar) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === "Escape" && sidebar) {
+          openSidebar(false);
+        }
+      };
+      window.addEventListener("keydown", handleKeyDown);
+      return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [sidebar, openSidebar]);
   return (
     <div>
       <div
         className={`sidebar bg-white z-[1000] h-[100vh] fixed md:top-[5rem] top-20 left-0  pb-36 ${!sidebar ? "translate-x-[-100%]" : "translate-x-0"
-          } ease-in-out duration-500 pt-6 ${sidebar ? "shadow-2xl" : ""}`}
+          } ease-in-out duration-500 pt-6 ${sidebar ? "" : ""}`}
       >
         <div className="px-8 max-w-xs">
           {
@@ -329,13 +344,13 @@ function MainMenu({
         <div className={`space-y-2 transition-all ease-in-out duration-300 ${open.studentLife ? "h-full opacity-100 mt-2" : "h-0 opacity-0"}`}>
           {open.studentLife && (
             <>
-              <div>
-                <div className="flex items-center gap-2">
+              {/* <div> */}
+                {/* <div className="flex items-center gap-2"> */}
                   {/* <College /> */}
-                  <Typography className="text-sm text-gray-500">Competitive Exam Training</Typography>
-                  <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
-                </div>
-              </div>
+                  {/* <Typography className="text-sm text-gray-500">Competitive Exam Training</Typography>
+                  <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" /> */}
+                {/* </div> */}
+              {/* </div> */}
               <div>
                 <Link  onClick={()=>{
                  closeSidebar(false)
@@ -346,6 +361,22 @@ function MainMenu({
                  <div className="flex items-center gap-2">
                   {/* <StudentsLife /> */}
                   <Typography className="text-sm text-gray-500"> Code of Conduct</Typography>
+                  <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
+                </div>
+                </Link>
+               
+              </div>
+
+                <div>
+                <Link  onClick={()=>{
+                 closeSidebar(false)
+
+                }}
+                
+                href={"/e-magazine"}>
+                 <div className="flex items-center gap-2">
+                  {/* <StudentsLife /> */}
+                  <Typography className="text-sm text-gray-500"> E-Magazine</Typography>
                   <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
                 </div>
                 </Link>
@@ -454,8 +485,13 @@ function MainMenu({
                 </div>
               </div>
               <div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2" onClick={() => {
+                  router.push("/exam-circulars");
+                  openSidebar(false);
+                }
+                }>
                   {/* <StudentsLife /> */}
+                  
                   <Typography className="text-sm text-gray-500">Exam Circulars</Typography>
                   <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
                 </div>

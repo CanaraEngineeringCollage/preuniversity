@@ -21,7 +21,7 @@ const AdministrationMembers = () => {
   }, []);
   return (
     <section className="pb-20 px-4 sm:px-8 md:px-16 lg:px-64 xl:px-64">
-      <h1 className="text-[#1D1D1F] text-[40px] lg:text-[54px] mb-10 mt-10 md:mb-20 font-bold text-center">Administrative Body</h1>
+      <h1 className="text-[#1D1D1F] text-[30px] lg:text-[54px] mb-10 mt-10 md:mb-20 font-bold text-center">Administrative Body</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-8 justify-items-center">
         {data.map((item, index) => {

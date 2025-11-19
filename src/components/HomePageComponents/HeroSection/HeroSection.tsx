@@ -74,32 +74,36 @@ const   HeroBanner = () => {
 
             <motion.input
               type="text"
+              required
               placeholder="Your Full Name"
               {...register("fullName", { required: "Full Name is required" })}
               className="w-full border-b border-gray-300 focus:outline-none text-md py-2"
             />
-            {errors.fullName && <p className="text-red-500 text-sm">{errors.fullName.message}</p>}
+            {/* {errors.fullName && <p className="text-red-500 text-sm">{errors.fullName.message}</p>} */}
 
             <motion.input
               type="email"
+              required
               placeholder="Your Email"
               {...register("email", { required: "Email is required" })}
               className="w-full border-b border-gray-300 focus:outline-none text-md py-2"
             />
-            {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+            {/* {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>} */}
 
             <motion.input
               type="tel"
+              required
               placeholder="Your Phone Number"
               {...register("phoneNumber", {
                 required: "Phone Number is required",
               })}
               className="w-full border-b border-gray-300 focus:outline-none text-md py-2"
             />
-            {errors.phoneNumber && <p className="text-red-500 text-sm">{errors.phoneNumber.message}</p>}
+            {/* {errors.phoneNumber && <p className="text-red-500 text-sm">{errors.phoneNumber.message}</p>} */}
 
             <motion.textarea
               placeholder="Your Enquiry"
+              required
               {...register("comments", {
                 required: "Enquiry is required",
                 maxLength: 250,
@@ -109,7 +113,7 @@ const   HeroBanner = () => {
               className="w-full border-b border-gray-300 focus:outline-none text-md py-2"
             />
             <div className="flex justify-between text-red-500 text-sm px-1">
-              <span>{errors.comments?.message}</span>
+              {/* <span>{errors.comments?.message}</span> */}
               <span className="text-gray-500">{watch("comments")?.length || 0}/250</span>
             </div>
 

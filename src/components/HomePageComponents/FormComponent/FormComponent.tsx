@@ -37,7 +37,7 @@ function FormComponent() {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center p-4 overflow-hidden">
+    <div className="relative  flex items-center justify-center p-4 overflow-hidden">
       {/* Background half white and half blue */}
       <div className="absolute inset-0 z-0">
         <div className="h-1/2 bg-["></div>
@@ -45,12 +45,12 @@ function FormComponent() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 w-full max-w-7xl bg-[#F6F7FB] rounded-t-2xl  lg:rounded-2xl  overflow-hidden flex flex-col md:flex-row">
+      <div className="relative z-10 w-full max-w-7xl bg-[#F6F7FB]  rounded-2xl  overflow-hidden flex flex-col md:flex-row">
     <div className="md:w-1/2 h-[400px] md:h-[800px] relative lg:p-4">
   <iframe
     width="100%"
     height="100%"
-    className="rounded-[15px]"
+    className="lg:rounded-[15px]"
     style={{ border: 0 }}
     loading="lazy"
     allowFullScreen

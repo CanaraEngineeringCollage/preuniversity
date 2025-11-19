@@ -14,7 +14,7 @@ const ConductSection = () => {
   ];
 
   return (
-    <section className="max-w-7xl xl:max-w-[75%] text-[#86868B] lg:mx-auto py-20 lg:py-32  mx-[15px]">
+    <section className="max-w-7xl xl:max-w-[75%] text-[#86868B] lg:mx-auto py-10 lg:py-32  mx-[15px]">
       <h1 className="lg:text-[54px] text-[32px] font-bold text-[#1D1D1F] mb-5 lg:mb-28">Code of Conduct</h1>
       <p>
         All students shall observe the rules and regulations laid down in the college calendar and those that may be framed from time to time. All

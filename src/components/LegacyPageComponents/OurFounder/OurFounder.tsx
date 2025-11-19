@@ -4,7 +4,7 @@ import img from "../../../../public/images/legacyPageImages/image.png";
 
 export default function FounderSection() {
   return (
-    <section className="bg-[#fafbfe] py-20 px-4 overflow-hidden">
+    <section className="bg-[#fafbfe]  py-10 lg:py-20 px-5 overflow-hidden">
       <div className="max-w-7xl xl:max-w-[75%] mx-auto">
         <div className="flex flex-col md:flex-row items-start gap-12">
           {/* Left Column - Text */}
@@ -14,7 +14,7 @@ export default function FounderSection() {
               <div className="w-80 h-96 relative rounded-xl overflow-hidden shadow-md">
                 <Image src={img} alt="Sri Ammembal Subba Rao Pai" width={1000} height={1000} className="object-cover h-full" />
               </div>
-              <p className="mt-4 text-center text-[27px] font-semibold text-[#1D1D1F]">
+              <p className="mt-4 text-center text-[20px] font-semibold text-[#1D1D1F]">
                 Sri Ammembal Subba
                 <br />
                 Rao Pai

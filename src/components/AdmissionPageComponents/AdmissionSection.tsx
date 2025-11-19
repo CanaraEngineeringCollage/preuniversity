@@ -6,7 +6,7 @@ const AdmissionSection = () => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
   return (
-    <section className="py-20 xl:py-36 text-[#1D1D1F] lg2:px-24 mx-5 overflow-hidden">
+    <section className="py-10 lg:py-20 xl:py-36 text-[#1D1D1F] lg2:px-24 mx-5 overflow-hidden">
       <div className="">
         <h1 className="text-[30px] lg:text-[54px] font-bold pb-1 lg:pb-10 text-[#1D1D1F]">Admissions</h1>
         <div className="grid grid-cols-1 gap-3 md:gap-32 md:grid-cols-12 mt-10">
@@ -38,19 +38,19 @@ const AdmissionSection = () => {
             )}
           </div>
         </div>
-        <div className="mt-20 space-y-2">
-          <h1 className="font-extrabold text-2xl">Acceptance of Rules of Selection & Admission</h1>
+        <div className="mt-10 lg:mt-20 space-y-2">
+          <h1 className="font-extrabold text-xl">Acceptance of Rules of Selection & Admission</h1>
           <p className="text-[#86868B] text-[17px]">
             Every candidate will deemed to have accepted the rules by the very act of submitting his / her application.
           </p>
         </div>
-        <div className="mt-20 space-y-2">
-          <h1 className="font-extrabold text-2xl">All correspondence should be addressed to</h1>
+        <div className="mt-10 lg:mt-20 space-y-2">
+          <h1 className="font-extrabold text-xl">All correspondence should be addressed to</h1>
           <p className="text-[#86868B] text-[17px]">The Dean, Canara Pre-University College, M.G. Road, Mangaluru – 575003.</p>
           <p className="text-[#86868B] text-[17px]">
             <span className="font-bold">Tel No’s:</span> 0824-2495605 (O), 2492561 (P).
             <span className="lg:ml-20">
-              <span className="font-bold">Email:</span> canarapu@gmail.com
+              <span className="font-bold"><br className="lg:hidden"/>Email:</span> canarapu@gmail.com
             </span>
           </p>
         </div>

@@ -90,7 +90,7 @@ function Innovations() {
 
   return (
     <section className="max-w-[90%] xl:max-w-[75%] mx-auto lg:mb-0 mb-16">
-      <div className="min-h-screen relative overflow-hidden text-[#1D1D1F]" ref={sectionRef}>
+      <div className=" relative overflow-hidden text-[#1D1D1F]" ref={sectionRef}>
         <div className=" md:max-w-7xl lg:mx-auto xl:mx-auto ">
           <motion.div
             initial={{ opacity: 0, y: -50 }}
