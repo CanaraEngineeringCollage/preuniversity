@@ -141,7 +141,7 @@ function FormComponent() {
               <button
                 type="submit"
                 aria-label={isLoding ? "Submitting" : "Submit form"}
-                className="w-32 cursor-pointer bg-[#9583FE] text-white py-2 md:py-3 px-6 rounded-full hover:bg-[#6d28d9] transition-colors text-sm md:text-base"
+                className="w-32 cursor-pointer bg-[#3C71D7] text-white py-2 md:py-3 px-6 rounded-full hover:bg-[#3C71D7] transition-colors text-sm md:text-base"
               >
                 {isLoding ? <ClipLoader size={24} color="#fff" /> : "Submit"}
               </button>
