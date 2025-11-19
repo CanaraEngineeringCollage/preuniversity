@@ -103,7 +103,7 @@ function Innovations() {
               <br />
               Facilities
             </h1>
-            <p className="lg2:text-xl lg:text-lg text-[#86868B]  pt-4   mb-6 font-medium  lg:max-w-1/3">
+            <p className="lg2:text-xl lg:text-xl text-[#86868B]  pt-4   mb-6 font-medium  lg:max-w-1/3">
               Well-equipped & student-focused spaces that support learning & everyday campus life.
             </p>
           </motion.div>

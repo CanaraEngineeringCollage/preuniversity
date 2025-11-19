@@ -6,7 +6,7 @@ const PrivacySection = () => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
   return (
-    <section className="py-24 xl:py-36 text-[#1D1D1F] overflow-hidden">
+    <section className="pt-12 pb-5 lg:py-24 xl:py-36 text-[#1D1D1F] overflow-hidden">
       <div className="lg2:mx-24 mx-5">
         <h1 className="text-3xl text-[#1D1D1F] md:text-[40px] lg2:text-5xl xl:text-6xl font-bold pb-1 lg:pb-10">
           Privacy Policy

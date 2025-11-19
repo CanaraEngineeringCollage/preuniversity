@@ -47,7 +47,7 @@ export default function Footer() {
     <footer className="bg-[#001A48] text-white">
       {/* Desktop Version */}
       <div className="lg:block hidden">
-        <div className="max-w-6xl text-base mx-auto px-4 py-10 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
+        <div className="max-w-6xl text-base mx-auto px-4 py-16 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
           <div className="flex justify-center">
             <FooterList data={aboutLinks} />
           </div>
@@ -70,14 +70,14 @@ export default function Footer() {
         {/* Logo and Social */}
         <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
           <div className="flex items-center">
-            <Image src="/svgs/footerLogo.svg" alt="svg" width={200} height={200} className="w-40 sm:w-48 md:w-64" />
+            <Image src="/svgs/footerLogo.svg" alt="svg" width={200} height={200} className="w-40 cursor-pointer sm:w-48 md:w-64" />
           </div>
           <div className="flex flex-col items-center md:items-end">
             <span className="text-xs font-bold mb-2">Follow Us</span>
             <div className="flex space-x-3 text-white">
-              <Instagram />
-              <Yt />
-              <Meta />
+           <Link href="https://www.instagram.com/canara_pu_official/?hl=en" target="_blank"> <Instagram /></Link>
+              <Link href="https://www.youtube.com/@canaraeducationalinstituti2494" target="_blank"><Yt /></Link>
+              <Link href="https://www.facebook.com/canarapreuniversity/" target="_blank"><Meta /></Link>
             </div>
           </div>
         </div>
@@ -92,9 +92,9 @@ export default function Footer() {
               Privacy Policy
             </Link>
             <span>|</span>
-            <a href="#" className="">
+          <Link href="/privacy-policy" className="">
               Terms of Use
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -119,9 +119,10 @@ export default function Footer() {
           <div className="mt-4">
             <span className="text-xs font-bold mb-2 block text-center">Follow Us</span>
             <div className="flex space-x-3 justify-center">
-              <Instagram />
-              <Yt />
-              <Meta />
+             
+             <Link href="https://www.instagram.com/canara_pu_official/?hl=en" target="_blank"> <Instagram /></Link>
+            <Link href="https://www.youtube.com/@canaraeducationalinstituti2494" target="_blank"><Yt /></Link>
+              <Link href="https://www.facebook.com/canarapreuniversity/" target="_blank"><Meta /></Link>
             </div>
           </div>
         </div>
@@ -136,9 +137,9 @@ export default function Footer() {
               Privacy Policy
             </Link>
             <span>|</span>
-            <a href="#" className="">
+            <Link href="/privacy-policy" className=""> 
               Terms of Use
-            </a>
+            </Link>
           </div>
         </div>
       </div>
