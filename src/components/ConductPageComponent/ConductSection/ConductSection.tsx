@@ -14,21 +14,21 @@ const ConductSection = () => {
   ];
 
   return (
-    <section className="max-w-7xl xl:max-w-[75%] text-[#86868B] lg:mx-auto py-10 lg:py-32  mx-[15px]">
-      <h1 className="lg:text-[54px] text-[32px] font-bold text-[#1D1D1F] mb-5 lg:mb-28">Code of Conduct</h1>
-      <p>
+    <section className="max-w-7xl xl:max-w-[75%] text-[#2A2A2A] lg:mx-auto py-10 lg:py-16  px-5 ">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold ">Code of Conduct</h1>
+      <p className="mt-5 text-lg lg:text-xl lg:mt-10">
         All students shall observe the rules and regulations laid down in the college calendar and those that may be framed from time to time. All
         parents are also required to familiarize themselves with these rules. Every student is therefore deemed to have agreed to abide by the rules
         laid down in the college calendar.
       </p>
-      <ul className="list-disc ml-8 mt-5 space-y-2">
+      <ul className="list-disc text-lg lg:text-xl pl-6 mt-5 space-y-2">
         {points.map((point, index) => (
           <li>{point}</li>
         ))}
       </ul>
 
-      <h1 className="text-xl font-bold text-[#1D1D1F] mt-10 mb-3">Dress Code</h1>
-      <p>
+      <h1 className="text-2xl font-bold text-[#1D1D1F] mt-10 mb-3">Dress Code</h1>
+      <p className="text-lg lg:text-xl">
         Students are expected to dress in uniform prescribed by the college authorities and the I.D. card at all times in the college campus on all
         working days. Students not wearing teh prescribed uniform or the I.D.card will not be allowed to enter the campus.
       </p>

@@ -10,12 +10,12 @@ const QuestionSection = () => {
   const [showCommerce, setShowCommerce] = useState<boolean>(false);
 
   return (
-    <section className="lg:mx-52 mx-5 text-[#1D1D1F] py-10 lg:pt-24 lg:pb-32">
+    <section className="max-w-7xl xl:max-w-[75%] px-5 mx-auto my-10 lg:my-16 text-[#1D1D1F] ">
       <div>
-        <h1 className="mb-10 lg:mb-20 font-bold text-[30px] lg:text-[45px]">Question Bank</h1>
+        <h1 className=" font-bold text-[30px] lg:text-[45px]">Question Bank</h1>
 
         {/* Science Stream */}
-        <div className="flex gap-2 justify-between">
+        <div className="flex gap-2 justify-between mt-5 lg:mt-10">
           <div className="flex items-center gap-3">
             <Image src="/nav1.svg" alt="svg" width={20} height={20} />
             <h1 className="text-xl font-bold">Science Streams</h1>
@@ -40,7 +40,7 @@ const QuestionSection = () => {
                   className="flex justify-between mt-5 border-b-1 pb-1 border-[#e5e7ed]"
                   key={index}
                 >
-                  <h1 className="text-[17px] w-[50%] lg:w-auto text-[#86868B]">{item.name}</h1>
+                  <h1 className="text-[17px] w-[50%] lg:w-auto text-[#2A2A2A]">{item.name}</h1>
                   <a
                     download={item.link}
                     className="cursor-pointer text-[17px] font-bold flex gap-2 items-center"
@@ -79,7 +79,7 @@ const QuestionSection = () => {
                   className="flex justify-between mt-5 border-b-1 pb-1 border-[#e5e7ed]"
                   key={index}
                 >
-                  <h1 className="text-[17px] w-[50%] lg:w-auto text-[#86868B]">{item.name}</h1>
+                  <h1 className="text-[17px] w-[50%] lg:w-auto text-[#2A2A2A]">{item.name}</h1>
                   <a
                     download={item.link}
                     className="cursor-pointer text-[17px] font-bold flex gap-2 items-center"

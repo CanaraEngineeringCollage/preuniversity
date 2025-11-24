@@ -51,8 +51,8 @@ const onSubmit = async (data: FormData) => {
     <div className="relative md:h-[100vh] h-[70vh]">
       {/* Background Image Carousel */}
       <div className="absolute inset-0 z-0">
-        <div className="relative w-full h-full">
-          <Image src="/images/homePageImages/bgImage.png" alt="Students 1" fill className="object-cover " />
+        <div className="relative w-full  h-full">
+          <Image src="/images/homePageImages/bgImage.png" alt="Students 1" fill className="object-cover  object-[20%_center] md:object-center" />
 
           {/* Gradient overlay */}
         </div>

@@ -91,7 +91,7 @@ function Innovations() {
   return (
     <section className="max-w-[90%] xl:max-w-[75%] mx-auto lg:mb-0 mb-16">
       <div className=" relative overflow-hidden text-[#1D1D1F]" ref={sectionRef}>
-        <div className=" md:max-w-7xl lg:mx-auto xl:mx-auto ">
+        <div className="  ">
           <motion.div
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: isSectionInView ? 1 : 0, y: isSectionInView ? 0 : -50 }}
@@ -103,7 +103,7 @@ function Innovations() {
               <br />
               Facilities
             </h1>
-            <p className="lg2:text-xl lg:text-xl text-[#86868B]  pt-4   mb-6 font-medium  lg:max-w-1/3">
+            <p className="lg2:text-xl lg:text-xl text-[#2A2A2A]  pt-4   mb-6 font-medium  lg:max-w-1/3">
               Well-equipped & student-focused spaces that support learning & everyday campus life.
             </p>
           </motion.div>

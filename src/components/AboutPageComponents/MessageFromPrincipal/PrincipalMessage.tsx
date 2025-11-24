@@ -24,7 +24,7 @@ const PrincipalMessage = () => {
             <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] pt-6 font-bold">Smt. Latamaheswari K B</h2>
           </div>
 
-          <div className="text-[#86868B] pt-6 sm:pt-6 text-base sm:text-lg  leading-relaxed">
+          <div className="text-[#2A2A2A] text-justify pt-6 sm:pt-6 text-base sm:text-lg  leading-relaxed">
             <p>
               I am pleased to share my views through these few words. Having spent three decades in this noble profession, I feel blessed that I have
               had the opportunity to serve the society. Life has a series of challenges but the individual should learn the skill of retaining faith,

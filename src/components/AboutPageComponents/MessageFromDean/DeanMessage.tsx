@@ -16,7 +16,7 @@ const DeanMessage = () => {
 
             <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] font-bold">Shetty K M</h2>
           </div>
-          <div className="text-[#86868B] pt-3 sm:pt-3 flex flex-col text-base sm:text-lg  leading-relaxed">
+          <div className="text-[#2A2A2A] text-justify pt-3 sm:pt-3 flex flex-col text-base sm:text-lg  leading-relaxed">
             <p className="pt-4">
               Vision, when turned inward, becomes Duty. When it looks outward, it becomes Aspiration. When it looks upward, it becomes Faith.
             </p>
@@ -26,7 +26,7 @@ const DeanMessage = () => {
               of talent and skill.
             </p>
 
-            <p className="pt-8 sm:pt-3">
+            <p className="pt-8 sm:pt-3 text-justify">
               The world today, unlike the past, is ever changing, distance is dying and barriers are becoming thin and nonexistent. Even in the field
               of education there exists global competition. In such a scenario the Management and Staff of our institution have tried to develop
               balanced personalities of the students who are culturally refined, emotionally stable, ethically oriented, intellectually alert,

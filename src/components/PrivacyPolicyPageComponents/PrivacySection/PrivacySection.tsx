@@ -19,7 +19,7 @@ const PrivacySection = () => {
                 key={index}
                 onClick={() => setSelectedIndex(index)}
                 className={`border-b-2  pb-3 mb-3 border-[#e5e7ed] cursor-pointer ${
-                  selectedIndex === index ? "text-[#2884CA] font-bold text-[20px]" : "text-[#86868B] font-[500] text-[20px]"
+                  selectedIndex === index ? "text-[#2884CA] font-bold text-[20px]" : "text-[#2A2A2A] font-[500] text-[20px]"
                 }`}
               >
                 {section.title}
@@ -34,13 +34,13 @@ const PrivacySection = () => {
             {privacyData[selectedIndex]?.data?.map((item, idx) => (
               <div key={idx} className="mb-6">
                 {item.datam?.map((value, i) => (
-                  <p key={i} className="md:text-lg  text-[14px] leading-7 pb-4 text-[#86868B] ">
+                  <p key={i} className="md:text-lg  text-[14px] leading-7 pb-4 text-[#2A2A2A] ">
                     {value}
                   </p>
                 ))}
 
                 {item.points?.length > 0 && (
-                  <ul className="space-y-2 list-disc pl-5 md:text-lg  text-[14px] leading-7  text-[#86868B] mb-4">
+                  <ul className="space-y-2 list-disc pl-5 md:text-lg  text-[14px] leading-7  text-[#2A2A2A] mb-4">
                     {item.points.map((point, j) => (
                       <li key={j} className="">
                         {point}

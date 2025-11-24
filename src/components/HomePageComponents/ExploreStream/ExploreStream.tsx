@@ -32,55 +32,37 @@ const ExploreStream = () => {
       title: "Physics, Chemistry, Mathematics & Electronics (PCME)",
       icon: "/svgs/homapageCarousalSvg/2.svg",
       description: "bsbsb",
-      link: "streams/beba"
-
-
-    },
-     {
-      title: "Basic Maths, Economics, Business Studies & Accountancy (BEBA)",
-      icon: "/svgs/homapageCarousalSvg/1.svg",
-      description: "asas",
-      link: "streams/pcmc"
-
-
-    },
-    {
-      title: "Physics, Chemistry, Mathematics & Computer Science (PCMC)",
-      icon: "/svgs/homapageCarousalSvg/3.svg",
-      description: "asas",
-      link: "streams/pcmc"
-
-
-    },
-    {
-      title: "Physics, Chemistry, Mathematics & Statistics (PCMS)",
-      icon: "/svgs/homapageCarousalSvg/4.svg",
-      description: "asas",
-      link: "streams/pcms"
-
-
-    },
-    {
-      title: "Physics, Chemistry, Mathematics & Biology (PCMB)",
-      icon: "/svgs/homapageCarousalSvg/1.svg",
-      description: "asas",
-      link: "streams/pcmb"
-
-
-    },
-    {
-      title: "Physics, Chemistry, Mathematics & Electronics (PCME)",
-      icon: "/svgs/homapageCarousalSvg/2.svg",
-      description: "asas",
       link: "streams/pcme"
 
 
     },
-      {
+    {
+      title: "Physics, Chemistry, Mathematics & Computer Science (PCMC)",
+      icon: "/svgs/homapageCarousalSvg/3.svg",
+      description: "asas",
+      link: "streams/pcmc"
+
+
+    },
+    {
+      title: "Physics, Chemistry, Mathematics & Statistics (PCMS)",
+      icon: "/svgs/homapageCarousalSvg/4.svg",
+      description: "asas",
+      link: "streams/pcms"
+
+
+    },
+       {
+      title: "Physics, Chemistry, Mathematics & Biology (PCMB)",
+      icon: "/svgs/homapageCarousalSvg/1.svg",
+      description: "cscsc",
+      link: "streams/pcmb"
+    },
+    {
       title: "Physics, Chemistry, Mathematics & Electronics (PCME)",
       icon: "/svgs/homapageCarousalSvg/2.svg",
       description: "bsbsb",
-      link: "streams/beba"
+      link: "streams/pcme"
 
 
     },
@@ -100,6 +82,7 @@ const ExploreStream = () => {
 
 
     },
+    
   ];
 
   const dummyFunctionDepartmentDataCommerce: DataItem[] = [
@@ -136,39 +119,16 @@ const ExploreStream = () => {
 
 
     },
-    {
-      title: "Computer Science, Statistics, Business Studies, Accountancy (CSBA) ",
-      icon: "/svgs/homapageCarousalSvg/csba.svg",
-      description: "esas",
-      link: "streams/csba"
-
-
-    },
-    {
-      title: " Basic Maths, Statistics, Business Studies, Accountancy (BSBA) ",
-      icon: "/svgs/homapageCarousalSvg/bsba.svg",
-      description: "asas",
-      link: "streams/bsba"
-
-
-    },
 
     {
-      title: " Statistics, Economics, Business Studies, Accountancy (SEBA) ",
-      icon: "/svgs/homapageCarousalSvg/seba.svg",
-      description: "asas",
-      link: "streams/seba"
-
-
-    },
-    {
-      title: " History, Economics, Business Studies, Accountancy (HEBA)",
-      icon: "/svgs/homapageCarousalSvg/heba.svg",
+      title: " Basic Economics, Business Administration (BEBA)",
+      icon: "/svgs/homapageCarousalSvg/beba.svg",
       description: "asas",
       link: "streams/heba"
 
 
     },
+
 
 
 
@@ -191,12 +151,12 @@ const ExploreStream = () => {
 
 
   return (
-    <section className="lg:max-w-[95%] px-5 md:px-0 xl:max-w-[87.5%] ml-auto my-16">
+    <section className=" my-16 px-5 md:px-0 ">
       <div className="flex flex-col items-center ">
         <h1 className="leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl text-center   font-bold text-[#1D1D1F] ">
           Explore Our Stream Combinations
         </h1>
-        <p className="lg2:text-2xl lg:text-lg text-[#86868B]  pt-4  text-center mb-6 font-medium px-2">
+        <p className="lg2:text-2xl lg:text-lg text-[#2A2A2A]  pt-4  text-center mb-6 font-medium px-2">
           Find the program that fuels your passion and shapes your future
         </p>
         <div className="inline-flex items-center border border-gray-300 rounded-full mb-10">
@@ -223,7 +183,7 @@ const ExploreStream = () => {
           ))}
         </div>
       </div>
-      <div className="">
+      <div className="lg:max-w-[95%]   xl:max-w-[87.5%] ml-auto">
         <Swiper
           modules={[Autoplay]}
           autoplay={{ delay: autoplayDelay, disableOnInteraction: false }}

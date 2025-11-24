@@ -38,7 +38,7 @@ export default function Card() {
   const gradientColor = "#3d6cbe"; // Define gradient color (customize as needed)
 
   return (
-    <section className="my-10 lg:my-32">
+    <section className="my-10 lg:my-16 xl:my-32">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
         {data.map((item, index) => (
           <div

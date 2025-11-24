@@ -4,7 +4,7 @@ const Opportunity = () => {
   return (
     <div className="container text-[#1D1D1F] max-w-6xl xl:max-w-[75%] mx-auto px-5">
       <h1 className="leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl font-bold pt-14 pb-10 text-center">Where Excellence Meets Opportunity</h1>
-      {/* <div className="flex flex-col gap-8 text-[#86868B] lg2:text-xl font-medium">
+      {/* <div className="flex flex-col gap-8 text-[#2A2A2A] lg2:text-xl font-medium">
       <p>
         Established in 1972, Canara Pre-University College offers inclusive education to both boys & girls, regardless of caste, creed, or religion.
         The college provides a Two-Year Pre-University program with a wide range of Commerce (BSBA, BEBA, CSBA, SEBA & HEBA) & Science (PCMB, PCMC,
@@ -22,7 +22,7 @@ const Opportunity = () => {
         development.
       </p>
       </div> */}
-         <div className="flex flex-col gap-8 text-[#86868B] text-base lg:text-xl ">
+         <div className="flex flex-col gap-8 text-justify text-[#2A2A2A] text-base lg:text-xl ">
       <p>
        Canara Pre-University college was started in 1972 and provides education to both boys & girls without any distinction of caste creed or religion. The college provides Two – Year Pre university Education in Commerce (BSBA,BEBA,CSBA,SEBA & HEBA) & Science (PCMB, PCMC, PCME, PCMS).
       </p>
