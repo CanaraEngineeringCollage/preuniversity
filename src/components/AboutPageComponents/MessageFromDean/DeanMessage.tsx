@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const DeanMessage = () => {
   return (
-    <div className="max-w-5xl xl:max-w-[60%] mx-auto mt-10 lg:mt-28 px-5">
+    <div className="max-w-5xl xl:max-w-[60%] mx-auto mt-10 lg:mt-16 px-5">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-0">
         {/* Text section */}
         <div className="md:col-span-7 text-center md:text-left">
@@ -16,7 +16,7 @@ const DeanMessage = () => {
 
             <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] font-bold">Shetty K M</h2>
           </div>
-          <div className="text-[#2A2A2A] text-justify pt-3 sm:pt-3 flex flex-col text-base sm:text-lg  leading-relaxed">
+          <div className="text-[#2A2A2A] text-justify pt-3 sm:pt-3 flex flex-col text-lg  leading-relaxed">
             <p className="pt-4">
               Vision, when turned inward, becomes Duty. When it looks outward, it becomes Aspiration. When it looks upward, it becomes Faith.
             </p>

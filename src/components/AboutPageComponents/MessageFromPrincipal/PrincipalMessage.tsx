@@ -4,7 +4,7 @@ import image from "../../../../public/images/aboutPageImages/principal.webp";
 
 const PrincipalMessage = () => {
   return (
-    <div className="max-w-5xl xl:max-w-[60%] mx-auto my-10 md:my-36 px-5">
+    <div className="max-w-5xl xl:max-w-[60%] mx-auto my-10 md:my-20 px-5">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-0">
         {/* Image Section */}
         <div className="hidden lg:flex lg:col-span-4 flex-col items-center text-center md:text-left">
@@ -24,7 +24,7 @@ const PrincipalMessage = () => {
             <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] pt-6 font-bold">Smt. Latamaheswari K B</h2>
           </div>
 
-          <div className="text-[#2A2A2A] text-justify pt-6 sm:pt-6 text-base sm:text-lg  leading-relaxed">
+          <div className="text-[#2A2A2A] text-justify pt-6 sm:pt-6 text-lg  leading-relaxed">
             <p>
               I am pleased to share my views through these few words. Having spent three decades in this noble profession, I feel blessed that I have
               had the opportunity to serve the society. Life has a series of challenges but the individual should learn the skill of retaining faith,

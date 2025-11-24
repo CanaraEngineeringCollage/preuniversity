@@ -150,7 +150,7 @@ export default function Footer() {
 // Reusable Footer List Component
 const FooterList: FC<FooterListProps> = ({ data }) => {
   return (
-    <ul className="cursor-pointer text-[#8f9aaf] w-32">
+    <ul className="cursor-pointer text-white w-32">
       {data.map((item, index) => (
         <Link href={item.links} key={index}>
           <li className="pb-3">{item.data}</li>

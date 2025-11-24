@@ -1,446 +1,406 @@
 {
-    "streams": [
+  "streams": [
+    {
+      "slug": "pcme",
+      "name": " Physics, Chemistry, Mathematics, Electronics (PCME)",
+      "description": "The PCME subject combination is a stream in the science discipline at the pre-university level, popular especially among students with a strong interest in engineering, technology, and applied sciences. Replacing Biology with Electronics offers students exposure to circuit design, digital systems, and programming fundamentals, making this stream highly tech-oriented. It blends theoretical foundations in science and mathematics with practical, hands-on skills in electronics. PCME offers a technologically rich and versatile academic path, leading to robust careers in engineering, emerging tech, pure sciences, and research. It suits students who enjoy analytical thinking, problem-solving, and hands-on technical work, preparing them for future roles in an increasingly digital and automated world.",
+      "future_prospects_heading": "Future Prospects for PCME Students",
+      "future_prospects": [
         {
-            "slug": "pcme",
-            "name": " Physics, Chemistry, Mathematics, Electronics (PCME)",
-            "description": "The PCME subject combination is a stream in the science discipline at the pre-university level, popular especially among students with a strong interest in engineering, technology, and applied sciences. Replacing Biology with Electronics offers students exposure to circuit design, digital systems, and programming fundamentals, making this stream highly tech-oriented. It blends theoretical foundations in science and mathematics with practical, hands-on skills in electronics. PCME offers a technologically rich and versatile academic path, leading to robust careers in engineering, emerging tech, pure sciences, and research. It suits students who enjoy analytical thinking, problem-solving, and hands-on technical work, preparing them for future roles in an increasingly digital and automated world.",
-            "future_prospects_heading": "Future Prospects for PCME Students",
-            "future_prospects": [
-                {
-                    "title": "Engineering Pathways",
-                    "sub_title": "PCME students are highly competitive in national and state-level engineering entrance exams like JEE, CET, or COMEDK, often choosing technology-driven branches with study opportunities such as",
-                    "points": [
-                        "Electronics & Communication Engineering (ECE)",
-                        "Electrical Engineering",
-                        "Computer Science Engineering (CSE)",
-                        "Mechatronics, Robotics, and Instrumentation",
-                        "Artificial Intelligence & Machine Learning (AI/ML)"
-                    ]
-                },
-                {
-                    "title": "Pure Sciences & Research",
-                    "sub_title": "Students can pursue careers in R&D, academia, or become scientists in organizations like ISRO, DRDO, etc. with study opportunities such as",
-                    "points": [
-                        "B.Sc. in Physics, Electronics, or Mathematics",
-                        "Integrated M.Sc. programs and research opportunities in premier institutes (IISc, IISERs, IITs)"
-                    ]
-                },
-                {
-                    "title": "Emerging Tech Careers",
-                    "sub_title": "Diploma or certification-based specializations leading to job-ready skills in hardware and software tech in fields such as Embedded Systems, IoT, Automation, VLSI Design, and Robotics."
-                },
-                {
-                    "title": "Software and IT Industry",
-                    "sub_title": "Though PCME doesn’t directly include Computer Science, a strong math background and exposure to digital systems allow easy transition to:",
-                    "points": [
-                        "Software Development",
-                        "Data Science",
-                        "Cybersecurity",
-                        "Game Development"
-                    ]
-                },
-                {
-                    "title": "Government & Civil Services",
-                    "sub_title": "PCME lays a solid foundation for quantitative aptitude and logical reasoning needed for these exams. Many opt for UPSC, Indian Engineering Services (IES), or other public sector jobs."
-                },
-                {
-                    "title": "Entrepreneurship & Startups",
-                    "sub_title": "With electronics and programming knowledge, students can develop hardware or software products, tech services, or innovations in EdTech, HealthTech, or Smart Devices."
-                }
-            ]
+          "title": "Engineering Pathways",
+          "sub_title": "PCME students are highly competitive in national and state-level engineering entrance exams like JEE, CET, or COMEDK, often choosing technology-driven branches with study opportunities such as",
+          "points": [
+            "Electronics & Communication Engineering (ECE)",
+            "Electrical Engineering",
+            "Computer Science Engineering (CSE)",
+            "Mechatronics, Robotics, and Instrumentation",
+            "Artificial Intelligence & Machine Learning (AI/ML)"
+          ]
         },
         {
-            "slug": "pcmc",
-            "name": " Physics, Chemistry, Mathematics, Computer Science (PCMC) ",
-            "description": " The PCMC subject combination—Physics, Chemistry, Mathematics, and Computer Science—is a widely chosen stream at the pre-university level by students inclined toward software, programming, and computational sciences. Replacing Biology with Computer Science, this combination builds a strong base in logic, algorithms, and mathematical thinking, making it ideal for future tech leaders, coders, and engineers. It balances core scientific principles with practical computing skills.",
-            "future_prospects_heading": "Future Prospects for PCMC Students",
-            "future_prospects": [
-                {
-                    "title": "Engineering Pathways",
-                    "sub_title": "PCMC students are well-prepared for engineering entrance exams like JEE, CET, and COMEDK, particularly excelling in computer-related branches.",
-                    "points": [
-                        "Computer Science Engineering (CSE)",
-                        "Information Science/Technology",
-                        "Artificial Intelligence & Data Science",
-                        "Software Engineering",
-                        "Cybersecurity and Cloud Computing"
-                    ]
-                },
-                {
-                    "title": "IT & Software Careers:",
-                    "sub_title": "Strong programming foundations make PCMC students highly employable in the ever-growing tech industry",
-                    "points": [
-                        "Software Developer/Engineer",
-                        "Web & App Development",
-                        "UI/UX Designer",
-                        "Game Developer",
-                        "DevOps Engineer"
-                    ]
-                },
-                {
-                    "title": "Data & Analytics Roles:",
-                    "sub_title": "Mathematical reasoning and programming exposure prepare students for careers in big data and AI.",
-                    "points": [
-                        "Data Scientist",
-                        "Business Analyst",
-                        "Machine Learning Engineer",
-                        "AI/ML Specialist"
-                    ]
-                },
-                {
-                    "title": "B.Sc. & Integrated Programs:",
-                    "sub_title": "These lead to careers in research, academics, or specialized tech domains.",
-                    "points": [
-                        "B.Sc. in Computer Science, Mathematics, or Physics",
-                        "Integrated M.Sc. in Data Science, AI, or Computer Applications",
-                        "Dual-degree options in science and technology fields"
-                    ]
-                },
-                {
-                    "title": "Competitive Exams & Government Roles:",
-                    "sub_title": "PCMC develops strong analytical and logical skills needed to excel in such exams.",
-                    "points": [
-                        "Indian Engineering Services (IES)",
-                        "Civil Services (UPSC, KPSC)",
-                        "Technical roles in PSUs and defense sectors (ISRO, DRDO, NIC)"
-                    ]
-                },
-                {
-                    "title": " Entrepreneurship & Innovation:",
-                    "sub_title": "With coding, digital tools, and problem-solving skills, PCMC students can build their own apps, tech products, or start ventures in EdTech, FinTech, or IT services."
-                }
-            ]
+          "title": "Pure Sciences & Research",
+          "sub_title": "Students can pursue careers in R&D, academia, or become scientists in organizations like ISRO, DRDO, etc. with study opportunities such as",
+          "points": [
+            "B.Sc. in Physics, Electronics, or Mathematics",
+            "Integrated M.Sc. programs and research opportunities in premier institutes (IISc, IISERs, IITs)"
+          ]
         },
         {
-            "slug": "pcmb",
-            "name": "Physics, Chemistry, Mathematics, Biology (PCMB)",
-            "description": "The PCMB subject combination—Physics, Chemistry, Mathematics, and Biology—is one of the most versatile streams at the pre-university level. It equips students with a strong foundation in both life sciences and physical sciences, keeping doors open for careers in engineering, medicine, and pure sciences. Ideal for students who are undecided between medical and non-medical fields, PCMB offers the flexibility to explore a wide range of academic and professional options.",
-            "future_prospects_heading": "Future Prospects for PCMB Students",
-            "future_prospects": [
-                {
-                    "title": "Medical & Allied Health Sciences",
-                    "sub_title": "PCMB students are eligible for medical entrance exams like NEET, opening pathways to healthcare and life sciences careers.",
-                    "points": [
-                        "MBBS (Bachelor of Medicine, Bachelor of Surgery)",
-                        "BDS (Dental Sciences)",
-                        "BAMS, BHMS, BPT, B.Sc. Nursing",
-                        "B.Sc. in Biotechnology, Microbiology, Genetics, or Biochemistry"
-                    ]
-                },
-                {
-                    "title": "Engineering Pathways",
-                    "sub_title": "Students interested in interdisciplinary fields like bioinformatics or genetic engineering benefit from the blend of biology and mathematics.",
-                    "points": [
-                        "Biotechnology or Biomedical Engineering",
-                        "Computer Science, Electronics, or Mechanical Engineering (via JEE/CET/COMEDK)",
-                        "Bioinformatics and Genetic Engineering"
-                    ]
-                },
-                {
-                    "title": "Pure Sciences & Research",
-                    "sub_title": "Ideal for those pursuing careers in R&D, academia, or aiming to become scientists in institutes like ISRO, DRDO, or CSIR.",
-                    "points": [
-                        "B.Sc. in Physics, Chemistry, Mathematics, or Biology",
-                        "Integrated M.Sc., Research Fellowships, or B.S. programs at IISc, IISERs, or IITs",
-                        "Research roles in top science institutions (ISRO, DRDO, CSIR)"
-                    ]
-                },
-                {
-                    "title": "Agriculture, Environmental & Life Sciences",
-                    "sub_title": "Career options in sustainability, environmental science, and applied life sciences are popular among PCMB students.",
-                    "points": [
-                        "B.Sc. in Agriculture, Forestry, or Environmental Science",
-                        "B.Sc. in Horticulture, Fisheries, or Sericulture",
-                        "Careers in sustainability, conservation, and climate science"
-                    ]
-                },
-                {
-                    "title": "Competitive Exams & Government Jobs",
-                    "sub_title": "Strong academic base supports success in various general and technical government roles.",
-                    "points": [
-                        "UPSC (Civil Services), IFS, SSC, Banking, and Defense services",
-                        "Technical roles in government health and science departments"
-                    ]
-                },
-                {
-                    "title": "Emerging Fields & Interdisciplinary Careers",
-                    "sub_title": "PCMB opens doors to unique careers that blend life sciences, technology, and data.",
-                    "points": [
-                        "Computational Biology",
-                        "Health Data Analytics",
-                        "Pharmaceutical R&D",
-                        "Medical Coding and AI in Healthcare"
-                    ]
-                }
-            ]
+          "title": "Emerging Tech Careers",
+          "sub_title": "Diploma or certification-based specializations leading to job-ready skills in hardware and software tech in fields such as Embedded Systems, IoT, Automation, VLSI Design, and Robotics."
         },
         {
-            "slug": "pcms",
-            "name": "Physics, Chemistry, Mathematics, Statistics (PCMS)",
-            "description": "The PCMS subject combination—Physics, Chemistry, Mathematics, and Statistics—is a niche but powerful stream at the pre-university level. It is ideal for students with a strong analytical mindset and an interest in quantitative analysis, problem-solving, and data interpretation. By replacing Biology or Computer Science with Statistics, this stream offers a solid foundation in mathematical reasoning, scientific principles, and statistical modeling, making it perfect for future careers in data science, research, and technology-driven fields.",
-            "future_prospects_heading": "Future Prospects for PCMS Students",
-            "future_prospects": [
-                {
-                    "title": "Engineering & Technology",
-                    "sub_title": "Statistics enhances the analytical skills needed for data-heavy engineering branches and modern tech applications.",
-                    "points": [
-                        "Computer Science Engineering (CSE)",
-                        "Data Science & AI Engineering",
-                        "Electronics & Communication Engineering",
-                        "Civil or Mechanical Engineering (with a math-heavy foundation)"
-                    ]
-                },
-                {
-                    "title": "Data & Analytics Careers",
-                    "sub_title": "PCMS students are well-prepared for careers in the data-driven economy, especially when combined with higher studies or certifications in data analytics, machine learning, or finance.",
-                    "points": [
-                        "Data Scientist / Analyst",
-                        "Business Intelligence Professional",
-                        "Actuary / Risk Analyst",
-                        "Market Research Analyst"
-                    ]
-                },
-                {
-                    "title": "Higher Education in Pure Sciences",
-                    "sub_title": "Perfect for students inclined toward academia, research, or careers in mathematical modeling and scientific computing.",
-                    "points": [
-                        "B.Sc. in Statistics, Mathematics, or Physics",
-                        "Integrated M.Sc. in Applied Mathematics, Quantitative Economics, or Data Science",
-                        "Opportunities at top institutions like ISI, IITs, IISc"
-                    ]
-                },
-                {
-                    "title": "Competitive Exams & Government Roles",
-                    "sub_title": "Quantitative aptitude from statistics gives students a strong edge.",
-                    "points": [
-                        "Indian Statistical Services (ISS), UPSC, RBI Grade B",
-                        "Public sector roles in census, finance, banking, and policy analysis"
-                    ]
-                },
-                {
-                    "title": "Finance, Actuarial & Business Roles",
-                    "sub_title": "Statistics makes PCMS a launchpad for finance and economics-related professions.",
-                    "points": [
-                        "Actuarial Science",
-                        "Chartered Financial Analyst (CFA) / Quantitative Finance",
-                        "Operations Research",
-                        "Insurance and Risk Management"
-                    ]
-                }
-            ]
+          "title": "Software and IT Industry",
+          "sub_title": "Though PCME doesn’t directly include Computer Science, a strong math background and exposure to digital systems allow easy transition to:",
+          "points": ["Software Development", "Data Science", "Cybersecurity", "Game Development"]
         },
         {
-            "slug": "bsba",
-            "name": "Business Studies, Statistics, Business Administration (BSBA)",
-            "description": "The BSBA combination at the pre-university level blends the strategic and operational aspects of business with the analytical power of statistics. This stream is ideal for students interested in understanding how businesses function, make decisions, and grow using data-backed insights. It lays a strong foundation in management, quantitative analysis, and business operations.",
-            "future_prospects_heading": "Future Prospects for BSBA Students",
-            "future_prospects": [
-                {
-                    "title": "Business & Management Studies",
-                    "points": [
-                        "Ideal for pursuing BBA, BBM, BMS or integrated MBA programs.",
-                        "Opens up career paths in marketing, human resources, operations, and general management."
-                    ]
-                },
-                {
-                    "title": "Finance & Commerce Degrees",
-                    "sub_title": "",
-                    "points": [
-                        "Students can also opt for B.Com (General or with specialization) and eventually pursue CA, CS, or CMA.",
-                        "Career roles include accountants, financial analysts, investment advisors, etc."
-                    ]
-                },
-                {
-                    "title": "Data & Analytics Roles",
-                    "points": [
-                        "With a strong base in statistics, students can pursue Data Analytics, Business Intelligence, or Market Research roles through further studies in B.Sc. Statistics, BCA, or related fields."
-                    ]
-                },
-                {
-                    "title": "Entrepreneurship & Startups",
-                    "points": [
-                        "Business studies and administration subjects instill a deep understanding of enterprise creation",
-                        "Students are well-positioned to manage family businesses or launch their own ventures."
-                    ]
-                },
-                {
-                    "title": "Government & Competitive Exams",
-                    "points": [
-                        "The mix of theory and analytical reasoning helps in preparing for exams like UPSC, SSC, Banking, and State Public Service Commission roles, especially those"
-                    ]
-                }
-            ]
+          "title": "Government & Civil Services",
+          "sub_title": "PCME lays a solid foundation for quantitative aptitude and logical reasoning needed for these exams. Many opt for UPSC, Indian Engineering Services (IES), or other public sector jobs."
         },
         {
-            "slug": "beba",
-            "name": "(Basic Economics, Business Administration (BEBA)",
-            "description": "The BEBA combination combines the analytical depth of Economics with the strategic insight of Business Administration. This stream is ideal for students keen on understanding economic frameworks, market dynamics, and how businesses operate and grow within them. BEBA prepares students to think critically, manage resources, and make data-informed decisions in the world of commerce.",
-            "future_prospects_heading": "Future Prospects for BEBA Students",
-            "future_prospects": [
-                {
-                    "title": "Business & Management Degrees",
-                    "points": [
-                        "Ideal for pursuing BBA, BBM, BMS, or integrated MBA programs.",
-                        "Leads to careers in management, marketing, operations, and entrepreneurship."
-                    ]
-                },
-                {
-                    "title": "Economics & Policy Studies",
-                    "points": [
-                        "Students can opt for B.A. in Economics or B.Sc. in Economics, followed by post-graduation.",
-                        "Opens doors to careers in economic research, public policy, consulting, and international trade."
-                    ]
-                },
-                {
-                    "title": "Public Sector & Civil Services",
-                    "points": [
-                        "Strong base in economics helps in preparing for UPSC, RBI Grade B, IES, and other government exams.",
-                        "Preferred for roles in planning, administration, and economic services."
-                    ]
-                },
-                {
-                    "title": "International Careers & Higher Studies",
-                    "sub_title": "BEBA students often pursue Masters in Economics, Business, or Public Policy abroad.",
-                    "points": [
-                        "BEBA students often pursue Masters in Economics, Business, or Public Policy abroad.",
-                        "Opens up international careers in development organizations, think tanks, NGOs, and multinational corporations."
-                    ]
-                },
-                {
-                    "title": "Entrepreneurship & Innovation",
-                    "points": [
-                        "With foundational knowledge of business planning and economic feasibility, students can launch or manage startups in sectors like FinTech, EdTech, and e-commerce."
-                    ]
-                }
-            ]
-        },
-        {
-            "slug": "csba",
-            "name": " Computer Science, Business Administration (CSBA)",
-            "description": "The CSBA combination—Computer Science and Business Administration—is ideal for students interested in both technology and management. It provides foundational knowledge in programming, databases, algorithms, as well as business principles like marketing, finance, and entrepreneurship. This dual-discipline approach nurtures problem-solving, strategic thinking, and digital literacy, equipping students for careers in today’s tech-enabled business world.",
-            "future_prospects_heading": "Future Prospects for CSBA Students",
-            "future_prospects": [
-                {
-                    "title": "Undergraduate Programs",
-                    "points": [
-                        "BBA (Digital Business, Business Analytics, etc.)",
-                        "BCA (Bachelor of Computer Applications)",
-                        "B.Com with specialization in IT or Business Analytics",
-                        "BMS (Bachelor of Management Studies)"
-                    ]
-                },
-                {
-                    "title": "Career Opportunities",
-                    "points": [
-                        "Business Analyst",
-                        "Product Manager",
-                        "Digital Marketing Strategist",
-                        "Technology Consultant",
-                        "Startup roles in tech-enabled businesses"
-                    ]
-                },
-                {
-                    "title": "Higher Studies and Certifications",
-                    "points": [
-                        "MBA in Information Systems, Business Analytics, or Marketing",
-                        "MCA or MS in Information Technology",
-                        "PG Diplomas in Data Science, UI/UX, or Digital Strategy",
-                        "Certifications in Digital Marketing, Project Management, or Web Development"
-                    ]
-                },
-                {
-                    "title": "Entrepreneurship and Innovation",
-                    "points": [
-                        "Strong potential to launch tech-based startups or work in innovative sectors like EdTech, HealthTech, and E-commerce",
-                        "Ideal for those with a vision to merge business acumen with technological innovation"
-                    ]
-                }
-            ]
-        },
-        {
-            "slug": "seba",
-            "name": "Statistics, Economics, Business Administration (SEBA)",
-            "description": "The SEBA combination is designed for students with an analytical mindset and interest in understanding data, markets, and business dynamics. It blends quantitative reasoning from Statistics, economic insight from Economics, and managerial knowledge from Business Administration—creating a well-rounded foundation for decision-making in business and policy environments.",
-            "future_prospects_heading": "Future Prospects for SEBA Students",
-            "future_prospects": [
-                {
-                    "title": "Undergraduate Programs",
-                    "points": [
-                        "BBA (Finance, Business Analytics, International Business)",
-                        "B.Com (with specialization in Economics or Statistics)",
-                        "B.Sc in Data Science, Economics, or Statistics",
-                        "BMS (Bachelor of Management Studies)"
-                    ]
-                },
-                {
-                    "title": "Career Opportunities",
-                    "points": [
-                        "Business/Data Analyst",
-                        "Financial Analyst",
-                        "Market Research Executive",
-                        "Economist (after further studies)",
-                        "Policy Analyst"
-                    ]
-                },
-                {
-                    "title": "Higher Studies and Certifications",
-                    "points": [
-                        "MBA (Finance, Analytics, Strategy)",
-                        "M.A./M.Sc in Economics or Statistics",
-                        "PG Diplomas in Data Analytics, Public Policy, or Finance",
-                        "Certifications in Excel, Tableau, SPSS, or Financial Modelling"
-                    ]
-                },
-                {
-                    "title": "Entrepreneurship and Research",
-                    "points": [
-                        "Opportunity to work in research-oriented roles in think tanks or government bodies",
-                        "Build ventures based on data-driven solutions or economic consulting"
-                    ]
-                }
-            ]
-        },
-        {
-            "slug": "heba",
-            "name": "History, Economics, Business Administration (HEBA)",
-            "description": "The HEBA combination is ideal for students interested in understanding the evolution of societies, economic systems, and business practices. It combines the analytical and theoretical frameworks of History and Economics with the practical, managerial orientation of Business Administration. This blend nurtures students with strong contextual understanding and decision-making skills, suited for diverse careers in business, governance, and public affairs.",
-            "future_prospects_heading": "Future Prospects for HEBA Students",
-            "future_prospects": [
-                {
-                    "title": "Undergraduate Programs",
-                    "points": [
-                        "BBA (General, Marketing, HR, or Public Policy)",
-                        "B.A. in Economics or History",
-                        "B.Com with Business Studies electives",
-                        "BMS (Bachelor of Management Studies)"
-                    ]
-                },
-                {
-                    "title": "Career Opportunities",
-                    "points": [
-                        "Business Executive",
-                        "Public Relations Officer",
-                        "Economic Research Assistant",
-                        "Civil Services Aspirant",
-                        "NGO/Policy Sector Professional"
-                    ]
-                },
-                {
-                    "title": "Higher Studies and Certifications",
-                    "points": [
-                        "MBA (HR, Public Administration, Business Analytics)",
-                        "M.A. in History, Economics, or Public Policy",
-                        "PG Diplomas in Heritage Management, Development Studies",
-                        "Certifications in Business Communication, Leadership, or Data Analytics"
-                    ]
-                },
-                {
-                    "title": "Entrepreneurship and Creative Fields",
-                    "points": [
-                        "Opportunities in content creation, heritage tourism, social enterprises"
-                    ]
-                }
-            ]
+          "title": "Entrepreneurship & Startups",
+          "sub_title": "With electronics and programming knowledge, students can develop hardware or software products, tech services, or innovations in EdTech, HealthTech, or Smart Devices."
         }
-    ]
+      ]
+    },
+    {
+      "slug": "pcmc",
+      "name": " Physics, Chemistry, Mathematics, Computer Science (PCMC) ",
+      "description": " The PCMC subject combination Physics, Chemistry, Mathematics, and Computer Science is a widely chosen stream at the pre-university level by students inclined toward software, programming, and computational sciences. Replacing Biology with Computer Science, this combination builds a strong base in logic, algorithms, and mathematical thinking, making it ideal for future tech leaders, coders, and engineers. It balances core scientific principles with practical computing skills.",
+      "future_prospects_heading": "Future Prospects for PCMC Students",
+      "future_prospects": [
+        {
+          "title": "Engineering Pathways",
+          "sub_title": "PCMC students are well-prepared for engineering entrance exams like JEE, CET, and COMEDK, particularly excelling in computer-related branches.",
+          "points": [
+            "Computer Science Engineering (CSE)",
+            "Information Science/Technology",
+            "Artificial Intelligence & Data Science",
+            "Software Engineering",
+            "Cybersecurity and Cloud Computing"
+          ]
+        },
+        {
+          "title": "IT & Software Careers:",
+          "sub_title": "Strong programming foundations make PCMC students highly employable in the ever-growing tech industry",
+          "points": ["Software Developer/Engineer", "Web & App Development", "UI/UX Designer", "Game Developer", "DevOps Engineer"]
+        },
+        {
+          "title": "Data & Analytics Roles:",
+          "sub_title": "Mathematical reasoning and programming exposure prepare students for careers in big data and AI.",
+          "points": ["Data Scientist", "Business Analyst", "Machine Learning Engineer", "AI/ML Specialist"]
+        },
+        {
+          "title": "B.Sc. & Integrated Programs:",
+          "sub_title": "These lead to careers in research, academics, or specialized tech domains.",
+          "points": [
+            "B.Sc. in Computer Science, Mathematics, or Physics",
+            "Integrated M.Sc. in Data Science, AI, or Computer Applications",
+            "Dual-degree options in science and technology fields"
+          ]
+        },
+        {
+          "title": "Competitive Exams & Government Roles:",
+          "sub_title": "PCMC develops strong analytical and logical skills needed to excel in such exams.",
+          "points": [
+            "Indian Engineering Services (IES)",
+            "Civil Services (UPSC, KPSC)",
+            "Technical roles in PSUs and defense sectors (ISRO, DRDO, NIC)"
+          ]
+        },
+        {
+          "title": " Entrepreneurship & Innovation:",
+          "sub_title": "With coding, digital tools, and problem-solving skills, PCMC students can build their own apps, tech products, or start ventures in EdTech, FinTech, or IT services."
+        }
+      ]
+    },
+    {
+      "slug": "pcmb",
+      "name": "Physics, Chemistry, Mathematics, Biology (PCMB)",
+      "description": "The PCMB subject combination Physics, Chemistry, Mathematics, and Biology is one of the most versatile streams at the pre-university level. It equips students with a strong foundation in both life sciences and physical sciences, keeping doors open for careers in engineering, medicine, and pure sciences. Ideal for students who are undecided between medical and non-medical fields, PCMB offers the flexibility to explore a wide range of academic and professional options.",
+      "future_prospects_heading": "Future Prospects for PCMB Students",
+      "future_prospects": [
+        {
+          "title": "Medical & Allied Health Sciences",
+          "sub_title": "PCMB students are eligible for medical entrance exams like NEET, opening pathways to healthcare and life sciences careers.",
+          "points": [
+            "MBBS (Bachelor of Medicine, Bachelor of Surgery)",
+            "BDS (Dental Sciences)",
+            "BAMS, BHMS, BPT, B.Sc. Nursing",
+            "B.Sc. in Biotechnology, Microbiology, Genetics, or Biochemistry"
+          ]
+        },
+        {
+          "title": "Engineering Pathways",
+          "sub_title": "Students interested in interdisciplinary fields like bioinformatics or genetic engineering benefit from the blend of biology and mathematics.",
+          "points": [
+            "Biotechnology or Biomedical Engineering",
+            "Computer Science, Electronics, or Mechanical Engineering (via JEE/CET/COMEDK)",
+            "Bioinformatics and Genetic Engineering"
+          ]
+        },
+        {
+          "title": "Pure Sciences & Research",
+          "sub_title": "Ideal for those pursuing careers in R&D, academia, or aiming to become scientists in institutes like ISRO, DRDO, or CSIR.",
+          "points": [
+            "B.Sc. in Physics, Chemistry, Mathematics, or Biology",
+            "Integrated M.Sc., Research Fellowships, or B.S. programs at IISc, IISERs, or IITs",
+            "Research roles in top science institutions (ISRO, DRDO, CSIR)"
+          ]
+        },
+        {
+          "title": "Agriculture, Environmental & Life Sciences",
+          "sub_title": "Career options in sustainability, environmental science, and applied life sciences are popular among PCMB students.",
+          "points": [
+            "B.Sc. in Agriculture, Forestry, or Environmental Science",
+            "B.Sc. in Horticulture, Fisheries, or Sericulture",
+            "Careers in sustainability, conservation, and climate science"
+          ]
+        },
+        {
+          "title": "Competitive Exams & Government Jobs",
+          "sub_title": "Strong academic base supports success in various general and technical government roles.",
+          "points": ["UPSC (Civil Services), IFS, SSC, Banking, and Defense services", "Technical roles in government health and science departments"]
+        },
+        {
+          "title": "Emerging Fields & Interdisciplinary Careers",
+          "sub_title": "PCMB opens doors to unique careers that blend life sciences, technology, and data.",
+          "points": ["Computational Biology", "Health Data Analytics", "Pharmaceutical R&D", "Medical Coding and AI in Healthcare"]
+        }
+      ]
+    },
+    {
+      "slug": "pcms",
+      "name": "Physics, Chemistry, Mathematics, Statistics (PCMS)",
+      "description": "The PCMS subject combination Physics, Chemistry, Mathematics, and Statistics is a niche but powerful stream at the pre-university level. It is ideal for students with a strong analytical mindset and an interest in quantitative analysis, problem-solving, and data interpretation. By replacing Biology or Computer Science with Statistics, this stream offers a solid foundation in mathematical reasoning, scientific principles, and statistical modeling, making it perfect for future careers in data science, research, and technology-driven fields.",
+      "future_prospects_heading": "Future Prospects for PCMS Students",
+      "future_prospects": [
+        {
+          "title": "Engineering & Technology",
+          "sub_title": "Statistics enhances the analytical skills needed for data-heavy engineering branches and modern tech applications.",
+          "points": [
+            "Computer Science Engineering (CSE)",
+            "Data Science & AI Engineering",
+            "Electronics & Communication Engineering",
+            "Civil or Mechanical Engineering (with a math-heavy foundation)"
+          ]
+        },
+        {
+          "title": "Data & Analytics Careers",
+          "sub_title": "PCMS students are well-prepared for careers in the data-driven economy, especially when combined with higher studies or certifications in data analytics, machine learning, or finance.",
+          "points": ["Data Scientist / Analyst", "Business Intelligence Professional", "Actuary / Risk Analyst", "Market Research Analyst"]
+        },
+        {
+          "title": "Higher Education in Pure Sciences",
+          "sub_title": "Perfect for students inclined toward academia, research, or careers in mathematical modeling and scientific computing.",
+          "points": [
+            "B.Sc. in Statistics, Mathematics, or Physics",
+            "Integrated M.Sc. in Applied Mathematics, Quantitative Economics, or Data Science",
+            "Opportunities at top institutions like ISI, IITs, IISc"
+          ]
+        },
+        {
+          "title": "Competitive Exams & Government Roles",
+          "sub_title": "Quantitative aptitude from statistics gives students a strong edge.",
+          "points": ["Indian Statistical Services (ISS), UPSC, RBI Grade B", "Public sector roles in census, finance, banking, and policy analysis"]
+        },
+        {
+          "title": "Finance, Actuarial & Business Roles",
+          "sub_title": "Statistics makes PCMS a launchpad for finance and economics-related professions.",
+          "points": [
+            "Actuarial Science",
+            "Chartered Financial Analyst (CFA) / Quantitative Finance",
+            "Operations Research",
+            "Insurance and Risk Management"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "bsba",
+      "name": "Business Studies, Statistics, Business Administration (BSBA)",
+      "description": "The BSBA combination at the pre-university level blends the strategic and operational aspects of business with the analytical power of statistics. This stream is ideal for students interested in understanding how businesses function, make decisions, and grow using data-backed insights. It lays a strong foundation in management, quantitative analysis, and business operations.",
+      "future_prospects_heading": "Future Prospects for BSBA Students",
+      "future_prospects": [
+        {
+          "title": "Business & Management Studies",
+          "points": [
+            "Ideal for pursuing BBA, BBM, BMS or integrated MBA programs.",
+            "Opens up career paths in marketing, human resources, operations, and general management."
+          ]
+        },
+        {
+          "title": "Finance & Commerce Degrees",
+          "sub_title": "",
+          "points": [
+            "Students can also opt for B.Com (General or with specialization) and eventually pursue CA, CS, or CMA.",
+            "Career roles include accountants, financial analysts, investment advisors, etc."
+          ]
+        },
+        {
+          "title": "Data & Analytics Roles",
+          "points": [
+            "With a strong base in statistics, students can pursue Data Analytics, Business Intelligence, or Market Research roles through further studies in B.Sc. Statistics, BCA, or related fields."
+          ]
+        },
+        {
+          "title": "Entrepreneurship & Startups",
+          "points": [
+            "Business studies and administration subjects instill a deep understanding of enterprise creation",
+            "Students are well-positioned to manage family businesses or launch their own ventures."
+          ]
+        },
+        {
+          "title": "Government & Competitive Exams",
+          "points": [
+            "The mix of theory and analytical reasoning helps in preparing for exams like UPSC, SSC, Banking, and State Public Service Commission roles, especially those"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "beba",
+      "name": "Basic Maths, Economics, Business Studies, Accountancy (BEBA)",
+      "description": "The BEBA combination blends the analytical depth of Economics with the strategic understanding of Business Studies. This stream is ideal for students interested in economic systems, business operations, financial planning, and market dynamics. BEBA helps students develop strong reasoning, decision-making, and administrative skills for the world of commerce.",
+      "future_prospects_heading": "Future Prospects for BEBA Students",
+      "future_prospects": [
+        {
+          "title": "Business & Management Degrees",
+          "points": [
+            "Ideal for pursuing BBA, BBM, BMS, or integrated MBA programs.",
+            "Leads to careers in management, marketing, finance, operations, and entrepreneurship."
+          ]
+        },
+        {
+          "title": "Economics & Policy Studies",
+          "points": [
+            "Students can opt for B.A. Economics or B.Sc. Economics, followed by specialization or postgraduate studies.",
+            "Opens doors to careers in economic research, public policy, consulting, banking, and international trade."
+          ]
+        },
+        {
+          "title": "Public Sector & Civil Services",
+          "points": [
+            "A strong foundation in economics helps with exams like UPSC, RBI Grade B, IES, and other competitive government exams.",
+            "Preferred for roles in planning, administration, financial services, and economic policymaking."
+          ]
+        },
+        {
+          "title": "International Careers & Higher Studies",
+          "sub_title": "BEBA students often pursue Masters in Economics, Business, or Public Policy abroad.",
+          "points": [
+            "Opportunities include higher education in international universities offering business, economics, and public policy programs.",
+            "Leads to global careers in development agencies, think tanks, NGOs, and multinational corporations."
+          ]
+        },
+        {
+          "title": "Entrepreneurship & Innovation",
+          "points": [
+            "Students gain foundational knowledge in business planning and economic feasibility, helping them start or manage ventures in sectors like FinTech, EdTech, retail, or e-commerce."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "csba",
+      "name": " Computer Science, Business Administration (CSBA)",
+      "description": "The CSBA combination Computer Science and Business Administration is ideal for students interested in both technology and management. It provides foundational knowledge in programming, databases, algorithms, as well as business principles like marketing, finance, and entrepreneurship. This dual-discipline approach nurtures problem-solving, strategic thinking, and digital literacy, equipping students for careers in today’s tech-enabled business world.",
+      "future_prospects_heading": "Future Prospects for CSBA Students",
+      "future_prospects": [
+        {
+          "title": "Undergraduate Programs",
+          "points": [
+            "BBA (Digital Business, Business Analytics, etc.)",
+            "BCA (Bachelor of Computer Applications)",
+            "B.Com with specialization in IT or Business Analytics",
+            "BMS (Bachelor of Management Studies)"
+          ]
+        },
+        {
+          "title": "Career Opportunities",
+          "points": [
+            "Business Analyst",
+            "Product Manager",
+            "Digital Marketing Strategist",
+            "Technology Consultant",
+            "Startup roles in tech-enabled businesses"
+          ]
+        },
+        {
+          "title": "Higher Studies and Certifications",
+          "points": [
+            "MBA in Information Systems, Business Analytics, or Marketing",
+            "MCA or MS in Information Technology",
+            "PG Diplomas in Data Science, UI/UX, or Digital Strategy",
+            "Certifications in Digital Marketing, Project Management, or Web Development"
+          ]
+        },
+        {
+          "title": "Entrepreneurship and Innovation",
+          "points": [
+            "Strong potential to launch tech-based startups or work in innovative sectors like EdTech, HealthTech, and E-commerce",
+            "Ideal for those with a vision to merge business acumen with technological innovation"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "seba",
+      "name": "Statistics, Economics, Business Administration (SEBA)",
+      "description": "The SEBA combination is designed for students with an analytical mindset and interest in understanding data, markets, and business dynamics. It blends quantitative reasoning from Statistics, economic insight from Economics, and managerial knowledge from Business Administration creating a well-rounded foundation for decision-making in business and policy environments.",
+      "future_prospects_heading": "Future Prospects for SEBA Students",
+      "future_prospects": [
+        {
+          "title": "Undergraduate Programs",
+          "points": [
+            "BBA (Finance, Business Analytics, International Business)",
+            "B.Com (with specialization in Economics or Statistics)",
+            "B.Sc in Data Science, Economics, or Statistics",
+            "BMS (Bachelor of Management Studies)"
+          ]
+        },
+        {
+          "title": "Career Opportunities",
+          "points": ["Business/Data Analyst", "Financial Analyst", "Market Research Executive", "Economist (after further studies)", "Policy Analyst"]
+        },
+        {
+          "title": "Higher Studies and Certifications",
+          "points": [
+            "MBA (Finance, Analytics, Strategy)",
+            "M.A./M.Sc in Economics or Statistics",
+            "PG Diplomas in Data Analytics, Public Policy, or Finance",
+            "Certifications in Excel, Tableau, SPSS, or Financial Modelling"
+          ]
+        },
+        {
+          "title": "Entrepreneurship and Research",
+          "points": [
+            "Opportunity to work in research-oriented roles in think tanks or government bodies",
+            "Build ventures based on data-driven solutions or economic consulting"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "heba",
+      "name": "History, Economics, Business Administration (HEBA)",
+      "description": "The HEBA combination is ideal for students interested in understanding the evolution of societies, economic systems, and business practices. It combines the analytical and theoretical frameworks of History and Economics with the practical, managerial orientation of Business Administration. This blend nurtures students with strong contextual understanding and decision-making skills, suited for diverse careers in business, governance, and public affairs.",
+      "future_prospects_heading": "Future Prospects for HEBA Students",
+      "future_prospects": [
+        {
+          "title": "Undergraduate Programs",
+          "points": [
+            "BBA (General, Marketing, HR, or Public Policy)",
+            "B.A. in Economics or History",
+            "B.Com with Business Studies electives",
+            "BMS (Bachelor of Management Studies)"
+          ]
+        },
+        {
+          "title": "Career Opportunities",
+          "points": [
+            "Business Executive",
+            "Public Relations Officer",
+            "Economic Research Assistant",
+            "Civil Services Aspirant",
+            "NGO/Policy Sector Professional"
+          ]
+        },
+        {
+          "title": "Higher Studies and Certifications",
+          "points": [
+            "MBA (HR, Public Administration, Business Analytics)",
+            "M.A. in History, Economics, or Public Policy",
+            "PG Diplomas in Heritage Management, Development Studies",
+            "Certifications in Business Communication, Leadership, or Data Analytics"
+          ]
+        },
+        {
+          "title": "Entrepreneurship and Creative Fields",
+          "points": ["Opportunities in content creation, heritage tourism, social enterprises"]
+        }
+      ]
+    }
+  ]
 }

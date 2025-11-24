@@ -121,10 +121,54 @@ const ExploreStream = () => {
     },
 
     {
-      title: " Basic Economics, Business Administration (BEBA)",
+      title: "Basic Maths, Economics, Business Studies, Accountancy (BEBA)",
       icon: "/svgs/homapageCarousalSvg/beba.svg",
       description: "asas",
+      link: "streams/beba"
+
+
+    },
+
+
+     {
+      title: "Computer Science, Statistics, Business Studies, Accountancy (CSBA) ",
+      icon: "/svgs/homapageCarousalSvg/csba.svg",
+      description: "esas",
+      link: "streams/csba"
+
+
+    },
+    {
+      title: " Basic Maths, Statistics, Business Studies, Accountancy (BSBA) ",
+      icon: "/svgs/homapageCarousalSvg/bsba.svg",
+      description: "asas",
+      link: "streams/bsba"
+
+
+    },
+
+    {
+      title: " Statistics, Economics, Business Studies, Accountancy (SEBA) ",
+      icon: "/svgs/homapageCarousalSvg/seba.svg",
+      description: "asas",
+      link: "streams/seba"
+
+
+    },
+    {
+      title: " History, Economics, Business Studies, Accountancy (HEBA)",
+      icon: "/svgs/homapageCarousalSvg/heba.svg",
+      description: "asas",
       link: "streams/heba"
+
+
+    },
+
+    {
+      title: "Basic Maths, Economics, Business Studies, Accountancy (BEBA)",
+      icon: "/svgs/homapageCarousalSvg/beba.svg",
+      description: "asas",
+      link: "streams/beba"
 
 
     },
