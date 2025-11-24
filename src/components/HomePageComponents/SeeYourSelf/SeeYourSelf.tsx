@@ -26,7 +26,7 @@ const SeeYourSelf = () => {
           <Link href={"/about"}><button className="px-4 py-1.5 border  border-gray-600 rounded-4xl lg:w-1/4 mt-8 hover:bg-gray-500/40 transition">View More</button></Link>
         </div>
         </div>
-        <div className="lg:col-span-1"></div>
+        <div className="lg:col-span-1 hidden lg:block"></div>
         <div className="lg:flex hidden lg:col-span-4 items-center justify-end md:py-8 lg2:py-16 ">
           <Image src="/images/homePageImages/image1.png" alt="" width={1000} height={1000} className=" rounded-2xl" />
         </div>

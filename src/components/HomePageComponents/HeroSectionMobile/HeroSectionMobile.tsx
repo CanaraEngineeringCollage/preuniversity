@@ -55,9 +55,9 @@ const onSubmit = async (data: FormData) => {
 
 
   return (
-    <div className="flex justify-center mt-[-10px] ">
+    <div className="flex justify-center mt-3 mb-4 ">
       <div className="w-full max-w-7xl p-10">
-        <h2 className="text-center text-[#1D1D1F] font-bold text-3xl md:text-3xl mb-12">
+        <h2 className="text-center text-[#1D1D1F] font-bold text-3xl md:text-3xl mb-10">
           Dream Big. Plan Smart. Enquire Now.
         </h2>
 
