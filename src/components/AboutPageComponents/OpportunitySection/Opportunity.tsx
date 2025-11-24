@@ -22,7 +22,7 @@ const Opportunity = () => {
         development.
       </p>
       </div> */}
-         <div className="flex flex-col gap-8 text-justify text-[#2A2A2A] text-base lg:text-xl ">
+         <div className="flex flex-col gap-8 text-justify text-[#2A2A2A] text-lg lg:text-xl ">
       <p>
        Canara Pre-University college was started in 1972 and provides education to both boys & girls without any distinction of caste creed or religion. The college provides Two – Year Pre university Education in Commerce (BSBA,BEBA,CSBA,SEBA & HEBA) & Science (PCMB, PCMC, PCME, PCMS).
       </p>

@@ -66,8 +66,8 @@ function FormComponent() {
 
       {/* Main content */}
       <div className="relative z-10 w-full max-w-7xl bg-[#F6F7FB]  rounded-2xl  overflow-hidden flex flex-col md:flex-row">
-    <div className="md:w-1/2 h-[400px] md:h-[800px] relative lg:p-4">
-  <iframe
+    <div  className="md:w-1/2 h-[400px] md:h-[800px] relative lg:p-4">
+  <iframe 
     width="100%"
     height="100%"
     className="lg:rounded-[15px]"
