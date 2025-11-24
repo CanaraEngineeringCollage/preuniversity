@@ -9,7 +9,7 @@ const SeeYourSelf = () => {
       <div className="grid grid-cols-1  lg:grid-cols-12 justify-items-center items-center">
         <div className="flex flex-col lg:col-span-7">
           <h1 className="font-bold leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl">See Yourself at Canara</h1>
-            <div className="flex pt-5 lg:hidden items-center justify-center  lg2:p-16 ">
+            <div className="flex pt-5 pb-1 lg:hidden items-center justify-center  lg2:p-16 ">
           <Image src="/images/homePageImages/image1.png" alt="" width={1000} height={1000} className=" rounded-2xl" />
         </div>
           <p className="text-[#2A2A2A] text-base text-justify lg:text-xl lg2:pt-8 lg:pt-4 pt-5 ">

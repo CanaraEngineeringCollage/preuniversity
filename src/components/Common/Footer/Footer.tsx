@@ -27,8 +27,8 @@ const examLinks = [
 const buzzLinks = [{ data: "Buzz", links: "/buzz" }];
 
 const eventLinks = [
-  { data: "Footprints", links: "#" },
-  { data: "Mat Kabaddi", links: "#" },
+  { data: "Footprints", links: "/#" },
+  { data: "Mat Kabaddi", links: "/#" },
 ];
 
 interface FooterListProps {

@@ -6,10 +6,10 @@ const AdmissionSection = () => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
   return (
-    <section className="py-10 lg:py-16 xl:py-36 text-[#1D1D1F] lg2:mx-24 mx-5 overflow-hidden">
+    <section className="py-10 lg:py-16  text-[#1D1D1F] lg2:mx-24 mx-5 overflow-hidden">
       <div className="">
         <h1 className="text-[30px] lg:text-[54px] font-bold pb-1  text-[#1D1D1F]">Admissions</h1>
-        <div className="grid grid-cols-1  md:grid-cols-12 mt-10">
+        <div className="grid grid-cols-1 text-justify  md:grid-cols-12 mt-10">
           <div className="col-span-4">
             {AdmissionData?.map((section, index) => (
               <h1

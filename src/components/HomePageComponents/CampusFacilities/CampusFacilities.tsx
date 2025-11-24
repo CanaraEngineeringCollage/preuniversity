@@ -100,7 +100,7 @@ function Innovations() {
           >
             <h1 className="font-bold leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl">
               Our Campus
-              <br />
+              <br className="hidden lg:block"/>
               Facilities
             </h1>
             <p className="lg2:text-xl lg:text-xl text-[#2A2A2A]  pt-4   mb-6 font-medium  lg:max-w-1/3">

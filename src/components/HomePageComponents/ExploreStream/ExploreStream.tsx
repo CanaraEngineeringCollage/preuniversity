@@ -195,7 +195,7 @@ const ExploreStream = () => {
 
 
   return (
-    <section className=" my-16 px-5 md:px-0 ">
+    <section className=" my-14 lg:my-16 px-5 md:px-0 ">
       <div className="flex flex-col items-center ">
         <h1 className="leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl text-center   font-bold text-[#1D1D1F] ">
           Explore Our Stream Combinations

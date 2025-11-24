@@ -8,7 +8,7 @@ import Updates from "../Options/Updates/Updates";
 function  NavbarItems() {
   return (
     <>
-      <div className="hidden nav-items  lg:flex  lg2 flex-row w-full justify-between">
+      <div className="hidden nav-items text-white  lg:flex  lg2 flex-row w-full justify-between">
         <div className="cursor-pointer   pt-[8px] text-sm xl:text-base font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
           <About />
         </div>
