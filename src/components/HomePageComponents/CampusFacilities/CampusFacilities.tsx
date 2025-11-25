@@ -129,7 +129,7 @@ function Innovations() {
             <FacilityCard
               title="Scholarships"
               description="All Government & College Scholarships are given to needy and meritorious students."
-              imageUrl="/images/homePageImages/3.png"
+              imageUrl="/images/homePageImages/1.png"
               className="lg:col-span-3 md:col-span-5 row-span-2"
               gradientColor="#3c72d7"
               delay={0.3}
@@ -187,7 +187,7 @@ function Innovations() {
             <FacilityCard
               title="Scholarships"
               description="All Government & College Scholarships are given to needy and meritorious students."
-              imageUrl="/images/homePageImages/3.png"
+              imageUrl="/images/homePageImages/1.png"
               className="col-span-1"
               gradientColor="#3c72d7"
               delay={0.3}

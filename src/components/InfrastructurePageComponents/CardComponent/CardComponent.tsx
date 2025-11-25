@@ -3,33 +3,38 @@ import { motion } from "framer-motion";
 
 const data = [
   {
-    image: "/images/homePageImages/phy2.webp",
+    image: "/images/homePageImages/1.png",
     text: "Academic Counselling",
     description: "Interactive learning environment",
   },
   {
-    image: "/images/homePageImages/chem1.webp",
+    image: "/images/homePageImages/2.png",
     text: "Book Bank",
     description: "Hands-on practical sessions",
   },
   {
-    image: "/images/homePageImages/comp2.webp",
+    image: "/images/homePageImages/5.png",
     text: "Medical Facilities",
     description: "Advanced course experiments",
   },
   {
-    image: "/images/homePageImages/electo1.webp",
+    image: "/images/homePageImages/3.png",
     text: "Dedicated Course Labs",
     description: "Interactive learning environment",
   },
   {
-    image: "/images/homePageImages/bio1.webp",
+    image: "/images/homePageImages/6.png",
     text: "Competitive Exam Training",
     description: "Hands-on practical sessions",
   },
   {
-    image: "/images/homePageImages/electo2.webp",
+    image: "/images/homePageImages/4.png",
     text: "Club Activities",
+    description: "Advanced course experiments",
+  },
+  {
+    image: "/images/homePageImages/1.png",
+    text: "Scholarships",
     description: "Advanced course experiments",
   },
 ];
