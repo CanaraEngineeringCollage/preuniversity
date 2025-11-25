@@ -25,7 +25,7 @@ export default function StudentLife() {
             placeholder=""
             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
           >
-            StudentLife
+            Student Life
             <FaChevronUp strokeWidth={2.5} className={`hidden h-3.5 w-3.5 transition-transform lg:block ${isMenuOpen ? "" : "rotate-180"}`} />
           </ListItem>
         </Typography>
