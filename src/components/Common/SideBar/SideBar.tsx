@@ -476,7 +476,8 @@ function MainMenu({
             <>
               <div >
                 <div className="flex items-center gap-2" onClick={() => {
-                  router.push("/exam-results");
+                window.open("https://canarapucollege.com/result/", "_blank");
+
                   openSidebar(false);
                 }}>
                   {/* <College /> */}
@@ -498,7 +499,7 @@ function MainMenu({
               </div>
               <div>
                 <div className="flex items-center gap-2" onClick={() => {
-                  router.push("/fee-portal");
+                  window.open("https://canarapucollege.com/2pufees/", "_blank");
                   openSidebar(false);
                 }
                 }>
