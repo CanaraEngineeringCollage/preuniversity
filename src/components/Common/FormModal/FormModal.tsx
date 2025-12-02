@@ -119,14 +119,14 @@ reset();
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="bg-white rounded-3xl max-w-xl w-full p-8 relative shadow-2xl"
+            className="bg-white rounded-3xl max-w-xl w-full px-8 pb-8 pt-14 relative shadow-2xl"
           >
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 bg-gray-600 h-8 w-8 rounded-full flex items-center justify-center text-white"
+              className="absolute top-4 right-4  h-8 w-8 rounded-full flex items-center justify-center text-white"
             >
-             <IoCloseOutline className="h-6 w-6" />
+             <IoCloseOutline className="text-4xl text-black" />
             </button>
 
             {/* Title */}

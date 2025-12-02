@@ -24,35 +24,50 @@ interface FacilityCardProps {
   // Used to alternate direction
 }
 
-const FacilityCard: React.FC<FacilityCardProps> = ({
-  title,
-  imageUrl,
-  className = "",
-  gradientColor,
-  delay,
-  index,
-  description,
-  additionalFeatures,
-  bottomDescription,
-  heading,
-  keyHighlights,
-  subDescription,
-  subHeading,
-  subTitle,
-  centering,
-}) => {
+const FacilityCard: React.FC<FacilityCardProps> = (props) => {
+  const {
+    title,
+    imageUrl,
+    className = "",
+    gradientColor,
+    delay,
+    index,
+    description,
+    additionalFeatures,
+    bottomDescription,
+    heading,
+    keyHighlights,
+    subDescription,
+    subHeading,
+    subTitle,
+    centering,
+  } = props;
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  // Alternate direction: even index from left, odd from right
-  const direction = index % 2 === 0 ? -50 : 50; // -50 for left, 50 for right
+  // Detect Desktop
+  const isDesktop = typeof window !== "undefined" && window.innerWidth >= 1024;
+
+  // Mobile animation: alternate L/R
+  const horizontalDirection = index % 2 === 0 ? -50 : 50;
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, x: direction }} // Start off-screen left or right
-      animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : direction }} // Slide to center
-      transition={{ duration: 0.5, ease: "easeOut", delay }} // Smooth transition with delay
+      initial={
+        isDesktop
+          ? { opacity: 0, y: 80 } // Desktop: bottom → top
+          : { opacity: 0, x: horizontalDirection } // Mobile: left/right
+      }
+      animate={
+        isInView
+          ? isDesktop
+            ? { opacity: 1, y: 0 }
+            : { opacity: 1, x: 0 }
+          : {}
+      }
+      transition={{ duration: 0.6, ease: "easeOut", delay }}
       className={`relative rounded-2xl overflow-hidden group h-[360px] ${className}`}
     >
       <AppleStyledCard
@@ -83,6 +98,7 @@ const FacilityCard: React.FC<FacilityCardProps> = ({
     </motion.div>
   );
 };
+
 
 function Innovations() {
   const sectionRef = useRef(null);

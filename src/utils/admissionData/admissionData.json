@@ -38,18 +38,8 @@
         
         "points": [
           "The selected candidate should pay the fees in one installment after the interview or else admission shall lapse.",
-          "Any difference in Government fees shall be collected at a later date. The fees once paid, shall in no circumstance be refunded."
-          
-        ]
-      }
-    ]
-  },
-  {
-    "title": "Mode of Payment",
-    "data": [
-      {
-        "points": [
-          "By cheque only"
+          "Any difference in Government fees shall be collected at a later date. The fees once paid, shall in no circumstance be refunded.",
+          "Mode of Payment: By cheque only."
           
         ]
       }

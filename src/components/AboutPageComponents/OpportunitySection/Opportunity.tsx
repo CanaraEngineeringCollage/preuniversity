@@ -3,7 +3,7 @@ import React from "react";
 const Opportunity = () => {
   return (
     <div className="container text-[#1D1D1F] max-w-6xl xl:max-w-[75%] mx-auto px-5">
-      <h1 className="leading-[1.1] md:text-3xl lg:text-4xl lg2:text-5xl text-3xl font-bold pt-10 lg:pt-16 pb-10 text-center">Where Excellence Meets Opportunity</h1>
+      <h1 className="leading-[1.1] md:text-3xl lg:text-4xl lg2:text-5xl text-3xl font-bold pt-10 lg:pt-8 pb-8 text-center">Where Excellence Meets Opportunity</h1>
       {/* <div className="flex flex-col gap-8 text-[#2A2A2A] lg2:text-xl font-medium">
       <p>
         Established in 1972, Canara Pre-University College offers inclusive education to both boys & girls, regardless of caste, creed, or religion.
@@ -24,7 +24,7 @@ const Opportunity = () => {
       </div> */}
          <div className="flex flex-col gap-8 text-justify text-[#2A2A2A] text-lg lg:text-xl ">
       <p>
-       Canara Pre-University college was started in 1972 and provides education to both boys & girls without any distinction of caste creed or religion. The college provides Two – Year Pre university Education in Commerce (BSBA,BEBA,CSBA,SEBA & HEBA) & Science (PCMB, PCMC, PCME, PCMS).
+       Canara Pre-University college was started in 1972 and provides education to both boys & girls without any distinction of caste creed or religion. The college provides Two – Year Pre university Education in Commerce (BSBA, BEBA, CSBA, SEBA & HEBA) & Science (PCMB, PCMC, PCME, PCMS).
       </p>
       <p>
         The college makes every attempt to provide an environment in which every student discovers and realizes his full potential. The college lays emphasis not only on the development of intellect, but also on character building and discipline so that the students turn out to be worthy individuals and realize their goals in this competitive world.

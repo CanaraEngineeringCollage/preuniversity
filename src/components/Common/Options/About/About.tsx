@@ -30,7 +30,7 @@ export default function About() {
         </Typography>
       </MenuHandler>
 
-     <MenuList className="w-full bg-white !top-[210px] text-[#1D1D1F] p-0 z-100 border-none !border-0 shadow-none flex justify-center  outline-none focus:ring-0">
+     <MenuList className="w-full bg-white !top-[195px] xl:!top-[212px] text-[#1D1D1F] p-0 z-100 border-none !border-0 shadow-none flex justify-center  outline-none focus:ring-0">
   <div className="w-[80%]    p-8 border-none outline-none">
     <div className="flex justify-evenly">
       

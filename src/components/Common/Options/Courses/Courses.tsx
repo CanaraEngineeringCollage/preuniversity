@@ -45,7 +45,7 @@ export default function Courses() {
         </Typography>
       </MenuHandler>
 
-<MenuList className="w-full bg-white !top-[210px] text-[#1D1D1F] p-0 shadow-none !border-none !outline-none !focus:outline-none">
+<MenuList className="w-full bg-white !top-[195px] xl:!top-[212px] text-[#1D1D1F] p-0 shadow-none !border-none !outline-none !focus:outline-none">
 
         {isMenuOpen && (
           <div className="w-[75%] mx-auto p-10">

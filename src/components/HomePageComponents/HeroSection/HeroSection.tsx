@@ -10,6 +10,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { ClipLoader } from "react-spinners";
 import { submitToGoogleSheet } from "@/utils/formSubmission";
+import FormModal from "@/components/Common/FormModal/FormModal";
 
 interface FormData {
   fullName: string;
@@ -46,8 +47,10 @@ const onSubmit = async (data: FormData) => {
 
   const formRef = useRef(null);
   const isFormInView = useInView(formRef, { once: true });
+  const [open, setOpen] = useState(false);
 
   return (
+    <>
     <div className="relative md:h-[100vh] h-[70vh]">
       {/* Background Image Carousel */}
       <div className="absolute inset-0 z-0">
@@ -139,6 +142,16 @@ const onSubmit = async (data: FormData) => {
         </motion.div>
       </div>
     </div>
+    <div className="flex md:hidden justify-center mt-6">
+  <button
+    onClick={() => setOpen(true)}
+    className="text-white bg-[#3C71D7] rounded-[90px] px-5 py-3 font-bold"
+  >
+    Enquire Now
+  </button>
+</div>
+ <FormModal isOpen={open} onClose={() => setOpen(false)} />
+      </>
   );
 };
 

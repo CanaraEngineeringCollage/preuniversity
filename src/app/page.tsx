@@ -12,9 +12,9 @@ export default function Home() {
   <section>
     <HeroBanner/>
   </section>
-  <section className="md:hidden">
+  {/* <section className="md:hidden">
     <HeroSectionMobile/>
-  </section>
+  </section> */}
   <section>
     <SeeYourSelf/>
   </section>

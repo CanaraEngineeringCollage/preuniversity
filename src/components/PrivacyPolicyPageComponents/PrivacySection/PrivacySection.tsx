@@ -34,7 +34,7 @@ const PrivacySection = () => {
             {privacyData[selectedIndex]?.data?.map((item, idx) => (
               <div key={idx} className="mb-6">
                 {item.datam?.map((value, i) => (
-                  <p key={i} className="md:text-lg  text-[14px] leading-7 pb-4 text-[#2A2A2A] ">
+                  <p key={i} className={`md:text-lg  text-[14px]  text-[#2A2A2A] ${selectedIndex === 8 ? "pb-2" : "pb-4 leading-7"}`}>
                     {value}
                   </p>
                 ))}

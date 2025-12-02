@@ -48,7 +48,7 @@ export default function Footer() {
       {/* Desktop Version */}
       <div className="lg:block hidden">
         <div className="max-w-6xl text-base mx-auto px-4 py-16 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
-          <div className="flex justify-center">
+          <div className="flex justify-start">
             <FooterList data={aboutLinks} />
           </div>
           <div className="flex justify-center">
@@ -57,7 +57,7 @@ export default function Footer() {
           <div className="flex justify-center">
             <FooterList data={examLinks} />
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-end">
             <FooterList data={buzzLinks} />
           </div>
           <div className="flex justify-center">
@@ -76,7 +76,7 @@ export default function Footer() {
             <span className="text-xs font-bold mb-2">Follow Us</span>
             <div className="flex space-x-3 text-white">
            <Link href="https://www.instagram.com/canara_pu_official/?hl=en" target="_blank"> <Instagram /></Link>
-              <Link href="https://www.youtube.com/@canaraeducationalinstituti2494" target="_blank"><Yt /></Link>
+              <Link href="https://www.youtube.com/@canarapreuniversitycollege7891" target="_blank"><Yt /></Link>
               <Link href="https://www.facebook.com/canarapreuniversity/" target="_blank"><Meta /></Link>
             </div>
           </div>
@@ -121,7 +121,7 @@ export default function Footer() {
             <div className="flex space-x-3 justify-center">
              
              <Link href="https://www.instagram.com/canara_pu_official/?hl=en" target="_blank"> <Instagram /></Link>
-            <Link href="https://www.youtube.com/@canaraeducationalinstituti2494" target="_blank"><Yt /></Link>
+            <Link href="https://www.youtube.com/@canarapreuniversitycollege7891" target="_blank"><Yt /></Link>
               <Link href="https://www.facebook.com/canarapreuniversity/" target="_blank"><Meta /></Link>
             </div>
           </div>

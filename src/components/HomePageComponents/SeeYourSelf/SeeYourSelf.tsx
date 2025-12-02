@@ -5,7 +5,7 @@ import React from "react";
 
 const SeeYourSelf = () => {
   return (
-    <section className="max-w-7xl xl:max-w-[75%] px-5 mx-auto text-[#1D1D1F] my-0 md:my-12">
+    <section className="max-w-7xl xl:max-w-[75%] px-5 mx-auto text-[#1D1D1F] mt-12 md:my-12">
       <div className="grid grid-cols-1  lg:grid-cols-12 justify-items-center items-center">
         <div className="flex flex-col lg:col-span-7">
           <h1 className="font-bold leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl">See Yourself at Canara</h1>
@@ -23,7 +23,7 @@ const SeeYourSelf = () => {
             encouraged to take part in co-curricular activities, with achievers recognized & celebrated.
           </p>
           <div className="mx-auto lg:mx-0 ">
-          <Link href={"/about"}><button className="px-4 py-1.5 border  border-gray-600 rounded-4xl lg:w-1/4 mt-8 hover:bg-gray-500/40 transition">View More</button></Link>
+          <Link href={"/about"}><button className="px-8 py-1.5 border  border-gray-600 rounded-4xl  mt-8  transition">View More</button></Link>
         </div>
         </div>
         <div className="lg:col-span-1 hidden lg:block"></div>

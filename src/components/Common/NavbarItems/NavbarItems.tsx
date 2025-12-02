@@ -9,24 +9,24 @@ function  NavbarItems() {
   return (
     <>
       <div className="hidden nav-items text-white  lg:flex  lg2 flex-row w-full justify-between">
-        <div className="cursor-pointer   pt-[8px] text-sm xl:text-base font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
+        <div className="cursor-pointer    text-sm xl:text-base font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
           <About />
         </div>
-        <div className="cursor-pointer  pt-[8px] text-sm xl:text-base font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
+        <div className="cursor-pointer   text-sm xl:text-base font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
           <Courses />
         </div>
-        <div className="cursor-pointer  pt-[8px] text-sm xl:text-base font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
+        <div className="cursor-pointer   text-sm xl:text-base font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
           <StudentLife />
         </div>
-        <div className="cursor-pointer  pt-[8px] text-sm xl:text-base font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
+        <div className="cursor-pointer   text-sm xl:text-base font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
           <Events />
         </div>
         <Link href="/buzz">
-          <div className="cursor-pointer  pt-[8px] text-[18px] font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
+          <div className="cursor-pointer   text-[18px] font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
             Buzz
           </div>
         </Link>
-        <div className="cursor-pointer  pt-[8px] text-sm xl:text-base font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
+        <div className="cursor-pointer   text-sm xl:text-base font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
           <Updates />
         </div>
       </div>

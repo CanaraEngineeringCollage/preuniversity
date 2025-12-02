@@ -41,6 +41,8 @@ const AdmissionSection = () => {
             )}
           </div>
         </div>
+        <hr className="mt-16 border-t-2 border-[#e5e7ed]" />
+
         <div className="mt-10 lg:mt-16 space-y-2">
           <h1 className="font-extrabold text-xl">Acceptance of Rules of Selection & Admission</h1>
           <p className="text-[#2A2A2A] text-lg">
