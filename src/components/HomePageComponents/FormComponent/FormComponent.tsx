@@ -57,20 +57,20 @@ function FormComponent() {
   };
 
   return (
-    <div className="relative  flex items-center justify-center p-4 overflow-hidden">
+    <div className="relative  flex items-center justify-center mb-7 md:mb-0 p-4 overflow-hidden">
       {/* Background half white and half blue */}
       <div className="absolute inset-0 z-0">
         <div className="h-1/2 bg-["></div>
-        <div className="h-1/2 bg-[#001A48]"></div>
+        <div className="h-1/2 md:bg-[#001A48]"></div>
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 w-full max-w-7xl bg-[#F6F7FB]  rounded-2xl  overflow-hidden flex flex-col md:flex-row">
-    <div  className="md:w-1/2 h-[400px] md:h-[800px] relative lg:p-4">
+      <div className="relative z-10 w-full max-w-7xl bg-[#F6F7FB]  rounded-2xl px-1.5 md:px-0  overflow-hidden md:flex flex-col md:flex-row">
+    <div  className="md:w-1/2 h-[400px] md:h-[700px] relative lg:p-4">
   <iframe 
     width="100%"
     height="100%"
-    className="lg:rounded-[15px]"
+    className="rounded-2xl lg:rounded-[15px]"
     style={{ border: 0 }}
     loading="lazy"
     allowFullScreen
@@ -99,7 +99,7 @@ function FormComponent() {
 </div>
 
 
-        <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-center md:ml-8">
+        <div className="w-full md:w-1/2 p-6 md:p-8 border md:border-none rounded-2xl flex flex-col mt-8 md:mt-0 justify-center md:ml-8">
           <h2 className="text-2xl md:text-[44px] font-bold text-[#1e1b4b] mb-6 md:mb-8">
             Dream Big. Plan Smart. Enquire Now.
           </h2>
@@ -141,27 +141,30 @@ function FormComponent() {
               />
             </div>
 
-            <div className="relative">
-              <textarea
-                name="enquiry"
-                placeholder="Your Enquiry"
-                value={formData.enquiry}
-                onChange={handleChange}
-                className="w-full px-4 py-2 md:py-3 border-b border-gray-300 focus:border-purple-500 focus:outline-none resize-none text-sm md:text-base"
-                maxLength={250}
-                required
-                rows={3}
-              />
-              <span className="absolute bottom-2 right-2 text-xs md:text-sm text-gray-400">
-                {charCount}/250
-              </span>
-            </div>
+          <div className="relative w-full">
+  <textarea
+    name="enquiry"
+    placeholder="Your Enquiry"
+    value={formData.enquiry}
+    onChange={handleChange}
+    className="w-full px-4 py-2 md:py-3 pr-14 border-b border-gray-300 focus:border-purple-500 focus:outline-none resize-none text-sm md:text-base"
+    maxLength={250}
+    required
+    rows={3}
+  />
+  
+  {/* Character Counter */}
+  <span className="absolute top-2 right-2 text-xs  text-gray-400">
+    {charCount}/250
+  </span>
+</div>
+
 
             <div className="flex justify-center">
               <button
                 type="submit"
                 aria-label={isLoding ? "Submitting" : "Submit form"}
-                className="w-32 cursor-pointer bg-[#3C71D7] text-white py-2 md:py-3 px-6 rounded-full hover:bg-[#3C71D7] transition-colors text-sm md:text-base"
+                className="bg-[#3C71D7] text-white px-8 py-2 rounded-full font-semibold text-md  hover:bg-[#3C71D7]/90 transition-colors text-sm md:text-base"
               >
                 {isLoding ? <ClipLoader size={24} color="#fff" /> : "Submit"}
               </button>

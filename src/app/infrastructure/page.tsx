@@ -52,9 +52,9 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
-      <section>
+      {/* <section>
         <Banner/>
-      </section>
+      </section> */}
       <section>
         <Card/>
       </section>

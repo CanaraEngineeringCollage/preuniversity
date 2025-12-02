@@ -16,7 +16,7 @@ type props ={
 export default function Subject( {name ,description,future_prospects_heading,future_prospects}:props ) {
   return(
     <>
-    <Banner/>
+    {/* <Banner/> */}
 
  <div className="max-w-7xl xl:max-w-[75%] px-5  mx-auto lg:py-16 text-[#1D1D1F] py-10">
   <h1 className=" text-[#1D1D1F] max-w-4xl leading-[1.2] text-3xl sm:text-4xl lg:text-5xl font-bold  ">

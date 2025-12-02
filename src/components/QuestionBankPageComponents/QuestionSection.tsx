@@ -15,9 +15,9 @@ const QuestionSection = () => {
         <h1 className=" font-bold text-[30px] lg:text-[45px]">Question Bank</h1>
 
         {/* Science Stream */}
-        <div className="flex gap-2 justify-between mt-5 lg:mt-10">
+        <div onClick={() => setShowScience(!showScience)} className="flex gap-2 cursor-pointer justify-between mt-5 lg:mt-10">
           <div className="flex items-center gap-3">
-            <Image src="/nav1.svg" alt="svg" width={20} height={20} />
+            <Image src="/questionbank/science.svg" alt="svg" width={20} height={20} />
             <h1 className="text-xl font-bold">Science Streams</h1>
           </div>
           <button onClick={() => setShowScience(!showScience)}>
@@ -54,9 +54,9 @@ const QuestionSection = () => {
         </AnimatePresence>
 
         {/* Commerce Stream */}
-        <div className="flex justify-between gap-2 mt-10">
+        <div onClick={() => setShowCommerce(!showCommerce)} className="flex cursor-pointer justify-between gap-2 mt-10">
           <div className="flex items-center gap-3">
-            <Image src="/nav1.svg" alt="svg" width={20} height={20} />
+            <Image src="/questionbank/commerce.svg" alt="svg" width={20} height={20} />
             <h1 className="text-xl font-bold">Commerce Streams</h1>
           </div>
           <button onClick={() => setShowCommerce(!showCommerce)}>

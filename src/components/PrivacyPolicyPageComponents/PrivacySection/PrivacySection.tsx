@@ -1,9 +1,17 @@
 "use client";
 import React, { useState } from "react";
 import privacyData from "../../../utils/privacyData/privacyData.json";
+import CustomSelect from "../../Common/CustomSelect/CustomSelect";
 
 const PrivacySection = () => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
+
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const index = privacyData.findIndex((section) => section.title === e.target.value);
+    if (index !== -1) {
+      setSelectedIndex(index);
+    }
+  };
 
   return (
     <section className="pt-12 pb-5 lg:py-24 xl:py-36 text-[#1D1D1F] overflow-hidden">
@@ -11,9 +19,19 @@ const PrivacySection = () => {
         <h1 className="text-3xl text-[#1D1D1F] md:text-[40px] lg2:text-5xl xl:text-6xl font-bold pb-1 lg:pb-10">
           Privacy Policy
         </h1>
+        
+        {/* Mobile Select Dropdown */}
+        <div className="md:hidden mt-10">
+          <CustomSelect
+            value={privacyData[selectedIndex].title}
+            onChange={handleSelectChange}
+            options={privacyData.map((section) => section.title)}
+          />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-12 mt-10">
-          {/* Sidebar */}
-          <div className="col-span-3">
+          {/* Desktop Sidebar - Hidden on mobile */}
+          <div className="col-span-3 hidden md:block">
             {privacyData?.map((section, index) => (
               <h1
                 key={index}

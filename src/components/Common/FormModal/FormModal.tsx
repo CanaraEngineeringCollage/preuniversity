@@ -208,46 +208,46 @@ reset();
               </div>
 
               {/* Enquiry */}
-              <div>
-                <textarea
-                  rows={3}
-                  maxLength={250}
-                  placeholder="Your Enquiry"
-                  {...register("enquiry", {
-                    required: "Enquiry is required",
-                    minLength: {
-                      value: 2,
-                      message: "Enquiry must be at least 2 characters",
-                    },
-                    maxLength: {
-                      value: 250,
-                      message: "Enquiry cannot exceed 250 characters",
-                    },
-                    validate: {
-                      notOnlyWhitespace: (value) =>
-                        value.trim().length > 0 ||
-                        "Enquiry cannot be only whitespace",
-                    },
-                  })}
-                  className="w-full border-b border-gray-300 focus:outline-none text-lg py-2 resize-none"
-                />
+        <div className="relative">
+  <textarea
+    rows={3}
+    maxLength={250}
+    placeholder="Your Enquiry"
+    {...register("enquiry", {
+      required: "Enquiry is required",
+      minLength: {
+        value: 2,
+        message: "Enquiry must be at least 2 characters",
+      },
+      maxLength: {
+        value: 250,
+        message: "Enquiry cannot exceed 250 characters",
+      },
+      validate: {
+        notOnlyWhitespace: (value) =>
+          value.trim().length > 0 ||
+          "Enquiry cannot be only whitespace",
+      },
+    })}
+    className="w-full border-b border-gray-300 focus:outline-none text-lg py-2 pr-12 resize-none"
+  />
 
-                <div className="flex justify-between items-center mt-1">
-                  <p className="text-red-500 text-sm">
-                    {errors.enquiry?.message}
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    {commentValue.length}/250
-                  </p>
-                </div>
-              </div>
+  {/* Character Counter inside textarea (top-right or bottom-right) */}
+  <span className="absolute right-0 top-0 mt-2 mr-2 text-xs text-gray-500">
+    {commentValue.length}/250
+  </span>
+
+  {/* Error Message Below */}
+  <p className="text-red-500 text-sm mt-1">{errors.enquiry?.message}</p>
+</div>
+
 
               {/* Submit Button */}
               <div className="flex justify-center">
                 <button
                   type="submit"
                   disabled={loading}
-                  className={`bg-[#3C71D7] text-white text-lg font-semibold px-6 py-2 rounded-full transition ${
+                  className={`bg-[#3C71D7] text-white px-8 py-2 rounded-full font-semibold text-md transition ${
                     loading ? "opacity-50 cursor-not-allowed" : ""
                   }`}
                 >

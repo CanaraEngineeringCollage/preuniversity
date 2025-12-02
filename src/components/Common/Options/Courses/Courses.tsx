@@ -61,7 +61,7 @@ export default function Courses() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16">
 
                   {/* PCMB */}
-                  <motion.div custom={0} variants={cardVariants} initial="initial" animate="animate">
+                  <motion.div custom={0}  initial="initial" animate="animate">
                     <Link href="/streams/pcmb">
                       <p className={`text-base ${pathname.includes("pcmb") ? "text-primary" : "text-gray-600"}`}>
                         Physics, Chemistry, Mathematics & Biology (PCMB)
@@ -70,7 +70,7 @@ export default function Courses() {
                   </motion.div>
 
                   {/* PCME */}
-                  <motion.div custom={1} variants={cardVariants} initial="initial" animate="animate">
+                  <motion.div custom={1}  initial="initial" animate="animate">
                     <Link href="/streams/pcme">
                       <p className={`text-base ${pathname.includes("pcme") ? "text-primary" : "text-gray-600"}`}>
                         Physics, Chemistry, Mathematics & Electronics (PCME)
@@ -79,7 +79,7 @@ export default function Courses() {
                   </motion.div>
 
                   {/* PCMC */}
-                  <motion.div custom={2} variants={cardVariants} initial="initial" animate="animate">
+                  <motion.div custom={2}  initial="initial" animate="animate">
                     <Link href="/streams/pcmc">
                       <p className={`text-base ${pathname.includes("pcmc") ? "text-primary" : "text-gray-600"}`}>
                         Physics, Chemistry, Mathematics & Computer Science (PCMC)
@@ -88,7 +88,7 @@ export default function Courses() {
                   </motion.div>
 
                   {/* PCMS */}
-                  <motion.div custom={3} variants={cardVariants} initial="initial" animate="animate">
+                  <motion.div custom={3}  initial="initial" animate="animate">
                     <Link href="/streams/pcms">
                       <p className={`text-base ${pathname.includes("pcms") ? "text-primary" : "text-gray-600"}`}>
                         Physics, Chemistry, Mathematics & Statistics (PCMS)
@@ -109,7 +109,7 @@ export default function Courses() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16">
 
                   {/* BSBA */}
-                  <motion.div custom={4} variants={cardVariants} initial="initial" animate="animate">
+                  <motion.div custom={4}  initial="initial" animate="animate">
                     <Link href="/streams/bsba">
                       <p className={`text-base ${pathname.includes("bsba") ? "text-primary" : "text-gray-600"}`}>
                         Basic Maths, Statistics, Business Studies & Accountancy (BSBA)
@@ -118,7 +118,7 @@ export default function Courses() {
                   </motion.div>
 
                   {/* BEBA */}
-                  <motion.div custom={5} variants={cardVariants} initial="initial" animate="animate">
+                  <motion.div custom={5}  initial="initial" animate="animate">
                     <Link href="/streams/beba">
                       <p className={`text-base ${pathname.includes("beba") ? "text-primary" : "text-gray-600"}`}>
                         Basic Maths, Economics, Business Studies & Accountancy (BEBA)
@@ -127,7 +127,7 @@ export default function Courses() {
                   </motion.div>
 
                   {/* SEBA */}
-                  <motion.div custom={6} variants={cardVariants} initial="initial" animate="animate">
+                  <motion.div custom={6}  initial="initial" animate="animate">
                     <Link href="/streams/seba">
                       <p className={`text-base ${pathname.includes("seba") ? "text-primary" : "text-gray-600"}`}>
                         Statistics, Economics, Business Studies & Accountancy (SEBA)
@@ -136,7 +136,7 @@ export default function Courses() {
                   </motion.div>
 
                   {/* HEBA */}
-                  <motion.div custom={7} variants={cardVariants} initial="initial" animate="animate">
+                  <motion.div custom={7}  initial="initial" animate="animate">
                     <Link href="/streams/heba">
                       <p className={`text-base ${pathname.includes("heba") ? "text-primary" : "text-gray-600"}`}>
                         History, Economics, Business Studies & Accountancy (HEBA)
@@ -145,7 +145,7 @@ export default function Courses() {
                   </motion.div>
 
                   {/* CSBA — moves automatically to next row */}
-                  <motion.div custom={8} variants={cardVariants} initial="initial" animate="animate">
+                  <motion.div custom={8}  initial="initial" animate="animate">
                     <Link href="/streams/csba">
                       <p className={`text-base ${pathname.includes("csba") ? "text-primary" : "text-gray-600"}`}>
                         Computer Science, Statistics, Business Studies & Accountancy (CSBA)

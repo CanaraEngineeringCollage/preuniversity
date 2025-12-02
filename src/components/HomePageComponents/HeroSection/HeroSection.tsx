@@ -51,7 +51,22 @@ const onSubmit = async (data: FormData) => {
 
   return (
     <>
-    <div className="relative md:h-[100vh] h-[70vh]">
+    <div className="relative md:h-[100vh] h-[50vh]">
+      <div className="absolute bottom-6 left-0 w-full flex flex-col items-center md:hidden z-20 px-4 text-center">
+  <h2
+    
+    className="text-3xl leading-[1.3] font-bold text-white font-helvetica mb-4"
+  >
+    Dream Big. Plan Smart. <br /> Enquire Now.
+  </h2>
+
+  <button
+    onClick={() => setOpen(true)}
+    className="text-white bg-[#3C71D7] rounded-[90px] px-8 py-2 font-bold"
+  >
+    Enquire Now
+  </button>
+</div>
       {/* Background Image Carousel */}
       <div className="absolute inset-0 z-0">
         <div className="relative w-full  h-full">
@@ -112,21 +127,25 @@ const onSubmit = async (data: FormData) => {
             />
             {/* {errors.phoneNumber && <p className="text-red-500 text-sm">{errors.phoneNumber.message}</p>} */}
 
-            <motion.textarea
-              placeholder="Your Enquiry"
-              required
-              {...register("comments", {
-                required: "Enquiry is required",
-                maxLength: 250,
-              })}
-              rows={4}
-              maxLength={250}
-              className="w-full border-b border-gray-300 focus:outline-none text-md py-2"
-            />
-            <div className="flex justify-between text-red-500 text-sm px-1">
-              {/* <span>{errors.comments?.message}</span> */}
-              <span className="text-gray-500">{watch("comments")?.length || 0}/250</span>
-            </div>
+           <div className="relative w-full">
+  <motion.textarea
+    placeholder="Your Enquiry"
+    required
+    {...register("comments", {
+      required: "Enquiry is required",
+      maxLength: 250,
+    })}
+    rows={4}
+    maxLength={250}
+    className="w-full border-b border-gray-300 focus:outline-none text-md py-2 pr-10"
+  />
+
+  {/* Character Counter Positioned Right */}
+  <span className="absolute top-2 right-0 text-gray-500 text-[12px]">
+    {watch("comments")?.length || 0}/250
+  </span>
+</div>
+
 
             <div className="flex justify-center">
               <motion.button
@@ -142,14 +161,22 @@ const onSubmit = async (data: FormData) => {
         </motion.div>
       </div>
     </div>
-    <div className="flex md:hidden justify-center mt-6">
+    {/* <div className="flex md:hidden justify-center mt-6">
+         <motion.h2
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-2xl md:text-4xl leading-[1.3] font-bold text-center text-[#001A48] font-helvetica"
+            >
+              Dream Big. Plan Smart. Enquire Now.
+            </motion.h2>
   <button
     onClick={() => setOpen(true)}
     className="text-white bg-[#3C71D7] rounded-[90px] px-5 py-3 font-bold"
   >
     Enquire Now
   </button>
-</div>
+</div> */}
  <FormModal isOpen={open} onClose={() => setOpen(false)} />
       </>
   );

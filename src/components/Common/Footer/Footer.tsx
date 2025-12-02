@@ -19,7 +19,7 @@ const admissionLinks = [
 ];
 
 const examLinks = [
-  { data: "Exam Results", links: "/exam-results" },
+  { data: "Exam Results", links: "https://canarapucollege.com/result/" },
   { data: "Exam Circulars", links: "/exam-circulars" },
   { data: "Question Bank", links: "/question-bank" },
 ];
@@ -69,9 +69,9 @@ export default function Footer() {
 
         {/* Logo and Social */}
         <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
-          <div className="flex items-center">
+          <Link href="/"><div className="flex items-center">
             <Image src="/svgs/footerLogo.svg" alt="svg" width={200} height={200} className="w-40 cursor-pointer sm:w-48 md:w-64" />
-          </div>
+          </div></Link>
           <div className="flex flex-col items-center md:items-end">
             <span className="text-xs font-bold mb-2">Follow Us</span>
             <div className="flex space-x-3 text-white">
@@ -86,7 +86,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="max-w-6xl text-[12px] text-[#6b7a95] mx-auto px-4 pt-4 pb-10 flex flex-col items-center text-center md:flex-row md:justify-between md:text-left">
-          <p>Copyright © ${new Date().getFullYear()} Canara High School Association. All rights reserved.</p>
+          <p>Copyright © {new Date().getFullYear()} Canara High School Association. All rights reserved.</p>
           <div className="space-x-2 mt-2 md:mt-0">
             <Link href="/privacy-policy" className="">
               Privacy Policy
@@ -113,9 +113,9 @@ export default function Footer() {
 
         {/* Mobile Logo and Social Icons */}
         <div className="flex flex-col items-center py-6">
-          <div className="flex items-center">
-            <Image src="/svgs/footerLogo.svg" alt="svg" width={200} height={200} className="w-40" />
-          </div>
+          <Link href="/"><div className="flex items-center">
+            <Image src="/svgs/footerLogo.svg" alt="svg" width={200} height={200} className="w-56" />
+          </div></Link>
           <div className="mt-4">
             <span className="text-xs font-bold mb-2 block text-center">Follow Us</span>
             <div className="flex space-x-3 justify-center">
@@ -131,7 +131,7 @@ export default function Footer() {
 
         {/* Mobile Bottom Bar */}
         <div className="text-[12px] text-[#6b7a95] pt-4 pb-10 text-center">
-          <p className="mb-2">Copyright © ${new Date().getFullYear()} Canara High School Association. All rights reserved.</p>
+          <p className="mb-2">Copyright © {new Date().getFullYear()} Canara High School Association. All rights reserved.</p>
           <div className="space-x-2">
             <Link href="/privacy-policy" className="">
               Privacy Policy
@@ -151,14 +151,24 @@ export default function Footer() {
 const FooterList: FC<FooterListProps> = ({ data }) => {
   return (
     <ul className="cursor-pointer text-white w-32">
-      {data.map((item, index) => (
-        <Link href={item.links} key={index}>
-          <li className="pb-3">{item.data}</li>
-        </Link>
-      ))}
+      {data.map((item, index) => {
+        const isExternal = item.links.startsWith("http");
+
+        return (
+          <Link
+            key={index}
+            href={item.links}
+            target={isExternal ? "_blank" : "_self"}
+            rel={isExternal ? "noopener noreferrer" : undefined}
+          >
+            <li className="pb-3">{item.data}</li>
+          </Link>
+        );
+      })}
     </ul>
   );
 };
+
 
 // Arrow Icon for Mobile Collapsible Sections
 const ArrowIcon = ({ isOpen }: { isOpen: boolean }) => (

@@ -202,7 +202,7 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({ title, description, campu
 
         
         <div className="flex justify-between items-center pb-5 lg:pb-10  gap-2">
-          <button className="border text-lg font-bold px-3 py-1 rounded-4xl cursor-pointer" onClick={() => setActiveCategory("All")}>
+          <button className="border text-lg font-bold px-3 py-1 hidden md:block  rounded-4xl cursor-pointer" onClick={() => setActiveCategory("All")}>
             Clear All Filters
           </button>
           {/* Mobile Select Category */}
@@ -246,10 +246,10 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({ title, description, campu
               <div className="flex flex-col justify-center w-full md:w-1/2 p-6 lg:p-10">
                 <p className="text-[17px] text-textGray uppercase font-bold mb-4">{event.date}</p>
                 <h2 className="text-[31px] leading-[1.1] font-bold text-[#1D1D1F] mb-2">{event.title}</h2>
-                <p className="text-textGray leading-[1.3] text-[21px] mb-4">{event.description}</p>
+                <p className="text-textGray leading-[1.3] text-lg lg:text-lg mb-4">{event.description}</p>
                 <motion.button
                   onClick={() => openCard(index)}
-                  className="text-[#2997FF] inline-flex text-[21px] items-center font-medium text-sm"
+                  className="text-[#0066CC] inline-flex text-[21px] items-center font-medium text-sm"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -260,7 +260,7 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({ title, description, campu
           ))}
         </div>
         <div className="flex justify-center mt-10">
-          <button className="bg-[#eff1f6] text-[#1D1D1F] px-5 py-2 cursor-pointer rounded-3xl">Explore More Campus Stories</button>
+          <button className="bg-[#eff1f6] text-[#1D1D1F] px-8 py-2 text-lg font-bold cursor-pointer rounded-3xl">Explore More Campus Stories</button>
         </div>
 
         {/* Modal */}

@@ -105,7 +105,7 @@ function Innovations() {
   const isSectionInView = useInView(sectionRef, { once: true });
 
   return (
-    <section className="max-w-[90%] xl:max-w-[75%] mx-auto lg:mb-0 mb-10">
+    <section className="max-w-[90%] xl:max-w-[75%] mx-auto lg:mb-0 mb-8">
       <div className=" relative overflow-hidden text-[#1D1D1F]" ref={sectionRef}>
         <div className="  ">
           <motion.div

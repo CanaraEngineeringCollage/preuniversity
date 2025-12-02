@@ -29,7 +29,7 @@ function Navbar({ openSidebar, sidebar }: { openSidebar: () => void; sidebar: bo
     <>
       {/* First Header */}
       <section className={`bg-white relative transition-all duration-500 ease-in-out `}>
-        <nav className="  py-6 max-w-[95%]  lg:max-w-[90%] mx-auto">
+        <nav className="  py-6 max-w-[90%]  lg:max-w-[90%] mx-auto">
           {/* For large and Medium-sized Screen */}
           <div className="flex items-center justify-between relative  lg:py-2 xl:py-3 container-padding">
             <div className="flex flex-row items-center  relative">
@@ -51,9 +51,9 @@ function Navbar({ openSidebar, sidebar }: { openSidebar: () => void; sidebar: bo
 
               </Link>
             </div>
-            <button onClick={() => setOpen(true)} className="text-white bg-[#3C71D7] hidden lg:block rounded-[90px] px-5 py-3 font-bold">Enquire Now</button>
+            <button onClick={() => setOpen(true)} className="text-white bg-[#3C71D7] hidden lg:block rounded-[90px] px-8 py-3 font-bold">Enquire Now</button>
           </div>
-          <div className="block lg:hidden absolute top-1/2 -translate-y-1/2 right-3 z-[1000]">
+          <div className="block lg:hidden absolute top-1/2 -translate-y-1/2 right-5 z-[1000]">
             {/* Dropdown */}
             <DropDown openSidebar={openSidebar} sidebar={sidebar} />
             {/* Dropdown */}
