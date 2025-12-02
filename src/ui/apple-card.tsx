@@ -215,7 +215,7 @@ export default function AppleStyledCard({ title, imageSrc, imageAlt, content, gr
   />
 
  <motion.div className="absolute bottom-4 z-[100] text-center w-full">
-  <div className="w-[250px] mx-auto text-white border rounded-3xl text-base md:text-base py-2 font-bold px-2 mt-2">
+  <div className="lg2:w-[250px] mx-auto text-white border rounded-3xl text-base md:text-base py-2 font-bold px-2 mt-2">
     {title}
   </div>
 </motion.div>

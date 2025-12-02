@@ -160,26 +160,36 @@ function Innovations() {
               delay={0.4}
               index={3} // From right
             />
-            <FacilityCard
+                        <FacilityCard
               title="Medical Facilities"
               description="All the bonafied students of this institution come under the “Safety Insurance Policy”, The Premium towards the same, is paid by the college from the ‘Parent -Teacher Association’ fund."
               imageUrl="/images/homePageImages/5.png"
-              className="lg:col-span-3 md:col-span-5 row-span-2 top-36"
-        
+              className="lg:col-span-3 md:col-span-5 row-span-2 mt-10"
               gradientColor="#3c72d7"
-              centering="object-[5%_center]"
-              delay={0.5}
+             delay={0.5}
               index={4} // From left
             />
-            <FacilityCard
-              title="Remedial Classes"
+          <div  className="lg:col-span-3 md:col-span-5 row-span-1 top-32"></div>
+         <div  className="lg:col-span-3 md:col-span-5 row-span-2"></div>
+          {/* <FacilityCard
+             title="Remedial Classes"
               description="With the aim of enhancing students’ performance and aiding the slow learners, remedial classes are organised."
               imageUrl="/images/homePageImages/6.png"
-              className="lg:col-span-4 md:col-span-5 object-cover lg:max-w-[310px] row-span-2 xl:max-w-[310px] top-[-13rem]"
+              className="lg:col-span-3 md:col-span-5 row-span-1 mt-5"
               gradientColor="#3c72d7"
-              delay={0.6}
+           delay={0.6}
+              index={5} // From right
+            /> */}
+            <FacilityCard
+             title="Remedial Classes"
+              description="With the aim of enhancing students’ performance and aiding the slow learners, remedial classes are organised."
+              imageUrl="/images/homePageImages/6.png"
+              className="lg:col-span-3 md:col-span-5 row-span-1 -top-[210px]"
+              gradientColor="#3c72d7"
+           delay={0.6}
               index={5} // From right
             />
+          
           </div>
           <div className="grid md:grid-cols-2 grid-cols-1 gap-4 relative lg:hidden">
             <FacilityCard
