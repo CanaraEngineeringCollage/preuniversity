@@ -37,7 +37,7 @@ export default function About() {
       {/* Column 1 */}
       <div className="space-y-2">
         <ul className="text-[#1D1D1F] text-[16px] leading-10">
-          <Link href="/about"><li>About the CEC Campus</li></Link>
+          <Link href="/about"><li>About Canara PU College</li></Link>
         </ul>
       </div>
 
