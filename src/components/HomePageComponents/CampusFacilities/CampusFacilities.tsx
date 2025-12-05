@@ -128,7 +128,7 @@ function Innovations() {
               title="Academic Counsellor"
               description="Every class shall have a member of the teaching staff as the Academic Counsellor who will act as a friend, philosopher & guide to all the students entrusted to his / her personal care."
               imageUrl="/images/homePageImages/1.png"
-              className="lg:col-span-3 md:col-span-5 row-span-2 mt-56"
+              className="lg:col-span-4 md:col-span-5 row-span-2 mt-56"
               gradientColor="#3c72d7"
               delay={0.1}
               index={0} // From left
@@ -137,7 +137,7 @@ function Innovations() {
               title="Book Bank"
               description="This scheme is intended primarily to help the economically backward students who cannot afford to purchase expensive text books, to possess the same on loan from the Book Bank for the academic year."
               imageUrl="/images/homePageImages/2.png"
-              className="lg:col-span-3 md:col-span-5 row-span-1 top-32"
+              className="lg:col-span-4 md:col-span-5 row-span-1 top-32"
               gradientColor="#3c72d7"
               delay={0.2}
               index={1} // From right
@@ -146,12 +146,12 @@ function Innovations() {
               title="Scholarships"
               description="All Government & College Scholarships are given to needy and meritorious students."
               imageUrl="/images/homePageImages/1.png"
-              className="lg:col-span-3 md:col-span-5 row-span-2"
+              className="lg:col-span-4 md:col-span-5 row-span-2"
               gradientColor="#3c72d7"
               delay={0.3}
               index={2} // From left
             />
-            <FacilityCard
+            {/* <FacilityCard
               title="Communication System"
               description="The College provides easy access to the attendance of the students through the  SMS service to parents. SMS alerts about college notifications are also given to lecturers and parents . The regularly Updated college Website gives a comprehensive view to the college activities."
               imageUrl="/images/homePageImages/4.png"
@@ -164,33 +164,105 @@ function Innovations() {
               title="Medical Facilities"
               description="All the bonafied students of this institution come under the “Safety Insurance Policy”, The Premium towards the same, is paid by the college from the ‘Parent -Teacher Association’ fund."
               imageUrl="/images/homePageImages/5.png"
-              className="lg:col-span-3 md:col-span-5 row-span-2 mt-10"
+              className="lg:col-span-3 md:col-span-5 row-span-2 top-[140px]"
               gradientColor="#3c72d7"
              delay={0.5}
               index={4} // From left
             />
-          <div  className="lg:col-span-3 md:col-span-5 row-span-1 top-32"></div>
-         <div  className="lg:col-span-3 md:col-span-5 row-span-2"></div>
-          {/* <FacilityCard
+           <FacilityCard
              title="Remedial Classes"
               description="With the aim of enhancing students’ performance and aiding the slow learners, remedial classes are organised."
               imageUrl="/images/homePageImages/6.png"
-              className="lg:col-span-3 md:col-span-5 row-span-1 mt-5"
-              gradientColor="#3c72d7"
-           delay={0.6}
-              index={5} // From right
-            /> */}
-            <FacilityCard
-             title="Remedial Classes"
-              description="With the aim of enhancing students’ performance and aiding the slow learners, remedial classes are organised."
-              imageUrl="/images/homePageImages/6.png"
-              className="lg:col-span-3 md:col-span-5 row-span-1 -top-[210px]"
+              className="lg:col-span-3 md:col-span-5 row-span-1 top-[90px] "
               gradientColor="#3c72d7"
            delay={0.6}
               index={5} // From right
             />
-          
+         
+          <FacilityCard
+             title="Remedial Classes"
+              description="With the aim of enhancing students’ performance and aiding the slow learners, remedial classes are organised."
+              imageUrl="/images/homePageImages/6.png"
+              className="lg:col-span-3 md:col-span-5 row-span-1 -top-[140px]"
+              gradientColor="#3c72d7"
+           delay={0.6}
+              index={5} // From right
+            />
+            <FacilityCard
+             title="Remedial Classes"
+              description="With the aim of enhancing students’ performance and aiding the slow learners, remedial classes are organised."
+              imageUrl="/images/homePageImages/6.png"
+              className="lg:col-span-3 md:col-span-5 row-span-1 -top-[370px]"
+              gradientColor="#3c72d7"
+           delay={0.6}
+              index={5} // From right
+            /> */}
+             <FacilityCard
+              title="Competitive exam training"
+              description=""
+              imageUrl="/images/homePageImages/4.png"
+              className="lg:col-span-4 md:col-span-5 row-span-2 top-[130px] "
+              gradientColor="#3c72d7"
+              delay={0.1}
+              index={0} // From left
+            />
+            <FacilityCard
+              title="Medical Facilities"
+              description="All the bonafied students of this institution come under the “Safety Insurance Policy”, The Premium towards the same, is paid by the college from the ‘Parent-Teacher Association’ fund."
+              imageUrl="/images/homePageImages/5.png"
+              className="lg:col-span-4 md:col-span-5 row-span-1 "
+              gradientColor="#3c72d7"
+              delay={0.2}
+              index={1} // From right
+            />
+            <FacilityCard
+              title="Remedial Classes"
+              description="With the aim of enhancing students’ performance and aiding the slow learners, remedial classes are organised."
+              imageUrl="/images/homePageImages/6.png"
+              className="lg:col-span-4 md:col-span-5 row-span-2 -top-[220px]"
+              gradientColor="#3c72d7"
+              delay={0.3}
+              index={2} // From left
+            />
+
+             <FacilityCard
+              title="Club Activities "
+              description=""
+              imageUrl="/images/homePageImages/1.png"
+              className="lg:col-span-4 md:col-span-5 row-span-2  "
+              gradientColor="#3c72d7"
+              delay={0.1}
+              index={0} // From left
+            />
+            <FacilityCard
+              title="Dedicated course Lab"
+              description=""
+              imageUrl="/images/homePageImages/2.png"
+              className="lg:col-span-4 md:col-span-5 row-span-1 -top-[95px]"
+              gradientColor="#3c72d7"
+              delay={0.2}
+              index={1} // From right
+            />
+           
+            <div className="lg:col-span-4 md:col-span-5 row-span-2 -top-[2000px]"></div>
+            <FacilityCard
+              title="Real-Time Student Updates for Parents"
+              description=""
+              imageUrl="/images/homePageImages/1.png"
+              className="lg:col-span-4 md:col-span-5 row-span-2 -top-[595px]"
+              gradientColor="#3c72d7"
+              delay={0.3}
+              index={2} // From left
+            />
           </div>
+
+
+
+
+
+
+
+          
           <div className="grid md:grid-cols-2 grid-cols-1 gap-4 relative lg:hidden">
             <FacilityCard
               title="Academic Counsellor"

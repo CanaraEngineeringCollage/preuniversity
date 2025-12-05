@@ -386,6 +386,21 @@ function MainMenu({
                 <Link  onClick={()=>{
                  closeSidebar(false)
 
+                }}
+                
+                href={"/achievements"}>
+                 <div className="flex items-center gap-2">
+                  {/* <StudentsLife /> */}
+                  <Typography className="text-sm text-gray-500"> Achievements</Typography>
+                  {/* <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" /> */}
+                </div>
+                </Link>
+               
+              </div>
+              <div>
+                <Link  onClick={()=>{
+                 closeSidebar(false)
+
                 }} 
                 
                 href={"/question-bank"}>

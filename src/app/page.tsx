@@ -24,7 +24,9 @@ export default function Home() {
   <section>
     <Innovations/>
   </section>
+  <section className="lg:-mt-[270px]">
   <FormComponent/>
+  </section>
   </>
   );
 }
