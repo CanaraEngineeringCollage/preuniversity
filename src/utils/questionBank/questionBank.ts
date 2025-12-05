@@ -19,52 +19,7 @@ const science = [
     name: "Chemistry March 2016",
     link: "",
   },
-  {
-    name: "Maths April 15",
-    link: "",
-  },
-
-  {
-    name: "Biology April 2015",
-    link: "",
-  },
-  {
-    name: "Biology March 2016",
-    link: "",
-  },
-  {
-    name: "Biology March 2018",
-    link: "",
-  },
-  {
-    name: "Electronics April 2015",
-    link: "",
-  },
-  {
-    name: "Electronics March 2016",
-    link: "",
-  },
-  {
-    name: "Electronics March 2018",
-    link: "",
-  },
-
-  {
-    name: "Computer Science April 2015",
-    link: "",
-  },
-  {
-    name: "Computer Science March 2016",
-    link: "",
-  },
-  {
-    name: "Computer Science March 2017",
-    link: "",
-  },
-  {
-    name: "Computer Science March 2018",
-    link: "",
-  },
+  
 ];
 
 const commerce = [
@@ -85,14 +40,7 @@ const commerce = [
     name: "Computer Science March 2016",
     link: "",
   },
-  {
-    name: "Computer Science March 2017",
-    link: "",
-  },
-  {
-    name: "Computer Science March 2018",
-    link: "",
-  },
+  
 ];
 
 export { science, commerce };

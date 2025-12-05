@@ -24,13 +24,13 @@ const ExploreStream = () => {
   const dummyFunctionDepartmentData: DataItem[] = [
     {
       title: "Physics, Chemistry, Mathematics & Biology (PCMB)",
-      icon: "/svgs/homapageCarousalSvg/1.svg",
+      icon: "images/homePageImages/pcmb.svg",
       description: "cscsc",
       link: "streams/pcmb"
     },
     {
       title: "Physics, Chemistry, Mathematics & Electronics (PCME)",
-      icon: "/svgs/homapageCarousalSvg/2.svg",
+      icon: "images/homePageImages/pcme.svg",
       description: "bsbsb",
       link: "streams/pcme"
 
@@ -38,7 +38,7 @@ const ExploreStream = () => {
     },
     {
       title: "Physics, Chemistry, Mathematics & Computer Science (PCMC)",
-      icon: "/svgs/homapageCarousalSvg/3.svg",
+      icon: "images/homePageImages/pcmc.svg",
       description: "asas",
       link: "streams/pcmc"
 
@@ -46,7 +46,7 @@ const ExploreStream = () => {
     },
     {
       title: "Physics, Chemistry, Mathematics & Statistics (PCMS)",
-      icon: "/svgs/homapageCarousalSvg/4.svg",
+      icon: "images/homePageImages/pcms.svg",
       description: "asas",
       link: "streams/pcms"
 
@@ -54,13 +54,13 @@ const ExploreStream = () => {
     },
        {
       title: "Physics, Chemistry, Mathematics & Biology (PCMB)",
-      icon: "/svgs/homapageCarousalSvg/1.svg",
+      icon: "images/homePageImages/pcmb.svg",
       description: "cscsc",
       link: "streams/pcmb"
     },
     {
       title: "Physics, Chemistry, Mathematics & Electronics (PCME)",
-      icon: "/svgs/homapageCarousalSvg/2.svg",
+      icon: "images/homePageImages/pcme.svg",
       description: "bsbsb",
       link: "streams/pcme"
 
@@ -68,7 +68,7 @@ const ExploreStream = () => {
     },
     {
       title: "Physics, Chemistry, Mathematics & Computer Science (PCMC)",
-      icon: "/svgs/homapageCarousalSvg/3.svg",
+      icon: "images/homePageImages/pcmc.svg",
       description: "asas",
       link: "streams/pcmc"
 
@@ -76,7 +76,7 @@ const ExploreStream = () => {
     },
     {
       title: "Physics, Chemistry, Mathematics & Statistics (PCMS)",
-      icon: "/svgs/homapageCarousalSvg/4.svg",
+      icon: "images/homePageImages/pcms.svg",
       description: "asas",
       link: "streams/pcms"
 
@@ -88,7 +88,7 @@ const ExploreStream = () => {
   const dummyFunctionDepartmentDataCommerce: DataItem[] = [
     {
       title: "Computer Science, Statistics, Business Studies, Accountancy (CSBA) ",
-      icon: "/svgs/homapageCarousalSvg/csba.svg",
+      icon: "images/homePageImages/csba.svg",
       description: "esas",
       link: "streams/csba"
 
@@ -96,7 +96,7 @@ const ExploreStream = () => {
     },
     {
       title: " Basic Maths, Statistics, Business Studies, Accountancy (BSBA) ",
-      icon: "/svgs/homapageCarousalSvg/bsba.svg",
+      icon: "images/homePageImages/bsba.svg",
       description: "asas",
       link: "streams/bsba"
 
@@ -105,7 +105,7 @@ const ExploreStream = () => {
 
     {
       title: " Statistics, Economics, Business Studies, Accountancy (SEBA) ",
-      icon: "/svgs/homapageCarousalSvg/seba.svg",
+      icon: "images/homePageImages/seba.svg",
       description: "asas",
       link: "streams/seba"
 
@@ -113,7 +113,7 @@ const ExploreStream = () => {
     },
       {
       title: "Computer Science, Economics, Business Studies & Accountancy  (CEBA) ",
-      icon: "/svgs/homapageCarousalSvg/csba.svg",
+      icon: "images/homePageImages/ceba.svg",
       description: "esas",
       link: "streams/ceba"
 
@@ -121,7 +121,7 @@ const ExploreStream = () => {
     },
     {
       title: " History, Economics, Business Studies, Accountancy (HEBA)",
-      icon: "/svgs/homapageCarousalSvg/heba.svg",
+      icon: "images/homePageImages/heba.svg",
       description: "asas",
       link: "streams/heba"
 
@@ -130,7 +130,7 @@ const ExploreStream = () => {
 
     {
       title: "Basic Maths, Economics, Business Studies, Accountancy (BEBA)",
-      icon: "/svgs/homapageCarousalSvg/beba.svg",
+      icon: "images/homePageImages/beba.svg",
       description: "asas",
       link: "streams/beba"
 
@@ -140,7 +140,7 @@ const ExploreStream = () => {
 
      {
       title: "Computer Science, Statistics, Business Studies, Accountancy (CSBA) ",
-      icon: "/svgs/homapageCarousalSvg/csba.svg",
+      icon: "images/homePageImages/csba.svg",
       description: "esas",
       link: "streams/csba"
 
@@ -148,7 +148,7 @@ const ExploreStream = () => {
     },
     {
       title: " Basic Maths, Statistics, Business Studies, Accountancy (BSBA) ",
-      icon: "/svgs/homapageCarousalSvg/bsba.svg",
+      icon: "images/homePageImages/bsba.svg",
       description: "asas",
       link: "streams/bsba"
 
@@ -157,7 +157,7 @@ const ExploreStream = () => {
 
     {
       title: " Statistics, Economics, Business Studies, Accountancy (SEBA) ",
-      icon: "/svgs/homapageCarousalSvg/seba.svg",
+      icon: "images/homePageImages/seba.svg",
       description: "asas",
       link: "streams/seba"
 
@@ -165,7 +165,7 @@ const ExploreStream = () => {
     },
           {
       title: "Computer Science, Economics, Business Studies & Accountancy  (CEBA) ",
-      icon: "/svgs/homapageCarousalSvg/csba.svg",
+      icon: "images/homePageImages/ceba.svg",
       description: "esas",
       link: "streams/ceba"
 
@@ -173,7 +173,7 @@ const ExploreStream = () => {
     },
     {
       title: " History, Economics, Business Studies, Accountancy (HEBA)",
-      icon: "/svgs/homapageCarousalSvg/heba.svg",
+      icon: "images/homePageImages/heba.svg",
       description: "asas",
       link: "streams/heba"
 
@@ -182,7 +182,7 @@ const ExploreStream = () => {
 
     {
       title: "Basic Maths, Economics, Business Studies, Accountancy (BEBA)",
-      icon: "/svgs/homapageCarousalSvg/beba.svg",
+      icon: "images/homePageImages/beba.svg",
       description: "asas",
       link: "streams/beba"
 

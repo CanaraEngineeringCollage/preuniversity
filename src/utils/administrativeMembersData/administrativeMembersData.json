@@ -148,8 +148,8 @@
     "image": "/images/governingCounsilImages/12.png",
     "category": "Prospective",
     "roles": [
-      { "title": "Member Secretary", "organization": "" },
-      { "title": "Governing Council", "organization": "Principal" }
+      { "title": "Member Secretary", "organization": "Governing Council" },
+      { "title": "", "organization": "" }
     ]
   },
 
@@ -160,7 +160,7 @@
     "category": "Prospective",
     "roles": [
       { "title": "Member Secretary", "organization": "Governing Council" },
-      { "title": "Vice Principal & Dean-Academics", "organization": "" }
+      { "title": "", "organization": "" }
     ]
   },
   {
@@ -170,7 +170,7 @@
     "category": "Prospective",
     "roles": [
       { "title": "Member", "organization": "Governing Council" },
-      { "title": "Accreditation & Dean-Academics", "organization": "" }
+      { "title": "", "organization": "" }
     ]
   }
 ]
