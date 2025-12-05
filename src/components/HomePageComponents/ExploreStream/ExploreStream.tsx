@@ -111,6 +111,14 @@ const ExploreStream = () => {
 
 
     },
+      {
+      title: "Computer Science, Economics, Business Studies & Accountancy  (CEBA) ",
+      icon: "/svgs/homapageCarousalSvg/csba.svg",
+      description: "esas",
+      link: "streams/ceba"
+
+
+    },
     {
       title: " History, Economics, Business Studies, Accountancy (HEBA)",
       icon: "/svgs/homapageCarousalSvg/heba.svg",
@@ -152,6 +160,14 @@ const ExploreStream = () => {
       icon: "/svgs/homapageCarousalSvg/seba.svg",
       description: "asas",
       link: "streams/seba"
+
+
+    },
+          {
+      title: "Computer Science, Economics, Business Studies & Accountancy  (CEBA) ",
+      icon: "/svgs/homapageCarousalSvg/csba.svg",
+      description: "esas",
+      link: "streams/ceba"
 
 
     },
