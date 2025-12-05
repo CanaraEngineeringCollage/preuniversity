@@ -284,7 +284,7 @@
     },
     {
       "slug": "csba",
-      "name": " Computer Science, Business Administration (CSBA)",
+      "name": "Computer Science, Statistics, Business Studies & Accountancy (CSBA)",
       "description": "The CSBA combination Computer Science and Business Administration is ideal for students interested in both technology and management. It provides foundational knowledge in programming, databases, algorithms, as well as business principles like marketing, finance, and entrepreneurship. This dual-discipline approach nurtures problem-solving, strategic thinking, and digital literacy, equipping students for careers in today’s tech-enabled business world.",
       "future_prospects_heading": "Future Prospects for CSBA Students",
       "future_prospects": [
@@ -305,6 +305,50 @@
             "Digital Marketing Strategist",
             "Technology Consultant",
             "Startup roles in tech-enabled businesses"
+          ]
+        },
+        {
+          "title": "Higher Studies and Certifications",
+          "points": [
+            "MBA in Information Systems, Business Analytics, or Marketing",
+            "MCA or MS in Information Technology",
+            "PG Diplomas in Data Science, UI/UX, or Digital Strategy",
+            "Certifications in Digital Marketing, Project Management, or Web Development"
+          ]
+        },
+        {
+          "title": "Entrepreneurship and Innovation",
+          "points": [
+            "Strong potential to launch tech-based startups or work in innovative sectors like EdTech, HealthTech, and E-commerce",
+            "Ideal for those with a vision to merge business acumen with technological innovation"
+          ]
+        }
+      ]
+    },
+     {
+      "slug": "ceba",
+      "name": "Computer Science, Economics, Business Studies & Accountancy (CEBA)",
+      "description": "The CEBA combination Computer Science and Business Administration is ideal for students interested in both technology and management. It provides foundational knowledge in programming, databases, algorithms, as well as business principles like marketing, finance, and entrepreneurship. This dual-discipline approach nurtures problem-solving, strategic thinking, and digital literacy, equipping students for careers in today’s tech-enabled business world.",
+      "future_prospects_heading": "Future Prospects for CEBA Students",
+      "future_prospects": [
+        {
+          "title": "Undergraduate Programs",
+          "points": [
+            "BBA (Digital Business, Business Analytics, etc.)",
+            "BCA (Bachelor of Computer Applications)",
+            "B.Com with specialization in IT or Business Analytics",
+            "BMS (Bachelor of Management Studies)"
+          ]
+        },
+        {
+          "title": "Career Opportunities",
+          "points": [
+            "Business Analyst",
+            "Product Manager",
+            "Digital Marketing Strategist",
+            "Technology Consultant",
+            "Startup roles in tech-enabled businesses",
+            "Economist (after further studies)"
           ]
         },
         {

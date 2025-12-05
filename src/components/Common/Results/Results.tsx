@@ -1,17 +1,17 @@
 import Image from "next/image";
 import React from "react";
 
-const Results = ({ image, text }: { image: string; text: string }) => {
+const Results = ({ image, text,title }: { image: string; text: string,title:string }) => {
   return (
     <section className="text-[#1D1D1F] relative w-full overflow-hidden pb-10 lg:pb-20">
-      <div className="relative h-[65vh] lg:h-[100vh] w-screen flex justify-center items-center">
+      <div className="relative h-[65vh] lg:h-[80vh] w-screen flex justify-center items-center">
         {/* Correct Image Placement */}
         <Image
           src={image}
           alt=""
           layout="fill"
           objectFit="cover"
-          className="z-0 !h-[80vh] hidden lg:block"     
+          className="z-0 !h-[65vh] hidden lg:block"     
         />
           <Image
           src={image}
@@ -24,7 +24,8 @@ const Results = ({ image, text }: { image: string; text: string }) => {
         {/* Input & Button Box */}
         <div className="absolute bottom-0 z-[999] w-full left-0 text-center flex justify-center">
         
-          <div className="lg:mx-20 mx-4 rounded-2xl w-full bg-[#F5F5F7] px-3.5 lg:px-28 pt-20 pb-10">
+          <div className="lg:mx-20 mx-4 rounded-2xl w-full bg-[#F5F5F7] px-3.5 lg:px-28 pt-10 ">
+         <h1 className="leading-[1.1] md:text-2xl lg:text-2xl lg2:text-4xl text-[#1D1D1F] text-2xl font-bold pb-10">{title}</h1>
               <form >
             <div className="mb-10 flex justify-between gap-5 lg:gap-20">
               <input

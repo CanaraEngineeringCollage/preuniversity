@@ -49,10 +49,10 @@ const commerce = [
     title: "History, Economics, Business Studies & Accountancy (HEBA)",
     link: "/streams/heba",
   },
-  // {
-  //   title: "Computer Science, Economics, Business Studies & Accountancy (CEBA)",
-  //   link: "/examination-guidelines",
-  // },
+  {
+    title: "Computer Science, Economics, Business Studies & Accountancy (CEBA)",
+    link: "/streams/ceba",
+  },
 ];
 
 export default function Sidebar({ sidebar, openSidebar }: { sidebar: boolean; openSidebar: () => void }) {
@@ -222,10 +222,10 @@ function MainMenu({
                   onClick={() => {
                     closeSidebar(false)
                   }}
-                  href={"/legacy"}>
+                  href={"/founder"}>
                   <div className="flex items-center gap-2">
                     {/* <Employees /> */}
-                    <Typography className="text-sm text-gray-500">Institute Legacy</Typography>
+                    <Typography className="text-sm text-gray-500">Founder</Typography>
                     {/* <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" /> */}
                   </div>
                 </Link>
@@ -236,10 +236,10 @@ function MainMenu({
                   closeSidebar(false)
                 }}
 
-                  href={"/administration"}>
+                  href={"/management"}>
                   <div className="flex items-center gap-2">
                     {/* <Certicficate /> */}
-                    <Typography className="text-sm text-gray-500">Administration</Typography>
+                    <Typography className="text-sm text-gray-500">Management</Typography>
                     {/* <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" /> */}
                   </div>
                 </Link>
@@ -264,10 +264,10 @@ function MainMenu({
                   closeSidebar(false)
                 }}
 
-                  href={"/infrastructure"}>
+                  href={"/facilities"}>
                   <div className="flex items-center gap-2">
                     {/* <HandShake /> */}
-                    <Typography className="text-sm text-gray-500">Infrastructure</Typography>
+                    <Typography className="text-sm text-gray-500">Facilities</Typography>
                     {/* <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" /> */}
                   </div>
                 </Link>
@@ -476,7 +476,7 @@ function MainMenu({
             <>
               <div >
                 <div className="flex items-center gap-2" onClick={() => {
-                window.open("https://canarapucollege.com/result/", "_blank");
+                router.push("/exam-results");
 
                   openSidebar(false);
                 }}>
@@ -499,7 +499,7 @@ function MainMenu({
               </div>
               <div>
                 <div className="flex items-center gap-2" onClick={() => {
-                  window.open("https://canarapucollege.com/2pufees/", "_blank");
+                  router.push("/fee-portal");
                   openSidebar(false);
                 }
                 }>

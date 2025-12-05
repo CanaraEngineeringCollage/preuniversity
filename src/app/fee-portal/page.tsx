@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <section>
-      <Results image="/images/commonImages/bannerImage.webp" text="Check Fee Status" />
+      <Results title="Fee Portal" image="/images/commonImages/bannerImage.webp" text="Check Fee Status" />
     </section>
   );
 };

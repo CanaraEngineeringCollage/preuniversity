@@ -44,14 +44,14 @@ export default function About() {
       {/* Column 2 */}
       <div className="space-y-2">
         <ul className="text-[#1D1D1F] text-[16px] leading-10">
-          <Link href="/legacy"><li>Institute Legacy</li></Link>
+          <Link href="/founder"><li>Founder</li></Link>
         </ul>
       </div>
 
       {/* Column 3 */}
       <div className="space-y-2">
         <ul className="text-[#1D1D1F] text-[16px] leading-10">
-          <Link href="/administration"><li>Administration</li></Link>
+          <Link href="/management"><li>Management</li></Link>
         </ul>
       </div>
 
@@ -65,7 +65,7 @@ export default function About() {
       {/* Column 5 */}
       <div className="space-y-2">
         <ul className="text-[#1D1D1F] text-[16px] leading-10">
-          <Link href="/infrastructure"><li>Infrastructure</li></Link>
+          <Link href="/facilities"><li>Facilities</li></Link>
         </ul>
       </div>
 

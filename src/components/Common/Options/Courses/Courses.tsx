@@ -152,6 +152,13 @@ export default function Courses() {
                       </p>
                     </Link>
                   </motion.div>
+                   <motion.div custom={8}  initial="initial" animate="animate">
+                    <Link href="/streams/ceba">
+                      <p className={`text-base ${pathname.includes("ceba") ? "text-primary" : "text-gray-600"}`}>
+                        Computer Science, Economics, Business Studies & Accountancy (CEBA)
+                      </p>
+                    </Link>
+                  </motion.div>
 
                 </div>
               </div>

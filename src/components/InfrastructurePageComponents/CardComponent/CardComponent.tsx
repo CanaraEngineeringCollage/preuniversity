@@ -37,6 +37,16 @@ const data = [
     text: "Scholarships",
     description: "Advanced course experiments",
   },
+   {
+    image: "/images/homePageImages/6.png",
+    text: "Remedial classes",
+    description: "Advanced course experiments",
+  },
+   {
+    image: "/images/homePageImages/1.png",
+    text: "Real-Time Student Updates for Parents",
+    description: "Advanced course experiments",
+  },
 ];
 
 export default function Card() {
@@ -44,15 +54,13 @@ export default function Card() {
 
   return (
     <section className="my-10 lg:my-16 xl:my-32">
-            <h1 className="leading-[1.1] md:text-3xl text-[#1D1D1F] lg:text-4xl lg2:text-5xl leading-[1.4] text-3xl font-bold pt-0 lg:pt-0 pb-5 lg:pb-12 text-center">Infrastructure at <br className="md:hidden"/> Canara PU College</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+            <h1 className="leading-[1.1] md:text-3xl text-[#1D1D1F] lg:text-4xl lg2:text-5xl leading-[1.4] text-3xl font-bold pt-0 lg:pt-0 pb-5 lg:pb-12 text-center">Facilities at <br className="md:hidden"/> Canara PU College</h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto px-4">
         
         {data.map((item, index) => (
        <div
   key={index}
-  className={`relative w-full rounded-xl overflow-hidden shadow-lg ${
-    index === data.length - 1 ? "md:col-start-2" : ""
-  }`}
+  className={`relative w-full rounded-xl overflow-hidden shadow-lg`}
 >
 
             <Image
@@ -69,7 +77,7 @@ export default function Card() {
               }}
             />
             <div className="absolute bottom-0  left-0 w-full h-20 flex items-center justify-center">
-<button className="text-white !cursor-auto min-w-[250px] py-3 rounded-4xl border text-[16px] font-bold z-[101]">
+<button className="text-white !cursor-auto min-w-[350px]  py-3 rounded-4xl border text-[16px] font-bold z-[101]">
   {item.text}
 </button>
 

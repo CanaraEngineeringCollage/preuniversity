@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <section>
-        <Results image='/images/commonImages/bannerImage.webp' text='Get Results' />
+        <Results title="Exam Results" image='/images/commonImages/bannerImage.webp' text='Get Results' />
     </section>
   )
 }

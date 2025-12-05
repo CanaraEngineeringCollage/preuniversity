@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 // Data arrays for footer sections
 const aboutLinks = [
   { data: "About the College", links: "/about" },
-  { data: "Institute Legacy", links: "/legacy" },
-  { data: "Administration", links: "/administration" },
-  { data: "Infrastructure", links: "/infrastructure" },
+  { data: "Founder", links: "/founder" },
+  { data: "Management", links: "/management" },
+  { data: "Facilities", links: "/facilities" },
 ];
 
 const admissionLinks = [
@@ -19,7 +19,7 @@ const admissionLinks = [
 ];
 
 const examLinks = [
-  { data: "Exam Results", links: "https://canarapucollege.com/result/" },
+  { data: "Exam Results", links: "/exam-results" },
   { data: "Exam Circulars", links: "/exam-circulars" },
   { data: "Question Bank", links: "/question-bank" },
 ];

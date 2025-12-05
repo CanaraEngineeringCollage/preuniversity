@@ -12,6 +12,21 @@ type props ={
   }[]
   }
 
+const language = [
+  {
+    title: "First Language",
+    points: [
+      "English"
+    ],
+  },
+  {
+    title: "Second Language",
+    points: [
+      "Kannada / Hindi / Sanskrit "
+    
+    ],
+  }
+];
 
 export default function Subject( {name ,description,future_prospects_heading,future_prospects}:props ) {
   return(
@@ -54,6 +69,26 @@ export default function Subject( {name ,description,future_prospects_heading,fut
         )}
       </div>
     ))}
+    {language.map((item, index) => (
+  <div key={index} className="space-y-3">
+
+    {/* Subtitle only */}
+      <h3 className="text-lg text-justify  lg:text-xl font-bold text-[#0D3274] mb-2">
+          {item.title}
+        </h3>
+
+    {/* Points */}
+    {item.points && (
+      <ul className="list-disc pl-6 text-lg lg:text-xl text-[#2A2A2A]/90 space-y-2">
+        {item.points.map((point, i) => (
+          <li key={i}>{point}</li>
+        ))}
+      </ul>
+    )}
+
+  </div>
+))}
+
   </div>
 </div>
 

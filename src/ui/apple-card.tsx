@@ -214,11 +214,12 @@ export default function AppleStyledCard({ title, imageSrc, imageAlt, content, gr
     initial={{ opacity: 0.7 }}
   />
 
- <motion.div className="absolute bottom-4 z-[100] text-center w-full">
-  <div className="lg2:w-[250px] mx-auto text-white border rounded-3xl text-base md:text-base py-2 font-bold px-2 mt-2">
+ <motion.div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-[100] text-center">
+  <div className="lg2:w-[250px] text-white border rounded-3xl text-base md:text-base py-2 font-bold px-4 mt-2">
     {title}
   </div>
 </motion.div>
+
 
 
   <BlurImage
