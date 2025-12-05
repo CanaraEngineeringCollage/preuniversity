@@ -425,14 +425,22 @@ function MainMenu({
           {open.events && (
             <>
               <div>
-                <div className="flex items-center gap-2">
+                <div onClick={() => {
+                 openSidebar(false)
+                 router.push("/footprints")
+
+                }} className="flex items-center gap-2">
                   {/* <College /> */}
                   <Typography className="text-sm text-gray-500">Footprints</Typography>
                   {/* <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" /> */}
                 </div>
               </div>
               <div>
-                <div className="flex items-center gap-2">
+                <div onClick={() => {
+                 openSidebar(false)
+                 router.push("/mat-kabaddi")
+
+                }} className="flex items-center gap-2">
                   {/* <StudentsLife /> */}
                   <Typography className="text-sm text-gray-500"> Mat Kabaddi</Typography>
                   {/* <IoIosArrowDown className="w-4 h-4 text-gray-500 -rotate-90 transition-all ease-in-out duration-300 lg:hidden" /> */}
