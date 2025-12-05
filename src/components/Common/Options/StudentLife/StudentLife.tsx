@@ -70,6 +70,17 @@ export default function StudentLife() {
                 </ul>
               </div>
             </div>
+              <div className="flex gap-4 pr-4  ">
+              <div className="flex items-start">{/* <Employees /> */}</div>
+              <div className="flex flex-col gap-2">
+                <ul className="list-none text-[#1D1D1F] text-[16px] leading-10">
+                  <Link href="/achievements">
+                    <li>Achievements</li>
+                  </Link>
+                  
+                </ul>
+              </div>
+            </div>
 
             {/* Column 3 */}
             <div className="flex gap-4 pr-4  ">

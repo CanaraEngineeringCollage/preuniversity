@@ -74,13 +74,14 @@ export default function CardContent({
             },
           }}
         >
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            height={500}
-            width={900}
-            className="md:w-[100vw] h-full h-full w-full mx-auto object-cover mb-6 md:mb-12"
-          />
+        <Image
+  src={imageSrc}
+  alt={imageAlt}
+  height={500}
+  width={900}
+  className=" max-h-[500px] mx-auto objext object-[center_20%] object-cover mb-6 md:mb-12"
+/>
+
         </motion.div>
       )}
       <motion.div

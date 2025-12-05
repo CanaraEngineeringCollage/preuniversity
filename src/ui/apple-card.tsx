@@ -214,10 +214,10 @@ export default function AppleStyledCard({ title, imageSrc, imageAlt, content, gr
     initial={{ opacity: 0.7 }}
   />
 
- <motion.div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-[100] text-center">
-  <div className="lg2:w-[250px] text-white border rounded-3xl text-base md:text-base py-2 font-bold px-4 mt-2">
+ <motion.div className="absolute bottom-4 w-full left-1/2 -translate-x-1/2 z-[100] text-center">
+  <button className="max-w-[90%] lg2:max-w-[80%] text-white border rounded-3xl text-base md:text-base py-3 font-bold w-full px-10 lg2:px-0  mt-2">
     {title}
-  </div>
+  </button>
 </motion.div>
 
 
@@ -226,7 +226,7 @@ export default function AppleStyledCard({ title, imageSrc, imageAlt, content, gr
     src={imageSrc}
     alt={imageAlt || title || "Card image"}
     fill
-    className={`absolute object-cover z-10 inset-0 transition-transform duration-700 ease-in-out ${centering}`}
+    className={`absolute object-cover z-10 inset-0 transition-transform object-[center_20%] duration-700 ease-in-out ${centering}`}
   />
 </motion.button>
 
