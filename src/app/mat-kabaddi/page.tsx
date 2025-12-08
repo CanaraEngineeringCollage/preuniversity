@@ -8,7 +8,7 @@ export default function page() {
       <div className="">
 
         {/* Heading */}
-     <Brochure title="MAT Kabaddi" description="Two days of talent, competition & campus energy"/>
+     <Brochure category="mat-kabbadi"/>
      <FestLocation/>
       </div>
    

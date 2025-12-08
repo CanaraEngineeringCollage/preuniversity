@@ -9,7 +9,7 @@ import { ClipLoader } from "react-spinners";
 import toast from "react-hot-toast";
 import { useOutsideClick } from "@/components/hooks/use-outside-click";
 import { IoCloseOutline } from "react-icons/io5";
-import { submitToGoogleSheet } from "@/utils/formSubmission";
+import { submitForm } from "@/utils/formSubmission";
 
 type FormData = {
   fullName: string;
@@ -61,25 +61,30 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const commentValue = watch("enquiry") || "";
   const [loading, setLoading] = React.useState(false);
 
- const handleFormSubmit = async (data: FormData) => {
+const handleFormSubmit = async (data: FormData) => {
   setLoading(true);
 
-  const result = await submitToGoogleSheet({
+  const result = await submitForm({
     fullName: data.fullName,
     email: data.email,
     phoneNumber: data.phoneNumber,
     comments: data.enquiry,
   });
-reset();
-    onClose();
-  if (result.success) {
+
+  const sheetSuccess = result.sheet?.success;
+  const firestoreSuccess = result.firestore?.success;
+
+  if (sheetSuccess || firestoreSuccess) {
     reset();
     onClose();
+    toast.success("Enquiry submitted successfully!");
   } else {
+    toast.error("Something went wrong. Try again.");
   }
 
   setLoading(false);
 };
+
 
   // close on outside click
   useOutsideClick(containerRef, () => {

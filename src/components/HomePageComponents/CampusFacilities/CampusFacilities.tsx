@@ -46,19 +46,20 @@ const FacilityCard: React.FC<FacilityCardProps> = (props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  // Detect Desktop
-  const isDesktop = typeof window !== "undefined" && window.innerWidth >= 1024;
-
-  // Mobile animation: alternate L/R
+  // Safe client check
+  const isClient = typeof window !== "undefined";
+  const isDesktop = isClient && window.innerWidth >= 1024;
   const horizontalDirection = index % 2 === 0 ? -50 : 50;
 
   return (
     <motion.div
       ref={ref}
       initial={
-        isDesktop
-          ? { opacity: 0, y: 80 } // Desktop: bottom → top
-          : { opacity: 0, x: horizontalDirection } // Mobile: left/right
+        isClient
+          ? isDesktop
+            ? { opacity: 0, y: 80 }
+            : { opacity: 0, x: horizontalDirection }
+          : false // <--- prevents SSR mismatch
       }
       animate={
         isInView
@@ -99,7 +100,6 @@ const FacilityCard: React.FC<FacilityCardProps> = (props) => {
   );
 };
 
-
 function Innovations() {
   const sectionRef = useRef(null);
   const isSectionInView = useInView(sectionRef, { once: true });
@@ -107,13 +107,14 @@ function Innovations() {
   return (
     <section className="max-w-[90%] xl:max-w-[75%] mx-auto lg:mb-0 mb-8">
       <div className=" relative overflow-hidden text-[#1D1D1F]" ref={sectionRef}>
-        <div className="  ">
-          <motion.div
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: isSectionInView ? 1 : 0, y: isSectionInView ? 0 : -50 }}
-            transition={{ duration: 0.5 }}
-            className=""
-          >
+    
+            <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={
+            isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }
+          }
+          transition={{ duration: 0.5 }}
+        >
             <h1 className="font-bold leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl">
               Our Campus
               <br className="hidden lg:block"/>
@@ -269,7 +270,6 @@ function Innovations() {
             />
           </div>
         </div>
-      </div>
     </section>
   );
 }

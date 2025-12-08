@@ -8,7 +8,7 @@ export default function page() {
       <div className="">
 
         {/* Heading */}
-     <Brochure title="Footprints 2025" description="Two days of talent, competition & campus energy"/>
+     <Brochure category="footprints"/>
      <FestLocation/>
       </div>
    

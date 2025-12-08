@@ -63,7 +63,7 @@ function Navbar({ openSidebar, sidebar }: { openSidebar: () => void; sidebar: bo
       <section className={`bg-[#001A48] relative transition-all duration-500 ease-in-out `}>
         <nav className=" max-w-[70%] mx-auto">
           {/* For large and Medium-sized Screen */}
-          <div className="flex items-center justify-between relative  container-padding">
+          <div className="flex items-center z-50 justify-between relative  container-padding">
             <NavbarItems />
           </div>
         </nav>
