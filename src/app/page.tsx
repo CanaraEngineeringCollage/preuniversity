@@ -1,3 +1,7 @@
+
+"use client";
+
+import { useEffect, useState } from "react";
 import Innovations from "@/components/HomePageComponents/CampusFacilities/CampusFacilities";
 import ExploreStream from "@/components/HomePageComponents/ExploreStream/ExploreStream";
 import FormComponent from "@/components/HomePageComponents/FormComponent/FormComponent";
@@ -7,26 +11,33 @@ import SeeYourSelf from "@/components/HomePageComponents/SeeYourSelf/SeeYourSelf
 
 
 export default function Home() {
+    const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
   <>
   <section>
     <HeroBanner/>
   </section>
-  {/* <section className="md:hidden">
-    <HeroSectionMobile/>
-  </section> */}
+
   <section>
     <SeeYourSelf/>
   </section>
   <section>
    <ExploreStream />
   </section>
-  <section>
-    <Innovations/>
-  </section>
+   {mounted && (
+        <section>
+          <Innovations />
+        </section>
+      )}
   <section className="lg:-mt-[270px]">
   <FormComponent/>
   </section>
   </>
   );
 }
+

@@ -151,52 +151,6 @@ function Innovations() {
               delay={0.3}
               index={2} // From left
             />
-            {/* <FacilityCard
-              title="Communication System"
-              description="The College provides easy access to the attendance of the students through the  SMS service to parents. SMS alerts about college notifications are also given to lecturers and parents . The regularly Updated college Website gives a comprehensive view to the college activities."
-              imageUrl="/images/homePageImages/4.png"
-              className="lg:col-span-3 md:col-span-5 row-span-1 top-20"
-              gradientColor="#3c72d7"
-              delay={0.4}
-              index={3} // From right
-            />
-                        <FacilityCard
-              title="Medical Facilities"
-              description="All the bonafied students of this institution come under the “Safety Insurance Policy”, The Premium towards the same, is paid by the college from the ‘Parent -Teacher Association’ fund."
-              imageUrl="/images/homePageImages/5.png"
-              className="lg:col-span-3 md:col-span-5 row-span-2 top-[140px]"
-              gradientColor="#3c72d7"
-             delay={0.5}
-              index={4} // From left
-            />
-           <FacilityCard
-             title="Remedial Classes"
-              description="With the aim of enhancing students’ performance and aiding the slow learners, remedial classes are organised."
-              imageUrl="/images/homePageImages/6.png"
-              className="lg:col-span-3 md:col-span-5 row-span-1 top-[90px] "
-              gradientColor="#3c72d7"
-           delay={0.6}
-              index={5} // From right
-            />
-         
-          <FacilityCard
-             title="Remedial Classes"
-              description="With the aim of enhancing students’ performance and aiding the slow learners, remedial classes are organised."
-              imageUrl="/images/homePageImages/6.png"
-              className="lg:col-span-3 md:col-span-5 row-span-1 -top-[140px]"
-              gradientColor="#3c72d7"
-           delay={0.6}
-              index={5} // From right
-            />
-            <FacilityCard
-             title="Remedial Classes"
-              description="With the aim of enhancing students’ performance and aiding the slow learners, remedial classes are organised."
-              imageUrl="/images/homePageImages/6.png"
-              className="lg:col-span-3 md:col-span-5 row-span-1 -top-[370px]"
-              gradientColor="#3c72d7"
-           delay={0.6}
-              index={5} // From right
-            /> */}
              <FacilityCard
               title="Competitive exam training"
               description=""
@@ -254,15 +208,7 @@ function Innovations() {
               delay={0.3}
               index={2} // From left
             />
-          </div>
-
-
-
-
-
-
-
-          
+          </div>       
           <div className="grid md:grid-cols-2 grid-cols-1 gap-4 relative lg:hidden">
             <FacilityCard
               title="Academic Counsellor"
