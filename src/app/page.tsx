@@ -22,6 +22,7 @@ export default function Home() {
   <section>
     <HeroBanner/>
   </section>
+  
 
   <section>
     <SeeYourSelf/>
