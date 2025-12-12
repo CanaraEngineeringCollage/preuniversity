@@ -16,37 +16,35 @@ function FormComponent() {
   const [charCount, setCharCount] = useState<number>(0);
   const [isLoding, setIsLoading] = useState<boolean>(false);
 
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsLoading(true);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
 
-  const result = await submitForm({
-    fullName: formData.name,
-    email: formData.email,
-    phoneNumber: formData.phone,
-    comments: formData.enquiry,
-  });
-
-  const sheetSuccess = result.sheet?.success;
-  const firestoreSuccess = result.firestore?.success;
-
-  if (sheetSuccess || firestoreSuccess) {
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      enquiry: "",
+    const result = await submitForm({
+      fullName: formData.name,
+      email: formData.email,
+      phoneNumber: formData.phone,
+      comments: formData.enquiry,
     });
-    setCharCount(0);
-    toast.success("Enquiry submitted successfully!");
-  } else {
-    toast.error("Something went wrong! Try again.");
-  }
 
-  setIsLoading(false);
-};
+    const sheetSuccess = result.sheet?.success;
+    const firestoreSuccess = result.firestore?.success;
 
+    if (sheetSuccess || firestoreSuccess) {
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        enquiry: "",
+      });
+      setCharCount(0);
+      toast.success("Enquiry submitted successfully!");
+    } else {
+      toast.error("Something went wrong! Try again.");
+    }
 
+    setIsLoading(false);
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -72,20 +70,20 @@ const handleSubmit = async (e: React.FormEvent) => {
 
       {/* Main content */}
       <div className="relative z-10 w-full max-w-7xl bg-[#F6F7FB]  rounded-2xl px-1.5 md:px-0  overflow-hidden md:flex flex-col md:flex-row">
-    <div  className="md:w-1/2 h-[400px] md:h-[700px] relative lg:p-4">
-  <iframe 
-    width="100%"
-    height="100%"
-    className="rounded-2xl lg:rounded-[15px]"
-    style={{ border: 0 }}
-    loading="lazy"
-    allowFullScreen
-    referrerPolicy="no-referrer-when-downgrade"
-    src="https://maps.google.com/maps?q=12.908481990450067,74.8659859558218&z=15&output=embed&hl=en"
-  ></iframe>
+        <div className="md:w-1/2 h-[400px] md:h-[700px] relative lg:p-4">
+          <iframe
+            width="100%"
+            height="100%"
+            className="rounded-2xl lg:rounded-[15px]"
+            style={{ border: 0 }}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8486534147857!2d74.8398645!3d12.8791904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba350a13025ca43%3A0xc377faaf3db7a9c3!2sCanara%20College!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+          ></iframe>
 
-  {/* Custom BLUE Marker */}
-  {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+          {/* Custom BLUE Marker */}
+          {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
     <svg
       width="42"
       height="50"
@@ -102,15 +100,17 @@ const handleSubmit = async (e: React.FormEvent) => {
       />
     </svg>
   </div> */}
-</div>
-
+        </div>
 
         <div className="w-full md:w-1/2 p-6 md:p-8 border md:border-none rounded-2xl flex flex-col mt-8 md:mt-0 justify-center md:ml-8">
           <h2 className="text-2xl md:text-[44px] font-bold text-[#1e1b4b] mb-6 md:mb-8">
             Dream Big. Plan Smart. Enquire Now.
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6 text-[#1D1D1F]">
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-4 md:space-y-6 text-[#1D1D1F]"
+          >
             <div>
               <input
                 type="text"
@@ -147,24 +147,23 @@ const handleSubmit = async (e: React.FormEvent) => {
               />
             </div>
 
-          <div className="relative w-full">
-  <textarea
-    name="enquiry"
-    placeholder="Your Enquiry"
-    value={formData.enquiry}
-    onChange={handleChange}
-    className="w-full px-4 py-2 md:py-3 pr-14 border-b border-gray-300 focus:border-purple-500 focus:outline-none resize-none text-sm md:text-base"
-    maxLength={250}
-    required
-    rows={3}
-  />
-  
-  {/* Character Counter */}
-  <span className="absolute top-2 right-2 text-xs  text-gray-400">
-    {charCount}/250
-  </span>
-</div>
+            <div className="relative w-full">
+              <textarea
+                name="enquiry"
+                placeholder="Your Enquiry"
+                value={formData.enquiry}
+                onChange={handleChange}
+                className="w-full px-4 py-2 md:py-3 pr-14 border-b border-gray-300 focus:border-purple-500 focus:outline-none resize-none text-sm md:text-base"
+                maxLength={250}
+                required
+                rows={3}
+              />
 
+              {/* Character Counter */}
+              <span className="absolute top-2 right-2 text-xs  text-gray-400">
+                {charCount}/250
+              </span>
+            </div>
 
             <div className="flex justify-center">
               <button
