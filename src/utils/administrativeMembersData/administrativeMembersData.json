@@ -9,14 +9,14 @@
   {
     "id": 2,
     "name": "Sri K. Suresh Kamath",
-    "image": "/images/governingCounsilImages/2.png",
+    "image": "/images/governingCounsilImages/K. Suresh Kamath.webp",
     "category": "Governing",
     "roles": [{ "title": "B.Com, LL.B, ", "organization": "Vice President" }]
   },
   {
     "id": 3,
     "name": "Sri M. Ranganath Bhat",
-    "image": "/images/governingCounsilImages/3.png",
+    "image": "/images/governingCounsilImages/M. Ranganath Bhat.webp",
     "category": "Governing",
     "roles": [{ "title": "B.Tech, ", "organization": "Honorary Secretary" }]
   },
@@ -30,7 +30,7 @@
   {
     "id": 5,
     "name": "Sri M. Jagannath Kamath",
-    "image": "/images/governingCounsilImages/5.png",
+    "image": "/images/governingCounsilImages/CA M. Jagannath Kamath.webp",
     "category": "Governing",
     "roles": [{ "title": "", "organization": "Alternate Treasurer" }]
   },
@@ -44,63 +44,63 @@
   {
     "id": 7,
     "name": "Sri Basty Purushotham Shenoy",
-    "image": "/images/governingCounsilImages/7.png",
+    "image": "/images/governingCounsilImages/B. Purushotham Shenoy.webp",
     "category": "Governing",
     "roles": [{ "title": "B.Tech, ", "organization": "G.B. Member" }]
   },
   {
     "id": 8,
     "name": "Sri K. Shivananda Shenoy",
-    "image": "/images/governingCounsilImages/8.png",
+    "image": "/images/governingCounsilImages/K. Shivananda Shenoy.webp",
     "category": "Governing",
     "roles": [{ "title": "", "organization": "G.B. Member" }]
   },
   {
     "id": 9,
     "name": "Sri M. Naresh Shenoy",
-    "image": "/images/governingCounsilImages/9.png",
+    "image": "/images/governingCounsilImages/M. Naresh Shenoy.webp",
     "category": "Governing",
     "roles": [{ "title": "", "organization": "G.B. Member" }]
   },
   {
     "id": 10,
     "name": "Sri Raghavendra Kuduva",
-    "image": "/images/governingCounsilImages/10.png",
+    "image": "/images/governingCounsilImages/M. Raghavendra Kudva.webp",
     "category": "Governing",
     "roles": [{ "title": "", "organization": "G.B. Member" }]
   },
   {
     "id": 11,
     "name": "Sri Gopalakrishna Bhat K",
-    "image": "/images/governingCounsilImages/11.png",
+    "image": "/images/governingCounsilImages/Gopalakrishna Bhat. K.webp",
     "category": "Governing",
     "roles": [{ "title": "", "organization": "G.B. Member, Manager CPUC" }]
   },
   {
     "id": 12,
     "name": "Sri Yogesh R Kamath",
-    "image": "/images/governingCounsilImages/12.png",
+    "image": "/images/governingCounsilImages/Yogesh Kamath.webp",
     "category": "Governing",
     "roles": [{ "title": "", "organization": "G.B. Member" }]
   },
   {
     "id": 13,
     "name": "Ms. Ashwini Kamath",
-    "image": "/images/governingCounsilImages/13.png",
+    "image": "/images/governingCounsilImages/Ashwini Kamath.webp",
     "category": "Governing",
     "roles": [{ "title": "", "organization": "G.B. Member" }]
   },
   {
     "id": 14,
     "name": "Sri D. Vikram Pai",
-    "image": "/images/governingCounsilImages/14.png",
+    "image": "/images/governingCounsilImages/D. Vikram Pai.webp",
     "category": "Governing",
     "roles": [{ "title": "", "organization": "G.B. Member" }]
   },
   {
     "id": 15,
     "name": "Sri Giridhar Kamath",
-    "image": "/images/governingCounsilImages/15.png",
+    "image": "/images/governingCounsilImages/CA Giridhar Kamath (Spl. Invitee).webp",
     "category": "Governing",
     "roles": [{ "title": "", "organization": "G.B. Member (Special Invitee)" }]
   }
