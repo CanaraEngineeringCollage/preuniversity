@@ -22,7 +22,7 @@ function  NavbarItems() {
           <Events />
         </div>
         <Link href="/buzz">
-          <div className="cursor-pointer   text-[18px] font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
+          <div className="cursor-pointer opacity-95  text-[18px] font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
             Buzz
           </div>
         </Link>

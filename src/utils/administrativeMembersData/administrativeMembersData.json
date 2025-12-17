@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Sri D. Vasudeva Kamath",
-    "image": "/images/governingCounsilImages/1.png",
+    "image": "/images/governingCounsilImages/1.webp",
     "category": "Governing",
     "roles": [{ "title": "", "organization": "President" }]
   },
@@ -23,7 +23,7 @@
   {
     "id": 4,
     "name": "Sri M. Vaman Kamath",
-    "image": "/images/governingCounsilImages/4.png",
+    "image": "/images/governingCounsilImages/4.webp",
     "category": "Governing",
     "roles": [{ "title": "M.Com, F.C.A, ", "organization": "Treasurer" }]
   },
@@ -37,7 +37,7 @@
   {
     "id": 6,
     "name": "Sri T. Gopalkrishna Shenoy",
-    "image": "/images/governingCounsilImages/6.png",
+    "image": "/images/governingCounsilImages/6.webp",
     "category": "Governing",
     "roles": [{ "title": "B.E, ", "organization": "Joint Secretary, Correspondent CPUC" }]
   },

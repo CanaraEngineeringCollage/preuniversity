@@ -93,7 +93,7 @@ export default function AchievementsSection() {
                           />
                         </div>
 
-                        <p className="font-bold text-xl ">{item.name}</p>
+                        <p className="font-bold text-lg lg:text-xl ">{item.name}</p>
                         <p className="text-base">{item.score}</p>
                         <p className="text-base ">{item.subject}</p>
                       </motion.div>
