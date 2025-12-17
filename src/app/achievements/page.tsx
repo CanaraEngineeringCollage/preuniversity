@@ -1,10 +1,18 @@
-import AchievementsSection from "@/components/AchievementsPageComponenets/AchievementsSection"
+import AcademicToppers from "@/components/AchievementsPageComponenets/AcademicToppers"
+import NonAcademicToppers from "@/components/AchievementsPageComponenets/NonAcademicToppers"
+
+
 
 const page = () => {
   return (
+    <>
    <section>
-    <AchievementsSection/>
+    <AcademicToppers/>
    </section>
+      <section>
+    <NonAcademicToppers/>
+   </section>
+   </>
   )
 }
 
