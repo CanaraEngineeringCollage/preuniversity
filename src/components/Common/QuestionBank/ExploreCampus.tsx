@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useRef, useEffect, createContext } from "react";
-import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdClose, MdKeyboardArrowRight } from "react-icons/md";
 
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -243,7 +243,7 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({
       }}
     >
       {/* ----------- UI SECTION (UNMODIFIED) ----------- */}
-      <section className="max-w-7xl xl:max-w-[75%] mx-auto text-[#1D1D1F] py-16">
+      <section className="max-w-7xl xl:max-w-[75%] px-4 mx-auto text-[#1D1D1F] py-16">
         {(title || description) && (
           <div className="text-center mb-10 lg:px-32">
             <h1 className="text-center md:leading-[1.1] text-3xl md:text-[46px] mb-5 font-bold">
@@ -322,7 +322,7 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({
                       </p>
                     )}
                     {topTitle && (
-                      <h2 className="text-[31px] leading-[1.1] font-bold text-[#1D1D1F] mb-2">
+                      <h2 className="text-2xl lg:text-[31px] leading-[1.1] font-bold text-[#1D1D1F] mb-2">
                         {topTitle}
                       </h2>
                     )}
@@ -386,7 +386,7 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({
                   className="absolute top-6 me-4 lg:me-8 h-8 w-8 right-0 cursor-pointer ml-auto bg-[#808080] rounded-full flex items-center justify-center"
                   onClick={closeCard}
                 >
-                  x
+                  <MdClose className="text-white" />
                 </motion.button>
 
                 <motion.div variants={contentVariants} className="!overflow-hidden">

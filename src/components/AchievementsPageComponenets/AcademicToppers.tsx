@@ -68,11 +68,8 @@ export default function AcademicToppers() {
                   <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-10 my-14">
 
                     {dummyAchievements[year].map((item, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.05 }}
+                      <div
+                    
                         className="text-center"
                       >
                         <div className="w-full  relative rounded-lg overflow-hidden mb-3">
@@ -88,7 +85,7 @@ export default function AcademicToppers() {
                         <p className="font-bold text-lg lg:text-xl ">{item.name}</p>
                         {/* <p className="text-base">{item.score}</p>
                         <p className="text-base ">{item.subject}</p> */}
-                      </motion.div>
+                      </div>
                     ))}
 
                     {dummyAchievements[year].length === 0 && (
@@ -99,6 +96,7 @@ export default function AcademicToppers() {
               )}
             </AnimatePresence>
           </div>
+          
         ))}
       </div>
     </section>

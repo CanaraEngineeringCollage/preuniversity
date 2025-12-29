@@ -87,7 +87,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="max-w-6xl text-[12px] text-[#6b7a95] mx-auto px-4 pt-4 pb-10 flex flex-col items-center text-center md:flex-row md:justify-between md:text-left">
           <p>Copyright © {new Date().getFullYear()} Canara High School Association. All rights reserved.</p>
-          <div className="space-x-2 mt-2 md:mt-0">
+           <Link href="/privacy-policy" className=""><div className="space-x-2 mt-2 md:mt-0">
             <Link href="/privacy-policy" className="">
               Privacy Policy
             </Link>
@@ -95,7 +95,7 @@ export default function Footer() {
           <Link href="/privacy-policy" className="">
               Terms of Use
             </Link>
-          </div>
+          </div></Link> 
         </div>
       </div>
 
