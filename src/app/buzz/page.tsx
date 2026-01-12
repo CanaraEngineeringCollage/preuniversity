@@ -57,7 +57,7 @@ const page = () => {
       <ExploreCampus
     
         title="Your Campus Hub"
-        description="Stay updated with the latest news, events & achievements from across our campus"
+        description="Stay updated with the latest news, events & achievements from across our campus."
       />
     </div>
   );

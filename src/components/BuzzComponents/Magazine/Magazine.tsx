@@ -40,7 +40,7 @@ export default function Magazine() {
 
       {/* No Magazine Found */}
       {!loading && !magazineUrl && (
-        <div className="text-center text-gray-600 mt-10">
+        <div className="text-center text-[#2A2A2A] mt-10">
           <p>No magazine uploaded yet.</p>
         </div>
       )}

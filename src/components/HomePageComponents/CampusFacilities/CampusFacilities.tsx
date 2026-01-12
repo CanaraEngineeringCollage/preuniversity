@@ -21,7 +21,7 @@ const data = [
       "Developing effective study habits and time-management skills",
       "Overcoming academic challenges with personalised support",
       "Preparing for competitive examinations and higher education options",
-      "Building confidence and staying motivated throughout their academic journey",
+      "Building confidence and staying motivated throughout their academic journey.",
     ],
     closing:
       "We believe that timely guidance can make a significant difference in a student’s performance and overall growth. Through our structured counselling programme, we ensure that every student receives the support they need to excel academically and make well-informed decisions about their future. ",
@@ -37,7 +37,7 @@ const data = [
       "A wide collection of textbooks across all subject streams",
       "Long-term issue of books, enabling students to retain them for an entire term or academic year",
       "Priority access for deserving and economically disadvantaged students",
-      "Well-maintained and updated editions to support effective learning",
+      "Well-maintained and updated editions to support effective learning.",
     ],
     closing:
       "The facility helps reduce the financial burden on families while promoting a culture of consistent reading and responsible usage of resources. Students can borrow books through a simple, student-friendly process managed by our library team. ",
@@ -53,7 +53,7 @@ const data = [
       "First-aid services for immediate care",
       "Qualified medical assistance on call",
       "Health check-ups and awareness programmes",
-      "Emergency support and referral to nearby hospitals when required",
+      "Emergency support and referral to nearby hospitals when required.",
     ],
     closing:
       "The institution maintains a safe and supportive environment where students’ physical well-being is given utmost importance. Parents and students can be assured that necessary medical support is readily available during college hours. ",
@@ -81,7 +81,7 @@ const data = [
       "KCET – For admissions to professional courses in Karnataka",
       "CA Foundation – For students aiming for a career in Chartered Accountancy",
       "CLAT – Focused CLAT guidance with expert mentoring to build legal aptitude, reasoning skills, and exam confidence",
-      "Other national and state-level entrance examinations",
+      "Other national and state-level entrance examinations.",
     ],
     closing:
       "Our objective is to empower students with knowledge, confidence, and exam-readiness, helping them secure admission to reputed institutions and build promising careers. ",
@@ -163,7 +163,7 @@ const data = [
       "Government Scholarships offered by State and Central Governments",
       "Minority Scholarships for eligible students as per government norms",
       "Sports & Co-curricular Scholarships for students with exceptional achievements",
-      "Institutional Support & Fee Concessions for deserving students",
+      "Institutional Support & Fee Concessions for deserving students.",
     ],
     closing:
       "Through these initiatives, Canara P.U. College ensures equal opportunities for all learners, enabling them to pursue education with confidence and focus on academic excellence.",
@@ -173,9 +173,9 @@ const data = [
     title: "Real-Time Student Updates for Parents",
     intro: "We ensure parents are kept in the loop regarding their child's progress and safety through consistent communication channels.",
     points: [
-      "Attendance / Absenteeism details of students are sent to parents on quarterly and daily basis respectively.",
-      "After each test / exam parent – teacher interaction is arranged to update the parents about their ward’s academic performance.",
-      "Personal call is made to parents of students who have missed class for more than three continuous days.",
+      "Attendance / Absenteeism details of students are sent to parents on quarterly and daily basis respectively",
+      "After each test / exam parent – teacher interaction is arranged to update the parents about their ward’s academic performance",
+      "Personal call is made to parents of students who have missed class for more than three continuous days",
     ],
   },
 ];

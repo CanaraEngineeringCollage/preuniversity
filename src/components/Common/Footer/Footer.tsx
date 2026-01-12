@@ -47,20 +47,20 @@ export default function Footer() {
     <footer className="bg-[#001A48] text-white">
       {/* Desktop Version */}
       <div className="lg:block hidden">
-        <div className="max-w-6xl text-base mx-auto px-4 py-16 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
-          <div className="flex justify-start">
+        <div className="max-w-6xl text-base mx-auto  py-16 flex justify-between">
+          <div className="">
             <FooterList data={aboutLinks} />
           </div>
-          <div className="flex justify-center">
+          <div className="">
             <FooterList data={admissionLinks} />
           </div>
-          <div className="flex justify-center">
+          <div className="">
             <FooterList data={examLinks} />
           </div>
-          <div className="flex justify-end">
+          <div className="">
             <FooterList data={buzzLinks} />
           </div>
-          <div className="flex justify-center">
+          <div className="">
             <FooterList data={eventLinks} />
           </div>
         </div>
@@ -68,7 +68,7 @@ export default function Footer() {
         <hr className="border-gray-600 max-w-6xl my-4 mx-auto" />
 
         {/* Logo and Social */}
-        <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
+        <div className="max-w-6xl mx-auto  py-6 flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
           <Link href="/"><div className="flex items-center">
             <Image src="/svgs/footerLogo.svg" alt="svg" width={200} height={200} className="w-40 cursor-pointer sm:w-48 md:w-64" />
           </div></Link>
@@ -85,7 +85,7 @@ export default function Footer() {
         <hr className="border-gray-600 max-w-6xl my-4 mx-auto" />
 
         {/* Bottom */}
-        <div className="max-w-6xl text-[12px] text-[#6b7a95] mx-auto px-4 pt-4 pb-10 flex flex-col items-center text-center md:flex-row md:justify-between md:text-left">
+        <div className="max-w-6xl text-[12px] text-[#6b7a95] mx-auto  pt-4 pb-10 flex flex-col items-center text-center md:flex-row md:justify-between md:text-left">
           <p>Copyright © {new Date().getFullYear()} Canara High School Association. All rights reserved.</p>
            <Link href="/privacy-policy" className=""><div className="space-x-2 mt-2 md:mt-0">
             <Link href="/privacy-policy" className="">
@@ -150,7 +150,7 @@ export default function Footer() {
 // Reusable Footer List Component
 const FooterList: FC<FooterListProps> = ({ data }) => {
   return (
-    <ul className="cursor-pointer text-white w-32">
+    <ul className="cursor-pointer text-white ">
       {data.map((item, index) => {
         const isExternal = item.links.startsWith("http");
 

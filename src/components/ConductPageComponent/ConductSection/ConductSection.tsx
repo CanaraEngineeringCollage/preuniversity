@@ -30,7 +30,7 @@ const ConductSection = () => {
       <h1 className="text-2xl font-bold text-[#1D1D1F] mt-10 mb-3">Dress Code</h1>
       <p className="text-lg lg:text-xl">
         Students are expected to dress in uniform prescribed by the college authorities and the I.D. card at all times in the college campus on all
-        working days. Students not wearing teh prescribed uniform or the I.D.card will not be allowed to enter the campus.
+        working days. Students not wearing the prescribed uniform or the I.D.card will not be allowed to enter the campus.
       </p>
     </section>
   );
