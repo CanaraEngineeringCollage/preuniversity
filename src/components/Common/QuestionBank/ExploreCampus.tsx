@@ -256,7 +256,7 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({
         {/* Category Filters */}
      <div className="pb-5 lg:pb-10">
   {/* Mobile Dropdown */}
-  <div className="flex lg:hidden justify-between items-center gap-2 md:hidden">
+ {eventsToShow.length > 0 && <div className="flex lg:hidden justify-between items-center gap-2 md:hidden">
     <CustomSelect
       value={activeCategory}
       onChange={(e) => {
@@ -266,10 +266,10 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({
       // 👇 format only for display
       options={categories.map((c) => formatCategory(c))}
     />
-  </div>
+  </div>}
 
   {/* Desktop View */}
-  <div className="hidden lg:flex justify-evenly items-center pb-5 lg:pb-10 flex-wrap gap-2">
+  {eventsToShow.length > 0 && <div className="hidden lg:flex justify-evenly items-center pb-5 lg:pb-10 flex-wrap gap-2">
     {categories.map((category, index) => (
       <h3
         onClick={() => {
@@ -284,7 +284,7 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({
         {formatCategory(category)}
       </h3>
     ))}
-  </div>
+  </div>}
 </div>
 
 
