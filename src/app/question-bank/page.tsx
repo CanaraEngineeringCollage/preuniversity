@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import Banner from "@/components/Common/Banner/Banner";
 import QuestionSection from "@/components/QuestionBankPageComponents/QuestionSection";
 import React from "react";

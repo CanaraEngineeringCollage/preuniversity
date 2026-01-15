@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic";
+
+
 import Brochure, { EventSection as BrochureData } from "@/components/Common/Brochure/Brochure";
 import FestLocation, { EventSection as FestLocationData } from "@/components/Common/FestLocation/FestLocation";
 import { db } from "@/utils/firebase";

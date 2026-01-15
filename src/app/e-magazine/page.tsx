@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import Magazine from "@/components/BuzzComponents/Magazine/Magazine";
 import React from "react";
 import type { Metadata } from "next";
