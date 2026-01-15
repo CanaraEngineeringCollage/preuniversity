@@ -40,7 +40,7 @@ export default function NonAcademicToppers() {
   return (
     <section className="w-full md:pt-4 pb-16 text-[#1D1D1F]">
       <h2 className="text-center text-3xl leading-[1.1] md:text-3xl lg:text-4xl lg2:text-5xl font-bold font-semibold text-[#1D1D1F] mb-12">
-        Non Academic Toppers
+        Non Academic Achievements
       </h2>
 
       <motion.div

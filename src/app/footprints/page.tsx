@@ -9,7 +9,7 @@ export default function page() {
 
         {/* Heading */}
      <Brochure category="footprints"/>
-     <FestLocation/>
+     <FestLocation category="footprints"/>
       </div>
    
   );
