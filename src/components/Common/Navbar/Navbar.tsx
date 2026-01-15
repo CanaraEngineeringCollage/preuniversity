@@ -9,7 +9,7 @@ import FormModal from "../FormModal/FormModal";
 
 function Navbar({ openSidebar, sidebar }: { openSidebar: () => void; sidebar: boolean }) {
   const router = useRouter();
-    const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   // const [isScrolled, setIsScrolled] = useState(false);
 
   // function handleScroll() {
@@ -34,24 +34,25 @@ function Navbar({ openSidebar, sidebar }: { openSidebar: () => void; sidebar: bo
           <div className="flex items-center justify-between relative  lg:py-2 xl:py-3 container-padding">
             <div className="flex flex-row items-center  relative">
               <Link href={"/"}>
-        <Image
-  src="/svgs/navLogo.svg"
-  alt="logo"
-  width={309}
-  height={68}
-  onClick={() => router.push("/")}
-  className="
+                <Image
+                  src="/svgs/navLogo.svg"
+                  alt="logo"
+                  width={309}
+                  height={68}
+                  onClick={() => router.push("/")}
+                  className="
     cursor-pointer
     object-contain
    w-48     
     lg:w-72    /* large screens */
     xl:w-80    /* bigger desktops */
   "
-/>
-
+                />
               </Link>
             </div>
-            <button onClick={() => setOpen(true)} className="text-white bg-[#3C71D7] hidden lg:block rounded-[90px] px-8 py-3 font-bold">Enquire Now</button>
+            <button onClick={() => setOpen(true)} className="text-white bg-[#3C71D7] hidden lg:block rounded-[90px] px-8 py-3 font-bold">
+              Enquire Now
+            </button>
           </div>
           <div className="block lg:hidden absolute top-1/2 -translate-y-1/2 right-5 z-[1000]">
             {/* Dropdown */}
@@ -67,7 +68,7 @@ function Navbar({ openSidebar, sidebar }: { openSidebar: () => void; sidebar: bo
             <NavbarItems />
           </div>
         </nav>
- <FormModal isOpen={open} onClose={() => setOpen(false)} />
+        <FormModal isOpen={open} onClose={() => setOpen(false)} />
       </section>
       {/* First Header */}
     </>

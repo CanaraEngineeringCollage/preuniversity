@@ -4,20 +4,24 @@ import { useEffect, useState } from "react";
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "@/utils/firebase";
 
-
 interface BrochureProps {
   category: "mat-kabbadi" | "footprints";
 }
 
-interface EventSection {
+export interface EventSection {
   heading: string;
   description: string;
   googleFormUrl: string;
   flipbookUrl: string;
 }
 
-export default function Brochure({ category }: BrochureProps) {
-  const [data, setData] = useState<EventSection | null>(null);
+interface BrochureProps {
+  category: "mat-kabbadi" | "footprints";
+  initialData?: EventSection | null;
+}
+
+export default function Brochure({ category, initialData }: BrochureProps) {
+  const [data, setData] = useState<EventSection | null>(initialData || null);
 
   useEffect(() => {
     const unsub = onSnapshot(doc(db, "events", category), (snap) => {
@@ -29,7 +33,33 @@ export default function Brochure({ category }: BrochureProps) {
     return () => unsub();
   }, [category]);
 
-  if (!data) return <div className="text-center py-20">Loading...</div>;
+  if (!data) {
+    return (
+      <section className="w-full px-5 py-10 md:py-16 bg-[#F5F6FA]">
+        <div className="max-w-7xl xl:max-w-[85%] mx-auto flex flex-col items-center animate-pulse">
+          <div className="flex justify-between items-center w-full md:mb-10">
+            {/* Heading Skeleton */}
+            <div className="w-full">
+              <div className="h-8 md:h-14 bg-gray-300 rounded w-3/4 mb-4"></div>
+              <div className="h-4 md:h-6 bg-gray-300 rounded w-full mb-2"></div>
+              <div className="h-4 md:h-6 bg-gray-300 rounded w-2/3"></div>
+            </div>
+
+            {/* Register Button Skeleton (Desktop) */}
+            <div className="hidden lg:block w-48 h-12 bg-gray-300 rounded-[90px]"></div>
+          </div>
+
+          {/* Flipbook iFrame Skeleton */}
+          <div className="w-full mt-10 flex justify-center">
+            <div className="w-full h-[600px] bg-gray-300 rounded-md"></div>
+          </div>
+
+          {/* Register Button Skeleton (Mobile) */}
+          <div className="block lg:hidden mt-10 w-48 h-12 bg-gray-300 rounded-[90px]"></div>
+        </div>
+      </section>
+    );
+  }
 
   const handleRegister = () => {
     if (data.googleFormUrl) {
@@ -40,25 +70,17 @@ export default function Brochure({ category }: BrochureProps) {
   return (
     <section className="w-full px-5 py-10 md:py-16 bg-[#F5F6FA]">
       <div className="max-w-7xl xl:max-w-[85%] mx-auto flex flex-col items-center">
-
         <div className="flex justify-between items-center w-full md:mb-10">
           {/* Heading */}
           <div>
-            <h1 className="text-[30px] lg:text-[54px] font-bold text-[#1D1D1F]">
-              {data.heading}
-            </h1>
+            <h1 className="text-[30px] lg:text-[54px] font-bold text-[#1D1D1F]">{data.heading}</h1>
 
-            <p className="lg:text-2xl text-base text-[#1D1D1F] font-medium">
-              {data.description}
-            </p>
+            <p className="lg:text-2xl text-base text-[#1D1D1F] font-medium">{data.description} lore</p>
           </div>
 
           {/* Register Button (Desktop) */}
           {data.googleFormUrl && (
-            <button
-              onClick={handleRegister}
-              className="text-white bg-[#3C71D7] hidden lg:block rounded-[90px] px-8 py-3 font-bold"
-            >
+            <button onClick={handleRegister} className="text-white whitespace-nowrap bg-[#3C71D7] hidden lg:block rounded-[90px] px-8 py-3 font-bold">
               Register Now
             </button>
           )}
@@ -67,20 +89,13 @@ export default function Brochure({ category }: BrochureProps) {
         {/* Flipbook iFrame */}
         {data.flipbookUrl && (
           <div className="w-full mt-10 flex justify-center">
-            <iframe
-              src={data.flipbookUrl}
-              className="w-full h-[600px] rounded-md"
-              allowFullScreen
-            />
+            <iframe src={data.flipbookUrl} className="w-full h-[600px] rounded-md" allowFullScreen />
           </div>
         )}
 
         {/* Register Button (Mobile) */}
         {data.googleFormUrl && (
-          <button
-            onClick={handleRegister}
-            className="text-white bg-[#3C71D7] block lg:hidden mt-10 rounded-[90px] px-8 py-3 font-bold"
-          >
+          <button onClick={handleRegister} className="text-white bg-[#3C71D7] block lg:hidden mt-10 rounded-[90px] px-8 py-3 font-bold">
             Register Now
           </button>
         )}
