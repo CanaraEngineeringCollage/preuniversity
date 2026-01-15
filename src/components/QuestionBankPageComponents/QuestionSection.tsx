@@ -15,68 +15,23 @@ interface PaperItem {
   category: "firstYear" | "secondYear";
 }
 
-const QuestionSection = () => {
-  const [papers, setPapers] = useState<PaperItem[]>([]);
-  const [loading, setLoading] = useState(true);
-
+const QuestionSection = ({ papers }: { papers: PaperItem[] }) => {
   const [showFirstYear, setShowFirstYear] = useState(false);
   const [showSecondYear, setShowSecondYear] = useState(false);
 
-  // 🔹 Fetch papers
-  const fetchPapers = async () => {
-    try {
-      const q = query(
-        collection(db, "question-papers"),
-        orderBy("createdAt", "desc")
-      );
-
-      const snap = await getDocs(q);
-
-      const list = snap.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      })) as PaperItem[];
-
-      setPapers(list);
-    } catch (error) {
-      console.error("Failed to load Question Papers:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchPapers();
-  }, []);
-
   // 🔹 Split data by category
-  const firstYear = papers.filter(
-    (paper) => paper.category === "firstYear"
-  );
+  const firstYear = papers.filter((paper) => paper.category === "firstYear");
 
-  const secondYear = papers.filter(
-    (paper) => paper.category === "secondYear"
-  );
-
-  if (loading) {
-    return <p className="text-center py-10">Loading Question Papers...</p>;
-  }
+  const secondYear = papers.filter((paper) => paper.category === "secondYear");
 
   return (
     <section className="max-w-7xl xl:max-w-[75%] px-5 mx-auto my-10 lg:my-16 text-[#1D1D1F]">
       <div>
-        <h1 className="font-bold text-[30px] lg:text-[45px]">
-          Question Bank
-        </h1>
+        <h1 className="font-bold text-[30px] lg:text-[45px]">Question Bank</h1>
 
         {/* ================= 1st Year ================= */}
-        <div
-          onClick={() => setShowFirstYear(!showFirstYear)}
-          className="flex gap-2 cursor-pointer justify-between mt-5 lg:mt-10"
-        >
-          <h1 className="text-xl font-bold">
-            1st Year Question Papers
-          </h1>
+        <div onClick={() => setShowFirstYear(!showFirstYear)} className="flex gap-2 cursor-pointer justify-between mt-5 lg:mt-10">
+          <h1 className="text-xl font-bold">1st Year Question Papers</h1>
           {showFirstYear ? <UpArrow /> : <DownArrow />}
         </div>
 
@@ -90,20 +45,11 @@ const QuestionSection = () => {
               transition={{ duration: 0.5 }}
               className="overflow-hidden"
             >
-              {firstYear.length === 0 && (
-                <p className="mt-4 text-gray-500">
-                  No papers available
-                </p>
-              )}
+              {firstYear.length === 0 && <p className="mt-4 text-gray-500">No papers available</p>}
 
               {firstYear.map((item) => (
-                <div
-                  key={item.id}
-                  className="flex justify-between mt-5 border-b pb-2 border-[#e5e7ed]"
-                >
-                  <h1 className="text-[17px] w-[60%] text-[#2A2A2A]">
-                    {item.subjectName}
-                  </h1>
+                <div key={item.id} className="flex justify-between mt-5 border-b pb-2 border-[#e5e7ed]">
+                  <h1 className="text-[17px] w-[60%] text-[#2A2A2A]">{item.subjectName}</h1>
 
                   <a
                     href={item.pdfUrl}
@@ -121,13 +67,8 @@ const QuestionSection = () => {
         </AnimatePresence>
 
         {/* ================= 2nd Year ================= */}
-        <div
-          onClick={() => setShowSecondYear(!showSecondYear)}
-          className="flex cursor-pointer justify-between gap-2 mt-10"
-        >
-          <h1 className="text-xl font-bold">
-            2nd Year Question Papers
-          </h1>
+        <div onClick={() => setShowSecondYear(!showSecondYear)} className="flex cursor-pointer justify-between gap-2 mt-10">
+          <h1 className="text-xl font-bold">2nd Year Question Papers</h1>
           {showSecondYear ? <UpArrow /> : <DownArrow />}
         </div>
 
@@ -141,20 +82,11 @@ const QuestionSection = () => {
               transition={{ duration: 0.5 }}
               className="overflow-hidden"
             >
-              {secondYear.length === 0 && (
-                <p className="mt-4 text-gray-500">
-                  No papers available
-                </p>
-              )}
+              {secondYear.length === 0 && <p className="mt-4 text-gray-500">No papers available</p>}
 
               {secondYear.map((item) => (
-                <div
-                  key={item.id}
-                  className="flex justify-between mt-5 border-b pb-2 border-[#e5e7ed]"
-                >
-                  <h1 className="text-[17px] w-[60%] text-[#2A2A2A]">
-                    {item.subjectName}
-                  </h1>
+                <div key={item.id} className="flex justify-between mt-5 border-b pb-2 border-[#e5e7ed]">
+                  <h1 className="text-[17px] w-[60%] text-[#2A2A2A]">{item.subjectName}</h1>
 
                   <a
                     href={item.pdfUrl}

@@ -1,5 +1,5 @@
-import Magazine from '@/components/BuzzComponents/Magazine/Magazine'
-import React from 'react'
+import Magazine from "@/components/BuzzComponents/Magazine/Magazine";
+import React from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -24,8 +24,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "E-Magazine – Canara Pre-University College, Mangalore",
-    description:
-      "Read the official E-Magazine featuring student talents, college highlights, and campus stories from Canara PU College.",
+    description: "Read the official E-Magazine featuring student talents, college highlights, and campus stories from Canara PU College.",
     url: "https://canarapucollege.com/e-magazine",
     siteName: "Canara PU College Mangalore",
     images: [
@@ -47,13 +46,34 @@ export const metadata: Metadata = {
   },
 };
 
-const page = () => {
+import { collection, query, orderBy, limit, getDocs } from "firebase/firestore";
+import { db } from "@/utils/firebase";
+
+const getMagazine = async (): Promise<string | null> => {
+  try {
+    const q = query(collection(db, "magazines"), orderBy("createdAt", "desc"), limit(1));
+
+    const snap = await getDocs(q);
+
+    if (!snap.empty) {
+      return snap.docs[0].data().url;
+    } else {
+      return null;
+    }
+  } catch (error) {
+    console.error("Failed to load Magazine:", error);
+    return null;
+  }
+};
+
+const page = async () => {
+  const magazineUrl = await getMagazine();
+
   return (
     <div>
-          <Magazine /> 
-      
+      <Magazine initialUrl={magazineUrl} />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;
