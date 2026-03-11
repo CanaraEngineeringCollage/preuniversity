@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useRef, useEffect, createContext } from "react";
+import React, { useState, useRef, useEffect, createContext, useCallback } from "react";
 import { MdClose, MdKeyboardArrowRight } from "react-icons/md";
 
 import { AnimatePresence, motion } from "framer-motion";
@@ -8,11 +8,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import CustomSelect from "../CustomSelect/CustomSelect";
 import { parse } from "node-html-parser";
 import { useOutsideClick } from "@/components/hooks/use-outside-click";
-
-// ⭐ Firebase imports
-import { collection, query, orderBy, getDocs } from "firebase/firestore";
-import { db } from "@/utils/firebase";
-
 
 interface CampusEvent {
   id: string;
@@ -82,7 +77,7 @@ const contentVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.3, delay: 0.1 } },
 };
 
-// Parse HTML
+// Parse HTML & Add CMS URL to images
 const parseEventContent = (html: string) => {
   const root = parse(html);
   const firstHeadingEl = root.querySelector("h1,h2,h3,h4,h5,h6");
@@ -91,8 +86,15 @@ const parseEventContent = (html: string) => {
   const firstParagraphEl = root.querySelector("p");
   const topDescription = firstParagraphEl?.text?.trim() || "";
   if (firstParagraphEl) firstParagraphEl.remove();
+  
   const firstImageEl = root.querySelector("img");
-  const src = firstImageEl?.getAttribute("src") || "";
+  let src = firstImageEl?.getAttribute("src") || "";
+  
+  const cmsUrl = process.env.NEXT_PUBLIC_CMS_URL || "http://localhost:3000";
+  if (src && src.startsWith('/')) {
+    src = `${cmsUrl}${src}`;
+  }
+  
   if (firstImageEl) firstImageEl.remove();
 
   let remainingHTML = root
@@ -102,8 +104,32 @@ const parseEventContent = (html: string) => {
     .replace(/<[^/>]+>\s*<\/[^>]+>/g, "")
     .trim();
 
+  remainingHTML = remainingHTML.replace(/src="\/uploads\//g, `src="${cmsUrl}/uploads/`);
+
   return { src, topTitle, topDescription, remainingHTML };
 };
+
+// --- SKELETON LOADER COMPONENT ---
+const SkeletonCard = () => (
+  <div className="flex flex-col md:flex-row items-center gap-6 bg-white rounded-2xl shadow-md animate-pulse">
+    {/* Image Skeleton */}
+    <div className="flex-shrink-0 w-full md:w-[40%] h-[40vh] md:h-[30vh] lg2:h-[50vh] bg-gray-200 rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none" />
+    
+    {/* Content Skeleton */}
+    <div className="flex flex-col justify-center w-full md:w-1/2 p-6 lg:p-10">
+      <div className="h-4 bg-gray-200 rounded w-24 mb-4"></div>
+      <div className="h-4 bg-gray-200 rounded w-32 mb-3"></div>
+      <div className="h-8 bg-gray-200 rounded w-3/4 mb-4"></div>
+      <div className="space-y-2 mb-6">
+        <div className="h-4 bg-gray-200 rounded w-full"></div>
+        <div className="h-4 bg-gray-200 rounded w-full"></div>
+        <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+      </div>
+      <div className="h-5 bg-gray-200 rounded w-28"></div>
+    </div>
+  </div>
+);
+// ---------------------------------
 
 function EventContent({ description }: { description: EventDescriptionProps }) {
   return (
@@ -146,62 +172,120 @@ function EventContent({ description }: { description: EventDescriptionProps }) {
             }`}
             dangerouslySetInnerHTML={{ __html: description.remainingHTML }}
           />
-        )}{" "}
+        )}
       </div>
     </div>
   );
 }
 
-const ExploreCampus: React.FC<ExploreCampusProps> = ({
-  campusEvents: initialEvents = [],
-  title,
-  description,
-}) => {
-  const [campusEvents, setCampusEvents] = useState<CampusEvent[]>(initialEvents);
-  const [categories, setCategories] = useState<string[]>(["All"]);
-  const [activeCategory, setActiveCategory] = useState<string>("All");
+const ExploreCampus: React.FC<ExploreCampusProps> = ({ title, description }) => {
+  const [campusEvents, setCampusEvents] = useState<CampusEvent[]>([]);
+  const [categories, setCategories] = useState<string[]>([]);
+  const [activeCategory, setActiveCategory] = useState<string>("");
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showAll, setShowAll] = useState(false);
+  
+  // Pagination States
+  const [page, setPage] = useState(1);
+  const [loading, setLoading] = useState(true); // Default to true so skeletons show immediately
+  const [hasMore, setHasMore] = useState(true);
+  
   const containerRef = useRef<HTMLDivElement>(null);
+  const observerTarget = useRef<HTMLDivElement>(null);
+  const loadingRef = useRef(false); 
 
-  // ⭐⭐⭐ FIREBASE FETCH — ONLY CHANGE YOU ASKED FOR
-  const fetchBuzz = async () => {
-    try {
-      const q = query(collection(db, "buzz"), orderBy("date", "desc"));
-      const snap = await getDocs(q);
-
-      const items: CampusEvent[] = snap.docs.map((d) => ({
-        id: d.id,
-        ...(d.data() as any),
-      }));
-
-      setCampusEvents(items);
-
-      // Build categories dynamically
-      const uniqueCats = Array.from(new Set(items.map((i) => i.category || "other")));
-
-      setCategories(["All", ...uniqueCats]);
-    } catch (err) {
-      console.error("Error fetching buzz:", err);
-    }
-  };
-
+  // ⭐ 1. Initial Fetch to get Categories
   useEffect(() => {
-    fetchBuzz();
+    const initCategories = async () => {
+      try {
+        const cmsUrl = process.env.NEXT_PUBLIC_CMS_URL || "http://localhost:3000";
+        const res = await fetch(`${cmsUrl}/api/buzz?limit=100`, { cache: 'no-store' });
+        if (!res.ok) return;
+        const data = await res.json();
+        
+        const uniqueCats = Array.from(new Set(data.items.map((i: any) => i.category).filter(Boolean))) as string[];
+        setCategories(uniqueCats);
+        
+        if (uniqueCats.length > 0) {
+          setActiveCategory(uniqueCats[0]); // Auto-select the first category
+        } else {
+          setLoading(false); // Stop loading if absolutely nothing exists
+        }
+      } catch (err) {
+        console.error("Error fetching categories:", err);
+        setLoading(false);
+      }
+    };
+    initCategories();
   }, []);
 
+  // ⭐ 2. Standard Infinite Scroll Fetch
+  const loadEvents = useCallback(async () => {
+    if (!activeCategory || loadingRef.current || !hasMore) return;
+    
+    loadingRef.current = true;
+    setLoading(true);
 
+    try {
+      const cmsUrl = process.env.NEXT_PUBLIC_CMS_URL || "http://localhost:3000";
+      const url = `${cmsUrl}/api/buzz?page=${page}&limit=5&category=${encodeURIComponent(activeCategory)}`;
 
-  const sortedEvents = [...campusEvents].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("Failed to fetch");
+      const data = await res.json();
 
-  const filteredEvents = sortedEvents.filter((event) =>
-    activeCategory === "All" ? true : event.category === activeCategory
-  );
+      const newItems: CampusEvent[] = data.items.map((item: any) => ({
+        id: item.id.toString(),
+        category: item.category,
+        date: item.date,
+        content: item.content,
+        eventName: item.name,
+      }));
 
-  const eventsToShow = showAll ? filteredEvents : filteredEvents.slice(0, 5);
+      setCampusEvents((prev) => (page === 1 ? newItems : [...prev, ...newItems]));
+      setHasMore(data.page < data.totalPages);
+
+    } catch (err) {
+      console.error("Error fetching buzz:", err);
+    } finally {
+      loadingRef.current = false;
+      setLoading(false);
+    }
+  }, [page, activeCategory, hasMore]);
+
+  // Trigger fetch when category or page changes
+  useEffect(() => {
+    loadEvents();
+  }, [loadEvents]);
+
+  // Handle Category Change
+  const handleCategoryChange = (newCategory: string) => {
+    if (newCategory === activeCategory) return;
+    setActiveCategory(newCategory);
+    setPage(1);
+    setCampusEvents([]); // Clear list immediately so skeletons appear
+    setHasMore(true);
+  };
+
+  // Standard Intersection Observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && hasMore && !loadingRef.current) {
+          setPage((prevPage) => prevPage + 1);
+        }
+      },
+      { rootMargin: "100px", threshold: 0.1 }
+    );
+
+    if (observerTarget.current) {
+      observer.observe(observerTarget.current);
+    }
+
+    return () => {
+      if (observerTarget.current) observer.unobserve(observerTarget.current);
+    };
+  }, [hasMore]);
 
   const openCard = (index: number) => {
     setCurrentIndex(index);
@@ -212,7 +296,7 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({
 
   const goToNextCard = () =>
     setCurrentIndex((prev) =>
-      filteredEvents.length ? (prev + 1) % filteredEvents.length : 0
+      campusEvents.length ? (prev + 1) % campusEvents.length : 0
     );
 
   useEffect(() => {
@@ -235,14 +319,13 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({
       value={{
         onCardClose: () => {},
         currentIndex,
-        totalItems: filteredEvents.length,
+        totalItems: campusEvents.length,
         goToNextCard,
         openCard,
         closeCard,
         isOpen,
       }}
     >
-      {/* ----------- UI SECTION (UNMODIFIED) ----------- */}
       <section className="max-w-7xl xl:max-w-[75%] px-4 mx-auto text-[#1D1D1F] py-16">
         {(title || description) && (
           <div className="text-center mb-10 lg:px-32">
@@ -254,117 +337,111 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({
         )}
 
         {/* Category Filters */}
-     <div className="pb-5 lg:pb-10">
-  {/* Mobile Dropdown */}
- {eventsToShow.length > 0 && <div className="flex lg:hidden justify-between items-center gap-2 md:hidden">
-    <CustomSelect
-      value={activeCategory}
-      onChange={(e) => {
-        setActiveCategory(e.target.value);
-        setShowAll(false);
-      }}
-      // 👇 format only for display
-      options={categories.map((c) => formatCategory(c))}
-    />
-  </div>}
+        {categories.length > 0 && (
+          <div className="pb-5 lg:pb-10">
+            {/* Mobile Dropdown */}
+            <div className="flex lg:hidden justify-between items-center gap-2 md:hidden">
+              <CustomSelect
+                value={activeCategory}
+                onChange={(e) => handleCategoryChange(e.target.value)}
+                options={categories.map((c) => formatCategory(c))}
+              />
+            </div>
 
-  {/* Desktop View */}
-  {eventsToShow.length > 0 && <div className="hidden lg:flex justify-evenly items-center pb-5 lg:pb-10 flex-wrap gap-2">
-    {categories.map((category, index) => (
-      <h3
-        onClick={() => {
-          setActiveCategory(category);
-          setShowAll(false);
-        }}
-        className={`cursor-pointer ${
-          category === activeCategory ? "text-black font-bold" : "text-textGray"
-        } text-lg`}
-        key={index}
-      >
-        {formatCategory(category)}
-      </h3>
-    ))}
-  </div>}
-</div>
-
-
-        {/* Event Cards */}
-        <div className="flex flex-col gap-8">
-          {eventsToShow.length > 0 ? (
-            eventsToShow.map((event, index) => {
-              const { src, topTitle, topDescription } = parseEventContent(
-                event.content
-              );
-              return (
-                <div
-                  key={event.id}
-                  onClick={() => openCard(index)}
-                  className="flex cursor-pointer flex-col md:flex-row items-center gap-6 bg-white rounded-2xl shadow-md"
+            {/* Desktop View */}
+            <div className="hidden lg:flex justify-evenly items-center pb-5 lg:pb-10 flex-wrap gap-2">
+              {categories.map((category, index) => (
+                <h3
+                  onClick={() => handleCategoryChange(category)}
+                  className={`cursor-pointer transition-colors duration-200 ${
+                    category === activeCategory ? "text-black font-bold" : "text-textGray hover:text-black"
+                  } text-lg`}
+                  key={index}
                 >
-                  <div className="flex-shrink-0 w-full md:w-[40%]">
-                    <Image
-                      src={src || event.content}
-                      alt={topTitle || event.category}
-                      width={1000}
-                      height={1000}
-                      className="rounded-l-2xl object-cover w-full h-[40vh] md:h-[30vh] lg2:h-[50vh]"
-                    />
-                  </div>
-                  <div className="flex flex-col justify-center w-full md:w-1/2 p-6 lg:p-10">
-                    {event.date && (
-                      <p className="text-[17px] text-textGray uppercase font-bold mb-4">
-                        {new Date(event.date).toLocaleDateString("en-GB")}
-                      </p>
-                    )}
-                    {event.eventName && (
-                      <p className="text-textGray text-[17px] mb-3">
-                        {event.eventName}
-                      </p>
-                    )}
-                    {topTitle && (
-                      <h2 className="text-2xl lg:text-[31px] leading-[1.1] font-bold text-[#1D1D1F] mb-2">
-                        {topTitle}
-                      </h2>
-                    )}
-                    {topDescription && (
-                      <p className="text-textGray leading-[1.3] line-clamp-3 text-[21px] mb-4">
-                        {topDescription}
-                      </p>
-                    )}
-                    <motion.button
-                      onClick={() => openCard(index)}
-                      className="text-[#2997FF] inline-flex text-[21px] items-center font-medium text-sm"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      Read More  <MdKeyboardArrowRight className="ml-1 mt-1 text-[20px] md:text-[25px]" />
-                    </motion.button>
-                  </div>
+                  {formatCategory(category)}
+                </h3>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Event Cards & Skeletons */}
+        <div className="flex flex-col gap-8">
+          {/* Loaded Cards */}
+          {campusEvents.map((event, index) => {
+            const { src, topTitle, topDescription } = parseEventContent(event.content);
+            return (
+              <div
+                key={`${event.id}-${index}`}
+                onClick={() => openCard(index)}
+                className="flex cursor-pointer flex-col md:flex-row items-center gap-6 bg-white rounded-2xl shadow-md transition-shadow hover:shadow-lg"
+              >
+                <div className="flex-shrink-0 w-full md:w-[40%]">
+                  <Image
+                    src={src || "/placeholder-image.jpg"}
+                    alt={topTitle || event.category}
+                    width={1000}
+                    height={1000}
+                    className="rounded-l-2xl object-cover w-full h-[40vh] md:h-[30vh] lg2:h-[50vh]"
+                  />
                 </div>
-              );
-            })
-          ) : (
+                <div className="flex flex-col justify-center w-full md:w-1/2 p-6 lg:p-10">
+                  {event.date && (
+                    <p className="text-[17px] text-textGray uppercase font-bold mb-4">
+                      {new Date(event.date).toLocaleDateString("en-GB")}
+                    </p>
+                  )}
+                  {event.eventName && (
+                    <p className="text-textGray text-[17px] mb-3">
+                      {event.eventName}
+                    </p>
+                  )}
+                  {topTitle && (
+                    <h2 className="text-2xl lg:text-[31px] leading-[1.1] font-bold text-[#1D1D1F] mb-2">
+                      {topTitle}
+                    </h2>
+                  )}
+                  {topDescription && (
+                    <p className="text-textGray leading-[1.3] line-clamp-3 text-[21px] mb-4">
+                      {topDescription}
+                    </p>
+                  )}
+                  <motion.button
+                    onClick={() => openCard(index)}
+                    className="text-[#2997FF] inline-flex text-[21px] items-center font-medium text-sm"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Read More <MdKeyboardArrowRight className="ml-1 mt-1 text-[20px] md:text-[25px]" />
+                  </motion.button>
+                </div>
+              </div>
+            );
+          })}
+
+          {/* Skeleton Loaders (Appears while fetching data) */}
+          {loading && (
+            <>
+              <SkeletonCard />
+              {/* If it's the very first page load, show an extra skeleton to fill the screen better */}
+              {page === 1 && <SkeletonCard />}
+            </>
+          )}
+
+          {/* Empty State */}
+          {!loading && campusEvents.length === 0 && (
             <p className="text-center text-textGray text-[18px] py-10">
-              There are no events in this category.
+              There are no events in this category yet.
             </p>
           )}
         </div>
 
-        {/* Show More Button */}
-        {!showAll && filteredEvents.length > 5 && (
-          <div className="flex justify-center mt-10">
-            <button
-              className="bg-[#eff1f6] text-black px-5 py-2 cursor-pointer rounded-3xl"
-              onClick={() => setShowAll(true)}
-            >
-              Explore More Campus Stories
-            </button>
-          </div>
-        )}
+        {/* Hidden Infinite Scroll Trigger Point */}
+        <div ref={observerTarget} className="w-full h-10 mt-4 pointer-events-none" />
 
         {/* Modal */}
         <AnimatePresence>
-          {isOpen && filteredEvents.length > 0 && (
+          {isOpen && campusEvents.length > 0 && (
             <motion.div
               className="fixed inset-0 h-screen z-50 overflow-auto"
               initial="hidden"
@@ -391,17 +468,14 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({
 
                 <motion.div variants={contentVariants} className="!overflow-hidden">
                   <EventContent
-                    description={getEventDescription(
-                      filteredEvents[currentIndex]
-                    )}
+                    description={getEventDescription(campusEvents[currentIndex])}
                   />
                 </motion.div>
 
                 <motion.div variants={contentVariants} className="p-4 lg:px-20 ">
                   <h1 className="border-t-2 pt-9 text-[10px] md:text-[12px] text-textGray border-t-gray-200">
                     {parseEventContent(
-                      filteredEvents[(currentIndex + 1) % filteredEvents.length]
-                        .content
+                      campusEvents[(currentIndex + 1) % campusEvents.length].content
                     ).topTitle && "Next Event"}
                   </h1>
                   <h1
@@ -409,8 +483,7 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({
                     className="text-[#2997FF] inline-flex items-center cursor-pointer font-bold text-[16px] md:text-[20px]"
                   >
                     {parseEventContent(
-                      filteredEvents[(currentIndex + 1) % filteredEvents.length]
-                        .content
+                      campusEvents[(currentIndex + 1) % campusEvents.length].content
                     ).topTitle || "Next Event"}
                     <MdKeyboardArrowRight className="ml-1 mt-1 text-[20px] md:text-[25px]" />
                   </h1>
@@ -425,6 +498,7 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({
 };
 
 export default ExploreCampus;
+
 const formatCategory = (cat: string) => {
   if (!cat) return "";
   return cat.charAt(0).toUpperCase() + cat.slice(1).toLowerCase();
