@@ -1,9 +1,5 @@
 // utils/formSubmission.ts
 
-
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { db } from "./firebase";
-
 export interface SubmitFormData {
   fullName: string;
   email: string;
@@ -16,6 +12,8 @@ export interface SubmitFormData {
  */
 async function submitToGoogleSheet(data: SubmitFormData) {
   try {
+    // Note: mode 'no-cors' is used for Apps Script typically, 
+    // but it won't allow you to read the response.
     await fetch(process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL!, {
       method: "POST",
       mode: "no-cors",
@@ -38,31 +36,44 @@ async function submitToGoogleSheet(data: SubmitFormData) {
 }
 
 /**
- * Store data inside Firestore
+ * REPLACE FIREBASE: Submit data to your Next.js CMS API
  */
-async function submitToFirestore(data: SubmitFormData) {
+async function submitToCMS(data: SubmitFormData) {
   try {
-    await addDoc(collection(db, "inquiry"), {
-      ...data,
-      createdAt: serverTimestamp(),
+    const cmsUrl = process.env.NEXT_PUBLIC_CMS_URL || "http://localhost:3000";
+    
+    const response = await fetch(`${cmsUrl}/api/inquiry`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
     });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || "CMS submission failed");
+    }
 
     return { success: true };
   } catch (error) {
-    console.error("Firestore submission failed:", error);
+    console.error("CMS submission failed:", error);
     return { success: false, error };
   }
 }
 
 /**
- * Main function → Submit to both Google Sheet & Firestore
+ * Main function → Submit to both Google Sheet & Your CMS
  */
 export async function submitForm(data: SubmitFormData) {
-  const sheetResponse = await submitToGoogleSheet(data);
-  const firestoreResponse = await submitToFirestore(data);
+  // Execute both in parallel for better performance
+  const [sheetResponse, cmsResponse] = await Promise.all([
+    submitToGoogleSheet(data),
+    submitToCMS(data),
+  ]);
 
   return {
     sheet: sheetResponse,
-    firestore: firestoreResponse,
+    cms: cmsResponse, // This replaces the firestore key
   };
 }

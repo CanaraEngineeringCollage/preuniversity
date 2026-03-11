@@ -28,7 +28,7 @@ function FormComponent() {
     });
 
     const sheetSuccess = result.sheet?.success;
-    const firestoreSuccess = result.firestore?.success;
+    const firestoreSuccess = result.cms?.success;
 
     if (sheetSuccess || firestoreSuccess) {
       setFormData({
@@ -38,9 +38,9 @@ function FormComponent() {
         enquiry: "",
       });
       setCharCount(0);
-      toast.success("Enquiry submitted successfully!");
+      // toast.success("Enquiry submitted successfully!");
     } else {
-      toast.error("Something went wrong! Try again.");
+      // toast.error("Something went wrong! Try again.");
     }
 
     setIsLoading(false);

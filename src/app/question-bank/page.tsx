@@ -50,8 +50,7 @@ export const metadata: Metadata = {
   },
 };
 
-import { collection, query, orderBy, getDocs } from "firebase/firestore";
-import { db } from "@/utils/firebase";
+
 
 interface PaperItem {
   id: string;
@@ -61,35 +60,44 @@ interface PaperItem {
   category: "firstYear" | "secondYear";
 }
 
-const getQuestionPapers = async (): Promise<PaperItem[]> => {
+
+
+async function getQuestionPapers() {
+  const cmsUrl = process.env.NEXT_PUBLIC_CMS_URL || "http://localhost:3000";
+  
   try {
-    const q = query(collection(db, "question-papers"), orderBy("createdAt", "desc"));
+    // Increase limit to fetch all papers or handle pagination
+    const res = await fetch(`${cmsUrl}/api/question-papers?limit=100`, {
+      cache: 'no-store',
+    });
 
-    const snap = await getDocs(q);
+    if (!res.ok) return [];
 
-    return snap.docs.map((doc) => ({
-      id: doc.id,
-      ...doc.data(),
-    })) as PaperItem[];
+    const data = await res.json();
+    
+    // MAP CMS fields to the PaperItem interface expected by your components
+    return data.items.map((paper: any) => ({
+      id: paper.id.toString(),
+      subjectName: paper.subject, // Map 'subject' from CMS to 'subjectName'
+      pdfUrl: `${cmsUrl}${paper.fileUrl}`, // Prefix with CMS URL so PDF opens
+      fileName: paper.name, // Map 'name' from CMS to 'fileName'
+      category: paper.year === "PUC1" ? "firstYear" : "secondYear", // Map year logic
+    }));
   } catch (error) {
-    console.error("Failed to load Question Papers:", error);
+    console.error("Failed to load Question Papers from CMS:", error);
     return [];
   }
-};
+}
 
-const page = async () => {
+const Page = async () => {
   const papers = await getQuestionPapers();
 
   return (
     <>
-      <section>
-        <Banner />
-      </section>
-      <section>
-        <QuestionSection papers={papers} />
-      </section>
+      <section><Banner /></section>
+      <section><QuestionSection papers={papers} /></section>
     </>
   );
 };
 
-export default page;
+export default Page;

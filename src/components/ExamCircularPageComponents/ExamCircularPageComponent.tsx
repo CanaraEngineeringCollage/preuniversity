@@ -1,42 +1,50 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { collection, query, orderBy, getDocs } from "firebase/firestore";
-import { db } from "@/utils/firebase";
+import { useState, useEffect, useCallback } from "react";
 
 interface CircularItem {
-  id: string;
+  id: number;
   title: string;
-  pdfUrl: string;
-  fileName: string;
+  fileUrl: string;
+  createdAt?: string;
 }
 
 export default function ExamCircularPageComponent() {
   const [circulars, setCirculars] = useState<CircularItem[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Fetch circulars from Firestore
-  async function fetchCirculars() {
-    try {
-      const q = query(
-        collection(db, "exam-circulars"),
-        orderBy("createdAt", "desc")
-      );
+  // Fetch circulars from the new Next.js API
+ // Inside your Pre-University ExamCircularPageComponent
 
-      const snap = await getDocs(q);
+const fetchCirculars = useCallback(async () => {
+  try {
+    setLoading(true);
+    
+    // 1. Define your CMS URL
+    const cmsUrl = process.env.NEXT_PUBLIC_CMS_URL || "http://localhost:3000";
+    
+    // 2. Fetch data from the CMS
+    const res = await fetch(`${cmsUrl}/api/exam-circulars?page=1&limit=50`);
+    
+    if (!res.ok) throw new Error("Failed to fetch circulars");
 
-      const list = snap.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      })) as CircularItem[];
+    const data = await res.json();
+    
+    // 3. THE FIX: Attach the CMS URL to every file path so it points to port 3000
+    const formattedData = data.items.map((item: CircularItem) => ({
+      ...item,
+      fileUrl: item.fileUrl.startsWith('http') 
+        ? item.fileUrl 
+        : `${`http://localhost:3000`}${item.fileUrl}` // Turns "/uploads/file.pdf" into "http://localhost:3000/uploads/file.pdf"
+    }));
 
-      setCirculars(list);
-    } catch (error) {
-      console.error("Error loading circulars:", error);
-    } finally {
-      setLoading(false);
-    }
+    setCirculars(formattedData ?? []);
+  } catch (err) {
+    console.error("Error loading circulars:", err);
+  } finally {
+    setLoading(false);
   }
+}, []);
 
   useEffect(() => {
     fetchCirculars();
@@ -60,7 +68,7 @@ export default function ExamCircularPageComponent() {
             {circulars.map((item) => (
               <p
                 key={item.id}
-                onClick={() => window.open(item.pdfUrl, "_blank")}
+                onClick={() => window.open(item.fileUrl, "_blank")}
                 className="text-lg lg:text-xl text-[#2A2A2A] cursor-pointer mb-4 hover:underline"
               >
                 {item.title}
