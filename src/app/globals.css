@@ -20,6 +20,13 @@
   --breakpoint-xl: 1580px;
   --breakpoint-2xl: 2000px;
 }
+/* @theme {
+  
+  --color-primary: #2884ca;
+  
+
+
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -43,3 +50,19 @@ button{
   outline: none !important;
 }
 
+.u-row{
+  min-width: 100% !important;
+  padding: 0 !important;
+}
+
+.u-row-container, 
+.u-row-container * {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  background: white !important;
+  box-sizing: border-box;    /* ensures padding/border won’t break layout */
+  overflow: hidden !important;
+}

@@ -1,4 +1,4 @@
-const science = [
+const data = [
   {
     name: "Physics March 2015",
     link: "",
@@ -43,4 +43,4 @@ const commerce = [
   
 ];
 
-export { science, commerce };
+export { data, commerce };
