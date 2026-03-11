@@ -8,7 +8,7 @@
       "future_prospects": [
         {
           "title": "Engineering Pathways",
-          "sub_title": "PCME students are highly competitive in national and state-level engineering entrance exams like JEE, CET, or COMEDK, often choosing technology-driven branches with study opportunities such as",
+          "sub_title": "PCME students are highly competitive in national and state-level engineering entrance exams like JEE, CET, or COMEDK, often choosing technology-driven branches with study opportunities such as:",
           "points": [
             "Electronics & Communication Engineering (ECE)",
             "Electrical Engineering",
@@ -19,7 +19,7 @@
         },
         {
           "title": "Pure Sciences & Research",
-          "sub_title": "Students can pursue careers in R&D, academia, or become scientists in organizations like ISRO, DRDO, etc. with study opportunities such as",
+          "sub_title": "Students can pursue careers in R&D, academia, or become scientists in organizations like ISRO, DRDO, etc. with study opportunities such as:",
           "points": [
             "B.Sc. in Physics, Electronics, or Mathematics",
             "Integrated M.Sc. programs and research opportunities in premier institutes (IISc, IISERs, IITs)"
@@ -62,17 +62,17 @@
           ]
         },
         {
-          "title": "IT & Software Careers:",
-          "sub_title": "Strong programming foundations make PCMC students highly employable in the ever-growing tech industry",
+          "title": "IT & Software Careers",
+          "sub_title": "Strong programming foundations make PCMC students highly employable in the ever-growing tech industry.",
           "points": ["Software Developer/Engineer", "Web & App Development", "UI/UX Designer", "Game Developer", "DevOps Engineer"]
         },
         {
-          "title": "Data & Analytics Roles:",
+          "title": "Data & Analytics Roles",
           "sub_title": "Mathematical reasoning and programming exposure prepare students for careers in big data and AI.",
           "points": ["Data Scientist", "Business Analyst", "Machine Learning Engineer", "AI/ML Specialist"]
         },
         {
-          "title": "B.Sc. & Integrated Programs:",
+          "title": "B.Sc. & Integrated Programs",
           "sub_title": "These lead to careers in research, academics, or specialized tech domains.",
           "points": [
             "B.Sc. in Computer Science, Mathematics, or Physics",
@@ -81,7 +81,7 @@
           ]
         },
         {
-          "title": "Competitive Exams & Government Roles:",
+          "title": "Competitive Exams & Government Roles",
           "sub_title": "PCMC develops strong analytical and logical skills needed to excel in such exams.",
           "points": [
             "Indian Engineering Services (IES)",
@@ -90,7 +90,7 @@
           ]
         },
         {
-          "title": " Entrepreneurship & Innovation:",
+          "title": " Entrepreneurship & Innovation",
           "sub_title": "With coding, digital tools, and problem-solving skills, PCMC students can build their own apps, tech products, or start ventures in EdTech, FinTech, or IT services."
         }
       ]
@@ -227,14 +227,14 @@
         {
           "title": "Entrepreneurship & Startups",
           "points": [
-            "Business studies and administration subjects instill a deep understanding of enterprise creation",
+            "Business studies and administration subjects instill a deep understanding of enterprise creation.",
             "Students are well-positioned to manage family businesses or launch their own ventures."
           ]
         },
         {
           "title": "Government & Competitive Exams",
           "points": [
-            "The mix of theory and analytical reasoning helps in preparing for exams like UPSC, SSC, Banking, and State Public Service Commission roles, especially those"
+            "The mix of theory and analytical reasoning helps in preparing for exams like UPSC, SSC, Banking, and State Public Service Commission roles, especially those."
           ]
         }
       ]
@@ -268,8 +268,9 @@
         },
         {
           "title": "International Careers & Higher Studies",
-          "sub_title": "BEBA students often pursue Masters in Economics, Business, or Public Policy abroad.",
+          "sub_title": "",
           "points": [
+            "BEBA students often pursue Masters in Economics, Business, or Public Policy abroad.",
             "Opportunities include higher education in international universities offering business, economics, and public policy programs.",
             "Leads to global careers in development agencies, think tanks, NGOs, and multinational corporations."
           ]
@@ -319,8 +320,8 @@
         {
           "title": "Entrepreneurship and Innovation",
           "points": [
-            "Strong potential to launch tech-based startups or work in innovative sectors like EdTech, HealthTech, and E-commerce",
-            "Ideal for those with a vision to merge business acumen with technological innovation"
+            "Strong potential to launch tech-based startups or work in innovative sectors like EdTech, HealthTech, and E-commerce.",
+            "Ideal for those with a vision to merge business acumen with technological innovation."
           ]
         }
       ]
@@ -363,8 +364,8 @@
         {
           "title": "Entrepreneurship and Innovation",
           "points": [
-            "Strong potential to launch tech-based startups or work in innovative sectors like EdTech, HealthTech, and E-commerce",
-            "Ideal for those with a vision to merge business acumen with technological innovation"
+            "Strong potential to launch tech-based startups or work in innovative sectors like EdTech, HealthTech, and E-commerce.",
+            "Ideal for those with a vision to merge business acumen with technological innovation."
           ]
         }
       ]
@@ -400,8 +401,8 @@
         {
           "title": "Entrepreneurship and Research",
           "points": [
-            "Opportunity to work in research-oriented roles in think tanks or government bodies",
-            "Build ventures based on data-driven solutions or economic consulting"
+            "Opportunity to work in research-oriented roles in think tanks or government bodies.",
+            "Build ventures based on data-driven solutions or economic consulting."
           ]
         }
       ]
@@ -442,7 +443,7 @@
         },
         {
           "title": "Entrepreneurship and Creative Fields",
-          "points": ["Opportunities in content creation, heritage tourism, social enterprises"]
+          "points": ["Opportunities in content creation, heritage tourism, social enterprises."]
         }
       ]
     }

@@ -219,29 +219,41 @@ const ExploreStream = () => {
         <p className="lg2:text-2xl lg:text-lg text-[#2A2A2A]  pt-4  text-center mb-6 font-medium px-2">
           Find the program that fuels your passion and shapes your future
         </p>
-        <div className="inline-flex items-center border border-gray-300 rounded-full mb-10">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => {
-                setSelectedButton(tab.id);
-                setData(tab.id === "Science" ? dummyFunctionDepartmentData : dummyFunctionDepartmentDataCommerce);
-              }} className={`relative px-6 py-1.5 text-base sm:text-lg font-medium text-gray-700 rounded-full transition-colors duration-200 focus:outline-none`}
-              style={{
-                WebkitTapHighlightColor: "transparent",
-              }}
-            >
-              {selectedButton === tab.id && (
-                <motion.span
-                  layoutId="bubble"
-                  className="absolute inset-0 z-0 bg-[#3C71D7] rounded-full"
-                  transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
-                />
-              )}
-              <span className={`relative z-10 ${selectedButton === tab.id ? "text-white" : "text-gray-700"}`}>{tab.label}</span>
-            </button>
-          ))}
-        </div>
+      <div className="inline-flex items-center border border-gray-300 rounded-full mb-10">
+  {tabs.map((tab) => (
+    <button
+      key={tab.id}
+      onClick={() => {
+        setSelectedButton(tab.id);
+        setData(
+          tab.id === "Science"
+            ? dummyFunctionDepartmentData
+            : dummyFunctionDepartmentDataCommerce
+        );
+      }}
+      // CHANGE HERE: Removed 'px-6' and added 'w-36' (or w-32)
+      className={`relative w-36 py-1.5 text-base sm:text-lg font-medium text-[#2A2A2A] rounded-full transition-colors duration-200 focus:outline-none`}
+      style={{
+        WebkitTapHighlightColor: "transparent",
+      }}
+    >
+      {selectedButton === tab.id && (
+        <motion.span
+          layoutId="bubble"
+          className="absolute inset-0 z-0 bg-[#3C71D7] rounded-full"
+          transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
+        />
+      )}
+      <span
+        className={`relative z-10 ${
+          selectedButton === tab.id ? "text-white" : "text-[#2A2A2A]"
+        }`}
+      >
+        {tab.label}
+      </span>
+    </button>
+  ))}
+</div>
       </div>
       <div className="lg:max-w-[95%]   xl:max-w-[87.5%] ml-auto">
         <Swiper
@@ -270,7 +282,7 @@ const ExploreStream = () => {
                 <div className="mb-4">
                   <Image src={item.icon} alt="Mental Health Icon" width={30} height={30} />
                 </div>
-                <h2 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h2>
+                <h2 className="text-xl font-semibold text-[#2A2A2A] mb-2">{item.title}</h2>
                 <Link href={item.link} className="underline text-base">
                   Learn More
                 </Link>

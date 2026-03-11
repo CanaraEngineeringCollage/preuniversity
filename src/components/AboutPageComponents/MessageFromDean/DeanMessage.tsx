@@ -19,12 +19,11 @@ const DeanMessage = () => {
           <div className="text-[#2A2A2A] text-justify pt-3 sm:pt-3 flex flex-col text-lg  leading-relaxed">
             <p className="pt-4">
               Vision, when turned inward, becomes Duty. When it looks outward, it becomes Aspiration. When it looks upward, it becomes Faith.
-            </p>
-
-            <p>
-              These words of Stephens S, wise echoes the sentiments and commitment of Canara Institution which over the years has become the showcase
+               These words of Stephens S, wise echoes the sentiments and commitment of Canara Institution which over the years has become the showcase
               of talent and skill.
             </p>
+
+            
 
             <p className="pt-8 sm:pt-3 text-justify">
               The world today, unlike the past, is ever changing, distance is dying and barriers are becoming thin and nonexistent. Even in the field

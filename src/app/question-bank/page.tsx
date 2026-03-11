@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import Banner from "@/components/Common/Banner/Banner";
 import QuestionSection from "@/components/QuestionBankPageComponents/QuestionSection";
 import React from "react";
@@ -27,8 +28,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Question Bank – Canara Pre-University College, Mangalore",
-    description:
-      "Download PUC I & II year question papers, model question banks, and exam preparation materials from Canara PU College.",
+    description: "Download PUC I & II year question papers, model question banks, and exam preparation materials from Canara PU College.",
     url: "https://canarapucollege.com/question-bank",
     siteName: "Canara PU College Mangalore",
     images: [
@@ -45,22 +45,49 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Question Bank – Canara PU College, Mangalore",
-    description:
-      "Access downloadable question papers and model exam sets for better PUC exam preparation.",
+    description: "Access downloadable question papers and model exam sets for better PUC exam preparation.",
     images: ["/icon.png"],
   },
 };
 
-const page = () => {
+import { collection, query, orderBy, getDocs } from "firebase/firestore";
+import { db } from "@/utils/firebase";
+
+interface PaperItem {
+  id: string;
+  subjectName: string;
+  pdfUrl: string;
+  fileName: string;
+  category: "firstYear" | "secondYear";
+}
+
+const getQuestionPapers = async (): Promise<PaperItem[]> => {
+  try {
+    const q = query(collection(db, "question-papers"), orderBy("createdAt", "desc"));
+
+    const snap = await getDocs(q);
+
+    return snap.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    })) as PaperItem[];
+  } catch (error) {
+    console.error("Failed to load Question Papers:", error);
+    return [];
+  }
+};
+
+const page = async () => {
+  const papers = await getQuestionPapers();
+
   return (
     <>
       <section>
         <Banner />
       </section>
       <section>
-        <QuestionSection />
+        <QuestionSection papers={papers} />
       </section>
-      
     </>
   );
 };

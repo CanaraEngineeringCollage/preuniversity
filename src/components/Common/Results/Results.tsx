@@ -22,7 +22,7 @@ const Results = ({ image, text,title }: { image: string; text: string,title:stri
         />
 
         {/* Input & Button Box */}
-        <div className="absolute bottom-0 z-[999] w-full left-0 text-center flex justify-center">
+        <div className="absolute bottom-0 z-10 w-full left-0 text-center flex justify-center">
         
           <div className="lg:mx-20 mx-4 rounded-2xl w-full bg-[#F5F5F7] px-3.5 lg:px-28 pt-10 ">
          <h1 className="leading-[1.1] md:text-2xl lg:text-2xl lg2:text-4xl text-[#1D1D1F] text-2xl font-bold pb-10">{title}</h1>

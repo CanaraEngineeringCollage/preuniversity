@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 import { ClipLoader } from 'react-spinners';
 import { useRouter } from 'next/navigation';
-import { submitToGoogleSheet } from '@/utils/formSubmission';
+import { submitForm } from '@/utils/formSubmission';
 
 type FormData = {
   fullName: string;
@@ -36,14 +36,17 @@ const HeroSectionMobile = () => {
 const onSubmit = async (data: FormData) => {
   setLoading(true);
 
-  const result = await submitToGoogleSheet({
+  const result = await submitForm({
     fullName: data.fullName,
     email: data.email,
     phoneNumber: data.phoneNumber,
-    comments: data.enquiry, // map enquiry -> comments
+    comments: data.enquiry,
   });
 
-  if (result.success) {
+  const sheetSuccess = result.sheet?.success;
+  const firestoreSuccess = result.firestore?.success;
+
+  if (sheetSuccess || firestoreSuccess) {
     reset();
     toast.success("Enquiry submitted successfully!");
   } else {
@@ -52,6 +55,7 @@ const onSubmit = async (data: FormData) => {
 
   setLoading(false);
 };
+
 
 
   return (

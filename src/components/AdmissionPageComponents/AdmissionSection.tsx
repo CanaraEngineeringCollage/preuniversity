@@ -65,7 +65,7 @@ const AdmissionSection = () => {
         <div className="mt-10 lg:mt-16 space-y-2">
           <h1 className="font-extrabold text-xl">Acceptance of Rules of Selection & Admission</h1>
           <p className="text-[#2A2A2A]  md:text-lg text-[14px] leading-7">
-            Every candidate will deemed to have accepted the rules by the very act of submitting his / her application
+            Every candidate will deemed to have accepted the rules by the very act of submitting his/her application.
           </p>
         </div>
         <div className="mt-10  space-y-2">

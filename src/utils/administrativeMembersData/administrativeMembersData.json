@@ -1,176 +1,107 @@
 [
   {
     "id": 1,
-    "name": "Sri D Vasudeva Kamath",
-    "image": "/images/governingCounsilImages/1.png",
-    "category": "Prospective",
-    "roles": [
-      { "title": "Chairman", "organization": "Governing Council" },
-      { "title": "President", "organization": "CHSA" }
-    ]
+    "name": "Sri D. Vasudeva Kamath",
+    "image": "/images/governingCounsilImages/1.webp",
+    "category": "Governing",
+    "roles": [{ "title": "", "organization": "President" }]
   },
   {
     "id": 2,
-    "name": "Sri M. Ranganath Bhat",
-    "image": "/images/governingCounsilImages/2.png",
-    "category": "Current",
-    "roles": [
-      { "title": "Secretary", "organization": "Governing Council" },
-      { "title": "Hon. Secretary", "organization": "CHSA" }
-    ]
+    "name": "Sri K. Suresh Kamath",
+    "image": "/images/governingCounsilImages/K. Suresh Kamath.webp",
+    "category": "Governing",
+    "roles": [{ "title": "B.Com, LL.B, ", "organization": "Vice President" }]
   },
   {
     "id": 3,
-    "name": "Sri Pradeep G Pai",
-    "image": "/images/governingCounsilImages/3.png",
-    "category": "Parents",
-
-     "roles": [
-      { "title": "Convenor", "organization": "Governing Council" },
-            { "title": "", "organization": "" }
-    ]
+    "name": "Sri M. Ranganath Bhat",
+    "image": "/images/governingCounsilImages/M. Ranganath Bhat.webp",
+    "category": "Governing",
+    "roles": [{ "title": "B.Tech, ", "organization": "Honorary Secretary" }]
   },
   {
     "id": 4,
-    "name": "Sri CA. M.Vaman Kamath",
-    "image": "/images/governingCounsilImages/4.png",
-    "category": "Alumni",
-    "roles": [
-      { "title": "Member", "organization": "Governing Council" },
-      { "title": "Treasurer", "organization": "CHSA" }
-    ]
+    "name": "Sri M. Vaman Kamath",
+    "image": "/images/governingCounsilImages/4.webp",
+    "category": "Governing",
+    "roles": [{ "title": "M.Com, F.C.A, ", "organization": "Treasurer" }]
   },
   {
     "id": 5,
-    "name": "Sri K Suresh Kamath",
-    "image": "/images/governingCounsilImages/5.png",
+    "name": "Sri M. Jagannath Kamath",
+    "image": "/images/governingCounsilImages/CA M. Jagannath Kamath.webp",
     "category": "Governing",
-    "roles": [
-      { "title": "Member", "organization": "Governing Council" },
-      { "title": "Vice President", "organization": "CHSA" }
-    ]
+    "roles": [{ "title": "", "organization": "Alternate Treasurer" }]
   },
   {
     "id": 6,
     "name": "Sri T. Gopalkrishna Shenoy",
-    "image": "/images/governingCounsilImages/6.png",
-    "category": "Prospective",
-    "roles": [
-      { "title": "Member", "organization": "Governing Council" },
-      { "title": "Joint Secretary", "organization": "CHSA" }
-    ]
+    "image": "/images/governingCounsilImages/6.webp",
+    "category": "Governing",
+    "roles": [{ "title": "B.E, ", "organization": "Joint Secretary, Correspondent CPUC" }]
   },
   {
     "id": 7,
-    "name": "Sri M. Naresh Shenoy",
-    "image": "/images/governingCounsilImages/7.png",
+    "name": "Sri Basty Purushotham Shenoy",
+    "image": "/images/governingCounsilImages/B. Purushotham Shenoy.webp",
     "category": "Governing",
-    "roles": [
-      { "title": "Member", "organization": "Governing Council" },
-      { "title": "Governing Body Member", "organization": "CHSA" }
-    ]
+    "roles": [{ "title": "B.Tech, ", "organization": "G.B. Member" }]
   },
   {
     "id": 8,
-    "name": "Sri Gopal Rao",
-    "image": "/images/governingCounsilImages/8.png",
-    "category": "Prospective",
-    "roles": [
-      { "title": "Member by invite", "organization": "Governing Council" },
-      { "title": "", "organization": "" }
-    ]
+    "name": "Sri K. Shivananda Shenoy",
+    "image": "/images/governingCounsilImages/K. Shivananda Shenoy.webp",
+    "category": "Governing",
+    "roles": [{ "title": "", "organization": "G.B. Member" }]
   },
   {
     "id": 9,
-    "name": "Sri. Vinayak Kamath",
-    "image": "/images/governingCounsilImages/9.png",
-    "category": "Prospective",
-    "roles": [
-      { "title": "Member by invite", "organization": "Governing Council" },
-      { "title": "", "organization": "" }
-    ]
-  },
-  {
-    "id": 16,
-    "name": "Sri. Chakravarthy Sulibele",
-    "image": "/images/governingCounsilImages/16.png",
-    "category": "Prospective",
-    "roles": [
-      { "title": "Member by invite", "organization": "Governing Council" },
-      { "title": "", "organization": "" }
-    ]
-  },
-
-  {
-    "id": 14,
-    "name": "Sri. Siddartha Pai",
-    "image": "/images/governingCounsilImages/14.png",
-    "category": "Prospective",
-    "roles": [
-      { "title": "Member by invite", "organization": "Governing Council" },
-      { "title": "", "organization": "" }
-    ]
-  },
-
-  {
-    "id": 15,
-    "name": "Sri. Ullas Kamath",
-    "image": "/images/governingCounsilImages/15.png",
-    "category": "Prospective",
-    "roles": [
-      { "title": "Member by invite", "organization": "Governing Council" },
-      { "title": "", "organization": "" }
-    ]
+    "name": "Sri M. Naresh Shenoy",
+    "image": "/images/governingCounsilImages/M. Naresh Shenoy.webp",
+    "category": "Governing",
+    "roles": [{ "title": "", "organization": "G.B. Member" }]
   },
   {
     "id": 10,
-    "name": "Dr. P. Dayananda Pai",
-    "image": "/images/governingCounsilImages/10.png",
-    "category": "Prospective",
-    "roles": [
-      { "title": "Member by invite", "organization": "Governing Council" },
-      { "title": "", "organization": "" }
-    ]
+    "name": "Sri Raghavendra Kuduva",
+    "image": "/images/governingCounsilImages/M. Raghavendra Kudva.webp",
+    "category": "Governing",
+    "roles": [{ "title": "", "organization": "G.B. Member" }]
   },
   {
     "id": 11,
-    "name": "Sri. J.P. Nayak",
-    "image": "/images/governingCounsilImages/11.png",
-    "category": "Prospective",
-    "roles": [
-      { "title": "Member by invite", "organization": "Governing Council" },
-      { "title": "", "organization": "" }
-    ]
+    "name": "Sri Gopalakrishna Bhat K",
+    "image": "/images/governingCounsilImages/Gopalakrishna Bhat. K.webp",
+    "category": "Governing",
+    "roles": [{ "title": "", "organization": "G.B. Member, Manager CPUC" }]
   },
   {
     "id": 12,
-    "name": "Dr. Nagesh H R",
-    "image": "/images/governingCounsilImages/12.png",
-    "category": "Prospective",
-    "roles": [
-      { "title": "Member Secretary", "organization": "Governing Council" },
-      { "title": "", "organization": "" }
-    ]
+    "name": "Sri Yogesh R Kamath",
+    "image": "/images/governingCounsilImages/Yogesh Kamath.webp",
+    "category": "Governing",
+    "roles": [{ "title": "", "organization": "G.B. Member" }]
   },
-
   {
     "id": 13,
-    "name": "Dr. Demian Antony D Mello",
-    "image": "/images/governingCounsilImages/13.png",
-    "category": "Prospective",
-    "roles": [
-      { "title": "Member Secretary", "organization": "Governing Council" },
-      { "title": "", "organization": "" }
-    ]
+    "name": "Ms. Ashwini Kamath",
+    "image": "/images/governingCounsilImages/Ashwini Kamath.webp",
+    "category": "Governing",
+    "roles": [{ "title": "", "organization": "G.B. Member" }]
   },
   {
     "id": 14,
-    "name": "Dr. N Venkatesh",
-    "image": "/images/governingCounsilImages/18.png",
-    "category": "Prospective",
-    "roles": [
-      { "title": "Member", "organization": "Governing Council" },
-      { "title": "", "organization": "" }
-    ]
+    "name": "Sri D. Vikram Pai",
+    "image": "/images/governingCounsilImages/D. Vikram Pai.webp",
+    "category": "Governing",
+    "roles": [{ "title": "", "organization": "G.B. Member" }]
+  },
+  {
+    "id": 15,
+    "name": "Sri Giridhar Kamath",
+    "image": "/images/governingCounsilImages/CA Giridhar Kamath (Spl. Invitee).webp",
+    "category": "Governing",
+    "roles": [{ "title": "", "organization": "G.B. Member (Special Invitee)" }]
   }
 ]
