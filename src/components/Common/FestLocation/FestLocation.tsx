@@ -1,8 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { doc, onSnapshot } from "firebase/firestore";
-import { db } from "@/utils/firebase";
+
 
 export interface EventSection {
   venue?: string;
@@ -12,18 +10,7 @@ export interface EventSection {
 }
 
 export default function FestLocation({ category, initialData }: { category: "mat-kabbadi" | "footprints"; initialData?: EventSection | null }) {
-  const [data, setData] = useState<EventSection | null>(initialData || null);
-
-  // Dynamic Fetching based on category prop
-  useEffect(() => {
-    const unsub = onSnapshot(doc(db, "events", category), (snap) => {
-      if (snap.exists()) {
-        setData(snap.data() as EventSection);
-      }
-    });
-
-    return () => unsub();
-  }, [category]);
+  const data = initialData;
 
   // Optional: distinct loading state or default fallback
   if (!data) {

@@ -1,7 +1,6 @@
-export const dynamic = "force-dynamic";
-import Magazine from "@/components/BuzzComponents/Magazine/Magazine";
-import React from "react";
 import type { Metadata } from "next";
+import EMagazineClient from "./EMagazineClient";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "E-Magazine – Canara Pre-University College, Mangalore",
@@ -47,44 +46,8 @@ export const metadata: Metadata = {
   },
 };
 
-
-const getMagazine = async (): Promise<string | null> => {
-  const cmsUrl = process.env.NEXT_PUBLIC_CMS_URL || "http://localhost:3000";
-  
-  try {
-    // Fetch the latest magazine (limit 1)
-    const res = await fetch(`${cmsUrl}/api/magazines?limit=1`, {
-      cache: 'no-store',
-    });
-
-    if (!res.ok) return null;
-
-    const data = await res.json();
-    
-    if (data.items && data.items.length > 0) {
-      const latestMagazine = data.items[0];
-      
-      // If the URL is relative (starts with /uploads), prefix it with CMS URL
-      return latestMagazine.fileUrl.startsWith('http') 
-        ? latestMagazine.fileUrl 
-        : `${cmsUrl}${latestMagazine.fileUrl}`;
-    }
-    
-    return null;
-  } catch (error) {
-    console.error("Failed to load Magazine from CMS:", error);
-    return null;
-  }
-};
-
-const Page = async () => {
-  const magazineUrl = await getMagazine();
-
-  return (
-    <div>
-      <Magazine initialUrl={magazineUrl} />
-    </div>
-  );
+const Page = () => {
+  return <EMagazineClient />;
 };
 
 export default Page;

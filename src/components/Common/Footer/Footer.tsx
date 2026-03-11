@@ -91,10 +91,6 @@ export default function Footer() {
             <Link href="/privacy-policy" className="">
               Privacy Policy
             </Link>
-            <span>|</span>
-          <Link href="/privacy-policy" className="">
-              Terms of Use
-            </Link>
           </div></Link> 
         </div>
       </div>
@@ -135,10 +131,6 @@ export default function Footer() {
           <div className="space-x-2">
             <Link href="/privacy-policy" className="">
               Privacy Policy
-            </Link>
-            <span>|</span>
-            <Link href="/privacy-policy" className=""> 
-              Terms of Use
             </Link>
           </div>
         </div>

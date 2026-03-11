@@ -1,5 +1,8 @@
+"use client";
+
 import Brochure, { EventSection as BrochureData } from "@/components/Common/Brochure/Brochure";
 import FestLocation, { EventSection as FestLocationData } from "@/components/Common/FestLocation/FestLocation";
+import React, { useEffect, useState } from "react";
 
 // Helper to fetch from your CMS instead of Firebase
 async function getEventData(category: string) {
@@ -24,9 +27,22 @@ async function getEventData(category: string) {
   }
 }
 
-export default async function Page() {
+export default function Page() {
   const category = "footprints";
-  const data = await getEventData(category);
+  const [data, setData] = useState<any>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+    getEventData(category).then((res) => {
+      if (isMounted) {
+        setData(res);
+      }
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   // Casting data to the types expected by your components
   const brochureData = data as BrochureData | null;

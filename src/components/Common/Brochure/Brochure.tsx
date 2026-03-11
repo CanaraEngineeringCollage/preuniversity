@@ -1,8 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { doc, onSnapshot } from "firebase/firestore";
-import { db } from "@/utils/firebase";
+
 
 interface BrochureProps {
   category: "mat-kabbadi" | "footprints";
@@ -21,17 +19,7 @@ interface BrochureProps {
 }
 
 export default function Brochure({ category, initialData }: BrochureProps) {
-  const [data, setData] = useState<EventSection | null>(initialData || null);
-
-  useEffect(() => {
-    const unsub = onSnapshot(doc(db, "events", category), (snap) => {
-      if (snap.exists()) {
-        setData(snap.data() as EventSection);
-      }
-    });
-
-    return () => unsub();
-  }, [category]);
+  const data = initialData;
 
   if (!data) {
     return (
