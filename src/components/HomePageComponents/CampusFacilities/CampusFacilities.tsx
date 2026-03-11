@@ -15,7 +15,7 @@ const data = [
     title: "Academic Counselling",
     intro:
       "At Canara Pre-University College, Academic Counselling plays a vital role in guiding students towards informed and meaningful educational choices. Our counselling services are designed to help every learner understand their strengths, set clear academic goals, and shape a pathway that supports their future aspirations.",
-      pointsHeading:"Our experienced counsellors provide individual and group sessions that assist students in:",
+    pointsHeading: "Our experienced counsellors provide individual and group sessions that assist students in:",
     points: [
       "Selecting the right subject combinations based on interest and aptitude",
       "Developing effective study habits and time-management skills",
@@ -25,14 +25,14 @@ const data = [
     ],
     closing:
       "We believe that timely guidance can make a significant difference in a student’s performance and overall growth. Through our structured counselling programme, we ensure that every student receives the support they need to excel academically and make well-informed decisions about their future. ",
-      closingEnd:"At Canara P.U. College, we are committed to nurturing learners with clarity, direction, and confidence.",
+    closingEnd: "At Canara P.U. College, we are committed to nurturing learners with clarity, direction, and confidence.",
   },
   {
     image: "/images/homePageImages/2.png",
     title: "Book Bank",
     intro:
       "The Book Bank facility at Canara Pre-University College is designed to support students by providing easy access to essential academic resources throughout the academic year. This initiative ensures that every learner, irrespective of financial background, has the opportunity to study with the required textbooks and reference materials.",
-      pointsHeading:"Our Book Bank offers:",
+    pointsHeading: "Our Book Bank offers:",
     points: [
       "A wide collection of textbooks across all subject streams",
       "Long-term issue of books, enabling students to retain them for an entire term or academic year",
@@ -41,14 +41,14 @@ const data = [
     ],
     closing:
       "The facility helps reduce the financial burden on families while promoting a culture of consistent reading and responsible usage of resources. Students can borrow books through a simple, student-friendly process managed by our library team. ",
-      closingEnd:"At Canara P.U. College, the Book Bank stands as a testament to our commitment to inclusivity and academic support, ensuring that every student has the tools they need to succeed.",
+    closingEnd: "At Canara P.U. College, the Book Bank stands as a testament to our commitment to inclusivity and academic support, ensuring that every student has the tools they need to succeed.",
   },
   {
     image: "/images/homePageImages/5.png",
     title: "Medical Facilities",
     intro:
       "Canara Pre-University College prioritises the health, safety, and well-being of its students. The college provides basic medical facilities on campus to ensure prompt care and assistance during medical emergencies and health-related concerns. ",
-      pointsHeading:"Our Medical Facilities include:",
+    pointsHeading: "Our Medical Facilities include:",
     points: [
       "First-aid services for immediate care",
       "Qualified medical assistance on call",
@@ -57,7 +57,7 @@ const data = [
     ],
     closing:
       "The institution maintains a safe and supportive environment where students’ physical well-being is given utmost importance. Parents and students can be assured that necessary medical support is readily available during college hours. ",
-      closingEnd:"At Canara P.U. College, student health is considered an essential part of overall development and academic success.",
+    closingEnd: "At Canara P.U. College, student health is considered an essential part of overall development and academic success.",
   },
   {
     image: "/images/homePageImages/6.png",
@@ -85,15 +85,15 @@ const data = [
     ],
     closing:
       "Our objective is to empower students with knowledge, confidence, and exam-readiness, helping them secure admission to reputed institutions and build promising careers. ",
-    closingEnd:"At Canara P.U. College, we strive to create an environment where every learner is equipped to achieve excellence in competitive examinations. "
+    closingEnd: "At Canara P.U. College, we strive to create an environment where every learner is equipped to achieve excellence in competitive examinations. "
   },
   {
     image: "/images/homePageImages/6.png",
     title: "Remedial Classes",
     intro:
       "At Canara Pre-University College, we believe that every student has the potential to succeed when given the right support and guidance. Our Remedial Classes are designed to help learners strengthen their understanding of subjects, bridge learning gaps, and build the confidence needed to perform well academically. ",
-      pointsHeading:"These classes provide personalised academic support for students who require additional assistance beyond regular classroom teaching.",
-      keyFeaturesHeading: "Key Features of Remedial Classes",
+    pointsHeading: "These classes provide personalised academic support for students who require additional assistance beyond regular classroom teaching.",
+    keyFeaturesHeading: "Key Features of Remedial Classes",
     detailedFeatures: [
       { title: "Focused Attention", description: "Small-group or one-on-one sessions that address individual learning needs." },
       { title: "Concept Reinforcement", description: "Revision of fundamental concepts to ensure strong subject foundations." },
@@ -104,7 +104,7 @@ const data = [
     ],
     closing:
       "Our dedicated faculty ensures that students receive the support they need to move at a comfortable pace and achieve academic success. Remedial Classes reflect our commitment to inclusivity and to helping every learner reach their full potential. ",
-      closingEnd:"At Canara P.U. College, we stand by our students at every step of their learning journey."
+    closingEnd: "At Canara P.U. College, we stand by our students at every step of their learning journey."
   },
   {
     image: "/images/homePageImages/3.png",
@@ -155,8 +155,8 @@ const data = [
     title: "Scholarships",
     intro:
       "Canara Pre-University College is committed to promoting inclusive education by supporting students through a variety of scholarship schemes. These scholarships are designed to encourage academic excellence, support meritorious students, and assist those from economically disadvantaged backgrounds. ",
-      pointsHeading:"Our institution facilitates and guides students in availing government, institutional, and private scholarships, ensuring that financial constraints do not hinder academic progress. Types of Scholarships Available:",
-      extraHeading:"Types of Scholarships Available",
+    pointsHeading: "Our institution facilitates and guides students in availing government, institutional, and private scholarships, ensuring that financial constraints do not hinder academic progress. Types of Scholarships Available:",
+    extraHeading: "Types of Scholarships Available",
     extra: [
       "Merit-Based Scholarships for students with outstanding academic performance",
       "Need-Based Scholarships for students from economically weaker sections",
@@ -236,20 +236,20 @@ const FacilityCard = (props) => {
         gradientColor={gradientColor}
         centering={centering}
         content={
-            <FacilitiesCardContent
-                  closingEnd={data.closingEnd}
-                      keyFeaturesHeading={data.keyFeaturesHeading}
-                      extraHeading={data.extraHeading}
-                  pointsHeading={data.pointsHeading}
-                      title={data.title}
-                      intro={data.intro}
-                      points={data.points}
-                      detailedFeatures={data.detailedFeatures}
-                      extra={data.extra}
-                      closing={data.closing}
-                      imageSrc={data.image}
-                      imageAlt={data.title}
-                    />
+          <FacilitiesCardContent
+            closingEnd={data.closingEnd}
+            keyFeaturesHeading={data.keyFeaturesHeading}
+            extraHeading={data.extraHeading}
+            pointsHeading={data.pointsHeading}
+            title={data.title}
+            intro={data.intro}
+            points={data.points}
+            detailedFeatures={data.detailedFeatures}
+            extra={data.extra}
+            closing={data.closing}
+            imageSrc={data.image}
+            imageAlt={data.title}
+          />
         }
       />
     </motion.div>
@@ -261,186 +261,215 @@ function Innovations() {
   const isSectionInView = useInView(sectionRef, { once: true });
 
   return (
-    <section className="max-w-[90%] xl:max-w-[75%] mx-auto lg:mb-0 mb-8">
-      <div className=" relative overflow-hidden text-[#1D1D1F]" ref={sectionRef}>
-    
-            <motion.div
+    <section className="max-w-[90%] xl:max-w-[75%] mx-auto lg:mb-0 mb-8 py-4">
+      <div className="relative overflow-visible lg:overflow-hidden text-[#1D1D1F]" ref={sectionRef}>
+
+        <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={
             isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }
           }
           transition={{ duration: 0.5 }}
         >
-            <h1 className="font-bold leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl">
-              Our Campus
-              <br className="hidden lg:block"/>
-              Facilities
-            </h1>
-            <p className="lg2:text-xl lg:text-xl text-[#2A2A2A]  pt-4   mb-6 font-medium  lg:max-w-1/3">
-              Well-equipped & student-focused spaces that support learning & everyday campus life.
-            </p>
-          </motion.div>
-          <div className="lg:grid grid-cols-12 gap-4 overflow-hidden hidden relative">
-            <FacilityCard
+          <h1 className="font-bold leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl">
+            Our Campus
+            <br className="hidden lg:block" />
+            Facilities
+          </h1>
+          <p className="lg2:text-xl lg:text-xl text-[#2A2A2A]  pt-4   mb-6 font-medium  lg:max-w-1/3">
+            Well-equipped & student-focused spaces that support learning & everyday campus life.
+          </p>
+        </motion.div>
+        <div className="lg:grid grid-cols-12 gap-4 overflow-hidden hidden relative">
+          <FacilityCard
             data={data[0]}
-              title="Academic Counsellor"
-              description="Every class shall have a member of the teaching staff as the Academic Counsellor who will act as a friend, philosopher & guide to all the students entrusted to his / her personal care."
-              imageUrl="/images/homePageImages/1.png"
-              className="lg:col-span-4 md:col-span-5 row-span-2 mt-56"
-              gradientColor="#3c72d7"
-              delay={0.1}
-              index={0} // From left
-            />
-            <FacilityCard
+            title="Academic Counsellor"
+            description="Every class shall have a member of the teaching staff as the Academic Counsellor who will act as a friend, philosopher & guide to all the students entrusted to his / her personal care."
+            imageUrl="/images/homePageImages/1.png"
+            className="lg:col-span-4 md:col-span-5 row-span-2 mt-56"
+            gradientColor="#3c72d7"
+            delay={0.1}
+            index={0} // From left
+          />
+          <FacilityCard
             data={data[1]}
-              title="Book Bank"
-              description="This scheme is intended primarily to help the economically backward students who cannot afford to purchase expensive text books, to possess the same on loan from the Book Bank for the academic year."
-              imageUrl="/images/homePageImages/2.png"
-              className="lg:col-span-4 md:col-span-5 row-span-1 top-32"
-              gradientColor="#3c72d7"
-              delay={0.2}
-              index={1} // From right
-            />
-            <FacilityCard
+            title="Book Bank"
+            description="This scheme is intended primarily to help the economically backward students who cannot afford to purchase expensive text books, to possess the same on loan from the Book Bank for the academic year."
+            imageUrl="/images/homePageImages/2.png"
+            className="lg:col-span-4 md:col-span-5 row-span-1 top-32"
+            gradientColor="#3c72d7"
+            delay={0.2}
+            index={1} // From right
+          />
+          <FacilityCard
             data={data[7]}
-              title="Scholarships"
-              description="All Government & College Scholarships are given to needy and meritorious students."
-              imageUrl="/images/homePageImages/1.png"
-              className="lg:col-span-4 md:col-span-5 row-span-2"
-              gradientColor="#3c72d7"
-              delay={0.3}
-              index={2} // From left
-            />
-             <FacilityCard
-             data={data[3]}
-              title="Competitive exam training"
-              description=""
-              imageUrl="/images/homePageImages/4.png"
-              className="lg:col-span-4 md:col-span-5 row-span-2 top-[130px] "
-              gradientColor="#3c72d7"
-              delay={0.1}
-              index={0} // From left
-            />
-            <FacilityCard
+            title="Scholarships"
+            description="All Government & College Scholarships are given to needy and meritorious students."
+            imageUrl="/images/homePageImages/1.png"
+            className="lg:col-span-4 md:col-span-5 row-span-2"
+            gradientColor="#3c72d7"
+            delay={0.3}
+            index={2} // From left
+          />
+          <FacilityCard
+            data={data[3]}
+            title="Competitive exam training"
+            description=""
+            imageUrl="/images/homePageImages/4.png"
+            className="lg:col-span-4 md:col-span-5 row-span-2 top-[130px] "
+            gradientColor="#3c72d7"
+            delay={0.1}
+            index={0} // From left
+          />
+          <FacilityCard
             data={data[2]}
-              title="Medical Facilities"
-              description="All the bonafied students of this institution come under the “Safety Insurance Policy”, The Premium towards the same, is paid by the college from the ‘Parent-Teacher Association’ fund."
-              imageUrl="/images/homePageImages/5.png"
-              className="lg:col-span-4 md:col-span-5 row-span-1 "
-              gradientColor="#3c72d7"
-              delay={0.2}
-              index={1} // From right
-            />
-            <FacilityCard
+            title="Medical Facilities"
+            description="All the bonafied students of this institution come under the “Safety Insurance Policy”, The Premium towards the same, is paid by the college from the ‘Parent-Teacher Association’ fund."
+            imageUrl="/images/homePageImages/5.png"
+            className="lg:col-span-4 md:col-span-5 row-span-1 "
+            gradientColor="#3c72d7"
+            delay={0.2}
+            index={1} // From right
+          />
+          <FacilityCard
             data={data[4]}
-              title="Remedial Classes"
-              description="With the aim of enhancing students’ performance and aiding the slow learners, remedial classes are organised."
-              imageUrl="/images/homePageImages/6.png"
-              className="lg:col-span-4 md:col-span-5 row-span-2 -top-[220px]"
-              gradientColor="#3c72d7"
-              delay={0.3}
-              index={2} // From left
-            />
+            title="Remedial Classes"
+            description="With the aim of enhancing students’ performance and aiding the slow learners, remedial classes are organised."
+            imageUrl="/images/homePageImages/6.png"
+            className="lg:col-span-4 md:col-span-5 row-span-2 -top-[220px]"
+            gradientColor="#3c72d7"
+            delay={0.3}
+            index={2} // From left
+          />
 
-             <FacilityCard
-              data={data[6]}
-              title="Club Activities "
-              description=""
-              imageUrl="/images/homePageImages/1.png"
-              className="lg:col-span-4 md:col-span-5 row-span-2  "
-              gradientColor="#3c72d7"
-              delay={0.1}
-              index={0} // From left
-            />
-            <FacilityCard
-              data={data[5]}
-              title="Dedicated course Lab"
-              description=""
-              imageUrl="/images/homePageImages/2.png"
-              className="lg:col-span-4 md:col-span-5 row-span-1 -top-[95px]"
-              gradientColor="#3c72d7"
-              delay={0.2}
-              index={1} // From right
-            />
-           
-            <div className="lg:col-span-4 md:col-span-5 row-span-2 -top-[2000px]"></div>
-            <FacilityCard
-              data={data[8]}
-              title="Real-Time Student Updates for Parents"
-              description=""
-              imageUrl="/images/homePageImages/1.png"
-              className="lg:col-span-4 md:col-span-5 row-span-2 -top-[595px]"
-              gradientColor="#3c72d7"
-              delay={0.3}
-              index={2} // From left
-            />
-          </div>       
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-4 relative lg:hidden">
-            <FacilityCard
-              data={data[0]}
-              title="Academic Counsellor"
-              description="Every class shall have a member of the teaching staff as the Academic Counsellor who will act as a friend, philosopher & guide to all the students entrusted to his / her personal care."
-              className="col-span-1"
-              imageUrl="/images/homePageImages/1.png"
-              gradientColor="#3c72d7"
-              delay={0.1}
-              index={0}
-            />
-            <FacilityCard
-              data={data[1]}
-              title="Book Bank"
-              description="This scheme is intended primarily to help the economically backward students who cannot afford to purchase expensive text books, to possess the same on loan from the Book Bank for the academic year."
-              imageUrl="/images/homePageImages/2.png"
-              className="col-span-1"
-              gradientColor="#3c72d7"
-              delay={0.2}
-              index={1}
-            />
-            <FacilityCard
-              data={data[7]}
-              title="Scholarships"
-              description="All Government & College Scholarships are given to needy and meritorious students."
-              imageUrl="/images/homePageImages/1.png"
-              className="col-span-1"
-              gradientColor="#3c72d7"
-              delay={0.3}
-              index={2}
-            />
-            <FacilityCard
-              data={data[8]}
-              title="Communication System"
-              description="The College provides easy access to the attendance of the students through the  SMS service to parents. SMS alerts about college notifications are also given to lecturers and parents . The regularly Updated college Website gives a comprehensive view to the college activities."
-              imageUrl="/images/homePageImages/4.png"
-              className="col-span-1"
-              gradientColor="#3c72d7"
-              delay={0.4}
-              index={3}
-            />
-            <FacilityCard
-              data={data[2]}
-              title="Medical Facilities"
-              description="All the bonafied students of this institution come under the “Safety Insurance Policy”, The Premium towards the same, is paid by the college from the ‘Parent -Teacher Association’ fund."
-              imageUrl="/images/homePageImages/5.png"
-        
-              className="col-span-1"
-              centering="object-[5%_center]"
-              gradientColor="#3c72d7"
-              delay={0.5}
-              index={4}
-            />
-            <FacilityCard
-              data={data[4]}
-              title="Remedial Classes"
-              description="With the aim of enhancing students’ performance and aiding the slow learners, remedial classes are organised."
-              imageUrl="/images/homePageImages/6.png"
-              centering="object-[25%_center]"
-              className="col-span-1"
-              gradientColor="#3c72d7"
-              delay={0.6}
-              index={5}
-            />
-          </div>
+          <FacilityCard
+            data={data[6]}
+            title="Club Activities "
+            description=""
+            imageUrl="/images/homePageImages/1.png"
+            className="lg:col-span-4 md:col-span-5 row-span-2  "
+            gradientColor="#3c72d7"
+            delay={0.1}
+            index={0} // From left
+          />
+          <FacilityCard
+            data={data[5]}
+            title="Dedicated course Lab"
+            description=""
+            imageUrl="/images/homePageImages/2.png"
+            className="lg:col-span-4 md:col-span-5 row-span-1 -top-[95px]"
+            gradientColor="#3c72d7"
+            delay={0.2}
+            index={1} // From right
+          />
+
+          <div className="lg:col-span-4 md:col-span-5 row-span-2 -top-[2000px]"></div>
+          <FacilityCard
+            data={data[8]}
+            title="Real-Time Student Updates for Parents"
+            description=""
+            imageUrl="/images/homePageImages/1.png"
+            className="lg:col-span-4 md:col-span-5 row-span-2 -top-[595px]"
+            gradientColor="#3c72d7"
+            delay={0.3}
+            index={2} // From left
+          />
         </div>
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-4 relative lg:hidden pb-20">
+          <FacilityCard
+            data={data[0]}
+            title="Academic Counsellor"
+            description="Every class shall have a member of the teaching staff as the Academic Counsellor who will act as a friend, philosopher & guide to all the students entrusted to his / her personal care."
+            className="col-span-1"
+            imageUrl="/images/homePageImages/1.png"
+            gradientColor="#3c72d7"
+            delay={0.1}
+            index={0}
+          />
+          <FacilityCard
+            data={data[1]}
+            title="Book Bank"
+            description="This scheme is intended primarily to help the economically backward students who cannot afford to purchase expensive text books, to possess the same on loan from the Book Bank for the academic year."
+            imageUrl="/images/homePageImages/2.png"
+            className="col-span-1"
+            gradientColor="#3c72d7"
+            delay={0.2}
+            index={1}
+          />
+          <FacilityCard
+            data={data[7]}
+            title="Scholarships"
+            description="All Government & College Scholarships are given to needy and meritorious students."
+            imageUrl="/images/homePageImages/1.png"
+            className="col-span-1"
+            gradientColor="#3c72d7"
+            delay={0.3}
+            index={2}
+          />
+          <FacilityCard
+            data={data[3]}
+            title="Competitive exam training"
+            description=""
+            imageUrl="/images/homePageImages/4.png"
+            className="col-span-1"
+            gradientColor="#3c72d7"
+            delay={0.4}
+            index={3}
+          />
+          <FacilityCard
+            data={data[2]}
+            title="Medical Facilities"
+            description="All the bonafied students of this institution come under the “Safety Insurance Policy”, The Premium towards the same, is paid by the college from the ‘Parent-Teacher Association’ fund."
+            imageUrl="/images/homePageImages/5.png"
+            className="col-span-1"
+            centering="object-[5%_center]"
+            gradientColor="#3c72d7"
+            delay={0.5}
+            index={4}
+          />
+          <FacilityCard
+            data={data[4]}
+            title="Remedial Classes"
+            description="With the aim of enhancing students’ performance and aiding the slow learners, remedial classes are organised."
+            imageUrl="/images/homePageImages/6.png"
+            centering="object-[25%_center]"
+            className="col-span-1"
+            gradientColor="#3c72d7"
+            delay={0.6}
+            index={5}
+          />
+          <FacilityCard
+            data={data[6]}
+            title="Club Activities"
+            description=""
+            imageUrl="/images/homePageImages/1.png"
+            className="col-span-1"
+            gradientColor="#3c72d7"
+            delay={0.7}
+            index={6}
+          />
+          <FacilityCard
+            data={data[5]}
+            title="Dedicated course Lab"
+            description=""
+            imageUrl="/images/homePageImages/2.png"
+            className="col-span-1"
+            gradientColor="#3c72d7"
+            delay={0.8}
+            index={7}
+          />
+          <FacilityCard
+            data={data[8]}
+            title="Real-Time Student Updates for Parents"
+            description=""
+            imageUrl="/images/homePageImages/1.png"
+            className="col-span-1"
+            gradientColor="#3c72d7"
+            delay={0.9}
+            index={8}
+          />
+        </div>
+      </div>
     </section>
   );
 }
