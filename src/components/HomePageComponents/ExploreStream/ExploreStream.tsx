@@ -216,7 +216,7 @@ const ExploreStream = () => {
         <h1 className="leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl text-center   font-bold text-[#1D1D1F] ">
           Explore Our Stream Combinations
         </h1>
-        <p className="lg2:text-2xl lg:text-lg text-[#2A2A2A]  pt-4  text-center mb-6 font-medium px-2">
+        <p className="lg2:text-xl lg:text-xl text-[#2A2A2A]  pt-4  text-center mb-6 font-medium px-2">
           Find the program that fuels your passion and shapes your future
         </p>
       <div className="inline-flex items-center border border-gray-300 rounded-full mb-10">

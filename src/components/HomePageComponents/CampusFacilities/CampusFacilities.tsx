@@ -262,7 +262,7 @@ function Innovations() {
 
   return (
     <section className="max-w-[90%] xl:max-w-[75%] mx-auto lg:mb-0 mb-8 py-4">
-      <div className="relative overflow-visible lg:overflow-hidden text-[#1D1D1F]" ref={sectionRef}>
+      <div className="relative overflow-hidden text-[#1D1D1F]" ref={sectionRef}>
 
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -375,7 +375,7 @@ function Innovations() {
             index={2} // From left
           />
         </div>
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-4 relative lg:hidden pb-20">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-4 relative lg:hidden md:pb-20">
           <FacilityCard
             data={data[0]}
             title="Academic Counsellor"

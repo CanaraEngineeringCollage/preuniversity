@@ -408,11 +408,11 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({ title, description }) => 
                   )}
                   <motion.button
                     onClick={() => openCard(index)}
-                    className="text-[#2997FF] inline-flex text-[21px] items-center font-medium text-sm"
+                    className="text-[#3C71D7] inline-flex text-[21px] items-center font-medium text-sm"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    Read More <MdKeyboardArrowRight className="ml-1 mt-1 text-[20px] md:text-[25px]" />
+                    Read More <span> <MdKeyboardArrowRight className="ml-1 mt-1 text-[20px] md:text-[25px]" /> </span>
                   </motion.button>
                 </div>
               </div>
