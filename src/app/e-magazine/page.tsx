@@ -1,6 +1,6 @@
-import Magazine from '@/components/BuzzComponents/Magazine/Magazine'
-import React from 'react'
 import type { Metadata } from "next";
+import EMagazineClient from "./EMagazineClient";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "E-Magazine – Canara Pre-University College, Mangalore",
@@ -24,8 +24,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "E-Magazine – Canara Pre-University College, Mangalore",
-    description:
-      "Read the official E-Magazine featuring student talents, college highlights, and campus stories from Canara PU College.",
+    description: "Read the official E-Magazine featuring student talents, college highlights, and campus stories from Canara PU College.",
     url: "https://canarapucollege.com/e-magazine",
     siteName: "Canara PU College Mangalore",
     images: [
@@ -47,13 +46,8 @@ export const metadata: Metadata = {
   },
 };
 
-const page = () => {
-  return (
-    <div>
-          <Magazine /> 
-      
-    </div>
-  )
-}
+const Page = () => {
+  return <EMagazineClient />;
+};
 
-export default page
+export default Page;

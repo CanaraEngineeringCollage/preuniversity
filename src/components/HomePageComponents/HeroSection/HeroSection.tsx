@@ -9,8 +9,9 @@ import { useState } from "react";
 
 import { useRouter } from "next/navigation";
 import { ClipLoader } from "react-spinners";
-import { submitToGoogleSheet } from "@/utils/formSubmission";
+
 import FormModal from "@/components/Common/FormModal/FormModal";
+import { submitForm } from "@/utils/formSubmission";
 
 interface FormData {
   fullName: string;
@@ -32,9 +33,12 @@ const   HeroBanner = () => {
 const onSubmit = async (data: FormData) => {
   setLoading(true);
 
-  const result = await submitToGoogleSheet(data);
+  const result = await submitForm(data);
 
-  if (result.success) {
+  const sheetSuccess = result.sheet?.success;
+  const firestoreSuccess = result.firestore?.success;
+
+  if (sheetSuccess && firestoreSuccess) {
     reset();
     toast.success("Enquiry submitted successfully!");
   } else {
@@ -43,6 +47,7 @@ const onSubmit = async (data: FormData) => {
 
   setLoading(false);
 };
+
 
 
   const formRef = useRef(null);
@@ -77,7 +82,7 @@ const onSubmit = async (data: FormData) => {
       </div>
 
       {/* Form Container - Positioned on the Right */}
-      <div className="relative  container mx-auto h-full max-w-[1350px]  z-20 hidden md:flex items-center justify-end md:min-h-[90vh]">
+      <div className="relative  container mx-auto h-full max-w-[1350px]  z-10 hidden md:flex items-center justify-end md:min-h-[90vh]">
         <motion.div
           ref={formRef}
           initial={{ opacity: 0, x: 50 }} // Slide in from right

@@ -45,7 +45,7 @@ export default function Courses() {
         </Typography>
       </MenuHandler>
 
-<MenuList className="w-full bg-white !top-[195px] xl:!top-[212px] text-[#1D1D1F] p-0 shadow-none !border-none !outline-none !focus:outline-none">
+<MenuList className="w-full bg-white !top-[195px] xl:!top-[212px] z-50 text-[#1D1D1F] p-0 shadow-none !border-none !outline-none !focus:outline-none">
 
         {isMenuOpen && (
           <div className="w-[75%] mx-auto p-10">
@@ -63,7 +63,7 @@ export default function Courses() {
                   {/* PCMB */}
                   <motion.div custom={0}  initial="initial" animate="animate">
                     <Link href="/streams/pcmb">
-                      <p className={`text-base ${pathname.includes("pcmb") ? "text-primary" : "text-gray-600"}`}>
+                      <p className={`text-base ${pathname.includes("pcmb") ? "text-primary" : "text-[#2A2A2A]"}`}>
                         Physics, Chemistry, Mathematics & Biology (PCMB)
                       </p>
                     </Link>
@@ -72,7 +72,7 @@ export default function Courses() {
                   {/* PCME */}
                   <motion.div custom={1}  initial="initial" animate="animate">
                     <Link href="/streams/pcme">
-                      <p className={`text-base ${pathname.includes("pcme") ? "text-primary" : "text-gray-600"}`}>
+                      <p className={`text-base ${pathname.includes("pcme") ? "text-primary" : "text-[#2A2A2A]"}`}>
                         Physics, Chemistry, Mathematics & Electronics (PCME)
                       </p>
                     </Link>
@@ -81,7 +81,7 @@ export default function Courses() {
                   {/* PCMC */}
                   <motion.div custom={2}  initial="initial" animate="animate">
                     <Link href="/streams/pcmc">
-                      <p className={`text-base ${pathname.includes("pcmc") ? "text-primary" : "text-gray-600"}`}>
+                      <p className={`text-base ${pathname.includes("pcmc") ? "text-primary" : "text-[#2A2A2A]"}`}>
                         Physics, Chemistry, Mathematics & Computer Science (PCMC)
                       </p>
                     </Link>
@@ -90,7 +90,7 @@ export default function Courses() {
                   {/* PCMS */}
                   <motion.div custom={3}  initial="initial" animate="animate">
                     <Link href="/streams/pcms">
-                      <p className={`text-base ${pathname.includes("pcms") ? "text-primary" : "text-gray-600"}`}>
+                      <p className={`text-base ${pathname.includes("pcms") ? "text-primary" : "text-[#2A2A2A]"}`}>
                         Physics, Chemistry, Mathematics & Statistics (PCMS)
                       </p>
                     </Link>
@@ -111,7 +111,7 @@ export default function Courses() {
                   {/* BSBA */}
                   <motion.div custom={4}  initial="initial" animate="animate">
                     <Link href="/streams/bsba">
-                      <p className={`text-base ${pathname.includes("bsba") ? "text-primary" : "text-gray-600"}`}>
+                      <p className={`text-base ${pathname.includes("bsba") ? "text-primary" : "text-[#2A2A2A]"}`}>
                         Basic Maths, Statistics, Business Studies & Accountancy (BSBA)
                       </p>
                     </Link>
@@ -120,7 +120,7 @@ export default function Courses() {
                   {/* BEBA */}
                   <motion.div custom={5}  initial="initial" animate="animate">
                     <Link href="/streams/beba">
-                      <p className={`text-base ${pathname.includes("beba") ? "text-primary" : "text-gray-600"}`}>
+                      <p className={`text-base ${pathname.includes("beba") ? "text-primary" : "text-[#2A2A2A]"}`}>
                         Basic Maths, Economics, Business Studies & Accountancy (BEBA)
                       </p>
                     </Link>
@@ -129,7 +129,7 @@ export default function Courses() {
                   {/* SEBA */}
                   <motion.div custom={6}  initial="initial" animate="animate">
                     <Link href="/streams/seba">
-                      <p className={`text-base ${pathname.includes("seba") ? "text-primary" : "text-gray-600"}`}>
+                      <p className={`text-base ${pathname.includes("seba") ? "text-primary" : "text-[#2A2A2A]"}`}>
                         Statistics, Economics, Business Studies & Accountancy (SEBA)
                       </p>
                     </Link>
@@ -138,7 +138,7 @@ export default function Courses() {
                   {/* HEBA */}
                   <motion.div custom={7}  initial="initial" animate="animate">
                     <Link href="/streams/heba">
-                      <p className={`text-base ${pathname.includes("heba") ? "text-primary" : "text-gray-600"}`}>
+                      <p className={`text-base ${pathname.includes("heba") ? "text-primary" : "text-[#2A2A2A]"}`}>
                         History, Economics, Business Studies & Accountancy (HEBA)
                       </p>
                     </Link>
@@ -147,14 +147,14 @@ export default function Courses() {
                   {/* CSBA — moves automatically to next row */}
                   <motion.div custom={8}  initial="initial" animate="animate">
                     <Link href="/streams/csba">
-                      <p className={`text-base ${pathname.includes("csba") ? "text-primary" : "text-gray-600"}`}>
+                      <p className={`text-base ${pathname.includes("csba") ? "text-primary" : "text-[#2A2A2A]"}`}>
                         Computer Science, Statistics, Business Studies & Accountancy (CSBA)
                       </p>
                     </Link>
                   </motion.div>
                    <motion.div custom={8}  initial="initial" animate="animate">
                     <Link href="/streams/ceba">
-                      <p className={`text-base ${pathname.includes("ceba") ? "text-primary" : "text-gray-600"}`}>
+                      <p className={`text-base ${pathname.includes("ceba") ? "text-primary" : "text-[#2A2A2A]"}`}>
                         Computer Science, Economics, Business Studies & Accountancy (CEBA)
                       </p>
                     </Link>

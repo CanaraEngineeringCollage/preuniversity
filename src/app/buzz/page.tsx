@@ -1,7 +1,7 @@
-import ExploreCampus from "@/components/Common/QuestionBank/QuestionBank";
+
 import React from "react";
-import data from "../../utils/exploreCampusData/exploreCampusData.json";
 import type { Metadata } from "next";
+import ExploreCampus from "@/components/Common/QuestionBank/ExploreCampus";
 
 export const metadata: Metadata = {
   title: "Campus Buzz – News, Events & Updates | Canara Pre-University College",
@@ -55,9 +55,9 @@ const page = () => {
     <div>
 
       <ExploreCampus
-        campusEvents={data}
+    
         title="Your Campus Hub"
-        description="Stay updated with the latest news, events & achievements from across our campus"
+        description="Stay updated with the latest news, events & achievements from across our campus."
       />
     </div>
   );

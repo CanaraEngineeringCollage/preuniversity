@@ -1,16 +1,58 @@
+"use client";
 
-import Brochure from "@/components/Common/Brochure/Brochure";
-import FestLocation from "@/components/Common/FestLocation/FestLocation";
+import Brochure, { EventSection as BrochureData } from "@/components/Common/Brochure/Brochure";
+import FestLocation, { EventSection as FestLocationData } from "@/components/Common/FestLocation/FestLocation";
+import React, { useEffect, useState } from "react";
 
-export default function page() {
+// Helper to fetch from your CMS instead of Firebase
+async function getEventData(category: string) {
+  const cmsUrl = process.env.NEXT_PUBLIC_CMS_URL || "http://localhost:3000";
+  
+  try {
+    // We fetch with 'no-store' to ensure we always get the latest CMS updates
+    const res = await fetch(`${cmsUrl}/api/events?category=${category}`, {
+      cache: 'no-store',
+    });
+
+    if (!res.ok) return null;
+
+    const data = await res.json();
+    
+    // Your API returns { items: [ {category: 'footprints', ...} ] }
+    // We take the first item that matches our category
+    return data.items?.[0] || null;
+  } catch (err) {
+    console.error(`CMS Fetch Error for ${category}:`, err);
+    return null;
+  }
+}
+
+export default function Page() {
+  const category = "mat-kabbadi";
+  const [data, setData] = useState<any>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+    getEventData(category).then((res) => {
+      if (isMounted) {
+        setData(res);
+      }
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  // Casting data to the types expected by your components
+  const brochureData = data as BrochureData | null;
+  const festLocationData = data as FestLocationData | null;
+
   return (
-   
-      <div className="">
-
-        {/* Heading */}
-     <Brochure title="MAT Kabaddi" description="Two days of talent, competition & campus energy"/>
-     <FestLocation/>
-      </div>
-   
+    <div className="">
+      {/* Passing "mat-kabbadi" to your components */}
+      <Brochure category={category} initialData={brochureData} />
+      <FestLocation category={category} initialData={festLocationData} />
+    </div>
   );
 }
