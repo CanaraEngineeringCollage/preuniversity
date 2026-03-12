@@ -6,10 +6,10 @@ import Image from "next/image";
 
 const dummyAchievements = {
   "2024-2025": [
-     { name: "II Top Rank Achievers", score: "88/90", subject: "Math", image: "/images/academicAchievements/2024-2025/Rank 25.jpg" },
-    { name: "II Science Toppers", score: "88/90", subject: "Math", image: "/images/academicAchievements/2024-2025/Science 25.jpg" },
-    { name: "II Commerce Toppers", score: "88/90", subject: "Math", image: "/images/academicAchievements/2024-2025/Commerce 25.jpg" },
-    { name: "II Commerce Toppers", score: "88/90", subject: "Math", image: "/images/academicAchievements/2024-2025/Commerce 25 1.jpg" },
+     { name: "II Top Rank Achievers", score: "88/90", subject: "Math", image: "/images/academicAchievements/2024-2025/Rank 25webp" },
+    { name: "II Science Toppers", score: "88/90", subject: "Math", image: "/images/academicAchievements/2024-2025/Science 25webp" },
+    { name: "II Commerce Toppers", score: "88/90", subject: "Math", image: "/images/academicAchievements/2024-2025/Commerce 25webp" },
+    { name: "II Commerce Toppers", score: "88/90", subject: "Math", image: "/images/academicAchievements/2024-2025/Commerce 25 1webp" },
 
     
 
@@ -24,10 +24,10 @@ const dummyAchievements = {
 
 
 
-  "2022-2023": [    { name: "II Top Rank Achievers", score: "88/90", subject: "Math", image: "/images/academicAchievements/2022-23/rankHolders2025.jpg" },
-    { name: "II Science Toppers", score: "88/90", subject: "Math", image: "/images/academicAchievements/2022-23/science2025.jpg" },
-    { name: "II Commerce Toppers", score: "88/90", subject: "Math", image: "/images/academicAchievements/2022-23/commerce20.jpg" },
-    { name: "II Commerce Toppers", score: "88/90", subject: "Math", image: "/images/academicAchievements/2022-23/commerce2025(2).jpg" },],
+  "2022-2023": [    { name: "II Top Rank Achievers", score: "88/90", subject: "Math", image: "/images/academicAchievements/2022-23/rankHolders2025webp" },
+    { name: "II Science Toppers", score: "88/90", subject: "Math", image: "/images/academicAchievements/2022-23/science2025webp" },
+    { name: "II Commerce Toppers", score: "88/90", subject: "Math", image: "/images/academicAchievements/2022-23/commerce20webp" },
+    { name: "II Commerce Toppers", score: "88/90", subject: "Math", image: "/images/academicAchievements/2022-23/commerce2025(2)webp" },],
 };
 
 export default function AcademicToppers() {
