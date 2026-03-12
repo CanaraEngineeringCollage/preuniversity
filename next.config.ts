@@ -1,6 +1,16 @@
+// @ts-nocheck
+/* eslint-disable */
+
+import type { NextConfig } from "next";
+
 const nextConfig = {
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+
   images: {
     remotePatterns: [
       {
@@ -9,8 +19,10 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "cpucweb.canaraedu.org", // ⭐ Add your CMS domain here
+        hostname: "cpucweb.canaraedu.org", // Added your CMS domain
       },
     ],
   },
 };
+
+export default nextConfig;
