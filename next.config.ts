@@ -3,14 +3,13 @@
 
 import type { NextConfig } from "next";
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-
   images: {
     remotePatterns: [
       {
@@ -19,7 +18,11 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "cpucweb.canaraedu.org", // Added your CMS domain
+        hostname: "cpucweb.canaraedu.org", // Your CMS domain
+      },
+      {
+        protocol: "https",
+        hostname: "assets.unlayer.com", // 🔹 Added Unlayer to fix the 400 Bad Request error
       },
     ],
   },
