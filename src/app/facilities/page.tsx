@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Infrastructure – Canara Pre-University College, Mangalore",
   description:
     "Explore the modern infrastructure at Canara Pre-University College, Mangalore. Discover well-equipped laboratories, digital classrooms, library facilities, sports amenities, and a student-friendly learning environment.",
+  alternates: { canonical: "/facilities" },
   keywords: [
     "Canara PU College Infrastructure",
     "PUC campus facilities Mangalore",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     title: "Infrastructure – Canara Pre-University College, Mangalore",
     description:
       "Learn about the state-of-the-art infrastructure at Canara PU College including classrooms, labs, library, and sports facilities.",
-    url: "https://canarapucollege.com/infrastructure",
+    url: "/facilities",
     siteName: "Canara PU College Mangalore",
     images: [
       {

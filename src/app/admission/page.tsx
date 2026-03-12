@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Admissions – Canara Pre-University College, Mangalore",
   description:
     "Explore the admissions process at Canara Pre-University College, Mangalore. Learn about eligibility, required documents, Science & Commerce stream options, and how to apply for the academic year.",
+  alternates: { canonical: "/admission" },
   keywords: [
     "Canara PU College Admissions",
     "PUC Admissions Mangalore",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     title: "Admissions – Canara Pre-University College, Mangalore",
     description:
       "Begin your academic journey with Canara Pre-University College. Get detailed information on admission requirements, Science & Commerce streams, and the application process.",
-    url: "https://canarapucollege.com/admissions",
+    url: "/admission",
     siteName: "Canara PU College Mangalore",
     images: [
       {

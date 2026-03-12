@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Exam Circulars – Canara Pre-University College, Mangalore",
   description:
     "Access the latest exam circulars, notifications, timetables, and academic updates from Canara Pre-University College, Mangalore. Stay informed about important exam-related announcements.",
+  alternates: { canonical: "/exam-circulars" },
   keywords: [
     "Canara PU College Exam Circulars",
     "PUC exam notifications",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     title: "Exam Circulars – Canara Pre-University College, Mangalore",
     description:
       "Stay updated with official exam circulars, notices, and important academic announcements from Canara PU College.",
-    url: "https://canarapucollege.com/exam-circulars",
+    url: "/exam-circulars",
     siteName: "Canara PU College Mangalore",
     images: [
       {

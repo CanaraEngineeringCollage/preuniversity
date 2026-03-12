@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Code of Conduct – Canara Pre-University College, Mangalore",
   description:
     "Read the Code of Conduct at Canara Pre-University College, Mangalore. Learn about discipline, student responsibilities, campus rules, and guidelines that promote a safe and respectful learning environment.",
+  alternates: { canonical: "/conduct" },
   keywords: [
     "Canara PU College Code of Conduct",
     "PUC rules and regulations",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     title: "Code of Conduct – Canara Pre-University College",
     description:
       "Learn about student responsibilities, campus rules, and discipline guidelines at Canara PU College, Mangalore.",
-    url: "https://canarapucollege.com/conduct",
+    url: "/conduct",
     siteName: "Canara PU College Mangalore",
     images: [
       {

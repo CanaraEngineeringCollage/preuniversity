@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Exam Results – Canara Pre-University College, Mangalore",
   description:
     "View the latest exam results from Canara Pre-University College, Mangalore. Access PUC I & II year results, academic performance reports, and official result announcements.",
+  alternates: { canonical: "/exam-results" },
   keywords: [
     "Canara PU College Exam Results",
     "PUC results Mangalore",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     title: "Exam Results – Canara Pre-University College, Mangalore",
     description:
       "Check the official exam results and academic performance updates from Canara PU College.",
-    url: "https://canarapucollege.com/exam-results",
+    url: "/exam-results",
     siteName: "Canara PU College Mangalore",
     images: [
       {

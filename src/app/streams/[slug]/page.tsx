@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return {
     title: pageTitle,
     description: pageDescription,
+    alternates: { canonical: `/streams/${params.slug}` },
     keywords: [
       stream.name,
       `${stream.slug} PU College`,
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     openGraph: {
       title: pageTitle,
       description: pageDescription,
-      url: `https://canarapucollege.com/streams/${params.slug}`,
+      url: `/streams/${params.slug}`,
       siteName: "Canara PU College Mangalore",
       images: [
         {

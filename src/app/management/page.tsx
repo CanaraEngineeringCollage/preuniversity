@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Administration – Canara Pre-University College, Mangalore",
   description:
     "Meet the administration team of Canara Pre-University College, Mangalore. Our experienced leadership works together to ensure academic excellence, discipline, and student success since 1972.",
+  alternates: { canonical: "/management" },
   keywords: [
     "Canara PU College Administration",
     "Canara PU College Staff",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     title: "Administration – Canara Pre-University College, Mangalore",
     description:
       "Explore the administration and leadership team responsible for managing Canara Pre-University College with excellence and integrity.",
-    url: "https://canarapucollege.com/administration",
+    url: "/management",
     siteName: "Canara PU College Mangalore",
     images: [
       {

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy – Canara Pre-University College, Mangalore",
   description:
     "Read the Privacy Policy of Canara Pre-University College, Mangalore. Learn how we collect, use, protect, and manage your personal information in compliance with data protection standards.",
+  alternates: { canonical: "/privacy-policy" },
   keywords: [
     "Canara PU College Privacy Policy",
     "Privacy Policy Canara College",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     title: "Privacy Policy – Canara Pre-University College, Mangalore",
     description:
       "Understand how Canara PU College collects, uses, and protects personal information through this Privacy Policy.",
-    url: "https://canarapucollege.com/privacy-policy",
+    url: "/privacy-policy",
     siteName: "Canara PU College Mangalore",
     images: [
       {

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Fee Portal – Canara Pre-University College, Mangalore",
   description:
     "Access the official Fee Portal of Canara Pre-University College, Mangalore. Make secure online payments, view fee structures, track transactions, and stay updated with payment-related notifications.",
+  alternates: { canonical: "/fee-portal" },
   keywords: [
     "Canara PU College Fee Portal",
     "PUC fee payment online",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     title: "Fee Portal – Canara Pre-University College, Mangalore",
     description:
       "Securely pay your college fees online using the official Canara PU College Fee Portal.",
-    url: "https://canarapucollege.com/fee-portal",
+    url: "/fee-portal",
     siteName: "Canara PU College Mangalore",
     images: [
       {

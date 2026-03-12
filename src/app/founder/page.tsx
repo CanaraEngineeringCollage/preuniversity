@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Our Legacy – Canara Pre-University College, Mangalore",
   description:
     "Discover the rich legacy of Canara Pre-University College, Mangalore. A heritage of academic excellence, values, and service since 1972, shaping generations of students in Science and Commerce streams.",
+  alternates: { canonical: "/founder" },
   keywords: [
     "Canara PU College Legacy",
     "History of Canara Institutions",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     title: "Our Legacy – Canara Pre-University College, Mangalore",
     description:
       "Explore the heritage and historical journey of Canara PU College, Mangalore — empowering students with values and quality education for over five decades.",
-    url: "https://canarapucollege.com/legacy",
+    url: "/founder",
     siteName: "Canara PU College Mangalore",
     images: [
       {

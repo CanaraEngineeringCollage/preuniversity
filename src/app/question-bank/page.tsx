@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Question Bank – Canara Pre-University College, Mangalore",
   description:
     "Access the comprehensive Question Bank of Canara Pre-University College, Mangalore. Download previous years’ question papers, model questions, and practice sets for PUC I & II Science and Commerce streams.",
+  alternates: { canonical: "/question-bank" },
   keywords: [
     "Canara PU College Question Bank",
     "PUC question papers Mangalore",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Question Bank – Canara Pre-University College, Mangalore",
     description: "Download PUC I & II year question papers, model question banks, and exam preparation materials from Canara PU College.",
-    url: "https://canarapucollege.com/question-bank",
+    url: "/question-bank",
     siteName: "Canara PU College Mangalore",
     images: [
       {

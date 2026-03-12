@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: "About Us – Canara Pre-University College, Mangalore",
   description:
     "Learn about Canara Pre-University College, Mangalore—its legacy, mission, vision, leadership, and commitment to delivering quality education in Science and Commerce streams since 1972.",
+  alternates: { canonical: "/about" },
   keywords: [
     "Canara PU College",
     "About Canara PU College",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     title: "About Us – Canara Pre-University College, Mangalore",
     description:
       "Discover the history, core values, vision, mission, and leadership of Canara Pre-University College, a premier institution serving students since 1972.",
-    url: "https://canarapucollege.com/about",
+    url: "/about",
     siteName: "Canara PU College Mangalore",
     images: [
       {

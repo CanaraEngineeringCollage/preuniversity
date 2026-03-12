@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "E-Magazine – Canara Pre-University College, Mangalore",
   description:
     "Explore the digital E-Magazine of Canara Pre-University College, Mangalore. Read student articles, campus highlights, achievements, creative works, and annual publications online.",
+  alternates: { canonical: "/e-magazine" },
   keywords: [
     "Canara PU College E-Magazine",
     "PUC digital magazine",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "E-Magazine – Canara Pre-University College, Mangalore",
     description: "Read the official E-Magazine featuring student talents, college highlights, and campus stories from Canara PU College.",
-    url: "https://canarapucollege.com/e-magazine",
+    url: "/e-magazine",
     siteName: "Canara PU College Mangalore",
     images: [
       {

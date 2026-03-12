@@ -12,12 +12,13 @@ interface PaperItem {
   category: "firstYear" | "secondYear";
 }
 
-async function getQuestionPapers() {
+// 🔹 Added category parameter to use the backend filter
+async function getQuestionPapers(yearCategory: string) {
   const cmsUrl = process.env.NEXT_PUBLIC_CMS_URL || "http://localhost:3000";
   
   try {
-    // Increase limit to fetch all papers or handle pagination
-    const res = await fetch(`${cmsUrl}/api/question-papers?limit=100`, {
+    // 🔹 Pass the category to your API route
+    const res = await fetch(`${cmsUrl}/api/question-papers?limit=100&category=${yearCategory}`, {
       cache: 'no-store',
     });
 
@@ -25,28 +26,34 @@ async function getQuestionPapers() {
 
     const data = await res.json();
     
-    // MAP CMS fields to the PaperItem interface expected by your components
     return data.items.map((paper: any) => ({
       id: paper.id.toString(),
-      subjectName: paper.subject, // Map 'subject' from CMS to 'subjectName'
-      pdfUrl: `${cmsUrl}${paper.fileUrl}`, // Prefix with CMS URL so PDF opens
-      fileName: paper.name, // Map 'name' from CMS to 'fileName'
-      category: paper.year === "PUC1" ? "firstYear" : "secondYear", // Map year logic
+      subjectName: paper.subject, 
+      pdfUrl: `${cmsUrl}${paper.fileUrl}`, 
+      fileName: paper.name, 
+      category: paper.year === "PUC1" ? "firstYear" : "secondYear",
     }));
   } catch (error) {
-    console.error("Failed to load Question Papers from CMS:", error);
+    console.error(`Failed to load ${yearCategory} Question Papers:`, error);
     return [];
   }
 }
 
 export default function QuestionBankClient() {
-  const [papers, setPapers] = useState<PaperItem[]>([]);
+  const [firstYearPapers, setFirstYearPapers] = useState<PaperItem[]>([]);
+  const [secondYearPapers, setSecondYearPapers] = useState<PaperItem[]>([]);
 
   useEffect(() => {
     let isMounted = true;
-    getQuestionPapers().then((res) => {
+    
+    // 🔹 Fetch both categories concurrently from the backend
+    Promise.all([
+      getQuestionPapers("PUC1"),
+      getQuestionPapers("PUC2") // Replace "PUC2" if your DB uses a different string for 2nd year
+    ]).then(([firstYearRes, secondYearRes]) => {
       if (isMounted) {
-        setPapers(res);
+        setFirstYearPapers(firstYearRes);
+        setSecondYearPapers(secondYearRes);
       }
     });
 
@@ -58,7 +65,8 @@ export default function QuestionBankClient() {
   return (
     <>
       <section><Banner /></section>
-      <section><QuestionSection papers={papers} /></section>
+      {/* 🔹 Pass the already separated arrays as props */}
+      <section><QuestionSection firstYear={firstYearPapers} secondYear={secondYearPapers} /></section>
     </>
   );
 }
