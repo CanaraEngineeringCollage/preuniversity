@@ -28,7 +28,7 @@ function Navbar({ openSidebar, sidebar }: { openSidebar: () => void; sidebar: bo
   return (
     <>
       {/* First Header */}
-      <section className={`bg-white relative transition-all duration-500 ease-in-out `}>
+      <section className={`bg-white relative z-40 transition-all duration-500 ease-in-out `}>
         <nav className="  py-6 max-w-[90%]  lg:max-w-[90%] mx-auto">
           {/* For large and Medium-sized Screen */}
           <div className="flex items-center justify-between relative  lg:py-2 xl:py-3 container-padding">

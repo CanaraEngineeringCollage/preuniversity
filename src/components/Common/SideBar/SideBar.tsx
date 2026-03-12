@@ -85,9 +85,10 @@ export default function Sidebar({ sidebar, openSidebar }: { sidebar: boolean; op
     }, [sidebar, openSidebar]);
   return (
     <div>
-      <div
-        className={`sidebar bg-white z-[1000] h-[100vh] fixed md:top-[5rem] top-20 left-0  pb-36 ${!sidebar ? "translate-x-[-100%]" : "translate-x-0"
-          } ease-in-out duration-500 pt-6 ${sidebar ? "" : ""}`}
+        <div
+        className={`sidebar bg-white z-30 h-[100vh] fixed top-0 left-0  pb-32 ${
+          !sidebar ? "translate-x-[-100%]" : "translate-x-0"
+        } ease-in-out duration-500 pt-28 ${sidebar ? "" : ""}`}
       >
         <div className="px-8 max-w-xs">
           {

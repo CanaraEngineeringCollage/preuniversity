@@ -11,7 +11,7 @@ function Layout({ children }: { children: React.ReactNode }) {
     <>
       <div className="min-h-screen ">
         {/* overflow-x-hidden */}
-        <header className="top-0 left-0 right-0 bg-white z-[1111] ">
+        <header className="top-0 z-40 bg-white  ">
           <Navbar openSidebar={() => openSidebar((prev) => !prev)} sidebar={sidebar} />
         </header>
         <main className=" font-poppins">
