@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Download } from "../../../public/icons";
-import { UpArrow, DownArrow } from "../../../public/icons";
+import { Download, UpArrow, DownArrow } from "../../../public/icons";
 
 interface PaperItem {
   id: string;
@@ -18,12 +17,9 @@ interface QuestionSectionProps {
   secondYear: PaperItem[];
 }
 
-// 🔹 Accept firstYear and secondYear directly
 const QuestionSection = ({ firstYear, secondYear }: QuestionSectionProps) => {
   const [showFirstYear, setShowFirstYear] = useState(false);
   const [showSecondYear, setShowSecondYear] = useState(false);
-
-  // 🔹 Frontend filter logic completely removed!
 
   return (
     <section className="max-w-7xl xl:max-w-[75%] px-5 mx-auto my-10 lg:my-16 text-[#1D1D1F]">
@@ -31,9 +27,14 @@ const QuestionSection = ({ firstYear, secondYear }: QuestionSectionProps) => {
         <h1 className="font-bold text-[30px] lg:text-[45px]">Question Bank</h1>
 
         {/* ================= 1st Year ================= */}
-        <div onClick={() => setShowFirstYear(!showFirstYear)} className="flex gap-2 cursor-pointer justify-between mt-5 lg:mt-10">
+        <div 
+          onClick={() => setShowFirstYear(!showFirstYear)} 
+          className="flex gap-2 cursor-pointer justify-between mt-5 lg:mt-10 items-center"
+        >
           <h1 className="text-xl font-bold">1st Year Question Papers</h1>
-          {showFirstYear ? <UpArrow /> : <DownArrow />}
+          <button>
+            {showFirstYear ? <UpArrow /> : <DownArrow />}
+          </button>
         </div>
 
         <AnimatePresence>
@@ -68,9 +69,14 @@ const QuestionSection = ({ firstYear, secondYear }: QuestionSectionProps) => {
         </AnimatePresence>
 
         {/* ================= 2nd Year ================= */}
-        <div onClick={() => setShowSecondYear(!showSecondYear)} className="flex cursor-pointer justify-between gap-2 mt-10">
+        <div 
+          onClick={() => setShowSecondYear(!showSecondYear)} 
+          className="flex cursor-pointer justify-between gap-2 mt-10 items-center"
+        >
           <h1 className="text-xl font-bold">2nd Year Question Papers</h1>
-          {showSecondYear ? <UpArrow /> : <DownArrow />}
+          <button>
+            {showSecondYear ? <UpArrow /> : <DownArrow />}
+          </button>
         </div>
 
         <AnimatePresence>
