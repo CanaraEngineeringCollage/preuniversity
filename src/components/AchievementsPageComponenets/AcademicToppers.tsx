@@ -17,22 +17,19 @@ export default function AcademicToppers() {
   const [years, setYears] = useState<string[]>([]);
   const [openYear, setOpenYear] = useState<string>("");
   const [loading, setLoading] = useState(true);
-  const [loadingYear, setLoadingYear] = useState<string>(""); // Tracks if a specific accordion is loading
+  const [loadingYear, setLoadingYear] = useState<string>("");
 
   const yearRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
-  // 1. Fetch only the unique years on initial load
   useEffect(() => {
     const fetchInitialData = async () => {
       try {
-        // Fetch ONLY the years list using the optimized action we added to the backend
         const res = await fetch(`${process.env.NEXT_PUBLIC_CMS_URL}/api/academic-toppers?action=getYears`);
         if (!res.ok) throw new Error("Failed to fetch years");
         
         const fetchedYears: string[] = await res.json();
         setYears(fetchedYears);
         
-        // If there are years, open the first one and fetch its data
         if (fetchedYears.length > 0) {
           const firstYear = fetchedYears[0];
           setOpenYear(firstYear);
@@ -48,14 +45,11 @@ export default function AcademicToppers() {
     fetchInitialData();
   }, []);
 
-  // 2. The Lazy Loading function - fetches data only for a specific year
   const fetchYearData = async (targetYear: string) => {
-    // If we already downloaded this year's data previously, do nothing!
     if (achievements[targetYear]) return;
 
     setLoadingYear(targetYear);
     try {
-      // Fetch only the specific year (limit 100 per year max to be safe)
       const params = new URLSearchParams({ limit: "100", year: targetYear });
       const res = await fetch(`${process.env.NEXT_PUBLIC_CMS_URL}/api/academic-toppers?${params.toString()}`);
       
@@ -63,7 +57,6 @@ export default function AcademicToppers() {
       
       const data = await res.json();
       
-      // Save it into our state dictionary
       setAchievements((prev) => ({
         ...prev,
         [targetYear]: data.items ?? []
@@ -79,17 +72,10 @@ export default function AcademicToppers() {
     const isOpening = openYear !== year;
     setOpenYear(isOpening ? year : "");
 
-    if (isOpening) {
-      // LAZY LOAD: Fetch data right as they open the accordion (if we don't have it)
-      if (!achievements[year]) {
-        await fetchYearData(year);
-      }
-
-      // Smooth scroll (Fixed the bug by attaching the ref below)
-      setTimeout(() => {
-        yearRefs.current[year]?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 50);
+    if (isOpening && !achievements[year]) {
+      await fetchYearData(year);
     }
+    // Note: Scrolling is now handled by motion.div onAnimationStart for smoothness
   };
 
   if (loading) {
@@ -113,7 +99,7 @@ export default function AcademicToppers() {
           years.map((year) => (
             <div
               key={year}
-             // FIXED: Attached ref for auto-scroll
+              ref={(el) => { yearRefs.current[year] = el; }}
               className="border-b-2 border-[#000000] pb-4"
             >
               {/* YEAR HEADER */}
@@ -128,7 +114,6 @@ export default function AcademicToppers() {
                   )}
                 </div>
                 
-                {/* Animated Arrow Icon */}
                 <motion.span 
                   className="text-2xl flex items-center origin-center"
                   animate={{ rotate: openYear === year ? 180 : 0 }}
@@ -147,10 +132,16 @@ export default function AcademicToppers() {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}
                     className="overflow-hidden"
+                    // TRIGGER SMOOTH SCROLL WHEN ANIMATION STARTS
+                    onAnimationStart={() => {
+                      yearRefs.current[year]?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                    }}
                   >
-                    {/* Don't render grid if it's currently loading */}
                     {loadingYear !== year && (
                       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-y-10 py-14">
                         {achievements[year]?.map((item) => {
@@ -164,9 +155,9 @@ export default function AcademicToppers() {
                                 <Image
                                   src={fullImageUrl}
                                   alt={item.name}
-                                  height={400} // FIXED: Reduced image size
-                                  width={400}  // FIXED: Reduced image size
-                                  sizes="(max-width: 640px) 50vw, 33vw" // FIXED: Responsive sizes
+                                  height={400}
+                                  width={400}
+                                  sizes="(max-width: 640px) 50vw, 33vw"
                                   className="w-full aspect-square object-contain"
                                 />
                               </div>
