@@ -73,9 +73,9 @@ const textStyle = cn(textColor, "text-base md:text-xl font-sans leading-relaxed"
           <Image
             src={imageSrc}
             alt={imageAlt}
-            height={500}
-            width={900}
-            className="max-h-[500px] w-full mx-auto object-cover object-[center_20%] mb-6 md:mb-10 rounded-t-3xl"
+            height={1000}
+            width={1000}
+            className="h-full w-full mx-auto object-cover mb-6 md:mb-10 rounded-t-3xl"
           />
         </motion.div>
       )}

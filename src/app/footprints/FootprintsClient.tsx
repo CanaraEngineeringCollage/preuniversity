@@ -44,9 +44,10 @@ export default function FootprintsClient() {
   const brochureData = data as BrochureData | null;
   const festLocationData = data as FestLocationData | null;
 
+  const dummyDescriptionList = ["Footprints is a State Level Inter-School Cultural & Literary Fest for students of Classes IX and X. Over two exciting days, schools from across the state come together to celebrate creativity, talent, and the spirit of healthy competition through a vibrant range of cultural and literary events."];
   return (
     <div className="">
-      <Brochure category={category} initialData={brochureData} />
+      <Brochure descriptionList={dummyDescriptionList} category={category} initialData={brochureData} />
       <FestLocation category={category} initialData={festLocationData} />
     </div>
   );

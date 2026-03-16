@@ -1,11 +1,5 @@
 "use client";
 
-
-
-interface BrochureProps {
-  category: "mat-kabbadi" | "footprints";
-}
-
 export interface EventSection {
   heading: string;
   description: string;
@@ -16,9 +10,10 @@ export interface EventSection {
 interface BrochureProps {
   category: "mat-kabbadi" | "footprints";
   initialData?: EventSection | null;
+  descriptionList?: string[]; // Added as a separate prop here
 }
 
-export default function Brochure({ category, initialData }: BrochureProps) {
+export default function Brochure({ category, initialData, descriptionList }: BrochureProps) {
   const data = initialData;
 
   if (!data) {
@@ -35,6 +30,13 @@ export default function Brochure({ category, initialData }: BrochureProps) {
 
             {/* Register Button Skeleton (Desktop) */}
             <div className="hidden lg:block w-48 h-12 bg-gray-300 rounded-[90px]"></div>
+          </div>
+
+          {/* Array Data (descriptionList) Skeleton added here */}
+          <div className="w-full mb-10 space-y-3 ">
+            <div className="h-4 md:h-5 bg-gray-300 rounded w-11/12"></div>
+            <div className="h-4 md:h-5 bg-gray-300 rounded w-5/6"></div>
+            <div className="h-4 md:h-5 bg-gray-300 rounded w-full"></div>
           </div>
 
           {/* Flipbook iFrame Skeleton */}
@@ -63,7 +65,7 @@ export default function Brochure({ category, initialData }: BrochureProps) {
           <div>
             <h1 className="text-[30px] lg:text-[54px] font-bold text-[#1D1D1F]">{data.heading}</h1>
 
-            <p className="lg:text-2xl text-base text-[#1D1D1F] font-medium">{data.description} lore</p>
+            <p className="lg:text-2xl text-base text-[#1D1D1F] font-medium">{data.description}</p>
           </div>
 
           {/* Register Button (Desktop) */}
@@ -73,6 +75,19 @@ export default function Brochure({ category, initialData }: BrochureProps) {
             </button>
           )}
         </div>
+
+        {/* Array Data (descriptionList) added right after the heading block as a separate prop */}
+        {descriptionList && descriptionList.length > 0 && (
+          <div className="w-full mb-10">
+            <ul className="list-disc  space-y-2">
+              {descriptionList.map((desc, index) => (
+                <li key={index} className="text-base lg:text-lg text-[#1D1D1F] font-medium">
+                  {desc}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* Flipbook iFrame */}
         {data.flipbookUrl && (

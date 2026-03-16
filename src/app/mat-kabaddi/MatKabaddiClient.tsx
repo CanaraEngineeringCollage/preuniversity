@@ -43,10 +43,13 @@ export default function MatKabaddiClient() {
 
   const brochureData = data as BrochureData | null;
   const festLocationData = data as FestLocationData | null;
-
+const dummyDescriptionList = [
+  "The Department of Physical Education at Canara PU College organizes Mat Kabaddi tournaments that bring together enthusiastic teams to compete in an energetic sporting environment. The event provides a platform for participants to showcase their strength, coordination, and teamwork while competing on professional-grade mats.",
+  "The tournament highlights discipline, sportsmanship and healthy competition, making Mat Kabaddi an exciting sporting event on campus.",
+];
   return (
     <div className="">
-      <Brochure category={category} initialData={brochureData} />
+      <Brochure descriptionList={dummyDescriptionList} category={category} initialData={brochureData} />
       <FestLocation category={category} initialData={festLocationData} />
     </div>
   );

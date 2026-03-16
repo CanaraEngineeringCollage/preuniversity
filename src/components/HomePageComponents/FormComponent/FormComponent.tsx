@@ -57,7 +57,7 @@ function FormComponent() {
     <div className="relative flex items-center justify-center mb-7 md:mb-0 p-4 overflow-hidden">
       {/* Background half white and half blue */}
       <div className="absolute inset-0 z-0">
-        <div className="h-1/2 bg-white"></div> {/* Fixed broken bg-[ class */}
+        <div className="h-1/2 "></div> {/* Fixed broken bg-[ class */}
         <div className="h-1/2 md:bg-[#001A48]"></div>
       </div>
 

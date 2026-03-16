@@ -7,7 +7,7 @@ import FacilitiesCardContent, { FeatureItem } from "./FacilitiesCard/FacilitiesC
 
 const data = [
   {
-    image: "/images/homePageImages/1.png",
+    image: "/images/facilities/Academic Counselling.webp",
     title: "Academic Counselling",
     intro:
       "At Canara Pre-University College, Academic Counselling plays a vital role in guiding students towards informed and meaningful educational choices. Our counselling services are designed to help every learner understand their strengths, set clear academic goals, and shape a pathway that supports their future aspirations.",
@@ -24,7 +24,7 @@ const data = [
       closingEnd:"At Canara P.U. College, we are committed to nurturing learners with clarity, direction, and confidence.",
   },
   {
-    image: "/images/homePageImages/2.png",
+    image: "/images/facilities/Book Bank.webp",
     title: "Book Bank",
     intro:
       "The Book Bank facility at Canara Pre-University College is designed to support students by providing easy access to essential academic resources throughout the academic year. This initiative ensures that every learner, irrespective of financial background, has the opportunity to study with the required textbooks and reference materials.",
@@ -56,7 +56,7 @@ const data = [
       closingEnd:"At Canara P.U. College, student health is considered an essential part of overall development and academic success.",
   },
   {
-    image: "/images/homePageImages/6.png",
+    image: "/images/facilities/Competitive Exam Training.webp",
     title: "Competitive Exam Training",
     intro:
       "Canara Pre-University College is committed to preparing students for success beyond the classroom. To support their aspirations for professional courses and higher education, we offer specialised training programmes for major competitive examinations such as NEET, JEE, KCET, CA Foundation, and other entrance tests. Our competitive exam coaching focuses on building strong subject foundations, developing problem-solving abilities, and enhancing exam-oriented skills through well-structured teaching methods.",
@@ -84,7 +84,7 @@ const data = [
     closingEnd:"At Canara P.U. College, we strive to create an environment where every learner is equipped to achieve excellence in competitive examinations. "
   },
   {
-    image: "/images/homePageImages/6.png",
+    image: "/images/facilities/Remedial Classes.webp",
     title: "Remedial Classes",
     intro:
       "At Canara Pre-University College, we believe that every student has the potential to succeed when given the right support and guidance. Our Remedial Classes are designed to help learners strengthen their understanding of subjects, bridge learning gaps, and build the confidence needed to perform well academically. ",
@@ -103,7 +103,7 @@ const data = [
       closingEnd:"At Canara P.U. College, we stand by our students at every step of their learning journey."
   },
   {
-    image: "/images/homePageImages/3.png",
+    image: "/images/homePageImages/Dedicated Course Labs.webp",
     title: "Dedicated Course Labs",
     intro:
       "Canara Pre-University College provides well-equipped, subject-specific laboratories that support experiential learning and practical application of theoretical concepts. Our dedicated labs are designed to meet academic requirements while encouraging curiosity, experimentation, and scientific thinking among students.",
@@ -118,7 +118,7 @@ const data = [
       "Through these dedicated laboratories, Canara P.U. College ensures a balanced blend of theory and practice, preparing students for higher education and future careers in science and technology.",
   },
   {
-    image: "/images/homePageImages/4.png",
+    image: "/images/facilities/Club Activities.webp",
     title: "Club Activities",
     intro:
       "At Canara Pre-University College, club activities play a vital role in the holistic development of students. Our wide range of clubs provide platforms for creativity, leadership, teamwork, and intellectual growth beyond academics. These clubs encourage students to explore their interests, develop skills, and express their talents in a supportive and engaging environment.",
@@ -147,7 +147,7 @@ const data = [
       "Through these diverse club activities, Canara Pre-University College ensures the all-round development of students, helping them become confident, skilled, and socially responsible individuals.",
   },
   {
-    image: "/images/homePageImages/1.png",
+    image: "/images/facilities/Scholarships.webp",
     title: "Scholarships",
     intro:
       "Canara Pre-University College is committed to promoting inclusive education by supporting students through a variety of scholarship schemes. These scholarships are designed to encourage academic excellence, support meritorious students, and assist those from economically disadvantaged backgrounds. ",
@@ -165,7 +165,7 @@ const data = [
       "Through these initiatives, Canara P.U. College ensures equal opportunities for all learners, enabling them to pursue education with confidence and focus on academic excellence.",
   },
   {
-    image: "/images/homePageImages/1.png",
+    image: "/images/facilities/Real-Time Student Updates for Parents.webp",
     title: "Real-Time Student Updates for Parents",
     intro: "We ensure parents are kept in the loop regarding their child's progress and safety through consistent communication channels.",
     points: [
