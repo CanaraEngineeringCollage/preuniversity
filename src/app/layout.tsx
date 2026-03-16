@@ -5,6 +5,7 @@ import Layout from "@/components/Common/Layout/Layout";
 import localFont from "next/font/local";
 import ScrollToTopButton from "@/components/Common/ScrollToTopButton";
 import Script from "next/script";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,13 +57,19 @@ const helveticaNow = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://canarapucollege.com"),
   title: {
-    default:
-      "Canara Pre-University College, Mangalore – Empowering Futures Since 1972",
+    default: "Canara Pre-University College, Mangalore – Empowering Futures Since 1972",
     template: "%s | Canara PU College, Mangalore",
   },
   description:
     "Canara P.U. College, Mangalore offers two-year Pre-University education in Science (PCMB, PCMC, PCME, PCMS) and Commerce (BSBA, BEBA, CSBA, SEBA, HEBA). Co-educational, inclusive of all castes and creeds since 1972.",
-  keywords: ["Canara PU College", "Pre University College Mangalore", "PCMB PCMC PCMS", "BSBA BEBA CSBA SEBA HEBA", "PU College admissions Mangalore", "education Mangalore"],
+  keywords: [
+    "Canara PU College",
+    "Pre University College Mangalore",
+    "PCMB PCMC PCMS",
+    "BSBA BEBA CSBA SEBA HEBA",
+    "PU College admissions Mangalore",
+    "education Mangalore",
+  ],
   authors: [{ name: "Canara Pre-University College, Mangalore", url: "https://canarapucollege.com" }],
   alternates: { canonical: "/" },
   robots: {
@@ -86,8 +93,8 @@ export const metadata: Metadata = {
         url: "/icon.png",
         width: 1200,
         height: 630,
-        alt: "Canara PU College Mangalore Campus"
-      }
+        alt: "Canara PU College Mangalore Campus",
+      },
     ],
     locale: "en_US",
     type: "website",
@@ -95,11 +102,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Canara Pre-University College, Mangalore",
-    description: "Co-educational pre-university institution offering Science & Commerce since 1972.", 
+    description: "Co-educational pre-university institution offering Science & Commerce since 1972.",
     images: ["/icon.png"],
   },
 };
-
 
 export default function RootLayout({
   children,
@@ -108,8 +114,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body className={`${geistSans.variable} ${geistMono.variable} ${helveticaNow.variable} antialiased`}>
-        <Layout>{children} <ScrollToTopButton/> </Layout> <Script src="/smoothScroll/smoothScroll.js"/>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${helveticaNow.variable} antialiased`}>
+        <Toaster position="top-center" />
+        <Layout>
+          {children} <ScrollToTopButton />{" "}
+        </Layout>{" "}
+        <Script src="/smoothScroll/smoothScroll.js" />
       </body>
     </html>
   );
