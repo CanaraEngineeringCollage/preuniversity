@@ -103,7 +103,7 @@ const data = [
       closingEnd:"At Canara P.U. College, we stand by our students at every step of their learning journey."
   },
   {
-    image: "/images/homePageImages/Dedicated Course Labs.webp",
+    image: "/images/facilities/Dedicated Course Labs.webp",
     title: "Dedicated Course Labs",
     intro:
       "Canara Pre-University College provides well-equipped, subject-specific laboratories that support experiential learning and practical application of theoretical concepts. Our dedicated labs are designed to meet academic requirements while encouraging curiosity, experimentation, and scientific thinking among students.",
@@ -207,7 +207,7 @@ export default function FacilitiesSection() {
             />
 
             <div
-              className="absolute top-[70%] h-[30%] inset-x-0 z-[100] pointer-events-none"
+              className="absolute top-[70%] h-[30%] inset-x-0 z-20 pointer-events-none"
               style={{
                 backgroundImage: "linear-gradient(to top, #3d6cbe, transparent)",
               }}

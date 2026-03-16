@@ -39,6 +39,7 @@ function Navbar({ openSidebar, sidebar }: { openSidebar: () => void; sidebar: bo
                   alt="logo"
                   width={309}
                   height={68}
+                  priority
                   onClick={() => router.push("/")}
                   className="
     cursor-pointer

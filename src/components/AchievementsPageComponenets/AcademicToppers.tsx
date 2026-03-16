@@ -144,7 +144,7 @@ export default function AcademicToppers() {
                   >
                     {loadingYear !== year && (
                       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-y-10 py-14">
-                        {achievements[year]?.map((item) => {
+                     {achievements[year]?.map((item) => {
                           const fullImageUrl = item.imageUrl.startsWith('/') 
                             ? `${process.env.NEXT_PUBLIC_CMS_URL}${item.imageUrl}` 
                             : item.imageUrl;
@@ -152,12 +152,11 @@ export default function AcademicToppers() {
                           return (
                             <div key={item.id} className="text-center px-2">
                               <div className="w-full relative rounded-lg overflow-hidden mb-3 bg-gray-50">
-                                <Image
+                                <img
                                   src={fullImageUrl}
                                   alt={item.name}
-                                  height={400}
-                                  width={400}
-                                  sizes="(max-width: 640px) 50vw, 33vw"
+                                  height="400"
+                                  width="400"
                                   className="w-full aspect-square object-contain"
                                 />
                               </div>

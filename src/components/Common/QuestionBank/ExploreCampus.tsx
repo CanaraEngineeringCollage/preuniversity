@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import React, { useState, useRef, useEffect, createContext, useCallback } from "react";
 import { MdClose, MdKeyboardArrowRight } from "react-icons/md";
 
@@ -78,7 +78,6 @@ const contentVariants = {
 };
 
 // Parse HTML & Add CMS URL to images
-// Parse HTML & Add CMS URL to images
 const parseEventContent = (html: string) => {
   const root = parse(html);
   const firstHeadingEl = root.querySelector("h1,h2,h3,h4,h5,h6");
@@ -137,12 +136,12 @@ function EventContent({ description }: { description: EventDescriptionProps }) {
   return (
     <div>
       {description.src && (
-        <Image
+        <img
           src={description.src}
           alt={description.topTitle}
           loading="lazy"
-          width={1000}
-          height={700}
+          width="1000"
+          height="700"
           className="object-cover overflow-hidden rounded-t-2xl w-full h-full mb-10"
         />
       )}
@@ -372,11 +371,11 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({ title, description }) => 
                 className="flex cursor-pointer flex-col md:flex-row items-center gap-6 bg-white rounded-2xl shadow-md transition-shadow hover:shadow-lg"
               >
                 <div className="flex-shrink-0 w-full md:w-[40%]">
-                  <Image
+                  <img
                     src={src || "/placeholder-image.jpg"}
                     alt={topTitle || event.category}
-                    width={1000}
-                    height={1000}
+                    width="1000"
+                    height="1000"
                     className="rounded-l-2xl object-cover w-full h-[40vh] md:h-[30vh] lg2:h-[50vh]"
                   />
                 </div>

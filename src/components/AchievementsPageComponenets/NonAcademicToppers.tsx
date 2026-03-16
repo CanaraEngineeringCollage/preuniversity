@@ -83,11 +83,11 @@ export default function NonAcademicToppers() {
             return (
               <motion.div key={item.id} variants={itemVariants} className="text-center">
                 <div className="w-full relative rounded-lg overflow-hidden transition-shadow duration-300 ">
-                  <Image
+                  <img
                     src={fullImageUrl}
                     alt={`Achievement ${index + 1}`}
-                    height={500}
-                    width={500}
+                    height="500"
+                    width="500"
                     className="w-full object-contain transition-transform duration-500"
                   />
                 </div>
