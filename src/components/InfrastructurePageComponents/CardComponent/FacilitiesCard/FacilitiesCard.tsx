@@ -140,10 +140,14 @@ const textStyle = cn(textColor, "text-base md:text-xl font-sans leading-relaxed"
         {extraHeading && (
           <motion.p  className={cn(headingColor, "text-xl md:text-2xl font-semibold mt-1 mb-6")}>{extraHeading}</motion.p>
         )}
-            {/* Optional Header for Extra section could go here */}
             <motion.ul className={cn(textStyle, "list-disc pl-5 space-y-2")}>
               {extra.map((item, idx) => (
-                <li key={idx} className="pl-2 font-medium">{item}</li>
+                // Use dangerouslySetInnerHTML to render the <strong> tags
+                <li 
+                  key={idx} 
+                  className="pl-2 font-medium"
+                  dangerouslySetInnerHTML={{ __html: item }} 
+                />
               ))}
             </motion.ul>
           </div>

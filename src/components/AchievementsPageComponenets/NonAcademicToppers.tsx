@@ -50,17 +50,17 @@ export default function NonAcademicToppers() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {/* GRID LAYOUT: Adjust grid-cols to change items per row */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-10">
+        {/* GRID LAYOUT: Adjusted to match 3 columns on tablet and 4 on desktop */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 md:gap-10">
           {dummyAchievements.map((imagePath, index) => (
             <motion.div key={index} variants={itemVariants} className="text-center">
-              <div className="w-full relative rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="w-full relative rounded-lg overflow-hidden transition-shadow duration-300 ">
                 <Image
                   src={imagePath}
                   alt={`Achievement ${index + 1}`}
                   height={500}
                   width={500}
-                  className="w-full h-auto object-cover  transition-transform duration-500"
+                  className="w-full  object-contain transition-transform duration-500"
                 />
               </div>
             </motion.div>

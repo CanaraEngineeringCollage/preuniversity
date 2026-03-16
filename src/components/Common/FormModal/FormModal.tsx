@@ -48,7 +48,6 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     handleSubmit,
     watch,
     reset,
-    formState: { errors },
   } = useForm<FormData>({
     defaultValues: {
       fullName: "",
@@ -61,30 +60,29 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const commentValue = watch("enquiry") || "";
   const [loading, setLoading] = React.useState(false);
 
-const handleFormSubmit = async (data: FormData) => {
-  setLoading(true);
+  const handleFormSubmit = async (data: FormData) => {
+    setLoading(true);
 
-  const result = await submitForm({
-    fullName: data.fullName,
-    email: data.email,
-    phoneNumber: data.phoneNumber,
-    comments: data.enquiry,
-  });
+    const result = await submitForm({
+      fullName: data.fullName,
+      email: data.email,
+      phoneNumber: data.phoneNumber,
+      comments: data.enquiry,
+    });
 
-  const sheetSuccess = result.sheet?.success;
-  const firestoreSuccess = result.firestore?.success;
+    const sheetSuccess = result.sheet?.success;
+    const firestoreSuccess = result.cms?.success;
 
-  if (sheetSuccess || firestoreSuccess) {
-    reset();
-    onClose();
-    toast.success("Enquiry submitted successfully!");
-  } else {
-    toast.error("Something went wrong. Try again.");
-  }
+    if (sheetSuccess || firestoreSuccess) {
+      reset();
+      onClose();
+      toast.success("Enquiry submitted successfully!");
+    } else {
+      toast.error("Something went wrong. Try again.");
+    }
 
-  setLoading(false);
-};
-
+    setLoading(false);
+  };
 
   // close on outside click
   useOutsideClick(containerRef, () => {
@@ -92,7 +90,7 @@ const handleFormSubmit = async (data: FormData) => {
   });
 
   // ESC key close
- React.useEffect(() => {
+  React.useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -131,7 +129,7 @@ const handleFormSubmit = async (data: FormData) => {
               onClick={onClose}
               className="absolute top-4 right-4  h-8 w-8 rounded-full flex items-center justify-center text-white"
             >
-             <IoCloseOutline className="text-4xl text-black" />
+              <IoCloseOutline className="text-4xl text-black" />
             </button>
 
             {/* Title */}
@@ -149,24 +147,12 @@ const handleFormSubmit = async (data: FormData) => {
                 <input
                   type="text"
                   placeholder="Your Full Name"
-                  {...register("fullName", {
-                    required: "Full name is required",
-                    minLength: {
-                      value: 2,
-                      message: "Full name must be at least 2 characters",
-                    },
-                    maxLength: {
-                      value: 50,
-                      message: "Full name cannot exceed 50 characters",
-                    },
-                  })}
+                  {...register("fullName")}
+                  required
+                  minLength={2}
+                  maxLength={50}
                   className="w-full border-b border-gray-300 focus:outline-none text-lg py-2"
                 />
-                {errors.fullName && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {errors.fullName.message}
-                  </p>
-                )}
               </div>
 
               {/* Email */}
@@ -174,21 +160,11 @@ const handleFormSubmit = async (data: FormData) => {
                 <input
                   type="email"
                   placeholder="Your Email"
-                  {...register("email", {
-                    required: "Email is required",
-                    pattern: {
-                      value:
-                        /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                      message: "Enter a valid email",
-                    },
-                  })}
+                  {...register("email")}
+                  required
+                  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                   className="w-full border-b border-gray-300 focus:outline-none text-lg py-2"
                 />
-                {errors.email && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {errors.email.message}
-                  </p>
-                )}
               </div>
 
               {/* Phone */}
@@ -196,59 +172,33 @@ const handleFormSubmit = async (data: FormData) => {
                 <input
                   type="tel"
                   placeholder="Your Phone Number"
-                  {...register("phoneNumber", {
-                    required: "Phone number is required",
-                    pattern: {
-                      value: /^\+?[\d\s-]{10,15}$/,
-                      message: "Enter a valid phone number",
-                    },
-                  })}
+                  {...register("phoneNumber")}
+                  required
+                  pattern="^\+?[\d\s-]{10,15}$"
                   className="w-full border-b border-gray-300 focus:outline-none text-lg py-2"
                 />
-                {errors.phoneNumber && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {errors.phoneNumber.message}
-                  </p>
-                )}
               </div>
 
               {/* Enquiry */}
-        <div className="relative">
-  <textarea
-    rows={3}
-    maxLength={250}
-    placeholder="Your Enquiry"
-    {...register("enquiry", {
-      required: "Enquiry is required",
-      minLength: {
-        value: 2,
-        message: "Enquiry must be at least 2 characters",
-      },
-      maxLength: {
-        value: 250,
-        message: "Enquiry cannot exceed 250 characters",
-      },
-      validate: {
-        notOnlyWhitespace: (value) =>
-          value.trim().length > 0 ||
-          "Enquiry cannot be only whitespace",
-      },
-    })}
-    className="w-full border-b border-gray-300 focus:outline-none text-lg py-2 pr-12 resize-none"
-  />
+              <div className="relative">
+                <textarea
+                  rows={3}
+                  placeholder="Your Enquiry"
+                  {...register("enquiry")}
+                  required
+                  minLength={2}
+                  maxLength={250}
+                  className="w-full border-b border-gray-300 focus:outline-none text-lg py-2 pr-12 resize-none"
+                />
 
-  {/* Character Counter inside textarea (top-right or bottom-right) */}
-  <span className="absolute right-0 top-0 mt-2 mr-2 text-xs text-gray-500">
-    {commentValue.length}/250
-  </span>
-
-  {/* Error Message Below */}
-  <p className="text-red-500 text-sm mt-1">{errors.enquiry?.message}</p>
-</div>
-
+                {/* Character Counter inside textarea (top-right or bottom-right) */}
+                <span className="absolute right-0 top-0 mt-2 mr-2 text-xs text-gray-500">
+                  {commentValue.length}/250
+                </span>
+              </div>
 
               {/* Submit Button */}
-              <div className="flex justify-center">
+              <div className="flex justify-center mt-2">
                 <button
                   type="submit"
                   disabled={loading}

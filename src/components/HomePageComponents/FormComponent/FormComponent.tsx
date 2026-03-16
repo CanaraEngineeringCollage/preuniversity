@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { ClipLoader } from "react-spinners";
 import Image from "next/image";
 import { submitForm } from "@/utils/formSubmission";
+import toast from "react-hot-toast";
 
 function FormComponent() {
   const [formData, setFormData] = useState({
@@ -38,9 +39,9 @@ function FormComponent() {
         enquiry: "",
       });
       setCharCount(0);
-      // toast.success("Enquiry submitted successfully!");
+      toast.success("Enquiry submitted successfully!");
     } else {
-      // toast.error("Something went wrong! Try again.");
+      toast.error("Something went wrong! Try again.");
     }
 
     setIsLoading(false);

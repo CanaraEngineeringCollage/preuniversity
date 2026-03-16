@@ -72,11 +72,11 @@ const data = [
     ],
     extraHeading: "Exams Covered",
     extra: [
-      "NEET – For aspiring medical professionals",
-      "JEE (Main/Advanced) – For engineering aspirants",
-      "KCET – For admissions to professional courses in Karnataka",
-      "CA Foundation – For students aiming for a career in Chartered Accountancy",
-      "CLAT – Focused CLAT guidance with expert mentoring to build legal aptitude, reasoning skills, and exam confidence",
+    "<strong>NEET</strong> – For aspiring medical professionals",
+      "<strong>JEE</strong> (Main/Advanced) – For engineering aspirants",
+      "<strong>KCET</strong> – For admissions to professional courses in Karnataka",
+      "<strong>CA</strong> Foundation – For students aiming for a career in Chartered Accountancy",
+      "<strong>CLAT</strong> – Focused CLAT guidance with expert mentoring to build legal aptitude, reasoning skills, and exam confidence",
       "Other national and state-level entrance examinations.",
     ],
     closing:
@@ -151,8 +151,8 @@ const data = [
     title: "Scholarships",
     intro:
       "Canara Pre-University College is committed to promoting inclusive education by supporting students through a variety of scholarship schemes. These scholarships are designed to encourage academic excellence, support meritorious students, and assist those from economically disadvantaged backgrounds. ",
-      pointsHeading:"Our institution facilitates and guides students in availing government, institutional, and private scholarships, ensuring that financial constraints do not hinder academic progress. Types of Scholarships Available:",
-      extraHeading:"Types of Scholarships Available",
+      pointsHeading:"Our institution facilitates and guides students in availing government, institutional, and private scholarships, ensuring that financial constraints do not hinder academic progress.",
+      extraHeading:"Types of Scholarships Available:",
     extra: [
       "Merit-Based Scholarships for students with outstanding academic performance",
       "Need-Based Scholarships for students from economically weaker sections",

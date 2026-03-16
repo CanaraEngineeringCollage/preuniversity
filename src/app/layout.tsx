@@ -4,6 +4,7 @@ import "./globals.css";
 import Layout from "@/components/Common/Layout/Layout";
 import localFont from "next/font/local";
 import ScrollToTopButton from "@/components/Common/ScrollToTopButton";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -108,7 +109,7 @@ export default function RootLayout({
   return (
     <html lang="en">
     <body className={`${geistSans.variable} ${geistMono.variable} ${helveticaNow.variable} antialiased`}>
-        <Layout>{children} <ScrollToTopButton/></Layout>
+        <Layout>{children} <ScrollToTopButton/> </Layout> <Script src="/smoothScroll/smoothScroll.js"/>
       </body>
     </html>
   );

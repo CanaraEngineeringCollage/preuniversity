@@ -7,11 +7,7 @@ import FormComponent from "@/components/HomePageComponents/FormComponent/FormCom
 import HeroBanner from "@/components/HomePageComponents/HeroSection/HeroSection";
 import SeeYourSelf from "@/components/HomePageComponents/SeeYourSelf/SeeYourSelf";
 
-const DynamicCampusFacilities = dynamic(
-  () =>
-    import("@/components/HomePageComponents/CampusFacilities/CampusFacilities"),
-  { ssr: false }
-);
+const DynamicCampusFacilities = dynamic(() => import("@/components/HomePageComponents/CampusFacilities/CampusFacilities"), { ssr: false });
 
 export default function HomeClient() {
   return (
@@ -38,4 +34,3 @@ export default function HomeClient() {
     </>
   );
 }
-

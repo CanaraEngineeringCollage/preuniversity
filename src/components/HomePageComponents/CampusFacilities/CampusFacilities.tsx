@@ -6,9 +6,6 @@ import AppleStyledCard from "@/ui/apple-card";
 import CardContent from "@/ui/card-content";
 import FacilitiesCardContent from "@/components/InfrastructurePageComponents/CardComponent/FacilitiesCard/FacilitiesCard";
 
-
-
-
 const data = [
   {
     image: "/images/homePageImages/1.png",
@@ -41,7 +38,8 @@ const data = [
     ],
     closing:
       "The facility helps reduce the financial burden on families while promoting a culture of consistent reading and responsible usage of resources. Students can borrow books through a simple, student-friendly process managed by our library team. ",
-    closingEnd: "At Canara P.U. College, the Book Bank stands as a testament to our commitment to inclusivity and academic support, ensuring that every student has the tools they need to succeed.",
+    closingEnd:
+      "At Canara P.U. College, the Book Bank stands as a testament to our commitment to inclusivity and academic support, ensuring that every student has the tools they need to succeed.",
   },
   {
     image: "/images/homePageImages/5.png",
@@ -67,32 +65,43 @@ const data = [
     // Using detailedFeatures to separate the Heading from Description
     keyFeaturesHeading: "Key Features of Our Training Programme",
     detailedFeatures: [
-      { title: "Expert Faculty", description: "Experienced teachers and subject specialists who guide students with concept clarity and exam strategies." },
+      {
+        title: "Expert Faculty",
+        description: "Experienced teachers and subject specialists who guide students with concept clarity and exam strategies.",
+      },
       { title: "Structured Study Plan", description: "Systematic schedules covering the entire syllabus with ample time for revision." },
       { title: "Comprehensive Study Material", description: "Well-prepared notes, question banks, and model papers tailored to each exam." },
       { title: "Regular Tests & Assessments", description: "Weekly/Monthly tests, mock examinations, and performance analysis to track progress." },
-      { title: "Doubt-Clearing Sessions", description: "Dedicated time for personalised attention to ensure every student overcomes academic challenges." },
-      { title: "Career Guidance & Counselling", description: "Support for selecting the right career paths based on aptitude, interest, and performance." },
+      {
+        title: "Doubt-Clearing Sessions",
+        description: "Dedicated time for personalised attention to ensure every student overcomes academic challenges.",
+      },
+      {
+        title: "Career Guidance & Counselling",
+        description: "Support for selecting the right career paths based on aptitude, interest, and performance.",
+      },
     ],
     extraHeading: "Exams Covered",
     extra: [
-      "NEET – For aspiring medical professionals",
-      "JEE (Main/Advanced) – For engineering aspirants",
-      "KCET – For admissions to professional courses in Karnataka",
-      "CA Foundation – For students aiming for a career in Chartered Accountancy",
-      "CLAT – Focused CLAT guidance with expert mentoring to build legal aptitude, reasoning skills, and exam confidence",
+      "<strong>NEET</strong> – For aspiring medical professionals",
+      "<strong>JEE</strong> (Main/Advanced) – For engineering aspirants",
+      "<strong>KCET</strong> – For admissions to professional courses in Karnataka",
+      "<strong>CA</strong> Foundation – For students aiming for a career in Chartered Accountancy",
+      "<strong>CLAT</strong> – Focused CLAT guidance with expert mentoring to build legal aptitude, reasoning skills, and exam confidence",
       "Other national and state-level entrance examinations.",
     ],
     closing:
       "Our objective is to empower students with knowledge, confidence, and exam-readiness, helping them secure admission to reputed institutions and build promising careers. ",
-    closingEnd: "At Canara P.U. College, we strive to create an environment where every learner is equipped to achieve excellence in competitive examinations. "
+    closingEnd:
+      "At Canara P.U. College, we strive to create an environment where every learner is equipped to achieve excellence in competitive examinations. ",
   },
   {
     image: "/images/homePageImages/6.png",
     title: "Remedial Classes",
     intro:
       "At Canara Pre-University College, we believe that every student has the potential to succeed when given the right support and guidance. Our Remedial Classes are designed to help learners strengthen their understanding of subjects, bridge learning gaps, and build the confidence needed to perform well academically. ",
-    pointsHeading: "These classes provide personalised academic support for students who require additional assistance beyond regular classroom teaching.",
+    pointsHeading:
+      "These classes provide personalised academic support for students who require additional assistance beyond regular classroom teaching.",
     keyFeaturesHeading: "Key Features of Remedial Classes",
     detailedFeatures: [
       { title: "Focused Attention", description: "Small-group or one-on-one sessions that address individual learning needs." },
@@ -104,7 +113,7 @@ const data = [
     ],
     closing:
       "Our dedicated faculty ensures that students receive the support they need to move at a comfortable pace and achieve academic success. Remedial Classes reflect our commitment to inclusivity and to helping every learner reach their full potential. ",
-    closingEnd: "At Canara P.U. College, we stand by our students at every step of their learning journey."
+    closingEnd: "At Canara P.U. College, we stand by our students at every step of their learning journey.",
   },
   {
     image: "/images/homePageImages/3.png",
@@ -112,11 +121,31 @@ const data = [
     intro:
       "Canara Pre-University College provides well-equipped, subject-specific laboratories that support experiential learning and practical application of theoretical concepts. Our dedicated labs are designed to meet academic requirements while encouraging curiosity, experimentation, and scientific thinking among students.",
     detailedFeatures: [
-      { title: "Physics Laboratory", description: "The Physics Lab is equipped with modern instruments and apparatus to help students understand fundamental principles through hands-on experimentation. Practical sessions enhance conceptual clarity in areas such as mechanics, optics, electricity, and magnetism under the guidance of experienced faculty." },
-      { title: "Chemistry Laboratory", description: "Our Chemistry Lab offers a safe and well-ventilated environment with adequate workstations and essential equipment. Students perform experiments in organic, inorganic, and physical chemistry, gaining practical skills while adhering to strict safety protocols." },
-      { title: "Biology Laboratory", description: "The Biology Lab provides facilities for studying botany and zoology through microscopes, models, charts, and specimens. Practical work enables students to observe, analyse, and understand biological structures and processes effectively." },
-      { title: "Computer Science Laboratory", description: "The Computer Science Lab is equipped with updated systems and software to support programming, data handling, and practical computing skills. It enables students to apply theoretical knowledge in areas such as coding, algorithms, and information technology." },
-      { title: "Electronics Laboratory", description: "The Electronics Lab offers hands-on exposure to electronic components, circuits, and devices. Students learn the fundamentals of electronics through practical experiments that strengthen analytical and technical skills." },
+      {
+        title: "Physics Laboratory",
+        description:
+          "The Physics Lab is equipped with modern instruments and apparatus to help students understand fundamental principles through hands-on experimentation. Practical sessions enhance conceptual clarity in areas such as mechanics, optics, electricity, and magnetism under the guidance of experienced faculty.",
+      },
+      {
+        title: "Chemistry Laboratory",
+        description:
+          "Our Chemistry Lab offers a safe and well-ventilated environment with adequate workstations and essential equipment. Students perform experiments in organic, inorganic, and physical chemistry, gaining practical skills while adhering to strict safety protocols.",
+      },
+      {
+        title: "Biology Laboratory",
+        description:
+          "The Biology Lab provides facilities for studying botany and zoology through microscopes, models, charts, and specimens. Practical work enables students to observe, analyse, and understand biological structures and processes effectively.",
+      },
+      {
+        title: "Computer Science Laboratory",
+        description:
+          "The Computer Science Lab is equipped with updated systems and software to support programming, data handling, and practical computing skills. It enables students to apply theoretical knowledge in areas such as coding, algorithms, and information technology.",
+      },
+      {
+        title: "Electronics Laboratory",
+        description:
+          "The Electronics Lab offers hands-on exposure to electronic components, circuits, and devices. Students learn the fundamentals of electronics through practical experiments that strengthen analytical and technical skills.",
+      },
     ],
     closing:
       "Through these dedicated laboratories, Canara P.U. College ensures a balanced blend of theory and practice, preparing students for higher education and future careers in science and technology.",
@@ -127,25 +156,83 @@ const data = [
     intro:
       "At Canara Pre-University College, club activities play a vital role in the holistic development of students. Our wide range of clubs provide platforms for creativity, leadership, teamwork, and intellectual growth beyond academics. These clubs encourage students to explore their interests, develop skills, and express their talents in a supportive and engaging environment.",
     detailedFeatures: [
-      { title: "Interact Club", description: "Promotes social responsibility and leadership through community service, awareness programmes, and humanitarian initiatives." },
-      { title: "Cultural Club", description: "Encourages participation in cultural events, festivals, and celebrations, nurturing appreciation for art, tradition, and diversity." },
-      { title: "Extracurricular Activities", description: "Provides opportunities for students to engage in competitions and skill-based activities that enhance confidence and teamwork." },
-      { title: "Literary Club", description: "Develops reading, writing, and communication skills through debates, creative writing, poetry, and language-based activities." },
-      { title: "Quiz Club", description: "Enhances general knowledge, critical thinking, and quick decision-making through inter-class and inter-college quiz competitions." },
-      { title: "Music Club", description: "Nurtures musical talent by encouraging vocal and instrumental performances, practice sessions, and cultural programmes." },
-      { title: "Can Vision", description: "It is a vibrant platform that reflects the creativity, achievements, and skills of our students and faculty. It serves as a mirror of campus life, capturing academic excellence, cultural diversity, and the dynamic spirit of the institution." },
-      { title: "Ladies Club", description: "Empowers girl students through awareness programmes, health education, life skills, and confidence-building activities." },
-      { title: "Science Club", description: "Stimulates scientific curiosity through experiments, exhibitions, projects, and innovation-oriented activities." },
-      { title: "Commerce Club", description: "Provides insights into commerce, business, finance, and economics through seminars, discussions, and practical exposure." },
-      { title: "Eco Club", description: "Promotes environmental awareness, sustainability practices, tree plantation drives, and eco-friendly initiatives." },
-      { title: "Photography Club", description: "Encourages creative expression through photography, visual storytelling, exhibitions, and technical skill development." },
-      { title: "Dramatics Club", description: "Develops acting, stage confidence, and teamwork through theatre, skits, mime, and dramatics performances." },
-      { title: "Astronomy Club", description: "Creates interest in space science through sky observations, discussions, presentations, and scientific exploration." },
+      {
+        title: "Interact Club",
+        description: "Promotes social responsibility and leadership through community service, awareness programmes, and humanitarian initiatives.",
+      },
+      {
+        title: "Cultural Club",
+        description:
+          "Encourages participation in cultural events, festivals, and celebrations, nurturing appreciation for art, tradition, and diversity.",
+      },
+      {
+        title: "Extracurricular Activities",
+        description: "Provides opportunities for students to engage in competitions and skill-based activities that enhance confidence and teamwork.",
+      },
+      {
+        title: "Literary Club",
+        description: "Develops reading, writing, and communication skills through debates, creative writing, poetry, and language-based activities.",
+      },
+      {
+        title: "Quiz Club",
+        description:
+          "Enhances general knowledge, critical thinking, and quick decision-making through inter-class and inter-college quiz competitions.",
+      },
+      {
+        title: "Music Club",
+        description: "Nurtures musical talent by encouraging vocal and instrumental performances, practice sessions, and cultural programmes.",
+      },
+      {
+        title: "Can Vision",
+        description:
+          "It is a vibrant platform that reflects the creativity, achievements, and skills of our students and faculty. It serves as a mirror of campus life, capturing academic excellence, cultural diversity, and the dynamic spirit of the institution.",
+      },
+      {
+        title: "Ladies Club",
+        description: "Empowers girl students through awareness programmes, health education, life skills, and confidence-building activities.",
+      },
+      {
+        title: "Science Club",
+        description: "Stimulates scientific curiosity through experiments, exhibitions, projects, and innovation-oriented activities.",
+      },
+      {
+        title: "Commerce Club",
+        description: "Provides insights into commerce, business, finance, and economics through seminars, discussions, and practical exposure.",
+      },
+      {
+        title: "Eco Club",
+        description: "Promotes environmental awareness, sustainability practices, tree plantation drives, and eco-friendly initiatives.",
+      },
+      {
+        title: "Photography Club",
+        description: "Encourages creative expression through photography, visual storytelling, exhibitions, and technical skill development.",
+      },
+      {
+        title: "Dramatics Club",
+        description: "Develops acting, stage confidence, and teamwork through theatre, skits, mime, and dramatics performances.",
+      },
+      {
+        title: "Astronomy Club",
+        description: "Creates interest in space science through sky observations, discussions, presentations, and scientific exploration.",
+      },
       { title: "Art Club", description: "Fosters creativity through drawing, painting, craftwork, and art exhibitions." },
-      { title: "Debate Club", description: "Enhances logical thinking, public speaking, and communication skills through structured debates and discussions." },
-      { title: "Mathematics Club", description: "Promotes analytical thinking and problem-solving skills through puzzles, activities, and math-based competitions." },
-      { title: "IT Club", description: "Develops digital literacy, programming skills, and technological awareness through hands-on activities and workshops." },
-      { title: "Olympiad Training", description: "Prepares students for national and international Olympiad examinations, strengthening subject knowledge and competitive skills." },
+      {
+        title: "Debate Club",
+        description: "Enhances logical thinking, public speaking, and communication skills through structured debates and discussions.",
+      },
+      {
+        title: "Mathematics Club",
+        description: "Promotes analytical thinking and problem-solving skills through puzzles, activities, and math-based competitions.",
+      },
+      {
+        title: "IT Club",
+        description: "Develops digital literacy, programming skills, and technological awareness through hands-on activities and workshops.",
+      },
+      {
+        title: "Olympiad Training",
+        description:
+          "Prepares students for national and international Olympiad examinations, strengthening subject knowledge and competitive skills.",
+      },
     ],
     closing:
       "Through these diverse club activities, Canara Pre-University College ensures the all-round development of students, helping them become confident, skilled, and socially responsible individuals.",
@@ -155,8 +242,9 @@ const data = [
     title: "Scholarships",
     intro:
       "Canara Pre-University College is committed to promoting inclusive education by supporting students through a variety of scholarship schemes. These scholarships are designed to encourage academic excellence, support meritorious students, and assist those from economically disadvantaged backgrounds. ",
-    pointsHeading: "Our institution facilitates and guides students in availing government, institutional, and private scholarships, ensuring that financial constraints do not hinder academic progress. Types of Scholarships Available:",
-    extraHeading: "Types of Scholarships Available",
+    pointsHeading:
+      "Our institution facilitates and guides students in availing government, institutional, and private scholarships, ensuring that financial constraints do not hinder academic progress.",
+    extraHeading: "Types of Scholarships Available:",
     extra: [
       "Merit-Based Scholarships for students with outstanding academic performance",
       "Need-Based Scholarships for students from economically weaker sections",
@@ -212,19 +300,9 @@ const FacilityCard = (props) => {
     <motion.div
       ref={ref}
       initial={
-        isClient
-          ? isDesktop
-            ? { opacity: 0, y: 80 }
-            : { opacity: 0, x: horizontalDirection }
-          : false // <--- prevents SSR mismatch
+        isClient ? (isDesktop ? { opacity: 0, y: 80 } : { opacity: 0, x: horizontalDirection }) : false // <--- prevents SSR mismatch
       }
-      animate={
-        isInView
-          ? isDesktop
-            ? { opacity: 1, y: 0 }
-            : { opacity: 1, x: 0 }
-          : {}
-      }
+      animate={isInView ? (isDesktop ? { opacity: 1, y: 0 } : { opacity: 1, x: 0 }) : {}}
       transition={{ duration: 0.6, ease: "easeOut", delay }}
       className={`relative rounded-2xl overflow-hidden group h-[360px] ${className}`}
     >
@@ -263,12 +341,9 @@ function Innovations() {
   return (
     <section className="max-w-[90%] xl:max-w-[75%] mx-auto lg:mb-0 mb-8 py-4">
       <div className="relative overflow-hidden text-[#1D1D1F]" ref={sectionRef}>
-
         <motion.div
           initial={{ opacity: 0, y: -50 }}
-          animate={
-            isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }
-          }
+          animate={isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
           transition={{ duration: 0.5 }}
         >
           <h1 className="font-bold leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl">

@@ -36,7 +36,7 @@ const onSubmit = async (data: FormData) => {
   const result = await submitForm(data);
 
   const sheetSuccess = result.sheet?.success;
-  const firestoreSuccess = result.firestore?.success;
+  const firestoreSuccess = result.cms?.success;
 
   if (sheetSuccess && firestoreSuccess) {
     reset();
@@ -82,7 +82,7 @@ const onSubmit = async (data: FormData) => {
       </div>
 
       {/* Form Container - Positioned on the Right */}
-      <div className="relative  container mx-auto h-full max-w-[1350px]  z-10 hidden md:flex items-center justify-end md:min-h-[90vh]">
+      <div className="relative  pr-20 h-full   z-10 hidden md:flex items-center justify-end ">
         <motion.div
           ref={formRef}
           initial={{ opacity: 0, x: 50 }} // Slide in from right

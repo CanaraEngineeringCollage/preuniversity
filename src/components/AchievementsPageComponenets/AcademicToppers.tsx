@@ -31,14 +31,12 @@ export default function AcademicToppers() {
   const [openYear, setOpenYear] = useState("2024-2025");
   const years = Object.keys(dummyAchievements).sort((a, b) => Number(b) - Number(a));
 
-  // FIX 1: Ref map so we can scroll each year header into view on open
   const yearRefs = useRef({});
 
   const handleToggle = (year) => {
     const isOpening = openYear !== year;
     setOpenYear(isOpening ? year : "");
 
-    // FIX 2: Scroll the opened year's header into view after state updates
     if (isOpening) {
       setTimeout(() => {
         yearRefs.current[year]?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -54,45 +52,52 @@ export default function AcademicToppers() {
 
       <div className="max-w-7xl xl:max-w-[85%] mx-auto space-y-6 px-5">
         {years.map((year) => (
-          // FIX 1: Removed duplicate onClick from parent div; assigned ref here
           <div
             key={year}
-            ref={(el) => (yearRefs.current[year] = el)}
+           
             className="border-b-2 border-[#000000] pb-4"
           >
-            {/* YEAR HEADER — single onClick handler here only */}
+            {/* YEAR HEADER */}
             <div
               className="flex justify-between items-center cursor-pointer"
               onClick={() => handleToggle(year)}
+               
             >
               <h3 className="lg:text-4xl text-xl font-medium text-[#1D1D1F]">{year}</h3>
-              <span className="text-2xl">
+              
+              {/* Animated Arrow Icon */}
+              <motion.span 
+                className="text-2xl flex items-center origin-center"
+                animate={{ rotate: openYear === year ? 180 : 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
                 <svg className="h-5 w-5 lg:h-auto lg:w-auto" width="24" height="13" viewBox="0 0 27 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14.5123 14.5122C13.7769 15.2476 12.5826 15.2476 11.8472 14.5122L0.551673 3.21663C-0.183715 2.48124 -0.183715 1.28697 0.551673 0.551587C1.28706 -0.1838 2.48133 -0.1838 3.21672 0.551587L13.1827 10.5176L23.1487 0.557473C23.884 -0.177915 25.0783 -0.177915 25.8137 0.557473C26.5491 1.29286 26.5491 2.48713 25.8137 3.22252L14.5181 14.5181L14.5123 14.5122Z" fill="#1D1D1F"/>
                 </svg>
-              </span>
+              </motion.span>
             </div>
 
             {/* CONTENT */}
-            <AnimatePresence>
+            <AnimatePresence initial={false}>
               {openYear === year && (
                 <motion.div
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-10 my-14">
+                  {/* Changed my-14 (margin) to py-14 (padding) to prevent layout jumping */}
+                  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-y-10 py-14">
                     {dummyAchievements[year].map((item, index) => (
                       <div key={index} className="text-center">
-                        <div className="w-full relative rounded-lg overflow-hidden mb-3">
+                        <div className="w-full relative rounded-lg overflow-hidden mb-3 bg-gray-50">
                           <Image
                             src={item.image}
                             alt={item.name}
                             height={1000}
                             width={1000}
-                            className="object-cover object-[center_20%]"
+                            className="w-full aspect-square object-contain"
                           />
                         </div>
                         <p className="font-bold text-lg lg:text-xl">{item.name}</p>
