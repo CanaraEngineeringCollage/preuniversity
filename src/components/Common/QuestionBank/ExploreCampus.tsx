@@ -78,15 +78,16 @@ const contentVariants = {
 };
 
 // Parse HTML & Add CMS URL to images
+// Parse HTML & Add CMS URL to images
 const parseEventContent = (html: string) => {
   const root = parse(html);
   const firstHeadingEl = root.querySelector("h1,h2,h3,h4,h5,h6");
   const topTitle = firstHeadingEl?.text?.trim() || "";
   if (firstHeadingEl) firstHeadingEl.remove();
-  const firstParagraphEl = root.querySelector("p");
-  const topDescription = firstParagraphEl?.text?.trim() || "";
-  if (firstParagraphEl) firstParagraphEl.remove();
   
+  // REMOVED: We are no longer extracting and removing the first <p> tag here.
+  // It will naturally stay inside remainingHTML.
+
   const firstImageEl = root.querySelector("img");
   let src = firstImageEl?.getAttribute("src") || "";
   
@@ -106,7 +107,8 @@ const parseEventContent = (html: string) => {
 
   remainingHTML = remainingHTML.replace(/src="\/uploads\//g, `src="${cmsUrl}/uploads/`);
 
-  return { src, topTitle, topDescription, remainingHTML };
+  // We pass an empty string for topDescription so we don't break your typescript interfaces
+  return { src, topTitle, topDescription: "", remainingHTML }; 
 };
 
 // --- SKELETON LOADER COMPONENT ---
@@ -156,20 +158,14 @@ function EventContent({ description }: { description: EventDescriptionProps }) {
               {description.topTitle}
             </h3>
           )}
-          {description.topDescription && (
-            <p className="text-xl text-textGray">{description.topDescription}</p>
-          )}
+          {/* REMOVED: description.topDescription block is completely gone */}
         </div>
+        
         {description.remainingHTML && (
           <div
-            className={`bg-white   ${
-              description.topDescription &&
-              description.topTitle &&
-              description.src &&
-              "-mt-20"
-            } ${description.topDescription && "-mt-10"} ${
-              description.topTitle && "-mt-10"
-            }`}
+            className={`bg-white ${
+              description.topTitle && description.src ? "-mt-14" : ""
+            } ${description.topTitle && !description.src ? "-mt-10" : ""}`}
             dangerouslySetInnerHTML={{ __html: description.remainingHTML }}
           />
         )}
@@ -177,7 +173,6 @@ function EventContent({ description }: { description: EventDescriptionProps }) {
     </div>
   );
 }
-
 const ExploreCampus: React.FC<ExploreCampusProps> = ({ title, description }) => {
   const [campusEvents, setCampusEvents] = useState<CampusEvent[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
@@ -340,7 +335,7 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({ title, description }) => 
         {categories.length > 0 && (
           <div className="pb-5 lg:pb-10">
             {/* Mobile Dropdown */}
-            <div className="flex lg:hidden justify-between items-center gap-2 md:hidden">
+            <div className="flex lg:hidden justify-between items-center gap-2 ">
               <CustomSelect
                 value={activeCategory}
                 onChange={(e) => handleCategoryChange(e.target.value)}
@@ -480,7 +475,7 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({ title, description }) => 
                   </h1>
                   <h1
                     onClick={goToNextCard}
-                    className="text-[#2997FF] inline-flex items-center cursor-pointer font-bold text-[16px] md:text-[20px]"
+                    className="text-[#3C71D7] inline-flex items-center cursor-pointer font-bold text-[16px] md:text-[20px]"
                   >
                     {parseEventContent(
                       campusEvents[(currentIndex + 1) % campusEvents.length].content

@@ -46,11 +46,11 @@ button{
 }
 
 
-  * {
+ * {
   outline: none !important;
 }
 
-.u-row{
+.u-row {
   min-width: 100% !important;
   padding: 0 !important;
 }
@@ -63,6 +63,37 @@ button{
   margin-right: 0 !important;
   max-width: 100% !important;
   background: white !important;
-  box-sizing: border-box;    /* ensures padding/border won’t break layout */
-  overflow: hidden !important;
+  box-sizing: border-box;    
+  /* overflow: hidden !important; -> I recommend removing this from the wildcard, it causes text clipping bugs */
+  
+  /* 1. THIS FIXES YOUR FONT */
+  font-family: inherit !important; 
+}
+
+/* ==========================================
+   2. THIS FIXES YOUR BULLET POINTS
+   We have to override your zero-padding rule 
+   specifically for lists so they show up.
+   ========================================== */
+
+.u-row-container ul {
+  list-style-type: disc !important;
+  padding-left: 30px !important; /* Restores the space for bullets */
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  overflow: visible !important; /* Prevents bullets from being clipped */
+}
+
+.u-row-container ol {
+  list-style-type: decimal !important;
+  padding-left: 40px !important; /* Restores the space for numbers */
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  overflow: visible !important;
+}
+
+.u-row-container li {
+  display: list-item !important;
+  margin-bottom: 8px !important;
+  overflow: visible !important; /* Prevents bullets from being clipped */
 }
