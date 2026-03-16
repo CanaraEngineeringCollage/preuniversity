@@ -352,7 +352,7 @@ function Innovations() {
             Facilities
           </h1>
           <p className="lg2:text-xl lg:text-xl text-[#2A2A2A]  pt-4   mb-6 font-medium  lg:max-w-1/3">
-            Well-equipped & student-focused spaces that support learning & everyday campus life.
+            Well-equipped, student-focused spaces that support learning and everyday campus life.
           </p>
         </motion.div>
         <div className="lg:grid grid-cols-12 gap-4 overflow-hidden hidden relative">

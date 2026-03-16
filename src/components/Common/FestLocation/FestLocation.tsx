@@ -9,7 +9,7 @@ export interface EventSection {
   googleMapUrl?: string;
 }
 
-export default function FestLocation({ category, initialData }: { category: "mat-kabbadi" | "footprints"; initialData?: EventSection | null }) {
+export default function FestLocation({ category, initialData , title}: { category: "mat-kabbadi" | "footprints"; initialData?: EventSection | null , title?: string}) {
   const data = initialData;
 
   // Optional: distinct loading state or default fallback
@@ -57,7 +57,8 @@ export default function FestLocation({ category, initialData }: { category: "mat
         {/* LEFT TEXT SECTION */}
         <div className=" md:col-span-7 space-y-5">
           <h2 className="text-[#1D1D1F] leading-[1.3] md:text-3xl lg:text-4xl lg2:text-[45px] md:mb-10 text-3xl font-bold">
-            Be a Part of a Fest <br /> Like No Other
+            {title}
+           
           </h2>
 
           {/* Desktop Text Block */}

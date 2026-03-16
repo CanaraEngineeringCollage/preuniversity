@@ -67,7 +67,7 @@ const HeroBanner = () => {
         
         <div className="absolute bottom-6 left-0 w-full flex flex-col items-center md:hidden z-20 px-4 text-center">
           <h2 className="text-3xl leading-[1.3] font-bold text-white font-helvetica mb-4">
-            Dream Big. Plan Smart. <br /> Enquire Now.
+            Shape Your Future with <br /> Quality Education
           </h2>
 
           <button
@@ -112,7 +112,7 @@ const HeroBanner = () => {
                 transition={{ duration: 0.5 }}
                 className="text-2xl md:text-4xl leading-[1.3] font-bold text-center text-[#001A48] font-helvetica"
               >
-                Dream Big. Plan Smart. Enquire Now.
+                 Shape Your Future with Quality Education
               </motion.h2>
 
               {/* Full Name */}

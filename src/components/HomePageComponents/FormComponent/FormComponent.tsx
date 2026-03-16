@@ -81,7 +81,7 @@ function FormComponent() {
         {/* Form Section */}
         <div className="w-full md:w-1/2 p-6 md:p-8 border md:border-none rounded-2xl flex flex-col mt-8 md:mt-0 justify-center md:ml-8">
           <h2 className="text-2xl md:text-[44px] leading-[1.2] font-bold text-[#001A48] mb-6 md:mb-8">
-            Dream Big. Plan Smart. <br className="hidden md:block"/> Enquire Now.
+           Shape Your Future with <br className="hidden md:block"/>Quality Education
           </h2>
 
           <form

@@ -48,7 +48,7 @@ export default function FootprintsClient() {
   return (
     <div className="">
       <Brochure descriptionList={dummyDescriptionList} category={category} initialData={brochureData} />
-      <FestLocation category={category} initialData={festLocationData} />
+      <FestLocation category={category} initialData={festLocationData} title={"Step Forward. Showcase Your Talent. Leave Your Footprint."} />
     </div>
   );
 }

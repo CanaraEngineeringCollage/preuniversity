@@ -50,7 +50,7 @@ const dummyDescriptionList = [
   return (
     <div className="">
       <Brochure descriptionList={dummyDescriptionList} category={category} initialData={brochureData} />
-      <FestLocation category={category} initialData={festLocationData} />
+      <FestLocation category={category} initialData={festLocationData} title="Step Into the Ultimate Game Arena" />
     </div>
   );
 }
