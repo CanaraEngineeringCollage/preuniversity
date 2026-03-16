@@ -152,7 +152,7 @@ function EventContent({ description }: { description: EventDescriptionProps }) {
             </p>
           )}
           {description.topTitle && (
-            <h3 className="text-[27px] font-semibold font-sans text-black my-3 line-clamp-2">
+            <h3 className="text-[27px] font-semibold  text-black my-3 line-clamp-2">
               {description.topTitle}
             </h3>
           )}
@@ -456,7 +456,7 @@ const ExploreCampus: React.FC<ExploreCampusProps> = ({ title, description }) => 
               <motion.div
                 variants={cardVariants}
                 ref={containerRef}
-                className="max-w-4xl mx-auto bg-white h-fit z-[60] my-10 pb-10 rounded-3xl font-sans relative shadow-2xl"
+                className="max-w-4xl mx-auto bg-white h-fit z-[60] my-10 pb-10 rounded-3xl  relative shadow-2xl"
               >
                 <motion.button
                   variants={contentVariants}

@@ -17,55 +17,75 @@ export default function AcademicToppers() {
   const [years, setYears] = useState<string[]>([]);
   const [openYear, setOpenYear] = useState<string>("");
   const [loading, setLoading] = useState(true);
+  const [loadingYear, setLoadingYear] = useState<string>(""); // Tracks if a specific accordion is loading
 
   const yearRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
+  // 1. Fetch only the unique years on initial load
   useEffect(() => {
-    const fetchAchievements = async () => {
+    const fetchInitialData = async () => {
       try {
-        const params = new URLSearchParams({ page: "1", limit: "1000" });
+        // Fetch ONLY the years list using the optimized action we added to the backend
+        const res = await fetch(`${process.env.NEXT_PUBLIC_CMS_URL}/api/academic-toppers?action=getYears`);
+        if (!res.ok) throw new Error("Failed to fetch years");
         
-        const res = await fetch(`${process.env.NEXT_PUBLIC_CMS_URL}/api/academic-toppers?${params.toString()}`);
+        const fetchedYears: string[] = await res.json();
+        setYears(fetchedYears);
         
-        if (!res.ok) throw new Error("Failed to fetch data");
-        
-        const data = await res.json();
-        const items: AcademicTopper[] = data.items ?? [];
-        
-        // Group items by year
-        const grouped: Record<string, AcademicTopper[]> = {};
-        items.forEach((item) => {
-          if (!grouped[item.year]) {
-            grouped[item.year] = [];
-          }
-          grouped[item.year].push(item);
-        });
-
-        // Sort years descending (e.g., "2024-2025" before "2023-2024")
-        const sortedYears = Object.keys(grouped).sort((a, b) => b.localeCompare(a));
-        
-        setAchievements(grouped);
-        setYears(sortedYears);
-        
-        // Open the most recent year automatically
-        if (sortedYears.length > 0) {
-          setOpenYear(sortedYears[0]);
+        // If there are years, open the first one and fetch its data
+        if (fetchedYears.length > 0) {
+          const firstYear = fetchedYears[0];
+          setOpenYear(firstYear);
+          await fetchYearData(firstYear);
         }
       } catch (error) {
-        console.error("Fetch error:", error);
+        console.error("Initialization error:", error);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchAchievements();
+    fetchInitialData();
   }, []);
 
-  const handleToggle = (year: string) => {
+  // 2. The Lazy Loading function - fetches data only for a specific year
+  const fetchYearData = async (targetYear: string) => {
+    // If we already downloaded this year's data previously, do nothing!
+    if (achievements[targetYear]) return;
+
+    setLoadingYear(targetYear);
+    try {
+      // Fetch only the specific year (limit 100 per year max to be safe)
+      const params = new URLSearchParams({ limit: "100", year: targetYear });
+      const res = await fetch(`${process.env.NEXT_PUBLIC_CMS_URL}/api/academic-toppers?${params.toString()}`);
+      
+      if (!res.ok) throw new Error("Failed to fetch year data");
+      
+      const data = await res.json();
+      
+      // Save it into our state dictionary
+      setAchievements((prev) => ({
+        ...prev,
+        [targetYear]: data.items ?? []
+      }));
+    } catch (error) {
+      console.error(`Fetch error for year ${targetYear}:`, error);
+    } finally {
+      setLoadingYear("");
+    }
+  };
+
+  const handleToggle = async (year: string) => {
     const isOpening = openYear !== year;
     setOpenYear(isOpening ? year : "");
 
     if (isOpening) {
+      // LAZY LOAD: Fetch data right as they open the accordion (if we don't have it)
+      if (!achievements[year]) {
+        await fetchYearData(year);
+      }
+
+      // Smooth scroll (Fixed the bug by attaching the ref below)
       setTimeout(() => {
         yearRefs.current[year]?.scrollIntoView({ behavior: "smooth", block: "start" });
       }, 50);
@@ -74,7 +94,7 @@ export default function AcademicToppers() {
 
   if (loading) {
     return (
-      <section className="w-full py-16 text-[#1D1D1F] flex justify-center items-center min-h-[400px]">
+      <section className="w-full py-16 flex justify-center items-center min-h-[400px]">
         <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[#1D1D1F]"></div>
       </section>
     );
@@ -82,7 +102,7 @@ export default function AcademicToppers() {
 
   return (
     <section className="w-full py-16 text-[#1D1D1F]">
-      <h2 className="text-center text-3xl leading-[1.1] md:text-3xl lg:text-4xl lg2:text-5xl font-bold font-semibold text-[#1D1D1F] mb-12">
+      <h2 className="text-center text-3xl leading-[1.1] md:text-3xl lg:text-4xl lg2:text-5xl font-bold text-[#1D1D1F] mb-12">
         Academic Toppers
       </h2>
 
@@ -93,14 +113,20 @@ export default function AcademicToppers() {
           years.map((year) => (
             <div
               key={year}
+             // FIXED: Attached ref for auto-scroll
               className="border-b-2 border-[#000000] pb-4"
             >
               {/* YEAR HEADER */}
               <div
-                className="flex justify-between items-center cursor-pointer"
+                className="flex justify-between items-center cursor-pointer py-2"
                 onClick={() => handleToggle(year)}
               >
-                <h3 className="lg:text-4xl text-xl font-medium text-[#1D1D1F]">{year}</h3>
+                <div className="flex items-center gap-4">
+                  <h3 className="lg:text-4xl text-xl font-medium text-[#1D1D1F]">{year}</h3>
+                  {loadingYear === year && (
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-[#1D1D1F]"></div>
+                  )}
+                </div>
                 
                 {/* Animated Arrow Icon */}
                 <motion.span 
@@ -124,33 +150,36 @@ export default function AcademicToppers() {
                     transition={{ duration: 0.4, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-y-10 py-14">
-                      {achievements[year]?.map((item) => {
-                        // Dynamically create the absolute image URL
-                        const fullImageUrl = item.imageUrl.startsWith('/') 
-                          ? `${process.env.NEXT_PUBLIC_CMS_URL}${item.imageUrl}` 
-                          : item.imageUrl;
+                    {/* Don't render grid if it's currently loading */}
+                    {loadingYear !== year && (
+                      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-y-10 py-14">
+                        {achievements[year]?.map((item) => {
+                          const fullImageUrl = item.imageUrl.startsWith('/') 
+                            ? `${process.env.NEXT_PUBLIC_CMS_URL}${item.imageUrl}` 
+                            : item.imageUrl;
 
-                        return (
-                          <div key={item.id} className="text-center">
-                            <div className="w-full relative rounded-lg overflow-hidden mb-3 bg-gray-50">
-                              <Image
-                                src={fullImageUrl}
-                                alt={item.name}
-                                height={1000}
-                                width={1000}
-                                className="w-full aspect-square object-contain"
-                              />
+                          return (
+                            <div key={item.id} className="text-center px-2">
+                              <div className="w-full relative rounded-lg overflow-hidden mb-3 bg-gray-50">
+                                <Image
+                                  src={fullImageUrl}
+                                  alt={item.name}
+                                  height={400} // FIXED: Reduced image size
+                                  width={400}  // FIXED: Reduced image size
+                                  sizes="(max-width: 640px) 50vw, 33vw" // FIXED: Responsive sizes
+                                  className="w-full aspect-square object-contain"
+                                />
+                              </div>
+                              <p className="font-bold text-lg lg:text-xl">{item.name}</p>
                             </div>
-                            <p className="font-bold text-lg lg:text-xl">{item.name}</p>
-                          </div>
-                        );
-                      })}
+                          );
+                        })}
 
-                      {(!achievements[year] || achievements[year].length === 0) && (
-                        <p className="text-base col-span-full">No achievements available for this year.</p>
-                      )}
-                    </div>
+                        {(!achievements[year] || achievements[year].length === 0) && (
+                          <p className="text-base col-span-full">No achievements available for this year.</p>
+                        )}
+                      </div>
+                    )}
                   </motion.div>
                 )}
               </AnimatePresence>
