@@ -37,7 +37,7 @@ const Results = ({ image, text,title }: { image: string; text: string,title:stri
               <input
               required
                 type="text"
-                placeholder="Your  Date of Birth"
+                placeholder="Your Date of Birth"
                 className="w-full outline-none border-b-2 pb-2 border-[#d0d0d2]"
               />
             </div>

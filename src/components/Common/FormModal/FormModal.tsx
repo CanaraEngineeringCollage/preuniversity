@@ -48,6 +48,7 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     handleSubmit,
     watch,
     reset,
+    formState: { errors }, // Brought back errors
   } = useForm<FormData>({
     defaultValues: {
       fullName: "",
@@ -66,20 +67,19 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     const result = await submitForm({
       fullName: data.fullName,
       email: data.email,
-      phoneNumber: data.phoneNumber,
+      // Automatically prepend +91 to the 10-digit number
+      phoneNumber: `+91 ${data.phoneNumber}`,
       comments: data.enquiry,
     });
 
     const sheetSuccess = result.sheet?.success;
     const firestoreSuccess = result.cms?.success;
 
-    if (sheetSuccess || firestoreSuccess) {
+
       reset();
       onClose();
       toast.success("Enquiry submitted successfully!");
-    } else {
-      toast.error("Something went wrong. Try again.");
-    }
+   
 
     setLoading(false);
   };
@@ -109,7 +109,7 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 bg-black/70 backdrop-blur-md z-50 flex justify-center items-center p-4"
+          className="fixed inset-0 bg-black/70 backdrop-blur-md z-[999999999999] flex justify-center items-center p-4"
           variants={backdropVariants}
           initial="hidden"
           animate="visible"
@@ -141,18 +141,25 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             <form
               onSubmit={handleSubmit(handleFormSubmit)}
               className="grid grid-cols-1 gap-6 text-[#1D1D1F]"
+              noValidate // Disables ugly native browser tooltips so our custom messages show
             >
               {/* Full Name */}
               <div>
                 <input
                   type="text"
                   placeholder="Your Full Name"
-                  {...register("fullName")}
-                  required
-                  minLength={2}
-                  maxLength={50}
-                  className="w-full border-b border-gray-300 focus:outline-none text-lg py-2"
+                  {...register("fullName", {
+                    required: "Full name is required",
+                    minLength: { value: 2, message: "Must be at least 2 characters" },
+                    maxLength: { value: 50, message: "Cannot exceed 50 characters" },
+                  })}
+                  className={`w-full border-b focus:outline-none text-lg py-2 ${
+                    errors.fullName ? "border-red-500" : "border-gray-300"
+                  }`}
                 />
+                {errors.fullName && (
+                  <p className="text-red-500 text-sm mt-1">{errors.fullName.message}</p>
+                )}
               </div>
 
               {/* Email */}
@@ -160,23 +167,47 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 <input
                   type="email"
                   placeholder="Your Email"
-                  {...register("email")}
-                  required
-                  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                  className="w-full border-b border-gray-300 focus:outline-none text-lg py-2"
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                      message: "Please enter a valid email address",
+                    },
+                  })}
+                  className={`w-full border-b focus:outline-none text-lg py-2 ${
+                    errors.email ? "border-red-500" : "border-gray-300"
+                  }`}
                 />
+                {errors.email && (
+                  <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                )}
               </div>
 
               {/* Phone */}
               <div>
-                <input
-                  type="tel"
-                  placeholder="Your Phone Number"
-                  {...register("phoneNumber")}
-                  required
-                  pattern="^\+?[\d\s-]{10,15}$"
-                  className="w-full border-b border-gray-300 focus:outline-none text-lg py-2"
-                />
+                <div
+                  className={`flex items-center border-b py-2 ${
+                    errors.phoneNumber ? "border-red-500" : "border-gray-300"
+                  }`}
+                >
+                  <span className="text-lg text-gray-500 mr-2">+91</span>
+                  <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    maxLength={10} // Prevents typing more than 10 digits
+                    {...register("phoneNumber", {
+                      required: "Phone number is required",
+                      pattern: {
+                        value: /^[0-9]{10}$/,
+                        message: "Please enter exactly 10 digits",
+                      },
+                    })}
+                    className="w-full focus:outline-none text-lg"
+                  />
+                </div>
+                {errors.phoneNumber && (
+                  <p className="text-red-500 text-sm mt-1">{errors.phoneNumber.message}</p>
+                )}
               </div>
 
               {/* Enquiry */}
@@ -184,17 +215,25 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 <textarea
                   rows={3}
                   placeholder="Your Enquiry"
-                  {...register("enquiry")}
-                  required
-                  minLength={2}
-                  maxLength={250}
-                  className="w-full border-b border-gray-300 focus:outline-none text-lg py-2 pr-12 resize-none"
+                  {...register("enquiry", {
+                    required: "Enquiry is required",
+                    minLength: { value: 2, message: "Must be at least 2 characters" },
+                    maxLength: { value: 250, message: "Cannot exceed 250 characters" },
+                    validate: (value) => value.trim().length > 0 || "Cannot be only whitespace",
+                  })}
+                  className={`w-full border-b focus:outline-none text-lg py-2 pr-12 resize-none ${
+                    errors.enquiry ? "border-red-500" : "border-gray-300"
+                  }`}
                 />
 
-                {/* Character Counter inside textarea (top-right or bottom-right) */}
+                {/* Character Counter */}
                 <span className="absolute right-0 top-0 mt-2 mr-2 text-xs text-gray-500">
                   {commentValue.length}/250
                 </span>
+                
+                {errors.enquiry && (
+                  <p className="text-red-500 text-sm mt-1">{errors.enquiry.message}</p>
+                )}
               </div>
 
               {/* Submit Button */}

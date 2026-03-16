@@ -194,8 +194,7 @@ const ExploreStream = () => {
 
   ];
 
-
-  const [data, setData] = useState<DataItem[]>(dummyFunctionDepartmentData);
+const [data, setData] = useState<DataItem[]>(dummyFunctionDepartmentData);
   const swiperRef = useRef<SwiperType | null>(null);
   const autoplayDelay = 3000; // Swiper autoplay delay in ms
   const [selectedButton, setSelectedButton] = useState("Science");
@@ -231,7 +230,6 @@ const ExploreStream = () => {
             : dummyFunctionDepartmentDataCommerce
         );
       }}
-      // CHANGE HERE: Removed 'px-6' and added 'w-36' (or w-32)
       className={`relative w-36 py-1.5 text-base sm:text-lg font-medium text-[#2A2A2A] rounded-full transition-colors duration-200 focus:outline-none`}
       style={{
         WebkitTapHighlightColor: "transparent",
@@ -293,15 +291,41 @@ const ExploreStream = () => {
         </Swiper>
       </div>
       <div className="flex justify-end items-center mt-9 me-6 md:me-16 gap-4">
-        {/* Play/Pause Button with Progress Circle */}
 
         {/* Navigation Buttons */}
         <div className="flex gap-2">
+          {/* PREVIOUS BUTTON (FIXED BACKGROUND & DIRECTION) */}
           <button onClick={() => swiperRef.current?.slidePrev()}>
-            <PreviewIcon />
+            <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clipPath="url(#clip0_621_394)">
+                <rect x="0.222656" y="0.421875" width="36" height="36" rx="18" fill="#D2D2D7" fillOpacity="0.64" />
+                <path
+                  d="M21.7816 12.4839L15.8406 18.4059L21.7447 24.3659C22.3276 24.9549 22.3247 25.9039 21.7357 26.4869C21.4437 26.7769 21.0617 26.9219 20.6797 26.9219C20.2937 26.9219 19.9077 26.7739 19.6147 26.4779L12.6577 19.4559C12.0757 18.8679 12.0777 17.9219 12.6637 17.3379L19.6637 10.3599C20.2487 9.77488 21.2007 9.77588 21.7847 10.3629C22.3697 10.9499 22.3676 11.8999 21.7816 12.4839Z"
+                  fill="black"
+                  fillOpacity="0.56"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_621_394">
+                  <rect x="0.222656" y="0.421875" width="36" height="36" rx="18" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
           </button>
+          
+          {/* NEXT BUTTON */}
           <button onClick={() => swiperRef.current?.slideNext()}>
-            <NextIcon />
+            <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clipPath="url(#clip0_621_397)">
+                <rect x="0.222656" y="0.421875" width="36" height="36" rx="18" fill="#D2D2D7" fillOpacity="0.64"/>
+                <path d="M23.7814 17.3379C24.3674 17.9219 24.3694 18.8679 23.7874 19.4559L16.8304 26.4779C16.5374 26.7739 16.1514 26.9219 15.7654 26.9219C15.3834 26.9219 15.0014 26.7769 14.7094 26.4869C14.1204 25.9039 14.1174 24.9549 14.7004 24.3659L20.6045 18.4059L14.6635 12.4839C14.0775 11.8999 14.0755 10.9498 14.6605 10.3629C15.2445 9.77588 16.1965 9.77488 16.7815 10.3599L23.7814 17.3379Z" fill="black" fillOpacity="0.56"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_621_397">
+                  <rect x="0.222656" y="0.421875" width="36" height="36" rx="18" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
           </button>
         </div>
       </div>
