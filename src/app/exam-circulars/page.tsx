@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
    <>
-    <Banner  />
+    {/* <Banner  /> */}
     <section>
         <ExamCircularPageComponent/>
     </section>

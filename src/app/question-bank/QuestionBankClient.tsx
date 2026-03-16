@@ -64,7 +64,7 @@ export default function QuestionBankClient() {
 
   return (
     <>
-      <section><Banner /></section>
+      {/* <section><Banner /></section> */}
       <section>
         {/* Pass the already separated arrays to the child component */}
         <QuestionSection firstYear={firstYearPapers} secondYear={secondYearPapers} />

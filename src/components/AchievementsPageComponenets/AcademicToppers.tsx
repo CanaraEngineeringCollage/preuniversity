@@ -20,12 +20,13 @@ export default function AcademicToppers() {
 
   const yearRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
-  useEffect(() => {
+ useEffect(() => {
     const fetchAchievements = async () => {
       try {
-        // Fetching all records to group them by year on the frontend
         const params = new URLSearchParams({ page: "1", limit: "1000" });
-        const res = await fetch(`/${process.env.NEXT_PUBLIC_CMS_URL}/api/academic-toppers?${params.toString()}`);
+        
+        // Removed the leading slash here:
+        const res = await fetch(`${process.env.NEXT_PUBLIC_CMS_URL}/api/academic-toppers?${params.toString()}`);
         
         if (!res.ok) throw new Error("Failed to fetch data");
         
