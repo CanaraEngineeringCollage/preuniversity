@@ -81,7 +81,7 @@ export default function Brochure({ category, initialData, descriptionList }: Bro
           <div className="w-full mb-10">
             <div className="  space-y-2">
               {descriptionList.map((desc, index) => (
-                <p key={index} className="lg:text-2xl text-base text-[#1D1D1F] font-medium">
+                <p key={index} className="text-base lg:text-lg text-[#1D1D1F] font-medium">
                   {desc}
                 </p>
               ))}
