@@ -8,7 +8,7 @@ const SeeYourSelf = () => {
       <div className="grid grid-cols-1  lg:grid-cols-12 gap-10 justify-items-center items-center">
         <div className="flex flex-col lg:col-span-7">
           <h1 className="font-bold leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl">
-             Where Academic Excellence Begins
+             Where Academic <br className="hidden md:block"/> Excellence Begins
           </h1>
           <div className="flex pt-5 pb-1 lg:hidden items-center justify-center  lg2:p-16 ">
             <Image

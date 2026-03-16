@@ -134,7 +134,7 @@ const FormModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
             {/* Title */}
             <h2 className="text-2xl md:text-4xl leading-[1.3] font-bold text-center text-[#001A48] font-helvetica mb-6">
-              Dream Big. Plan Smart. <br /> Enquire Now.
+              Shape Your Future with <br /> Quality Education
             </h2>
 
             {/* Form */}
