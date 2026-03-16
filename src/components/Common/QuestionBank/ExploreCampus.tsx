@@ -162,7 +162,7 @@ function EventContent({ description }: { description: EventDescriptionProps }) {
         </div>
         {description.remainingHTML && (
           <div
-            className={`bg-white ${
+            className={`bg-white   ${
               description.topDescription &&
               description.topTitle &&
               description.src &&

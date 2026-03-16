@@ -93,9 +93,6 @@ export default function AcademicToppers() {
           years.map((year) => (
             <div
               key={year}
-              ref={(el) => {
-                yearRefs.current[year] = el;
-              }}
               className="border-b-2 border-[#000000] pb-4"
             >
               {/* YEAR HEADER */}

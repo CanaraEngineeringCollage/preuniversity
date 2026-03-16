@@ -42,7 +42,7 @@ const data = [
       "At Canara P.U. College, the Book Bank stands as a testament to our commitment to inclusivity and academic support, ensuring that every student has the tools they need to succeed.",
   },
   {
-    image: "/images/facilities/5.png",
+    image: "/images/homePageImages/Medical Facilities.webp",
     title: "Medical Facilities",
     intro:
       "Canara Pre-University College prioritises the health, safety, and well-being of its students. The college provides basic medical facilities on campus to ensure prompt care and assistance during medical emergencies and health-related concerns. ",
