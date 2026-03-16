@@ -20,12 +20,11 @@ export default function AcademicToppers() {
 
   const yearRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
- useEffect(() => {
+  useEffect(() => {
     const fetchAchievements = async () => {
       try {
         const params = new URLSearchParams({ page: "1", limit: "1000" });
         
-        // Removed the leading slash here:
         const res = await fetch(`${process.env.NEXT_PUBLIC_CMS_URL}/api/academic-toppers?${params.toString()}`);
         
         if (!res.ok) throw new Error("Failed to fetch data");
@@ -129,20 +128,27 @@ export default function AcademicToppers() {
                     className="overflow-hidden"
                   >
                     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-y-10 py-14">
-                      {achievements[year]?.map((item) => (
-                        <div key={item.id} className="text-center">
-                          <div className="w-full relative rounded-lg overflow-hidden mb-3 bg-gray-50">
-                            <Image
-                              src={item.imageUrl}
-                              alt={item.name}
-                              height={1000}
-                              width={1000}
-                              className="w-full aspect-square object-contain"
-                            />
+                      {achievements[year]?.map((item) => {
+                        // Dynamically create the absolute image URL
+                        const fullImageUrl = item.imageUrl.startsWith('/') 
+                          ? `${process.env.NEXT_PUBLIC_CMS_URL}${item.imageUrl}` 
+                          : item.imageUrl;
+
+                        return (
+                          <div key={item.id} className="text-center">
+                            <div className="w-full relative rounded-lg overflow-hidden mb-3 bg-gray-50">
+                              <Image
+                                src={fullImageUrl}
+                                alt={item.name}
+                                height={1000}
+                                width={1000}
+                                className="w-full aspect-square object-contain"
+                              />
+                            </div>
+                            <p className="font-bold text-lg lg:text-xl">{item.name}</p>
                           </div>
-                          <p className="font-bold text-lg lg:text-xl">{item.name}</p>
-                        </div>
-                      ))}
+                        );
+                      })}
 
                       {(!achievements[year] || achievements[year].length === 0) && (
                         <p className="text-base col-span-full">No achievements available for this year.</p>
