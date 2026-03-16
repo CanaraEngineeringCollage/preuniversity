@@ -79,13 +79,13 @@ export default function Brochure({ category, initialData, descriptionList }: Bro
         {/* Array Data (descriptionList) added right after the heading block as a separate prop */}
         {descriptionList && descriptionList.length > 0 && (
           <div className="w-full mb-10">
-            <ul className="list-disc  space-y-2">
+            <div className="  space-y-2">
               {descriptionList.map((desc, index) => (
-                <li key={index} className="text-base lg:text-lg text-[#1D1D1F] font-medium">
+                <p key={index} className="lg:text-2xl text-base text-[#1D1D1F] font-medium">
                   {desc}
-                </li>
+                </p>
               ))}
-            </ul>
+            </div>
           </div>
         )}
 
