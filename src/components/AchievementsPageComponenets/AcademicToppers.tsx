@@ -2,7 +2,8 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+// Note: If you aren't using Next/Image, you can remove the import below
+import Image from "next/image"; 
 
 interface AcademicTopper {
   id: number;
@@ -75,7 +76,6 @@ export default function AcademicToppers() {
     if (isOpening && !achievements[year]) {
       await fetchYearData(year);
     }
-    // Note: Scrolling is now handled by motion.div onAnimationStart for smoothness
   };
 
   if (loading) {
@@ -132,31 +132,35 @@ export default function AcademicToppers() {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
                     className="overflow-hidden"
-                    // TRIGGER SMOOTH SCROLL WHEN ANIMATION STARTS
-                    onAnimationStart={() => {
-                      yearRefs.current[year]?.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                      });
+                    // TRIGGER SMOOTH SCROLL WHEN ANIMATION COMPLETES (Fixed)
+                    onAnimationComplete={() => {
+                      // Only scroll if this is the currently open year
+                      if (openYear === year) {
+                        yearRefs.current[year]?.scrollIntoView({
+                          behavior: "smooth",
+                          block: "nearest", // 'nearest' is less aggressive than 'start'
+                        });
+                      }
                     }}
                   >
                     {loadingYear !== year && (
-                      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-y-10 py-14">
+                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-6 gap-y-10 py-10">
                      {achievements[year]?.map((item) => {
                           const fullImageUrl = item.imageUrl.startsWith('/') 
                             ? `${process.env.NEXT_PUBLIC_CMS_URL}${item.imageUrl}` 
                             : item.imageUrl;
 
                           return (
-                            <div key={item.id} className="text-center px-2">
-                              <div className="w-full relative rounded-lg overflow-hidden mb-3 bg-gray-50">
+                            <div key={item.id} className="text-center px-2 flex flex-col items-center">
+                              {/* Constrained max-width to reduce overall image size */}
+                              <div className="w-full  relative rounded-lg overflow-hidden mb-3 bg-gray-50">
                                 <img
                                   src={fullImageUrl}
                                   alt={item.name}
-                                  height="400"
-                                  width="400"
+                                  height="200"
+                                  width="200"
                                   className="w-full aspect-square object-contain"
                                 />
                               </div>
@@ -166,7 +170,7 @@ export default function AcademicToppers() {
                         })}
 
                         {(!achievements[year] || achievements[year].length === 0) && (
-                          <p className="text-base col-span-full">No achievements available for this year.</p>
+                          <p className="text-base col-span-full text-center">No achievements available for this year.</p>
                         )}
                       </div>
                     )}

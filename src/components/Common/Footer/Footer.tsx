@@ -46,8 +46,8 @@ export default function Footer() {
   return (
     <footer className="bg-[#001A48] text-white">
       {/* Desktop Version */}
-      <div className="lg:block hidden">
-        <div className="max-w-6xl text-base mx-auto  py-16 flex justify-between">
+      <div className="lg:block max-w-6xl px-4 mx-auto hidden">
+        <div className=" text-base mx-auto  py-16 flex justify-between">
           <div className="">
             <FooterList data={aboutLinks} />
           </div>
@@ -65,10 +65,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <hr className="border-gray-600 max-w-6xl my-4 mx-auto" />
+        <hr className="border-gray-600  my-4 mx-auto" />
 
         {/* Logo and Social */}
-        <div className="max-w-6xl mx-auto  py-6 flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
+        <div className=" mx-auto  py-6 flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
           <Link href="/"><div className="flex items-center">
             <Image src="/svgs/footerLogo.svg" alt="svg" width={200} height={200} className="w-40 cursor-pointer sm:w-48 md:w-64" />
           </div></Link>
@@ -82,10 +82,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <hr className="border-gray-600 max-w-6xl my-4 mx-auto" />
+        <hr className="border-gray-600  my-4 mx-auto" />
 
         {/* Bottom */}
-        <div className="max-w-6xl text-[12px] text-[#6b7a95] mx-auto  pt-4 pb-10 flex flex-col items-center text-center md:flex-row md:justify-between md:text-left">
+        <div className=" text-[12px] text-[#6b7a95] mx-auto  pt-4 pb-10 flex flex-col items-center text-center md:flex-row md:justify-between md:text-left">
           <p>Copyright © {new Date().getFullYear()} Canara High School Association. All rights reserved.</p>
            <Link href="/privacy-policy" className=""><div className="space-x-2 mt-2 md:mt-0">
             <Link href="/privacy-policy" className="">
