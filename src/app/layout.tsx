@@ -6,6 +6,8 @@ import localFont from "next/font/local";
 import ScrollToTopButton from "@/components/Common/ScrollToTopButton";
 import Script from "next/script";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -90,7 +92,7 @@ export const metadata: Metadata = {
     siteName: "Canara PU College Mangalore",
     images: [
       {
-        url: "/icon.png",
+        url: "https://preuniversity.vercel.app/images/og-image.png", // replace with actual OG image path
         width: 1200,
         height: 630,
         alt: "Canara PU College Mangalore Campus",
@@ -103,7 +105,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Canara Pre-University College, Mangalore",
     description: "Co-educational pre-university institution offering Science & Commerce since 1972.",
-    images: ["/icon.png"],
+    images: ["https://preuniversity.vercel.app/images/og-image.png"],
   },
 };
 
@@ -116,6 +118,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${helveticaNow.variable} antialiased`}>
         <Toaster position="top-center" />
+         <Analytics />
+
+        {/* Vercel Speed Insights */}
+        <SpeedInsights />
         <Layout>
           {children} <ScrollToTopButton />{" "}
         </Layout>{" "}
