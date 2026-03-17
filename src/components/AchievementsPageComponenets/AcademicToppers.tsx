@@ -2,8 +2,6 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-// Note: If you aren't using Next/Image, you can remove the import below
-import Image from "next/image"; 
 
 interface AcademicTopper {
   id: number;
@@ -27,14 +25,14 @@ export default function AcademicToppers() {
       try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_CMS_URL}/api/academic-toppers?action=getYears`);
         if (!res.ok) throw new Error("Failed to fetch years");
-        
+
         const fetchedYears: string[] = await res.json();
         setYears(fetchedYears);
-        
+
         if (fetchedYears.length > 0) {
           const firstYear = fetchedYears[0];
-          setOpenYear(firstYear);
           await fetchYearData(firstYear);
+          setOpenYear(firstYear);
         }
       } catch (error) {
         console.error("Initialization error:", error);
@@ -53,14 +51,14 @@ export default function AcademicToppers() {
     try {
       const params = new URLSearchParams({ limit: "100", year: targetYear });
       const res = await fetch(`${process.env.NEXT_PUBLIC_CMS_URL}/api/academic-toppers?${params.toString()}`);
-      
+
       if (!res.ok) throw new Error("Failed to fetch year data");
-      
+
       const data = await res.json();
-      
+
       setAchievements((prev) => ({
         ...prev,
-        [targetYear]: data.items ?? []
+        [targetYear]: data.items ?? [],
       }));
     } catch (error) {
       console.error(`Fetch error for year ${targetYear}:`, error);
@@ -71,11 +69,12 @@ export default function AcademicToppers() {
 
   const handleToggle = async (year: string) => {
     const isOpening = openYear !== year;
-    setOpenYear(isOpening ? year : "");
 
     if (isOpening && !achievements[year]) {
       await fetchYearData(year);
     }
+
+    setOpenYear(isOpening ? year : "");
   };
 
   if (loading) {
@@ -99,7 +98,9 @@ export default function AcademicToppers() {
           years.map((year) => (
             <div
               key={year}
-              ref={(el) => { yearRefs.current[year] = el; }}
+              ref={(el) => {
+                yearRefs.current[year] = el;
+              }}
               className="border-b-2 border-[#000000] pb-4"
             >
               {/* YEAR HEADER */}
@@ -113,16 +114,26 @@ export default function AcademicToppers() {
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-[#1D1D1F]"></div>
                   )}
                 </div>
-                
-                <motion.span 
-                  className="text-2xl flex items-center origin-center"
-                  animate={{ rotate: openYear === year ? 180 : 0 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
+
+                <span
+                  className={`text-2xl flex items-center origin-center transition-transform duration-300 ease-in-out ${
+                    openYear === year ? "rotate-180" : "rotate-0"
+                  }`}
                 >
-                  <svg className="h-5 w-5 lg:h-auto lg:w-auto" width="24" height="13" viewBox="0 0 27 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.5123 14.5122C13.7769 15.2476 12.5826 15.2476 11.8472 14.5122L0.551673 3.21663C-0.183715 2.48124 -0.183715 1.28697 0.551673 0.551587C1.28706 -0.1838 2.48133 -0.1838 3.21672 0.551587L13.1827 10.5176L23.1487 0.557473C23.884 -0.177915 25.0783 -0.177915 25.8137 0.557473C26.5491 1.29286 26.5491 2.48713 25.8137 3.22252L14.5181 14.5181L14.5123 14.5122Z" fill="#1D1D1F"/>
+                  <svg
+                    className="h-5 w-5 lg:h-auto lg:w-auto"
+                    width="24"
+                    height="13"
+                    viewBox="0 0 27 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.5123 14.5122C13.7769 15.2476 12.5826 15.2476 11.8472 14.5122L0.551673 3.21663C-0.183715 2.48124 -0.183715 1.28697 0.551673 0.551587C1.28706 -0.1838 2.48133 -0.1838 3.21672 0.551587L13.1827 10.5176L23.1487 0.557473C23.884 -0.177915 25.0783 -0.177915 25.8137 0.557473C26.5491 1.29286 26.5491 2.48713 25.8137 3.22252L14.5181 14.5181L14.5123 14.5122Z"
+                      fill="#1D1D1F"
+                    />
                   </svg>
-                </motion.span>
+                </span>
               </div>
 
               {/* CONTENT */}
@@ -132,48 +143,38 @@ export default function AcademicToppers() {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}
                     className="overflow-hidden"
-                    // TRIGGER SMOOTH SCROLL WHEN ANIMATION COMPLETES (Fixed)
-                    onAnimationComplete={() => {
-                      // Only scroll if this is the currently open year
-                      if (openYear === year) {
-                        yearRefs.current[year]?.scrollIntoView({
-                          behavior: "smooth",
-                          block: "nearest", // 'nearest' is less aggressive than 'start'
-                        });
-                      }
-                    }}
                   >
-                    {loadingYear !== year && (
-                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-6 gap-y-10 py-10">
-                     {achievements[year]?.map((item) => {
-                          const fullImageUrl = item.imageUrl.startsWith('/') 
-                            ? `${process.env.NEXT_PUBLIC_CMS_URL}${item.imageUrl}` 
-                            : item.imageUrl;
+                    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-y-10 py-14">
+                      {achievements[year]?.map((item) => {
+                        const fullImageUrl = item.imageUrl.startsWith("/")
+                          ? `${process.env.NEXT_PUBLIC_CMS_URL}${item.imageUrl}`
+                          : item.imageUrl;
 
-                          return (
-                            <div key={item.id} className="text-center px-2 flex flex-col items-center">
-                              {/* Constrained max-width to reduce overall image size */}
-                              <div className="w-full  relative rounded-lg overflow-hidden mb-3 bg-gray-50">
-                                <img
-                                  src={fullImageUrl}
-                                  alt={item.name}
-                                  height="200"
-                                  width="200"
-                                  className="w-full aspect-square object-contain"
-                                />
-                              </div>
-                              <p className="font-bold text-lg lg:text-xl">{item.name}</p>
+                        return (
+                          <div key={item.id} className="text-center px-2">
+                            <div className="w-full relative pt-[100%] rounded-lg overflow-hidden mb-3 bg-gray-200 animate-pulse">
+                              <img
+                                src={fullImageUrl}
+                                alt={item.name}
+                                className="absolute inset-0 w-full h-full object-contain"
+                                onLoad={(e) => {
+                                  const parent = (e.target as HTMLImageElement).parentElement;
+                                  parent?.classList.remove("animate-pulse", "bg-gray-200");
+                                  parent?.classList.add("bg-gray-50");
+                                }}
+                              />
                             </div>
-                          );
-                        })}
+                            <p className="font-bold text-lg lg:text-xl">{item.name}</p>
+                          </div>
+                        );
+                      })}
 
-                        {(!achievements[year] || achievements[year].length === 0) && (
-                          <p className="text-base col-span-full text-center">No achievements available for this year.</p>
-                        )}
-                      </div>
-                    )}
+                      {(!achievements[year] || achievements[year].length === 0) && (
+                        <p className="text-base col-span-full">No achievements available for this year.</p>
+                      )}
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>
