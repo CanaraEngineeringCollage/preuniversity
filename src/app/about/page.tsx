@@ -8,6 +8,7 @@ import React from "react";
 
 
 import type { Metadata } from "next";
+import CorrespondentMessage from "@/components/AboutPageComponents/CorrespondentMessage/CorrespondentMessage";
 
 export const metadata: Metadata = {
   title: "About Us – Canara Pre-University College, Mangalore",
@@ -63,6 +64,7 @@ const page = () => {
       <Banner />
       <Opportunity />
       <VisonAndMission />
+      <CorrespondentMessage/>
       <DeanMessage />
       <PrincipalMessage />
     </>

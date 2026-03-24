@@ -12,12 +12,11 @@ const DeanMessage = () => {
           <div className=" pt-5 flex lg:hidden flex-col items-center text-center">
             <Image src={image} alt="Dean" className="object-cover rounded-2xl w-full h-[350px] sm:h-[400px] md:h-[436px]" />
 
-            <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] font-bold pt-6 md:pt-9">Sri. Gopalakrishna</h2>
+            <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] font-bold pt-6">Sri. Gopalakrishna <br className="hidden lg:block"/> Shetty K M</h2>
 
-            <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] font-bold">Shetty K M</h2>
           </div>
-          <div className="text-[#2A2A2A] text-justify pt-3 sm:pt-3 flex flex-col text-lg  leading-relaxed">
-            <p className="pt-4">
+          <div className="text-[#2A2A2A] text-justify pt-3 sm:pt-5 flex flex-col text-lg  leading-relaxed">
+            <p className="">
               Vision, when turned inward, becomes Duty. When it looks outward, it becomes Aspiration. When it looks upward, it becomes Faith.
                These words of Stephens S, wise echoes the sentiments and commitment of Canara Institution which over the years has become the showcase
               of talent and skill.
@@ -46,7 +45,7 @@ const DeanMessage = () => {
         <div className="lg:col-span-4 hidden lg:flex flex-col items-center text-center">
           <Image src={image} alt="Dean" className="object-cover rounded-2xl w-full h-[350px] sm:h-[400px] md:h-[436px]" />
 
-          <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] font-bold pt-6 md:pt-9">Sri. Gopalakrishna</h2>
+          <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] font-bold pt-6">Sri. Gopalakrishna</h2>
 
           <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] font-bold">Shetty K M</h2>
         </div>

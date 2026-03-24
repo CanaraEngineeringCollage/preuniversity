@@ -24,7 +24,7 @@ const PrincipalMessage = () => {
             <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] pt-6 font-bold">Smt. Latamaheswari K B</h2>
           </div>
 
-          <div className="text-[#2A2A2A] text-justify pt-6 sm:pt-6 text-lg  leading-relaxed">
+          <div className="text-[#2A2A2A] text-justify pt-3 sm:pt-5 text-lg  leading-relaxed">
             <p>
               I am pleased to share my views through these few words. Having spent three decades in this noble profession, I feel blessed that I have
               had the opportunity to serve the society. Life has a series of challenges but the individual should learn the skill of retaining faith,
@@ -32,7 +32,7 @@ const PrincipalMessage = () => {
               extracurricular activities. This enables an individual feel complete.
             </p>
 
-            <p className="pt-8 sm:pt-6">
+            <p className="pt-8 sm:pt-3">
               At CANARA we take personal interest in monitoring the academic progress of the students alongside ensuring personality development. We
               consider it our prime duty to groom the students to be successful in life and at the same time we encourage them to develop traits that
               get them the recognition of being a good human being.
