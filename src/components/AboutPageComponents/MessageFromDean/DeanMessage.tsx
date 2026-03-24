@@ -4,25 +4,22 @@ import Image from "next/image";
 
 const DeanMessage = () => {
   return (
-    <div className="max-w-5xl xl:max-w-[60%] mx-auto mt-10 lg:mt-16 px-5">
+    <div className="max-w-5xl xl:max-w-[60%] mx-auto mt-10 lg:mt-20 px-5">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-0">
         {/* Text section */}
         <div className="md:col-span-7 text-center md:text-left">
           <h2 className="text-[#1D1D1F] leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl font-bold">Message from the Dean</h2>
           <div className=" pt-5 flex lg:hidden flex-col items-center text-center">
-            <Image src={image} alt="Dean" className="object-cover rounded-2xl w-full h-[350px] sm:h-[400px] md:h-[436px]" />
+            <Image src={image} alt="Dean" className="object-cover rounded-2xl w-full h-auto" />
 
             <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] font-bold pt-6">Sri. Gopalakrishna <br className="hidden lg:block"/> Shetty K M</h2>
-
           </div>
-          <div className="text-[#2A2A2A] text-justify pt-3 sm:pt-5 flex flex-col text-lg  leading-relaxed">
+          <div className="text-[#2A2A2A] text-justify pt-3 sm:pt-5 flex flex-col text-lg leading-relaxed">
             <p className="">
               Vision, when turned inward, becomes Duty. When it looks outward, it becomes Aspiration. When it looks upward, it becomes Faith.
                These words of Stephens S, wise echoes the sentiments and commitment of Canara Institution which over the years has become the showcase
               of talent and skill.
             </p>
-
-            
 
             <p className="pt-8 sm:pt-3 text-justify">
               The world today, unlike the past, is ever changing, distance is dying and barriers are becoming thin and nonexistent. Even in the field
@@ -43,7 +40,7 @@ const DeanMessage = () => {
 
         {/* Image section */}
         <div className="lg:col-span-4 hidden lg:flex flex-col items-center text-center">
-          <Image src={image} alt="Dean" className="object-cover rounded-2xl w-full h-[350px] sm:h-[400px] md:h-[436px]" />
+          <Image src={image} alt="Dean" className="object-cover rounded-2xl w-full h-auto" />
 
           <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] font-bold pt-6">Sri. Gopalakrishna</h2>
 

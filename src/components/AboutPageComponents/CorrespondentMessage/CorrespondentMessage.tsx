@@ -5,11 +5,11 @@ import image from "../../../../public/images/aboutPageImages/correspondent.webp"
 
 const CorrespondentMessage = () => {
   return (
-    <div className="max-w-5xl xl:max-w-[60%] mx-auto my-10 md:my-20 px-5">
+    <div className="max-w-5xl xl:max-w-[60%] mx-auto mt-10 lg:mt-16 px-5">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-0">
         {/* Image Section */}
         <div className="hidden lg:flex lg:col-span-4 flex-col items-center text-center md:text-left">
-          <Image src={image} alt="Correspondent" className="object-cover rounded-2xl w-full h-[350px] sm:h-[400px] md:h-[436px]" />
+          <Image src={image} alt="Correspondent" className="object-cover rounded-2xl w-full h-auto" />
           <h2 className="text-[#1D1D1F] text-2xl text-center sm:text-[27px] pt-6 font-bold">Sri. T Gopalkrishna Shenoy</h2>
         </div>
 
@@ -22,8 +22,8 @@ const CorrespondentMessage = () => {
 
           {/* Mobile Image Section */}
           <div className="lg:hidden pt-5 flex lg:col-span-4 flex-col items-center text-center md:text-left">
-            <Image src={image} alt="Correspondent" className="object-cover rounded-2xl w-full h-[350px] sm:h-[400px] md:h-[436px]" />
-            <h2 className="text-[#1D1D1F]  text-2xl sm:text-[27px] pt-6 font-bold">Sri. T Gopalkrishna Shenoy</h2>
+            <Image src={image} alt="Correspondent" className="object-cover rounded-2xl w-full h-auto" />
+            <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] pt-6 font-bold">Sri. T Gopalkrishna Shenoy</h2>
           </div>
 
           <div className="text-[#2A2A2A] text-justify pt-3 sm:pt-5 text-lg leading-relaxed">
