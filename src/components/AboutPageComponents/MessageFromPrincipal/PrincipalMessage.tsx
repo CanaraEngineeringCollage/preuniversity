@@ -4,7 +4,7 @@ import image from "../../../../public/images/aboutPageImages/principal.webp";
 
 const PrincipalMessage = () => {
   return (
-    <div className="max-w-5xl xl:max-w-[60%] mx-auto my-10 md:my-20 px-5">
+    <div className="max-w-6xl xl:max-w-[75%] mx-auto  px-5 my-10 md:my-20 ">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-0">
         {/* Image Section */}
         <div className="hidden lg:flex lg:col-span-4 flex-col items-center text-center md:text-left">

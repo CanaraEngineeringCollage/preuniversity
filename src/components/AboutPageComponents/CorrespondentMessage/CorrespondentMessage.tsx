@@ -5,7 +5,7 @@ import image from "../../../../public/images/aboutPageImages/correspondent.webp"
 
 const CorrespondentMessage = () => {
   return (
-    <div className="max-w-5xl xl:max-w-[60%] mx-auto mt-10 lg:mt-16 px-5">
+    <div className="max-w-6xl xl:max-w-[75%] mx-auto  px-5 mt-10 lg:mt-16 ">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-0">
         {/* Image Section */}
         <div className="hidden lg:flex lg:col-span-4 flex-col items-center text-center md:text-left">

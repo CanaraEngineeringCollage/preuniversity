@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const DeanMessage = () => {
   return (
-    <div className="max-w-5xl xl:max-w-[60%] mx-auto mt-10 lg:mt-20 px-5">
+    <div className="max-w-6xl xl:max-w-[75%] mx-auto  px-5  mt-10 lg:mt-20 ">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-0">
         {/* Text section */}
         <div className="md:col-span-7 text-center md:text-left">
