@@ -500,13 +500,15 @@ function MainMenu({
             <>
               <div >
                 <div className="flex items-center gap-2" onClick={() => {
-                router.push("/exam-results");
+             
 
                   openSidebar(false);
                 }}>
+<Link href="https://canarapucollege.com/a25/" target="_blank">
                   {/* <College /> */}
                   <Typography className="text-sm text-[#2A2A2A]">Exam Results</Typography>
                   {/* <IoIosArrowDown className="w-4 h-4 text-[#2A2A2A] -rotate-90 transition-all ease-in-out duration-300 lg:hidden" /> */}
+                </Link>
                 </div>
               </div>
               <div>
@@ -523,13 +525,16 @@ function MainMenu({
               </div>
               <div>
                 <div className="flex items-center gap-2" onClick={() => {
-                  router.push("/fee-portal");
+                
                   openSidebar(false);
                 }
+                
                 }>
+                  <Link href="https://canarapucollege.com/2pufees/" target="_blank">
                   {/* <Innovation /> */}
                   <Typography className="text-sm text-[#2A2A2A]">Fee Portal</Typography>
                   {/* <IoIosArrowDown className="w-4 h-4 text-[#2A2A2A] -rotate-90 transition-all ease-in-out duration-300 lg:hidden" /> */}
+                  </Link>
                 </div>
               </div>
 
