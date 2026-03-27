@@ -15,11 +15,11 @@ const aboutLinks = [
 const admissionLinks = [
   { data: "Admissions", links: "/admission" },
   // { data: "Streams", links: "/about" },
-  { data: "Fee Portal", links: "/fee-portal" },
+  { data: "Fee Portal", links: "https://canarapucollege.com/2pufees" },
 ];
 
 const examLinks = [
-  { data: "Exam Results", links: "/exam-results" },
+  { data: "Exam Results", links: "https://canarapucollege.com/a25/" },
   { data: "Exam Circulars", links: "/exam-circulars" },
   { data: "Question Bank", links: "/question-bank" },
 ];
@@ -115,7 +115,7 @@ export default function Footer() {
           <div className="mt-4">
             <span className="text-xs font-bold mb-2 block text-center">Follow Us</span>
             <div className="flex space-x-3 justify-center">
-             
+              
              <Link href="https://www.instagram.com/canara_pu_official/?hl=en" target="_blank"> <Instagram /></Link>
             <Link href="https://www.youtube.com/@canarapreuniversitycollege7891" target="_blank"><Yt /></Link>
               <Link href="https://www.facebook.com/canarapreuniversity/" target="_blank"><Meta /></Link>
