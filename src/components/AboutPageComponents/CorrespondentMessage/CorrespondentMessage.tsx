@@ -8,10 +8,12 @@ const CorrespondentMessage = () => {
     <div className="max-w-6xl xl:max-w-[75%] mx-auto  px-5 mt-10 lg:mt-16 ">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-0">
         {/* Image Section */}
-        <div className="hidden lg:flex lg:col-span-4 flex-col items-center text-center md:text-left">
-          <Image src={image} alt="Correspondent" className="object-cover rounded-2xl w-full h-auto" />
-          <h2 className="text-[#1D1D1F] text-2xl text-center sm:text-[27px] pt-6 font-bold">Sri. T Gopalkrishna Shenoy</h2>
-        </div>
+       {/* Desktop Image Section */}
+<div className="hidden lg:flex lg:col-span-4 flex-col items-center text-center md:text-left">
+  <Image src={image} alt="Correspondent" className="object-cover rounded-2xl w-5/6 h-auto" />
+  <h2 className="text-[#1D1D1F] text-2xl text-center  pt-6 font-bold">Sri. T Gopalkrishna</h2>
+    <h2 className="text-[#1D1D1F] text-2xl text-center   font-bold">Shenoy</h2>
+</div>
 
         {/* Spacer for desktop */}
         <div className="hidden md:block md:col-span-1"></div>

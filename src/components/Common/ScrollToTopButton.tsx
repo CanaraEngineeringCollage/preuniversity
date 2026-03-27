@@ -40,7 +40,7 @@ export default function ScrollToTopButton() {
           exit={{ opacity: 0, scale: 0.8 }}
           whileHover={{ scale: 1.1 }}
           onClick={scrollToTop}
-          className="fixed bottom-10 right-6 z-50 rounded-full transition-colors"
+          className="fixed bottom-10 right-6 z-20 rounded-full transition-colors"
           aria-label="Scroll to top"
         >
           <svg

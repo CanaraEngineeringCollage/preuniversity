@@ -4,12 +4,20 @@ import image from "../../../../public/images/aboutPageImages/principal.webp";
 
 const PrincipalMessage = () => {
   return (
-    <div className="max-w-6xl xl:max-w-[75%] mx-auto  px-5 my-10 md:my-20 ">
+    <div className="max-w-6xl xl:max-w-[75%] mx-auto px-5 my-10 md:my-20">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-0">
-        {/* Image Section */}
+        
+        {/* Desktop Image Section */}
         <div className="hidden lg:flex lg:col-span-4 flex-col items-center text-center md:text-left">
-          <Image src={image} alt="Principal" className="object-cover rounded-2xl w-full h-auto" />
-          <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] pt-6 font-bold">Smt. Latamaheswari K B</h2>
+          {/* Increased from w-3/4 to w-5/6 for a slightly larger image */}
+          <Image 
+            src={image} 
+            alt="Principal" 
+            className="object-cover rounded-2xl w-5/6 h-auto" 
+          />
+          <h2 className="text-[#1D1D1F] text-2xl  pt-6 font-bold">
+            Smt. Latamaheswari K B
+          </h2>
         </div>
 
         {/* Spacer for desktop */}
@@ -17,11 +25,20 @@ const PrincipalMessage = () => {
 
         {/* Message Section */}
         <div className="md:col-span-7 text-center md:text-left">
-          <h2 className="text-[#1D1D1F] text-3xl sm:text-[48px] font-bold">Message from the Principal</h2>
+          <h2 className="text-[#1D1D1F] text-3xl sm:text-[48px] font-bold">
+            Message from the Principal
+          </h2>
 
-          <div className="lg:hidden pt-5 flex lg:col-span-4 flex-col items-center text-center md:text-left">
-            <Image src={image} alt="Principal" className="object-cover rounded-2xl w-full h-auto" />
-            <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] pt-6 font-bold">Smt. Latamaheswari K B</h2>
+          {/* Mobile/Tablet Image Section */}
+          <div className="lg:hidden pt-5 flex flex-col items-center text-center md:text-left">
+            <Image 
+              src={image} 
+              alt="Principal" 
+              className="object-cover rounded-2xl w-full sm:w-3/4 md:w-1/2 h-auto" 
+            />
+            <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] pt-6 font-bold">
+              Smt. Latamaheswari K B
+            </h2>
           </div>
 
           <div className="text-[#2A2A2A] text-justify pt-3 sm:pt-5 text-lg leading-relaxed">

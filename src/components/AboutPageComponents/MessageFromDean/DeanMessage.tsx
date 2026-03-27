@@ -39,12 +39,13 @@ const DeanMessage = () => {
         <div className="hidden md:block md:col-span-1"></div>
 
         {/* Image section */}
+       {/* Image section */}
         <div className="lg:col-span-4 hidden lg:flex flex-col items-center text-center">
-          <Image src={image} alt="Dean" className="object-cover rounded-2xl w-full h-auto" />
+          {/* Changed w-full to w-5/6 to reduce desktop image size */}
+          <Image src={image} alt="Dean" className="object-cover rounded-2xl w-5/6 h-auto" />
 
-          <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] font-bold pt-6">Sri. Gopalakrishna</h2>
-
-          <h2 className="text-[#1D1D1F] text-2xl sm:text-[27px] font-bold">Shetty K M</h2>
+          <h2 className="text-[#1D1D1F] text-2xl  font-bold pt-6">Sri. Gopalakrishna</h2>
+          <h2 className="text-[#1D1D1F] text-2xl  font-bold">Shetty K M</h2>
         </div>
       </div>
     </div>

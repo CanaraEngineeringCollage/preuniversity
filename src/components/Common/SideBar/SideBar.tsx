@@ -65,10 +65,6 @@ export default function Sidebar({ sidebar, openSidebar }: { sidebar: boolean; op
   });
   const [visible, setVisible] = useState("main-menu");
 
-  const closeSidebar = () => {
-    openSidebar(false);
-  }
-
    useEffect(() => {
       if (sidebar) {
         document.body.style.overflow = "hidden";
@@ -142,14 +138,25 @@ function SubMenu({
   return (
     <>
       <div
-        onClick={() => {
-          setVisible("main-menu");
-        }}
-        className="flex gap-2 items-center sticky-top"
-      >
-        <IoIosArrowDown className={`w-4 h-4 text-[#2A2A2A] rotate-90 transition-all ease-in-out duration-300 lg:hidden`} />
-        <Typography className="font-medium text-[#2A2A2A]  text-[15px]">{data.title}</Typography>
-      </div>
+  onClick={() => {
+    setVisible("main-menu");
+  }}
+  // 1. Set the main container to start from the top
+  className="flex gap-2 items-start"
+  role="button"
+  aria-expanded={true}
+  aria-controls="sidebar"
+  aria-label="Toggle sidebar"
+>
+  {/* 2. Wrap the icon in a container that matches the exact line-height of text-lg (h-7). Add shrink-0 so it doesn't get squished by long text. */}
+  <div className="h-7 flex items-center shrink-0">
+    <IoIosArrowDown className="w-4 h-4 text-[#2A2A2A] rotate-90 transition-all ease-in-out duration-300 lg:hidden" />
+  </div>
+  
+  <Typography className="font-medium text-[#2A2A2A] text-lg">
+    {data.title}
+  </Typography>
+</div>
       <div className={`space-y-2 transition-all ease-in-out duration-300 mt-2`}>
         {data.links.map((link, index) => (
           <div
@@ -207,7 +214,7 @@ function MainMenu({
             <>
               <div>
                 <Link onClick={() => {
-                  closeSidebar(false)
+                  openSidebar(false)
                 }} href={"/about"}>
                   <div className="flex items-center gap-2">
                     {/* <College /> */}
@@ -221,7 +228,7 @@ function MainMenu({
               <div>
                 <Link
                   onClick={() => {
-                    closeSidebar(false)
+                    openSidebar(false)
                   }}
                   href={"/founder"}>
                   <div className="flex items-center gap-2">
@@ -234,7 +241,7 @@ function MainMenu({
               </div>
               <div>
                 <Link onClick={() => {
-                  closeSidebar(false)
+                  openSidebar(false)
                 }}
 
                   href={"/management"}>
@@ -248,7 +255,7 @@ function MainMenu({
 
               <div>
                 <Link onClick={() => {
-                  closeSidebar(false)
+                  openSidebar(false)
                 }}
 
 
@@ -262,7 +269,7 @@ function MainMenu({
               </div>
               <div>
                 <Link onClick={() => {
-                  closeSidebar(false)
+                  openSidebar(false)
                 }}
 
                   href={"/facilities"}>
@@ -354,7 +361,7 @@ function MainMenu({
               {/* </div> */}
               <div>
                 <Link  onClick={()=>{
-                 closeSidebar(false)
+                 openSidebar(false)
 
                 }}
                 
@@ -370,7 +377,7 @@ function MainMenu({
 
                 <div>
                 <Link  onClick={()=>{
-                 closeSidebar(false)
+                 openSidebar(false)
 
                 }}
                 
@@ -385,7 +392,7 @@ function MainMenu({
               </div>
               <div>
                 <Link  onClick={()=>{
-                 closeSidebar(false)
+                 openSidebar(false)
 
                 }}
                 
@@ -400,7 +407,7 @@ function MainMenu({
               </div>
               <div>
                 <Link  onClick={()=>{
-                 closeSidebar(false)
+                 openSidebar(false)
 
                 }} 
                 
