@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Campus Buzz – News, Events & Updates | Canara Pre-University College",
   description:
     "Explore the latest campus buzz from Canara Pre-University College, Mangalore. Stay updated with recent events, achievements, announcements, and important happenings across our campus.",
-  alternates: { canonical: "/buzz" },
+  alternates: { canonical: "/campus-buzz" },
   keywords: [
     "Canara PU College News",
     "PUC Events Mangalore",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Campus Buzz – Canara Pre-University College",
     description:
       "Stay informed with the latest events, achievements, and campus highlights from Canara PU College, Mangalore.",
-    url: "/buzz",
+    url: "/campus-buzz",
     siteName: "Canara PU College Mangalore",
     images: [
       {

@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/achievements`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${siteUrl}/question-bank`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${siteUrl}/e-magazine`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${siteUrl}/buzz`, lastModified: now, changeFrequency: "daily", priority: 0.6 },
+    { url: `${siteUrl}/campus-buzz`, lastModified: now, changeFrequency: "daily", priority: 0.6 },
     { url: `${siteUrl}/exam-circulars`, lastModified: now, changeFrequency: "daily", priority: 0.7 },
     { url: `${siteUrl}/exam-results`, lastModified: now, changeFrequency: "daily", priority: 0.7 },
     { url: `${siteUrl}/fee-portal`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },

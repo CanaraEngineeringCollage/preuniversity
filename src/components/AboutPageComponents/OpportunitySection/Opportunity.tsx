@@ -2,7 +2,7 @@ import React from "react";
 
 const Opportunity = () => {
   return (
-    <div className="container text-[#1D1D1F] max-w-6xl xl:max-w-[75%] mx-auto px-5">
+    <div className="container text-[#1D1D1F] max-w-6xl xl:max-w-[75%] mx-auto px-5 mb-10 lg:mb-16">
       <h1 className="leading-[1.1] md:text-3xl lg:text-4xl lg2:text-5xl text-3xl font-bold pt-10 lg:pt-8 pb-8 text-center">Where Excellence Meets Opportunity</h1>
       {/* <div className="flex flex-col gap-8 text-[#2A2A2A] lg2:text-xl font-medium">
       <p>

@@ -5,7 +5,7 @@ import Events from "../Options/Events/Events";
 import StudentLife from "../Options/StudentLife/StudentLife";
 import Updates from "../Options/Updates/Updates";
 
-function  NavbarItems() {
+function NavbarItems() {
   return (
     <>
       <div className="hidden nav-items text-white  lg:flex  lg2 flex-row w-full justify-between">
@@ -21,9 +21,9 @@ function  NavbarItems() {
         <div className="cursor-pointer   text-sm xl:text-base font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
           <Events />
         </div>
-        <Link href="/buzz">
+        <Link href="/campus-buzz">
           <div className="cursor-pointer font-sans   text-[18px] font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">
-            Buzz
+            Campus Buzz
           </div>
         </Link>
         <div className="cursor-pointer   text-sm xl:text-base font-semibold transition duration-300 ease-in-out h-20 flex items-center justify-center">

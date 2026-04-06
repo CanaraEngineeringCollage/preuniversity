@@ -2,16 +2,31 @@ import React from "react";
 
 const VisonAndMission = () => {
   return (
-    <div className="max-w-6xl xl:max-w-[75%] mx-auto  px-5 mt-8   lg:mb-0 lg:mt-14">
-      <div className="lg:py-11 py-10 ">
-        <h4 className="text-center text-[#2A2A2A] text-xl font-medium">Our Vision</h4>
-        <h1 className="leading-[1.1] md:text-3xl mt-1  lg:text-5xl text-2xl font-bold text-center text-[#1D1D1F]">Quality Education At Affordable Cost</h1>
+    <section className="py-10 px-5">
+      <div className="text-[#1D1D1F] max-w-6xl xl:max-w-[75%] mx-auto px-5 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
+        
+        {/* Vision Card */}
+        <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-center justify-center text-center space-y-6">
+          <h2 className="leading-[1.1] md:text-3xl lg:text-4xl text-3xl font-bold">
+            Our Vision
+          </h2>
+          <p className="text-[#2A2A2A] text-lg lg:text-xl max-w-lg mx-auto">
+            Quality Education At Affordable Cost
+          </p>
+        </div>
+
+        {/* Mission Card */}
+        <div className="bg-white rounded-2xl shadow p-8 flex flex-col items-center justify-center text-center space-y-6">
+          <h2 className="leading-[1.1] md:text-3xl lg:text-4xl text-3xl font-bold">
+            Our Mission
+          </h2>
+          <p className="text-[#2A2A2A] text-lg lg:text-xl max-w-lg mx-auto">
+            Educating Generations Creating Better Individuals
+          </p>
+        </div>
+
       </div>
-      <div className="lg:pt-8 pb-11 lg:pb-11 ">
-        <h4 className="text-center text-[#2A2A2A] text-xl font-medium">Our Mission</h4>
-        <h1 className="leading-[1.1] md:text-3xl mt-1  lg:text-5xl text-2xl font-bold text-center text-[#1D1D1F]">Educating Generations Creating Better Individuals</h1>
-      </div>
-    </div>
+    </section>
   );
 };
 

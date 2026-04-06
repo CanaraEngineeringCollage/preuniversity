@@ -24,7 +24,7 @@ const examLinks = [
   { data: "Question Bank", links: "/question-bank" },
 ];
 
-const buzzLinks = [{ data: "Buzz", links: "/buzz" }];
+const buzzLinks = [{ data: "Campus Buzz", links: "/campus-buzz" }];
 
 const eventLinks = [
   { data: "Footprints", links: "/footprints" },
@@ -191,7 +191,7 @@ const FooterSection: FC<{
         <ArrowIcon isOpen={isOpen} />
       </div>
     ) : (
-      <Link href="/buzz"><div className="flex items-center justify-between text-[#8f9aaf] font-semibold cursor-pointer py-2">{title}</div></Link>
+      <Link href="/campus-buzz"><div className="flex items-center justify-between text-[#8f9aaf] font-semibold cursor-pointer py-2">{title}</div></Link>
     )}
     {isOpen && <FooterList data={data} />}
   </div>

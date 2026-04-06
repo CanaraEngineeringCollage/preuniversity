@@ -477,12 +477,12 @@ function MainMenu({
       <div className="border-b-border border-b-2 py-4">
         <div
           onClick={() => {
-            router.push("/buzz");
+            router.push("/campus-buzz");
             openSidebar(false);
           }}
           className="flex gap-4 "
         >
-          <Typography className="font-semibold text-[#2884CA] ">Buzz</Typography>
+          <Typography className="font-semibold text-[#2884CA] ">Campus Buzz</Typography>
           {/* <IoIosArrowDown className={`w-6 h-6 text-[#2884CA] -rotate-90 transition-all ease-in-out duration-300 lg:hidden`} /> */}
         </div>
       </div>
