@@ -249,7 +249,7 @@ export default function EMagazineClient() {
   return (
     <div className="min-h-[100vh] py-10 lg:py-16 bg-gray-50/50">
       <div className="max-w-7xl xl:max-w-[75%] px-5 mx-auto">
-        <h1 className="text-[30px] lg:text-[54px] font-bold text-[#1D1D1F] mb-10">E-Magazine</h1>
+        <h1 className=" md:leading-[1.1] text-3xl md:text-[46px] font-bold  text-[#1D1D1F] mb-10">E-Magazine</h1>
 
         {/* Loading State for initial fetch */}
         {isLoading ? (
