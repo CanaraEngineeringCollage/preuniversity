@@ -4,19 +4,20 @@ import React from "react";
 
 const SeeYourSelf = () => {
   return (
-    <section className="max-w-7xl xl:max-w-[75%] px-5 mx-auto text-[#1D1D1F] mt-10 md:my-12">
-      <div className="grid grid-cols-1  lg:grid-cols-12 gap-10 justify-items-center items-center">
+    <section className="max-w-7xl xl:max-w-[75%] px-5 mx-auto text-[#1D1D1F] mt-10 md:my-24">
+      {/* Added lg:items-stretch to force columns to match heights on desktop */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 justify-items-center lg:items-stretch items-center">
         <div className="flex flex-col lg:col-span-7">
           <h1 className="font-bold leading-[1.1] md:text-3xl lg:text-4xl lg2:text-[45px] text-3xl">
-             Where Academic <br className="hidden md:block"/> Excellence Begins
+            Where Academic <br className="hidden md:block" /> Excellence Begins
           </h1>
-          <div className="flex pt-5 pb-1 lg:hidden items-center justify-center  lg2:p-16 ">
+          <div className="flex pt-5 pb-1 lg:hidden items-center justify-center lg2:p-16">
             <Image
-              src="/images/homePageImages/image1.png"
+              src="/images/homePageImages/image1.webp"
               alt=""
               width={1000}
               height={1000}
-              className=" rounded-2xl"
+              className="rounded-2xl"
             />
           </div>
           <p className="text-[#2A2A2A] text-base text-justify lg:text-xl lg2:pt-8 lg:pt-4 pt-5 ">
@@ -36,20 +37,23 @@ const SeeYourSelf = () => {
           </p>
           <div className="mx-auto lg:mx-0 ">
             <Link href={"/about"}>
-              <button className="px-8 py-1.5 border  border-gray-600 rounded-4xl  mt-8  transition">
+              <button className="px-8 py-1.5 border border-gray-600 rounded-4xl mt-8 transition">
                 View More
               </button>
             </Link>
           </div>
         </div>
         <div className="lg:col-span-1 hidden lg:block"></div>
-        <div className="lg:flex hidden lg:col-span-4 items-center justify-end md:py-8 lg2:py-16 ">
+
+        {/* Removed padding/centering, added w-full h-full to the wrapper */}
+        <div className="lg:flex hidden lg:col-span-4 w-full h-full">
+          {/* Added w-full, h-full, and object-cover to make the image fill the space */}
           <Image
-            src="/images/homePageImages/image1.png"
+            src="/images/homePageImages/image1.webp"
             alt=""
             width={1000}
             height={1000}
-            className=" rounded-2xl"
+            className="rounded-2xl w-full h-full object-cover"
           />
         </div>
       </div>
