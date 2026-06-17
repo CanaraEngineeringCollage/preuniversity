@@ -21,6 +21,10 @@ const nextConfig: NextConfig = {
         hostname: "cpucweb.canaraedu.org", // Your CMS domain
       },
       {
+        protocol: "http",
+        hostname: "35.154.47.69", // 🔹 Your current live IP address
+      },
+      {
         protocol: "https",
         hostname: "assets.unlayer.com", // 🔹 Added Unlayer to fix the 400 Bad Request error
       },
