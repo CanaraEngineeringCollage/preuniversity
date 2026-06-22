@@ -20,9 +20,9 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "cpucweb.canaraedu.org", // Your CMS domain
       },
-      {
-        protocol: "http",
-        hostname: "35.154.47.69", // 🔹 Your current live IP address
+    {
+        protocol: "https",
+        hostname: "cpucdashboard.cpuc.edu.in", // 🔹 Your NEW secure domain
       },
       {
         protocol: "https",
