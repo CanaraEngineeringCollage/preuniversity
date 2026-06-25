@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Canara Pre-University College, Mangalore",
-      url: "https://canarapucollege.com",
+      url: "https://cpuc.edu.in",
     },
   ],
   openGraph: {

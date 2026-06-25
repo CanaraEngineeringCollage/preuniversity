@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import subjects from "@/lib/subjects.json";
 
-const siteUrl = "https://canarapucollege.com";
+const siteUrl = "https://cpuc.edu.in";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
