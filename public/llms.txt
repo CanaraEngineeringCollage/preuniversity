@@ -1,0 +1,31 @@
+# llms.txt
+
+Site: Canara Pre-University College, Mangalore
+Domain: https://cpuc.edu.in
+Canonical base: https://cpuc.edu.in/
+Language: en
+
+## Allowed usage
+- You may read and summarize public pages on this domain.
+- Prefer citing the canonical URL for each page.
+- Do not attempt to access private/student data, admin systems, or payment data.
+
+## Primary pages (canonical)
+- https://cpuc.edu.in/
+- https://cpuc.edu.in/about
+- https://cpuc.edu.in/admission
+- https://cpuc.edu.in/facilities
+- https://cpuc.edu.in/management
+- https://cpuc.edu.in/founder
+- https://cpuc.edu.in/streams
+- https://cpuc.edu.in/question-bank
+- https://cpuc.edu.in/e-magazine
+- https://cpuc.edu.in/exam-circulars
+- https://cpuc.edu.in/exam-results
+- https://cpuc.edu.in/fee-portal
+- https://cpuc.edu.in/conduct
+- https://cpuc.edu.in/privacy-policy
+
+## Feeds for crawlers
+- Sitemap: https://cpuc.edu.in/sitemap.xml
+- Robots: https://cpuc.edu.in/robots.txt

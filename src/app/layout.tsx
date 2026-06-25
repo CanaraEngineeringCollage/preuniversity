@@ -57,7 +57,7 @@ const helveticaNow = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://canarapucollege.com"),
+  metadataBase: new URL("https://cpuc.edu.in"),
   title: {
     default: "Canara Pre-University College, Mangalore – Empowering Futures Since 1972",
     template: "%s | Canara PU College, Mangalore",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     "PU College admissions Mangalore",
     "education Mangalore",
   ],
-  authors: [{ name: "Canara Pre-University College, Mangalore", url: "https://canarapucollege.com" }],
+  authors: [{ name: "Canara Pre-University College, Mangalore", url: "https://cpuc.edu.in" }],
   alternates: { canonical: "/" },
   robots: {
     index: true,
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     siteName: "Canara PU College Mangalore",
     images: [
       {
-        url: "https://preuniversity.vercel.app/images/og-image.png", // replace with actual OG image path
+        url: "/images/og-image.png", // replace with actual OG image path
         width: 1200,
         height: 630,
         alt: "Canara PU College Mangalore Campus",
@@ -105,7 +105,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Canara Pre-University College, Mangalore",
     description: "Co-educational pre-university institution offering Science & Commerce since 1972.",
-    images: ["https://preuniversity.vercel.app/images/og-image.png"],
+    images: ["/images/og-image.png"],
   },
 };
 
