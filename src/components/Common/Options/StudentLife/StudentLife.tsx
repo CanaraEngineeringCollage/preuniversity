@@ -51,33 +51,31 @@ export default function StudentLife() {
               <div className="flex items-start">{/* <Employees /> */}</div>
               <div className="flex flex-col gap-2">
                 <ul className="list-none text-[#1D1D1F] text-[16px] leading-10">
-                  <Link href="/conduct">
-                    <li>Code of Conduct</li>
-                  </Link>
-                  
+                  <li>
+                    <Link href="/conduct">Code of Conduct</Link>
+                  </li>
                 </ul>
               </div>
             </div>
 
-              <div className="flex gap-4 pr-4  ">
+            <div className="flex gap-4 pr-4  ">
               <div className="flex items-start">{/* <Employees /> */}</div>
               <div className="flex flex-col gap-2">
                 <ul className="list-none text-[#1D1D1F] text-[16px] leading-10">
-                  <Link href="/e-magazine">
-                    <li>E-Magazine</li>
-                  </Link>
-                  
+                  <li>
+                    <Link href="/e-magazine">E-Magazine</Link>
+                  </li>
                 </ul>
               </div>
             </div>
-              <div className="flex gap-4 pr-4  ">
+            
+            <div className="flex gap-4 pr-4  ">
               <div className="flex items-start">{/* <Employees /> */}</div>
               <div className="flex flex-col gap-2">
                 <ul className="list-none text-[#1D1D1F] text-[16px] leading-10">
-                  <Link href="/achievements">
-                    <li>Achievements</li>
-                  </Link>
-                  
+                  <li>
+                    <Link href="/achievements">Achievements</Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -87,9 +85,9 @@ export default function StudentLife() {
               <div className="flex items-start">{/* <Certicficate /> */}</div>
               <div className="flex flex-col gap-2">
                 <ul className="list-none text-[#1D1D1F] text-[16px] leading-10">
-                  <Link href="/question-bank">
-                    <li>Question Bank</li>
-                  </Link>
+                  <li>
+                    <Link href="/question-bank">Question Bank</Link>
+                  </li>
                 </ul>
               </div>
             </div>

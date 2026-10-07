@@ -38,9 +38,11 @@ export default function Updates() {
               <div className="flex items-start">{/* <College /> */}</div>
               <div className="flex flex-col gap-2">
                 <ul className="list-none text-[#1D1D1F] text-[16px] leading-10">
-                  <Link href="https://canarapucollege.com/a25/" target="_blank">
-                    <li>Exam Results</li>
-                  </Link>
+                  <li>
+                    <Link href="https://canarapucollege.com/a25/" target="_blank">
+                      Exam Results
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -50,9 +52,11 @@ export default function Updates() {
               <div className="flex items-start">{/* <Employees /> */}</div>
               <div className="flex flex-col gap-2">
                 <ul className="list-none text-[#1D1D1F] text-[16px] leading-10">
-                  <Link href="/exam-circulars">
-                    <li>Exam Circulars</li>
-                  </Link>
+                  <li>
+                    <Link href="/exam-circulars">
+                      Exam Circulars
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -62,10 +66,11 @@ export default function Updates() {
               <div className="flex items-start">{/* <Certicficate /> */}</div>
               <div className="flex flex-col gap-2">
                 <ul className="list-none text-[#1D1D1F] text-[16px] leading-10">
-                  <Link href="https://canarapucollege.com/2pufees/" target="_bla">
-
-                    <li>Fee Portal</li>
-                  </Link>
+                  <li>
+                    <Link href="https://canarapucollege.com/2pufees/" target="_blank">
+                      Fee Portal
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>

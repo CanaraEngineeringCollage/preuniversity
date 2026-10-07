@@ -37,35 +37,45 @@ export default function About() {
       {/* Column 1 */}
       <div className="space-y-2">
         <ul className="text-[#1D1D1F] text-[16px] leading-10">
-          <Link href="/about"><li>About Canara PU College</li></Link>
+          <li>
+            <Link href="/about">About Canara PU College</Link>
+          </li>
         </ul>
       </div>
 
       {/* Column 2 */}
       <div className="space-y-2">
         <ul className="text-[#1D1D1F] text-[16px] leading-10">
-          <Link href="/founder"><li>Founder</li></Link>
+          <li>
+            <Link href="/founder">Founder</Link>
+          </li>
         </ul>
       </div>
 
       {/* Column 3 */}
       <div className="space-y-2">
         <ul className="text-[#1D1D1F] text-[16px] leading-10">
-          <Link href="/management"><li>Management</li></Link>
+          <li>
+            <Link href="/management">Management</Link>
+          </li>
         </ul>
       </div>
 
       {/* Column 4 */}
       <div className="space-y-2">
         <ul className="text-[#1D1D1F] text-[16px] leading-10">
-          <Link href="/admission"><li>Admissions</li></Link>
+          <li>
+            <Link href="/admission">Admissions</Link>
+          </li>
         </ul>
       </div>
 
       {/* Column 5 */}
       <div className="space-y-2">
         <ul className="text-[#1D1D1F] text-[16px] leading-10">
-          <Link href="/facilities"><li>Facilities</li></Link>
+          <li>
+            <Link href="/facilities">Facilities</Link>
+          </li>
         </ul>
       </div>
 

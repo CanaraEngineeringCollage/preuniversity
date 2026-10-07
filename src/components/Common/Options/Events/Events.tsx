@@ -38,9 +38,9 @@ export default function Events() {
               <div className="flex items-start">{/* <College /> */}</div>
               <div className="flex flex-col gap-2">
                 <ul className="list-none text-[#1D1D1F] text-[16px] leading-10">
-                  <Link href="/footprints">
-                    <li>Footprints</li>
-                  </Link>
+                  <li>
+                    <Link href="/footprints">Footprints</Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -50,9 +50,9 @@ export default function Events() {
               <div className="flex items-start">{/* <Employees /> */}</div>
               <div className="flex flex-col gap-2">
                 <ul className="list-none text-[#1D1D1F] text-[16px] leading-10">
-                  <Link href="/mat-kabaddi">
-                    <li>Mat Kabaddi</li>
-                  </Link>
+                  <li>
+                    <Link href="/mat-kabaddi">Mat Kabaddi</Link>
+                  </li>
                 </ul>
               </div>
             </div>

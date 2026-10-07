@@ -115,17 +115,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${helveticaNow.variable} antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${helveticaNow.variable} antialiased`}
+        suppressHydrationWarning
+      >
         <Toaster position="top-center" />
-         <Analytics />
-
-        {/* Vercel Speed Insights */}
+        <Analytics />
         <SpeedInsights />
         <Layout>
-          {children} <ScrollToTopButton />{" "}
-        </Layout>{" "}
-        <Script src="/smoothScroll/smoothScroll.js" />
+          {children}
+          <ScrollToTopButton />
+        </Layout>
+        <Script src="/smoothScroll/smoothScroll.js" strategy="afterInteractive" />
       </body>
     </html>
   );

@@ -87,11 +87,11 @@ export default function Footer() {
         {/* Bottom */}
         <div className=" text-[12px] text-[#6b7a95] mx-auto  pt-4 pb-10 flex flex-col items-center text-center md:flex-row md:justify-between md:text-left">
           <p>Copyright © {new Date().getFullYear()} Canara High School Association. All rights reserved.</p>
-           <Link href="/privacy-policy" className=""><div className="space-x-2 mt-2 md:mt-0">
-            <Link href="/privacy-policy" className="">
+          <div className="space-x-2 mt-2 md:mt-0">
+            <Link href="/privacy-policy" className="hover:underline">
               Privacy Policy
             </Link>
-          </div></Link> 
+          </div>
         </div>
       </div>
 
@@ -129,7 +129,7 @@ export default function Footer() {
         <div className="text-[12px] text-[#6b7a95] pt-4 pb-10 text-center">
           <p className="mb-2">Copyright © {new Date().getFullYear()} Canara High School Association. All rights reserved.</p>
           <div className="space-x-2">
-            <Link href="/privacy-policy" className="">
+            <Link href="/privacy-policy" className="hover:underline">
               Privacy Policy
             </Link>
           </div>
@@ -142,19 +142,20 @@ export default function Footer() {
 // Reusable Footer List Component
 const FooterList: FC<FooterListProps> = ({ data }) => {
   return (
-    <ul className="cursor-pointer text-white ">
+    <ul className="cursor-pointer text-white">
       {data.map((item, index) => {
         const isExternal = item.links.startsWith("http");
 
         return (
-          <Link
-            key={index}
-            href={item.links}
-            target={isExternal ? "_blank" : "_self"}
-            rel={isExternal ? "noopener noreferrer" : undefined}
-          >
-            <li className="pb-3">{item.data}</li>
-          </Link>
+          <li key={index} className="pb-3">
+            <Link
+              href={item.links}
+              target={isExternal ? "_blank" : "_self"}
+              rel={isExternal ? "noopener noreferrer" : undefined}
+            >
+              {item.data}
+            </Link>
+          </li>
         );
       })}
     </ul>
