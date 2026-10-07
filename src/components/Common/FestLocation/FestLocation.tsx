@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+
 export interface EventSection {
   venue?: string;
   timing?: string[]; // Assuming timing is an array of strings based on your request
@@ -9,6 +11,9 @@ export interface EventSection {
 
 export function getEmbedMapUrl(url?: string, venue?: string): string | null {
   if (!url || typeof url !== "string" || !url.trim()) {
+    if (venue && venue.trim()) {
+      return `https://maps.google.com/maps?q=${encodeURIComponent(venue.trim())}&output=embed`;
+    }
     return null;
   }
 
@@ -17,7 +22,7 @@ export function getEmbedMapUrl(url?: string, venue?: string): string | null {
   // 1. If full iframe tag was pasted (e.g. <iframe src="..." ...></iframe>)
   const iframeSrcMatch = trimmed.match(/src=["']([^"']+)["']/i);
   if (iframeSrcMatch && iframeSrcMatch[1]) {
-    return getEmbedMapUrl(iframeSrcMatch[1], venue);
+    return iframeSrcMatch[1];
   }
 
   // 2. If it's already an embed URL
@@ -51,13 +56,12 @@ export function getEmbedMapUrl(url?: string, venue?: string): string | null {
     // Ignore URL parsing errors
   }
 
-  // 4. If it's a short link (e.g. maps.app.goo.gl or goo.gl/maps) that cannot be embedded directly,
-  // use the venue if available to generate the embed map for the exact venue
+  // 4. For shortlinks (maps.app.goo.gl / goo.gl/maps) or raw addresses, use venue
   if (venue && venue.trim()) {
     return `https://maps.google.com/maps?q=${encodeURIComponent(venue.trim())}&output=embed`;
   }
 
-  return null;
+  return `https://maps.google.com/maps?q=${encodeURIComponent(trimmed)}&output=embed`;
 }
 
 export default function FestLocation({ category, initialData , title}: { category: "mat-kabbadi" | "footprints"; initialData?: EventSection | null , title?: string}) {
@@ -106,6 +110,8 @@ export default function FestLocation({ category, initialData , title}: { categor
   const directMapUrl =
     data.googleMapUrl && !data.googleMapUrl.includes("<iframe")
       ? data.googleMapUrl
+      : data.venue
+      ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(data.venue)}`
       : null;
 
   return (
