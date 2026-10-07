@@ -10,58 +10,12 @@ export interface EventSection {
 }
 
 export function getEmbedMapUrl(url?: string, venue?: string): string | null {
-  if (!url || typeof url !== "string" || !url.trim()) {
-    if (venue && venue.trim()) {
-      return `https://maps.google.com/maps?q=${encodeURIComponent(venue.trim())}&output=embed`;
-    }
-    return null;
+  if (!url && !venue) return null;
+  if (url && (url.includes("/maps/embed") || url.includes("output=embed"))) {
+    return url;
   }
-
-  const trimmed = url.trim();
-
-  // 1. If full iframe tag was pasted (e.g. <iframe src="..." ...></iframe>)
-  const iframeSrcMatch = trimmed.match(/src=["']([^"']+)["']/i);
-  if (iframeSrcMatch && iframeSrcMatch[1]) {
-    return iframeSrcMatch[1];
-  }
-
-  // 2. If it's already an embed URL
-  if (trimmed.includes("/maps/embed") || trimmed.includes("output=embed")) {
-    return trimmed;
-  }
-
-  // 3. Parse parameters or paths from Google Maps URLs
-  try {
-    const urlObj = new URL(trimmed.startsWith("http") ? trimmed : `https://${trimmed}`);
-
-    // Check query params ?q= or ?query=
-    const q = urlObj.searchParams.get("q") || urlObj.searchParams.get("query");
-    if (q) {
-      return `https://maps.google.com/maps?q=${encodeURIComponent(q)}&output=embed`;
-    }
-
-    // Check /maps/place/<PlaceName>
-    const placeMatch = urlObj.pathname.match(/\/maps\/place\/([^/@]+)/);
-    if (placeMatch && placeMatch[1]) {
-      const placeName = decodeURIComponent(placeMatch[1].replace(/\+/g, " "));
-      return `https://maps.google.com/maps?q=${encodeURIComponent(placeName)}&output=embed`;
-    }
-
-    // Check /@lat,lng
-    const coordsMatch = urlObj.pathname.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
-    if (coordsMatch && coordsMatch[1] && coordsMatch[2]) {
-      return `https://maps.google.com/maps?q=${coordsMatch[1]},${coordsMatch[2]}&output=embed`;
-    }
-  } catch {
-    // Ignore URL parsing errors
-  }
-
-  // 4. For shortlinks (maps.app.goo.gl / goo.gl/maps) or raw addresses, use venue
-  if (venue && venue.trim()) {
-    return `https://maps.google.com/maps?q=${encodeURIComponent(venue.trim())}&output=embed`;
-  }
-
-  return `https://maps.google.com/maps?q=${encodeURIComponent(trimmed)}&output=embed`;
+  const query = venue || url || "";
+  return `https://maps.google.com/maps?q=${encodeURIComponent(query)}&output=embed`;
 }
 
 export default function FestLocation({ category, initialData , title}: { category: "mat-kabbadi" | "footprints"; initialData?: EventSection | null , title?: string}) {
