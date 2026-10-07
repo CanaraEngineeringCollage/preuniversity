@@ -11,11 +11,27 @@ export interface EventSection {
 
 export function getEmbedMapUrl(url?: string, venue?: string): string | null {
   if (!url && !venue) return null;
+
+  // 1. If full iframe tag was pasted (e.g. <iframe src="..." ...></iframe>)
+  const iframeSrcMatch = url?.match(/src=["']([^"']+)["']/i);
+  if (iframeSrcMatch && iframeSrcMatch[1]) {
+    return iframeSrcMatch[1];
+  }
+
+  // 2. If it's already an embed URL
   if (url && (url.includes("/maps/embed") || url.includes("output=embed"))) {
     return url;
   }
-  const query = venue || url || "";
-  return `https://maps.google.com/maps?q=${encodeURIComponent(query)}&output=embed`;
+
+  // 3. For Canara College / PU College venue or shortlink, use the exact Google Map Embed
+  const combinedText = `${url || ""} ${venue || ""}`.toLowerCase();
+  if (combinedText.includes("canara") || combinedText.includes("woukhzw") || combinedText.includes("2cnrqr")) {
+    return "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8486534147857!2d74.8398645!3d12.8791904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba350a13025ca43%3A0xc377faaf3db7a9c3!2sCanara%20College!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin";
+  }
+
+  // 4. For any other venue, format clean search query with building-level zoom (z=17)
+  const query = (venue || url || "").replace(/\b\d{6}\b/g, "").trim();
+  return `https://maps.google.com/maps?q=${encodeURIComponent(query)}&z=17&output=embed`;
 }
 
 export default function FestLocation({ category, initialData , title}: { category: "mat-kabbadi" | "footprints"; initialData?: EventSection | null , title?: string}) {
