@@ -87,6 +87,17 @@ export default function Footer() {
         {/* Bottom */}
         <div className=" text-[12px] text-[#6b7a95] mx-auto  pt-4 pb-10 flex flex-col items-center text-center md:flex-row md:justify-between md:text-left">
           <p>Copyright © {new Date().getFullYear()} Canara High School Association. All rights reserved.</p>
+          <p className="mt-2 md:mt-0">
+            Designed and Developed by{" "}
+            <Link
+              href="https://megamind.studio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              Megamind Studios
+            </Link>
+          </p>
           <div className="space-x-2 mt-2 md:mt-0">
             <Link href="/privacy-policy" className="hover:underline">
               Privacy Policy
@@ -128,6 +139,17 @@ export default function Footer() {
         {/* Mobile Bottom Bar */}
         <div className="text-[12px] text-[#6b7a95] pt-4 pb-10 text-center">
           <p className="mb-2">Copyright © {new Date().getFullYear()} Canara High School Association. All rights reserved.</p>
+          <p className="mb-2">
+            Designed and Developed by{" "}
+            <Link
+              href="https://megamind.studio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              Megamind Studios
+            </Link>
+          </p>
           <div className="space-x-2">
             <Link href="/privacy-policy" className="hover:underline">
               Privacy Policy
